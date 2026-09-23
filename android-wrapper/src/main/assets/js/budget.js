@@ -7,10 +7,16 @@
 
   const STORAGE_KEY = "hearthHopeBudget_v1";
   const TZ = "America/New_York";
-  const CATEGORIES = [
-    "Rent", "Food", "Transit", "Phone", "Debt", "Reserve", "Cushion", "Baby", "Other"
-  ];
-  const UPCOMING_COUNT = 5; /* current + 5 upcoming */
+  const CATEGORIES = ["Rent", "Food", "Baby", "Bills", "Debt", "Other"];
+  /* Map legacy categories into the simplified set */
+  const CATEGORY_MAP = {
+    Phone: "Bills",
+    Transit: "Bills",
+    Reserve: "Other",
+    Cushion: "Other"
+  };
+  /* current + this many upcoming Wednesdays */
+  const UPCOMING_COUNT = 6;
 
   const root = document.getElementById("view-budget");
   if (!root) return;
@@ -78,16 +84,6 @@
     return a + " – " + b;
   }
 
-  function formatLongDate(ymd) {
-    return parseYmd(ymd).toLocaleDateString("en-US", {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-      timeZone: TZ
-    });
-  }
-
   function formatShortDate(ymd) {
     return parseYmd(ymd).toLocaleDateString("en-US", {
       month: "short",
@@ -112,6 +108,13 @@
 
   function centsToDollarInput(cents) {
     return ((Number(cents) || 0) / 100).toFixed(2);
+  }
+
+  function normalizeCategory(cat) {
+    const raw = String(cat || "").trim();
+    if (CATEGORIES.includes(raw)) return raw;
+    if (CATEGORY_MAP[raw]) return CATEGORY_MAP[raw];
+    return "Other";
   }
 
   /* ---------- State ---------- */
@@ -160,14 +163,15 @@
       parsed.weeks = parsed.weeks.map((w) => ({
         id: String(w.id),
         date: w.date,
-        income: w.income == null ? null : Number(w.income),
+        /* Keep field for compatibility; income overrides are ignored in math/UI */
+        income: null,
         archived: !!w.archived,
         items: Array.isArray(w.items)
           ? w.items.map((it) => ({
               id: String(it.id),
               name: String(it.name || ""),
               amount: Number(it.amount) || 0,
-              category: CATEGORIES.includes(it.category) ? it.category : "Other",
+              category: normalizeCategory(it.category),
               done: !!it.done,
               recurring: it.recurring !== false
             }))
@@ -188,7 +192,7 @@
         updateSaveUI();
       } catch (e) {
         console.warn("Budget save failed", e);
-        setSaveStatus("Couldn’t save — storage may be full", true);
+        setSaveStatus("Couldn’t save", true);
       }
     }
     dirty = true;
@@ -201,9 +205,9 @@
     }
   }
 
-  function weekIncome(week) {
-    if (week.income == null) return Number(state.pay) || 0;
-    return Number(week.income) || 0;
+  /** Always weekly take-home — paycheck overrides removed from UI/math. */
+  function weekIncome(_week) {
+    return Number(state.pay) || 0;
   }
 
   function weekAllocated(week) {
@@ -220,12 +224,14 @@
     return { done: done, total: items.length };
   }
 
-  /** Archive past Wednesdays; ensure current + upcoming exist. */
+  /** Archive past Wednesdays; ensure current + ~6 upcoming exist. */
   function syncWeeks() {
     const cur = currentWednesdayYmd(new Date());
     state.weeks.forEach((w) => {
       if (w.date < cur) w.archived = true;
       else w.archived = false;
+      /* Normalize: never use per-week income override */
+      w.income = null;
     });
 
     const byDate = new Map(state.weeks.map((w) => [w.date, w]));
@@ -247,7 +253,7 @@
             id: id + "-" + items.length,
             name: it.name,
             amount: it.amount,
-            category: it.category,
+            category: normalizeCategory(it.category),
             done: false,
             recurring: true
           });
@@ -278,19 +284,10 @@
   }
 
   function updateSaveUI() {
-    const btn = root.querySelector("[data-budget-save-btn]");
     if (dirty) {
-      setSaveStatus("Unsaved changes");
-      if (btn) {
-        btn.disabled = false;
-        btn.textContent = "Save changes";
-      }
+      setSaveStatus("Saving…");
     } else {
-      setSaveStatus("All changes saved");
-      if (btn) {
-        btn.disabled = true;
-        btn.textContent = "Save changes";
-      }
+      setSaveStatus("Saved");
     }
   }
 
@@ -319,6 +316,24 @@
       .join("");
   }
 
+  function renderPaySettings() {
+    return `
+      <div class="budget-settings budget-paycheck form-panel">
+        <h3>Your paycheck</h3>
+        <div class="form-grid two">
+          <div class="field">
+            <label for="budget-pay">Weekly take-home ($)</label>
+            <input class="input input-lg" type="number" inputmode="decimal" step="0.01" min="0" id="budget-pay" value="${centsToDollarInput(state.pay)}" />
+          </div>
+          <div class="field">
+            <label for="budget-opening">Starting cash ($)</label>
+            <input class="input input-lg" type="number" inputmode="decimal" step="0.01" min="0" id="budget-opening" value="${centsToDollarInput(state.opening)}" />
+          </div>
+        </div>
+        <p class="hint" style="margin-top:0.65rem;margin-bottom:0">Applies to every Wednesday. Stays on this device.</p>
+      </div>`;
+  }
+
   function renderDashboard(weeks) {
     const paySum = weeks.reduce((s, w) => s + weekIncome(w), 0);
     const allocSum = weeks.reduce((s, w) => s + weekAllocated(w), 0);
@@ -329,33 +344,30 @@
         <div class="budget-dash-main">
           <p class="budget-dash-label">Planned money left</p>
           <p class="budget-dash-value">${formatCents(left)}</p>
-          <p class="budget-dash-sub">After every allocation in this period${state.opening ? " (includes starting cash)" : ""}.</p>
+          <p class="budget-dash-sub">${state.opening ? "Includes starting cash." : "After your plan for these weeks."}</p>
         </div>
         <div class="budget-dash-side">
           <div class="budget-stat">
-            <p class="budget-dash-label">Total take-home pay</p>
+            <p class="budget-dash-label">Take-home</p>
             <p class="budget-stat-value">${formatCents(paySum)}</p>
-            <p class="budget-dash-sub">${payCount} Wednesday paycheck${payCount === 1 ? "" : "s"}</p>
+            <p class="budget-dash-sub">${payCount} paycheck${payCount === 1 ? "" : "s"}</p>
           </div>
           <div class="budget-stat">
-            <p class="budget-dash-label">Allocated to your plan</p>
+            <p class="budget-dash-label">Allocated</p>
             <p class="budget-stat-value">${formatCents(allocSum)}</p>
-            <p class="budget-dash-sub">Bills, debt, reserves &amp; essentials</p>
+            <p class="budget-dash-sub">Bills &amp; essentials</p>
           </div>
         </div>
       </div>`;
   }
 
   function renderItemRow(week, item) {
-    const undo = item.done
-      ? `<button type="button" class="budget-link-btn" data-budget-undo="${escapeHtml(week.id)}" data-item-id="${escapeHtml(item.id)}">Undo</button>`
-      : "";
     return `
       <li class="budget-item${item.done ? " is-done" : ""}" data-item-id="${escapeHtml(item.id)}">
         <label class="budget-check">
           <input type="checkbox" data-budget-toggle="${escapeHtml(week.id)}" data-item-id="${escapeHtml(item.id)}" ${item.done ? "checked" : ""} />
           <span class="budget-item-body">
-            <span class="budget-item-name">${escapeHtml(item.name || "Untitled")}</span>
+            <button type="button" class="budget-item-name-btn" data-budget-edit-item="${escapeHtml(week.id)}" data-item-id="${escapeHtml(item.id)}">${escapeHtml(item.name || "Untitled")}</button>
             <span class="budget-item-meta">
               <span class="budget-cat">${escapeHtml(item.category || "Other")}</span>
               ${item.recurring === false ? '<span class="budget-once">One-time</span>' : ""}
@@ -364,9 +376,8 @@
         </label>
         <div class="budget-item-right">
           <span class="budget-item-amt">${formatCents(item.amount)}</span>
-          ${undo}
-          <button type="button" class="budget-icon-btn" data-budget-edit-item="${escapeHtml(week.id)}" data-item-id="${escapeHtml(item.id)}" aria-label="Edit">✎</button>
-          <button type="button" class="budget-icon-btn danger" data-budget-del-item="${escapeHtml(week.id)}" data-item-id="${escapeHtml(item.id)}" aria-label="Delete">✕</button>
+          <button type="button" class="budget-text-btn" data-budget-edit-item="${escapeHtml(week.id)}" data-item-id="${escapeHtml(item.id)}">Edit</button>
+          <button type="button" class="budget-text-btn danger" data-budget-del-item="${escapeHtml(week.id)}" data-item-id="${escapeHtml(item.id)}">Remove</button>
         </div>
       </li>`;
   }
@@ -374,10 +385,9 @@
   function renderWeekCard(week, expanded) {
     const handled = weekHandled(week);
     const left = weekLeftover(week);
-    const income = weekIncome(week);
     const itemsHtml =
       (week.items || []).length === 0
-        ? `<p class="budget-empty-hint">No bills yet. Tap <strong>+ Add bill or debt</strong> to start.</p>`
+        ? `<p class="budget-empty-hint">No bills yet. Tap <strong>+ Add bill</strong> to start.</p>`
         : `<ul class="budget-item-list">${(week.items || []).map((it) => renderItemRow(week, it)).join("")}</ul>`;
 
     return `
@@ -388,25 +398,11 @@
             <p class="budget-week-range">${escapeHtml(formatWeekRange(week.date))}</p>
           </div>
           <div class="budget-week-summary">
-            <p class="budget-week-left">${formatCents(left)} <span>left over</span></p>
-            <p class="budget-week-handled">${handled.done}/${handled.total} handled</p>
+            <p class="budget-week-left">${formatCents(left)} <span>left</span></p>
+            <p class="budget-week-handled">${handled.done}/${handled.total} paid</p>
           </div>
         </button>
-        ${
-          expanded
-            ? `<div class="budget-week-body">
-            <div class="budget-week-toolbar">
-              <p class="budget-week-title">Wednesday paycheck · ${escapeHtml(formatLongDate(week.date))}</p>
-              <label class="budget-inline-field">
-                <span>Paycheck override ($)</span>
-                <input type="number" inputmode="decimal" step="0.01" min="0" class="input" data-budget-income="${escapeHtml(week.id)}" value="${week.income == null ? "" : centsToDollarInput(week.income)}" placeholder="${centsToDollarInput(state.pay)}" />
-              </label>
-            </div>
-            <p class="hint" style="margin:0 0 0.75rem">Default weekly pay: ${formatCents(income)}${week.income == null ? " (from settings)" : " (override)"}.</p>
-            ${itemsHtml}
-          </div>`
-            : ""
-        }
+        ${expanded ? `<div class="budget-week-body">${itemsHtml}</div>` : ""}
       </article>`;
   }
 
@@ -415,13 +411,13 @@
       <div class="budget-modal" id="budget-modal" hidden>
         <div class="budget-modal-backdrop" data-budget-modal-close></div>
         <div class="budget-modal-panel" role="dialog" aria-modal="true" aria-labelledby="budget-modal-title">
-          <h3 id="budget-modal-title">Add bill or debt</h3>
+          <h3 id="budget-modal-title">Add bill</h3>
           <form id="budget-item-form" class="budget-form" novalidate>
             <input type="hidden" name="editWeekId" value="" />
             <input type="hidden" name="editItemId" value="" />
             <div class="field">
               <label for="budget-item-name">Name</label>
-              <input class="input input-lg" id="budget-item-name" name="name" required placeholder="e.g. Phone bill" autocomplete="off" />
+              <input class="input input-lg" id="budget-item-name" name="name" required placeholder="e.g. Groceries" autocomplete="off" />
             </div>
             <div class="field">
               <label for="budget-item-amount">Amount (dollars)</label>
@@ -432,12 +428,12 @@
               <select class="select-input input-lg" id="budget-item-category" name="category">${categoryOptions("Other")}</select>
             </div>
             <div class="field">
-              <label for="budget-item-week">Paycheck week</label>
+              <label for="budget-item-week">Which week</label>
               <select class="select-input input-lg" id="budget-item-week" name="weekId"></select>
             </div>
             <label class="budget-check-row">
               <input type="checkbox" id="budget-item-recurring" name="recurring" checked />
-              <span>Recurring each payday <span class="hint">(uncheck for one-time debts)</span></span>
+              <span>Comes back each payday <span class="hint">(uncheck for one-time)</span></span>
             </label>
             <div class="form-actions" style="margin-top:1rem">
               <button type="submit" class="btn btn-primary btn-lg">Save</button>
@@ -465,60 +461,33 @@
         <div>
           <p class="hero-eyebrow">Payday budget</p>
           <h2>Budget</h2>
-          <p>Plan each payday. Mark bills paid. See what’s left.</p>
+          <p>Plan this week’s money. Mark bills paid. See what’s left.</p>
         </div>
         <div class="budget-save-row">
-          <span class="budget-save-status" data-budget-save-status>All changes saved</span>
-          <button type="button" class="btn btn-secondary" data-budget-save-btn disabled>Save changes</button>
+          <span class="budget-save-status" data-budget-save-status>Saved</span>
         </div>
       </div>
 
+      ${activeTab === "current" ? renderPaySettings() : ""}
+
       <div class="budget-actions">
-        <button type="button" class="btn btn-primary btn-lg" data-budget-add ${activeTab === "archived" ? "disabled" : ""}>+ Add bill or debt</button>
+        <button type="button" class="btn btn-primary btn-lg" data-budget-add ${activeTab === "archived" ? "disabled" : ""}>+ Add bill</button>
       </div>
 
       <div class="budget-tabs" role="tablist" aria-label="Budget periods">
-        <button type="button" role="tab" class="budget-tab${activeTab === "current" ? " active" : ""}" data-budget-tab="current" aria-selected="${activeTab === "current"}">Current &amp; upcoming</button>
-        <button type="button" role="tab" class="budget-tab${activeTab === "archived" ? " active" : ""}" data-budget-tab="archived" aria-selected="${activeTab === "archived"}">Archived weeks (${archivedCount})</button>
+        <button type="button" role="tab" class="budget-tab${activeTab === "current" ? " active" : ""}" data-budget-tab="current" aria-selected="${activeTab === "current"}">This payday</button>
+        <button type="button" role="tab" class="budget-tab${activeTab === "archived" ? " active" : ""}" data-budget-tab="archived" aria-selected="${activeTab === "archived"}">Past${archivedCount ? " (" + archivedCount + ")" : ""}</button>
       </div>
-      <p class="hint budget-tz-note">Wednesday–Tuesday · New York time</p>
 
       ${activeTab === "current" ? renderDashboard(weeks) : ""}
 
-      <div class="budget-weeks-head">
-        <h3>${activeTab === "archived" ? "Archived weeks" : "Paycheck weeks"}</h3>
-      </div>
       <div class="budget-week-list">
         ${
           weeks.length
             ? weeks.map((w) => renderWeekCard(w, w.id === expandedWeekId)).join("")
-            : `<div class="empty-state">${activeTab === "archived" ? "No archived weeks yet. Past Wednesdays move here automatically." : "Add your first bill."}</div>`
+            : `<div class="empty-state">${activeTab === "archived" ? "No past weeks yet." : "Add your first bill."}</div>`
         }
       </div>
-
-      ${
-        activeTab === "current"
-          ? `<div class="budget-add-week-wrap">
-          <button type="button" class="btn btn-secondary btn-lg" data-budget-add-week>+ Add next Wednesday</button>
-          <p class="hint">New weeks copy recurring bills. One-time debts do not repeat.</p>
-        </div>
-
-        <div class="budget-settings form-panel">
-          <h3>Your pay settings</h3>
-          <div class="form-grid two">
-            <div class="field">
-              <label for="budget-pay">Weekly take-home pay ($)</label>
-              <input class="input input-lg" type="number" inputmode="decimal" step="0.01" min="0" id="budget-pay" value="${centsToDollarInput(state.pay)}" />
-            </div>
-            <div class="field">
-              <label for="budget-opening">Starting savings / cash ($)</label>
-              <input class="input input-lg" type="number" inputmode="decimal" step="0.01" min="0" id="budget-opening" value="${centsToDollarInput(state.opening)}" />
-            </div>
-          </div>
-          <p class="hint" style="margin-top:0.75rem;margin-bottom:0">Every Wednesday. Applies to weeks without a paycheck override. Everything stays on this device.</p>
-        </div>`
-          : ""
-      }
 
       ${renderModal()}
     `;
@@ -550,13 +519,12 @@
     weekSelect.innerHTML = weekOptions(defaultWeek);
     form.name.value = opts.name || "";
     form.amount.value = opts.amount != null ? centsToDollarInput(opts.amount) : "";
-    form.category.value = opts.category || "Food";
+    form.category.value = normalizeCategory(opts.category || "Food");
     form.recurring.checked = opts.recurring !== false;
     form.editWeekId.value = opts.editWeekId || "";
     form.editItemId.value = opts.editItemId || "";
-    if (title) title.textContent = opts.editItemId ? "Edit bill or debt" : "Add bill or debt";
+    if (title) title.textContent = opts.editItemId ? "Edit bill" : "Add bill";
 
-    /* Prefer Food as gentle default for new items */
     if (!opts.editItemId && !opts.category) form.category.value = "Food";
 
     modal.hidden = false;
@@ -569,8 +537,6 @@
   }
 
   function wireDom() {
-    root.querySelector("[data-budget-save-btn]")?.addEventListener("click", () => persist(true));
-
     root.querySelectorAll("[data-budget-tab]").forEach((btn) => {
       btn.addEventListener("click", () => {
         activeTab = btn.getAttribute("data-budget-tab");
@@ -592,7 +558,7 @@
       const form = e.target;
       const name = (form.name.value || "").trim();
       const amount = dollarsToCents(form.amount.value);
-      const category = form.category.value || "Other";
+      const category = normalizeCategory(form.category.value || "Other");
       const weekId = form.weekId.value;
       const recurring = !!form.recurring.checked;
       const editWeekId = form.editWeekId.value;
@@ -667,19 +633,10 @@
       });
     });
 
-    root.querySelectorAll("[data-budget-undo]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const week = findWeek(btn.getAttribute("data-budget-undo"));
-        const item = week && findItem(week, btn.getAttribute("data-item-id"));
-        if (!item) return;
-        item.done = false;
-        persist(false);
-        render();
-      });
-    });
-
     root.querySelectorAll("[data-budget-edit-item]").forEach((btn) => {
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         const weekId = btn.getAttribute("data-budget-edit-item");
         const week = findWeek(weekId);
         const item = week && findItem(week, btn.getAttribute("data-item-id"));
@@ -710,17 +667,6 @@
       });
     });
 
-    root.querySelectorAll("[data-budget-income]").forEach((input) => {
-      input.addEventListener("change", () => {
-        const week = findWeek(input.getAttribute("data-budget-income"));
-        if (!week) return;
-        const raw = String(input.value || "").trim();
-        week.income = raw === "" ? null : dollarsToCents(raw);
-        persist(false);
-        render();
-      });
-    });
-
     const payInput = root.querySelector("#budget-pay");
     const openingInput = root.querySelector("#budget-opening");
     if (payInput) {
@@ -737,39 +683,6 @@
         render();
       });
     }
-
-    root.querySelector("[data-budget-add-week]")?.addEventListener("click", () => {
-      const vis = visibleWeeks();
-      const last = vis.length
-        ? vis[vis.length - 1]
-        : state.weeks.slice().sort((a, b) => (a.date < b.date ? -1 : 1)).pop();
-      const nextDate = last ? addDaysYmd(last.date, 7) : currentWednesdayYmd(new Date());
-      if (state.weeks.some((w) => w.date === nextDate)) {
-        expandedWeekId = state.weeks.find((w) => w.date === nextDate).id;
-        render();
-        return;
-      }
-      const id = nextWeekId(state.weeks);
-      const items = [];
-      if (last) {
-        (last.items || []).forEach((it) => {
-          if (it.recurring === false) return;
-          items.push({
-            id: id + "-" + items.length,
-            name: it.name,
-            amount: it.amount,
-            category: it.category,
-            done: false,
-            recurring: true
-          });
-        });
-      }
-      const week = { id: id, date: nextDate, income: null, items: items, archived: false };
-      state.weeks.push(week);
-      expandedWeekId = id;
-      persist(false);
-      render();
-    });
   }
 
   /* Re-sync when tab becomes visible (new Wednesday) */

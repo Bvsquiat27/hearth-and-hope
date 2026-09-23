@@ -29,7 +29,7 @@ Open `http://127.0.0.1:8080`.
 ## Live
 
 - GitHub Pages: https://bvsquiat27.github.io/hearth-and-hope/
-- Android APK: see GitHub Releases (v1.2.0+)
+- Android APK: see GitHub Releases (v1.2.1+)
 
 ## License / data notes
 
