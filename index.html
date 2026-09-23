@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Hearth & Hope — warm, practical support for new and expecting mothers. Resources, local help, and dignity-first care." />
+  <meta name="theme-color" content="#3d6d86" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Hearth & Hope" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="application-name" content="Hearth & Hope" />
+  <title>Hearth & Hope — Support for Moms</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="emergency-banner" role="note">
+    <strong>In danger?</strong> Call <strong>911</strong> (or local emergency). For emotional crisis in the U.S., call or text <strong>988</strong>. This app is not emergency care.
+  </div>
+
+  <div id="install-banner" class="install-banner" hidden role="region" aria-label="Install app">
+    <div class="install-banner-inner">
+      <div class="install-banner-text">
+        <strong>Add Hearth &amp; Hope to your home screen</strong>
+        <p id="install-banner-hint">Keep resources and help one tap away — works offline for pages you’ve already opened.</p>
+      </div>
+      <div class="install-banner-actions">
+        <button type="button" class="btn btn-primary" id="install-btn" hidden>Install this app</button>
+        <button type="button" class="btn btn-ghost" id="install-dismiss" aria-label="Dismiss install tip">Not now</button>
+      </div>
+      <ol id="ios-install-steps" class="ios-install-steps" hidden>
+        <li>Tap the <strong>Share</strong> button in Safari</li>
+        <li>Scroll and tap <strong>Add to Home Screen</strong></li>
+        <li>Tap <strong>Add</strong></li>
+      </ol>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#home" data-nav>
+        <span class="logo-mark" aria-hidden="true">♥</span>
+        <span>Hearth &amp; Hope</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#home" data-nav>Home</a>
+        <a href="#resources" data-nav>Resources</a>
+        <a href="#directory" data-nav>Find help</a>
+        <a href="#help" data-nav>Get Help</a>
+        <a href="#about" data-nav>Our promise</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HOME -->
+    <section id="view-home" class="view active" aria-label="Home">
+      <div class="hero">
+        <p class="hero-eyebrow">For new &amp; expecting mothers</p>
+        <h1>You are valued. You are not alone. Help is near.</h1>
+        <p class="hero-lead">
+          Practical resources, kind local partners, and a simple way to reach out — at your pace, with your consent.
+        </p>
+        <p class="faith-line">Supporting life as Christ intended — with dignity for every mother.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#resources" data-nav>Explore resources</a>
+          <a class="btn btn-secondary" href="#directory" data-nav>Find help nearby</a>
+          <a class="btn btn-secondary" href="#help" data-nav>I’m pregnant</a>
+          <a class="btn btn-ghost" href="#help" data-nav>I’m a new mom</a>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <h2>How we walk with you</h2>
+        <p>Small, clear steps — never shame, never pressure.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon green" aria-hidden="true">📚</div>
+          <h3>Learn what you need</h3>
+          <p>Short, trustworthy guides on pregnancy, parenting, adoption, aid, and emotional support. Skip anything that isn’t for you today.</p>
+          <a class="btn btn-secondary" href="#resources" data-nav>Browse resources</a>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📍</div>
+          <h3>Find local care</h3>
+          <p>Pregnancy centers, maternity homes, churches, food and housing partners — pro-life aligned, woman-honoring.</p>
+          <a class="btn btn-secondary" href="#directory" data-nav>Open directory</a>
+        </article>
+        <article class="card">
+          <div class="card-icon cream" aria-hidden="true">✉️</div>
+          <h3>Let us draft the ask</h3>
+          <p>Tell us what you need. With your explicit OK, we open an email (or text) to nearby centers on your behalf.</p>
+          <a class="btn btn-secondary" href="#help" data-nav>Contact centers for me</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="view-resources" class="view" hidden aria-label="Resources">
+      <div class="section-head">
+        <h2>Resources</h2>
+        <p>Practical information — not a substitute for your doctor. You’re brave for seeking clarity.</p>
+      </div>
+      <div class="toolbar">
+        <label class="visually-hidden" for="resource-search" style="position:absolute;left:-9999px">Search resources</label>
+        <input type="search" id="resource-search" class="search-input" placeholder="Search resources…" autocomplete="off" />
+      </div>
+      <div class="chip-row" id="resource-chips" role="group" aria-label="Filter by category"></div>
+      <div class="card-grid" id="resource-grid" style="margin-top:1.25rem"></div>
+      <div id="resource-detail" class="resource-detail" hidden></div>
+    </section>
+
+    <!-- DIRECTORY -->
+    <section id="view-directory" class="view" hidden aria-label="Directory">
+      <div class="section-head">
+        <h2>Find help nearby</h2>
+        <p>Sample centers for this prototype. Filter by city or ZIP. We never list abortion providers.</p>
+      </div>
+      <div class="toolbar">
+        <label class="visually-hidden" for="loc-filter" style="position:absolute;left:-9999px">City or ZIP</label>
+        <input type="search" id="loc-filter" class="filter-input" placeholder="City or ZIP (e.g. Austin, 78701)" autocomplete="off" style="flex:1 1 200px" />
+        <label class="visually-hidden" for="type-filter" style="position:absolute;left:-9999px">Type</label>
+        <select id="type-filter" class="select-input" style="flex:0 1 200px"></select>
+      </div>
+      <div class="center-list" id="center-list"></div>
+    </section>
+
+    <!-- GET HELP -->
+    <section id="view-help" class="view" hidden aria-label="Get Help">
+      <div class="section-head">
+        <h2>Contact centers for me</h2>
+        <p>We’ll match nearby partners and draft a message. Nothing is sent until you consent and your own mail or messaging app opens.</p>
+      </div>
+
+      <form id="help-form" class="form-panel" novalidate>
+        <div class="form-grid two">
+          <div class="field">
+            <label for="firstName">First name</label>
+            <input class="input" type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="e.g. Maria" />
+          </div>
+          <div class="field">
+            <label for="location">City or ZIP</label>
+            <input class="input" type="text" id="location" name="location" required placeholder="e.g. Austin or 78701" autocomplete="postal-code" />
+          </div>
+        </div>
+
+        <div class="form-grid two" style="margin-top:1rem">
+          <div class="field">
+            <label for="email">Email <span class="hint" style="display:inline">(optional if you share a phone)</span></label>
+            <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone <span class="hint" style="display:inline">(optional if you share an email)</span></label>
+            <input class="input" type="tel" id="phone" name="phone" autocomplete="tel" placeholder="555-555-0100" />
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:1rem">
+          <label>Your situation <span class="hint">(select all that apply)</span></label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="needs" value="expecting" /> I’m expecting</label>
+            <label><input type="checkbox" name="needs" value="new-mom" /> I’m a new mom</label>
+            <label><input type="checkbox" name="needs" value="housing" /> I need housing</label>
+            <label><input type="checkbox" name="needs" value="supplies" /> I need supplies</label>
+            <label><input type="checkbox" name="needs" value="talk" /> I need someone to talk to</label>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:1rem">
+          <label for="message">Short message to centers</label>
+          <textarea class="input" id="message" name="message" rows="3" placeholder="Anything you’d like them to know (optional but helpful)"></textarea>
+        </div>
+
+        <div class="field" style="margin-top:1rem">
+          <label for="church">Church preference <span class="hint" style="display:inline">(optional)</span></label>
+          <input class="input" type="text" id="church" name="church" placeholder="e.g. open to any Christian church, or prefer Catholic…" />
+        </div>
+
+        <div id="match-preview" style="margin-top:1.25rem"></div>
+
+        <div class="preview-box">
+          <h4>Message preview</h4>
+          <pre id="message-preview">Fill in the form to see your draft…</pre>
+        </div>
+
+        <div class="consent-box">
+          <label>
+            <input type="checkbox" id="consent" name="consent" required />
+            <span>I allow this app to contact the selected centers on my behalf. I understand my mail or messaging app will open so I can review and send.</span>
+          </label>
+          <label style="margin-top:0.65rem">
+            <input type="checkbox" id="prefer-sms" name="preferSms" />
+            <span>Also try opening an SMS to the first matched center (if my phone supports <code>sms:</code> links).</span>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-success">Preview &amp; open email</button>
+          <button type="button" class="btn btn-ghost" id="copy-message">Copy message</button>
+        </div>
+
+        <div id="form-error" class="alert alert-error" hidden role="alert"></div>
+        <div id="form-success" class="alert alert-success" hidden role="status"></div>
+      </form>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="view-about" class="view" hidden aria-label="Our promise">
+      <div class="section-head">
+        <h2>Our promise</h2>
+        <p>Hearth &amp; Hope exists to honor mothers and protect life — without treating women as problems to solve.</p>
+      </div>
+
+      <div class="promise-grid">
+        <article class="promise-card">
+          <h3>Dignity for women</h3>
+          <p>You are brave and valued. We never shame past choices. No “you should have…” — only next steps that respect you.</p>
+        </article>
+        <article class="promise-card">
+          <h3>Support for life</h3>
+          <p>We support life as Christ intended: practical help, community, and hope. Faith appears as encouragement you can skip.</p>
+        </article>
+        <article class="promise-card">
+          <h3>No abortion referrals</h3>
+          <p>We do not list, link to, or refer to Planned Parenthood or any abortion clinic. Period.</p>
+        </article>
+        <article class="promise-card">
+          <h3>Your privacy</h3>
+          <p>This prototype keeps everything on your device. We draft messages you approve; your email or SMS app does the sending. We don’t upload your form to a server.</p>
+        </article>
+      </div>
+
+      <div class="disclaimer-block">
+        <h3>Important disclaimer</h3>
+        <p>
+          Hearth &amp; Hope provides general information and connection tools only. It is <strong>not</strong> a substitute for medical care, legal advice, or emergency services.
+          Always talk with a qualified clinician about your health. If you or someone else is in immediate danger, call <strong>911</strong> (or your local emergency number).
+        </p>
+        <p style="margin-top:0.75rem;margin-bottom:0">
+          Directory entries in this demo are fictional placeholders for product testing.
+        </p>
+      </div>
+
+      <div class="install-tip-card" id="about-install-tip">
+        <h3>Install this app</h3>
+        <p>Add Hearth &amp; Hope to your phone’s home screen for a calm, full-screen experience and offline access to pages you’ve opened.</p>
+        <ul class="install-howto">
+          <li><strong>iPhone (Safari):</strong> Share → Add to Home Screen → Add</li>
+          <li><strong>Android (Chrome):</strong> Menu ⋮ → Install app / Add to Home screen — or use the Install banner when it appears</li>
+        </ul>
+        <button type="button" class="btn btn-secondary" id="about-install-btn" hidden>Install this app</button>
+      </div>
+
+      <p style="margin-top:1.5rem">
+        <a class="btn btn-primary" href="#help" data-nav>Get help now</a>
+        <a class="btn btn-secondary" href="#home" data-nav>Back home</a>
+      </p>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Primary mobile">
+    <a href="#home" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">⌂</span>
+      <span>Home</span>
+    </a>
+    <a href="#resources" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">📚</span>
+      <span>Resources</span>
+    </a>
+    <a href="#directory" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">📍</span>
+      <span>Find help</span>
+    </a>
+    <a href="#help" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">✉️</span>
+      <span>Get Help</span>
+    </a>
+    <a href="#about" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">♡</span>
+      <span>Promise</span>
+    </a>
+  </nav>
+
+  <footer class="site-footer">
+    <p><strong>Hearth &amp; Hope</strong> — a caring companion for mothers.</p>
+    <p>Not medical advice · No abortion referrals · Built with respect for Angel Feliciano’s vision</p>
+  </footer>
+
+  <script src="data/centers.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
