@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Hearth & Hope — warm, practical support for new and expecting mothers. Resources, local help, and dignity-first care." />
+  <meta name="theme-color" content="#3d6d86" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Hearth & Hope" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="application-name" content="Hearth & Hope" />
+  <title>Hearth & Hope — Support for Moms</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="emergency-banner" role="note">
+    <strong>In danger?</strong> Call <strong>911</strong> (or local emergency). For emotional crisis in the U.S., call or text <strong>988</strong>. This app is not emergency care.
+  </div>
+
+  <div id="install-banner" class="install-banner" hidden role="region" aria-label="Install app">
+    <div class="install-banner-inner">
+      <div class="install-banner-text">
+        <strong>Add Hearth &amp; Hope to your home screen</strong>
+        <p id="install-banner-hint">Keep resources and help one tap away — works offline for pages you’ve already opened.</p>
+      </div>
+      <div class="install-banner-actions">
+        <button type="button" class="btn btn-primary" id="install-btn" hidden>Install this app</button>
+        <button type="button" class="btn btn-ghost" id="install-dismiss" aria-label="Dismiss install tip">Not now</button>
+      </div>
+      <ol id="ios-install-steps" class="ios-install-steps" hidden>
+        <li>Tap the <strong>Share</strong> button in Safari</li>
+        <li>Scroll and tap <strong>Add to Home Screen</strong></li>
+        <li>Tap <strong>Add</strong></li>
+      </ol>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#home" data-nav>
+        <span class="logo-mark" aria-hidden="true">♥</span>
+        <span>Hearth &amp; Hope</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#home" data-nav>Home</a>
+        <a href="#resources" data-nav>Resources</a>
+        <a href="#budget" data-nav>Budget</a>
+        <a href="#directory" data-nav>Find help</a>
+        <a href="#support" data-nav>Support</a>
+        <a href="#postpartum" data-nav>Postpartum</a>
+        <a href="#help" data-nav>Get Help</a>
+        <a href="#about" data-nav>Our promise</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HOME -->
+    <section id="view-home" class="view active" aria-label="Home">
+      <div class="hero">
+        <p class="hero-eyebrow">For moms &amp; moms-to-be</p>
+        <h1>You matter. Help is near.</h1>
+        <p class="hero-lead">
+          Simple guides. Real local help. You choose what happens next.
+        </p>
+        <p class="faith-line">We support life as Christ intended — with dignity for every mother.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="#directory" data-nav>Find help near me</a>
+          <a class="btn btn-secondary btn-lg" href="#help" data-nav>I’m pregnant — get help</a>
+          <a class="btn btn-secondary btn-lg" href="#help" data-nav>I’m a new mom</a>
+          <a class="btn btn-secondary btn-lg" href="#crisis" data-nav>I’m pregnant and scared</a>
+          <a class="btn btn-secondary btn-lg" href="#budget" data-nav>Plan this week’s money</a>
+          <a class="btn btn-secondary btn-lg" href="#support" data-nav>More support tools</a>
+          <a class="btn btn-ghost btn-lg" href="#resources" data-nav>Read guides</a>
+        </div>
+        <p class="next-hint">Start with <strong>Find help near me</strong> — enter your city or ZIP.</p>
+      </div>
+
+      <div class="section-head">
+        <h2>Three easy steps</h2>
+        <p>No shame. No pressure. Go at your pace.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon green" aria-hidden="true">📚</div>
+          <h3>1. Read short guides</h3>
+          <p>Pregnancy, parenting, adoption, money help, and someone to talk to.</p>
+          <a class="btn btn-secondary" href="#resources" data-nav>Open guides</a>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📍</div>
+          <h3>2. Find local help</h3>
+          <p>Real pregnancy centers and maternity help near your ZIP. We never list abortion clinics.</p>
+          <a class="btn btn-primary" href="#directory" data-nav>Find help</a>
+        </article>
+        <article class="card">
+          <div class="card-icon cream" aria-hidden="true">✉️</div>
+          <h3>3. Ask for help</h3>
+          <p>We draft a message. You review it. Nothing sends until you say yes.</p>
+          <a class="btn btn-secondary" href="#help" data-nav>Contact centers</a>
+        </article>
+        <article class="card">
+          <div class="card-icon green" aria-hidden="true">💵</div>
+          <h3>4. Plan payday</h3>
+          <p>Set weekly pay, add bills, and see what’s left — private on your phone.</p>
+          <a class="btn btn-secondary" href="#budget" data-nav>Open budget</a>
+        </article>
+      </div>
+
+      <div class="section-head" style="margin-top:2rem">
+        <h2>Support for this season</h2>
+        <p>Calm tools for crisis, appointments, first months, mentors, and more.</p>
+      </div>
+      <div class="card-grid" id="home-support-grid">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🕯️</div>
+          <h3>Postpartum beacon</h3>
+          <p>Light an anonymous glow so nearby moms know you’re not alone — and send kind notes.</p>
+          <a class="btn btn-primary" href="#postpartum" data-nav>Open beacon</a>
+        </article>
+        <article class="card">
+          <div class="card-icon green" aria-hidden="true">⏱️</div>
+          <h3>Contraction timer</h3>
+          <p>Big Start/Stop taps. Track length and time between — private on your phone.</p>
+          <a class="btn btn-secondary" href="#contractions" data-nav>Open timer</a>
+        </article>
+        <article class="card">
+          <div class="card-icon cream" aria-hidden="true">🍼</div>
+          <h3>Baby tracker</h3>
+          <p>Last fed, diapers left, simple sleep — stays on this device only.</p>
+          <a class="btn btn-secondary" href="#baby" data-nav>Open tracker</a>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">💛</div>
+          <h3>I’m pregnant and scared</h3>
+          <p>A short, gentle path to what you need most — then nearby help.</p>
+          <a class="btn btn-primary" href="#crisis" data-nav>Start here</a>
+        </article>
+        <article class="card">
+          <div class="card-icon cream" aria-hidden="true">🩺</div>
+          <h3>Ultrasound &amp; appointments</h3>
+          <p>What to expect, what to pack, and how to ask for a free or low-cost scan.</p>
+          <a class="btn btn-secondary" href="#ultrasound" data-nav>Open guide</a>
+        </article>
+        <article class="card">
+          <div class="card-icon green" aria-hidden="true">📅</div>
+          <h3>First 90 days</h3>
+          <p>A simple checklist for WIC, diapers, Medicaid pointers, and more.</p>
+          <a class="btn btn-secondary" href="#ninety" data-nav>Open checklist</a>
+        </article>
+        <article class="card">
+          <div class="card-icon cream" aria-hidden="true">🤝</div>
+          <h3>Ask a mentor mom</h3>
+          <p>Request a peer mentor through a nearby center — real people, not a bot.</p>
+          <a class="btn btn-secondary" href="#mentor" data-nav>Ask for a mentor</a>
+        </article>
+        <article class="card">
+          <div class="card-icon green" aria-hidden="true">🎁</div>
+          <h3>Request goods</h3>
+          <p>Diapers, formula, clothes, car seat — draft a kind ask to local help.</p>
+          <a class="btn btn-secondary" href="#goods" data-nav>Request supplies</a>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">👨‍👩‍👧</div>
+          <h3>Invite family to help</h3>
+          <p>Share a calm “how you can help” note with rides, money, or presence.</p>
+          <a class="btn btn-secondary" href="#invite" data-nav>Share help ideas</a>
+        </article>
+        <article class="card">
+          <div class="card-icon cream" aria-hidden="true">💼</div>
+          <h3>Work &amp; school</h3>
+          <p>Plain-English pregnancy workplace rights overview and schedule tips.</p>
+          <a class="btn btn-secondary" href="#work" data-nav>Read overview</a>
+        </article>
+        <article class="card">
+          <div class="card-icon green" aria-hidden="true">✨</div>
+          <h3>Stories of hope</h3>
+          <p>Optional short stories from scared → supported → parenting. Never guilt.</p>
+          <a class="btn btn-secondary" href="#stories" data-nav>Read stories</a>
+        </article>
+        <article class="card">
+          <div class="card-icon cream" aria-hidden="true">📄</div>
+          <h3>Build a resume</h3>
+          <p>Guided resume for moms — gaps are okay. Plus job email templates.</p>
+          <a class="btn btn-secondary" href="#resume" data-nav>Build resume</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="view-resources" class="view" hidden aria-label="Resources">
+      <div class="section-head">
+        <h2>Guides</h2>
+        <p>Short, plain answers. Not a doctor — call your clinic for medical care.</p>
+      </div>
+      <div class="toolbar">
+        <label class="visually-hidden" for="resource-search" style="position:absolute;left:-9999px">Search resources</label>
+        <input type="search" id="resource-search" class="search-input" placeholder="Search resources…" autocomplete="off" />
+      </div>
+      <div class="chip-row" id="resource-chips" role="group" aria-label="Filter by category"></div>
+      <div class="card-grid" id="resource-grid" style="margin-top:1.25rem"></div>
+      <div id="resource-detail" class="resource-detail" hidden></div>
+    </section>
+
+    <!-- DIRECTORY -->
+    <section id="view-directory" class="view" hidden aria-label="Directory">
+      <div class="section-head">
+        <h2>Find help near you</h2>
+        <p>Enter your <strong>city or ZIP</strong>. We’ll show real pregnancy help centers nearby. No abortion clinics. No Planned Parenthood.</p>
+      </div>
+      <div class="toolbar toolbar-friendly">
+        <label class="field-label" for="loc-filter">Your city or ZIP</label>
+        <input type="search" id="loc-filter" class="filter-input input-lg" placeholder="Example: Houston or 77002" autocomplete="off" />
+        <label class="field-label" for="type-filter">Type of help</label>
+        <select id="type-filter" class="select-input input-lg"></select>
+        <button type="button" class="btn btn-secondary btn-lg" id="use-my-location-dir">Use my location</button>
+      </div>
+      <p id="dir-match-note" class="hint" style="margin:0.5rem 0 0" hidden></p>
+      <div class="center-list" id="center-list"></div>
+    </section>
+
+    <!-- GET HELP -->
+    <section id="view-help" class="view" hidden aria-label="Get Help">
+      <div class="section-head">
+        <h2>Get help</h2>
+        <p>Tell us where you are and what you need. We’ll show the <strong>best place near you</strong> — then you tap to email or call. Nothing sends until you say yes.</p>
+      </div>
+
+      <form id="help-form" class="form-panel" novalidate>
+        <div class="form-grid two">
+          <div class="field">
+            <label for="firstName">Your first name</label>
+            <input class="input" type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="e.g. Maria" />
+          </div>
+          <div class="field">
+            <label for="location">Your city or ZIP</label>
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center">
+              <input class="input" type="text" id="location" name="location" required placeholder="e.g. New York 10001, Boise, or your ZIP" autocomplete="postal-code" style="flex:1 1 160px" />
+              <button type="button" class="btn btn-secondary" id="use-my-location-help" style="flex:0 0 auto">Use my location</button>
+            </div>
+            <p id="help-geo-note" class="hint" style="margin:0.35rem 0 0" hidden></p>
+          </div>
+        </div>
+
+        <div class="form-grid two" style="margin-top:1rem">
+          <div class="field">
+            <label for="email">Email <span class="hint" style="display:inline">(optional if you share a phone)</span></label>
+            <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone <span class="hint" style="display:inline">(optional if you share an email)</span></label>
+            <input class="input" type="tel" id="phone" name="phone" autocomplete="tel" placeholder="555-555-0100" />
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:1rem">
+          <label>Your situation <span class="hint">(select all that apply)</span></label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="needs" value="expecting" /> I’m expecting</label>
+            <label><input type="checkbox" name="needs" value="new-mom" /> I’m a new mom</label>
+            <label><input type="checkbox" name="needs" value="housing" /> I need housing</label>
+            <label><input type="checkbox" name="needs" value="food" /> I need food help</label>
+            <label><input type="checkbox" name="needs" value="supplies" /> I need supplies</label>
+            <label><input type="checkbox" name="needs" value="ultrasound" /> I need an ultrasound / appointment</label>
+            <label><input type="checkbox" name="needs" value="ride" /> I need a ride to an appointment</label>
+            <label><input type="checkbox" name="needs" value="mentor" /> Please connect me with a mentor mom</label>
+            <label><input type="checkbox" name="needs" value="talk" /> I need someone to talk to</label>
+            <label><input type="checkbox" name="needs" value="apply" /> Please help me apply for local aid</label>
+          </div>
+        </div>
+
+        <div id="match-preview" class="match-preview-slot" aria-live="polite"></div>
+
+        <div class="field" style="margin-top:1rem">
+          <label for="message">Short message to centers</label>
+          <textarea class="input" id="message" name="message" rows="3" placeholder="Anything you’d like them to know (optional but helpful)"></textarea>
+        </div>
+
+        <div class="field" style="margin-top:1rem">
+          <label for="church">Church preference <span class="hint" style="display:inline">(optional)</span></label>
+          <input class="input" type="text" id="church" name="church" placeholder="e.g. open to any Christian church, or prefer Catholic…" />
+        </div>
+
+        <div class="preview-box">
+          <h4>Message preview</h4>
+          <pre id="message-preview">Fill in the form to see your draft…</pre>
+        </div>
+
+        <div class="consent-box">
+          <label>
+            <input type="checkbox" id="consent" name="consent" required />
+            <span>I allow this app to contact the selected centers on my behalf. I understand my mail or messaging app will open so I can review and send.</span>
+          </label>
+          <label style="margin-top:0.65rem">
+            <input type="checkbox" id="prefer-sms" name="preferSms" />
+            <span>Also try opening an SMS to the first matched center (if my phone supports <code>sms:</code> links).</span>
+          </label>
+        </div>
+
+        <div class="form-actions help-actions">
+          <button type="submit" class="btn btn-success btn-lg" id="help-primary-btn">Email best match now</button>
+          <a class="btn btn-secondary btn-lg" id="help-call-btn" hidden href="tel:">Call</a>
+          <button type="button" class="btn btn-secondary btn-lg" id="help-sms-btn" hidden>Text best match</button>
+          <button type="button" class="btn btn-ghost btn-lg" id="copy-message">Copy message</button>
+        </div>
+
+        <div id="form-error" class="alert alert-error" hidden role="alert"></div>
+        <div id="form-success" class="alert alert-success" hidden role="status"></div>
+      </form>
+    </section>
+
+
+
+
+    <!-- SUPPORT HUB -->
+    <section id="view-support" class="view" hidden aria-label="Support">
+      <div class="section-head">
+        <h2>Support hub</h2>
+        <p>Practical tools for this season. Choose what fits — skip anything that doesn’t.</p>
+      </div>
+      <div class="card-grid" id="support-hub-grid">
+        <article class="card"><div class="card-icon" aria-hidden="true">🕯️</div><h3>Postpartum beacon</h3><p>Anonymous area glow + kind notes from moms nearby.</p><a class="btn btn-primary" href="#postpartum" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon green" aria-hidden="true">⏱️</div><h3>Contraction timer</h3><p>Log length and time between. Soft guidance only.</p><a class="btn btn-secondary" href="#contractions" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon cream" aria-hidden="true">🍼</div><h3>Baby tracker</h3><p>Feeds, diaper stock, sleep — private on-device.</p><a class="btn btn-secondary" href="#baby" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon green" aria-hidden="true">🔔</div><h3>Reminders &amp; sounds</h3><p>Gentle feed / stock nudges with soft chimes.</p><a class="btn btn-secondary" href="#reminders" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">💛</div><h3>I’m pregnant and scared</h3><p>Short guided path to nearby help.</p><a class="btn btn-primary" href="#crisis" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon cream" aria-hidden="true">🩺</div><h3>Ultrasound &amp; appointments</h3><p>What to expect and how to ask for help.</p><a class="btn btn-secondary" href="#ultrasound" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon green" aria-hidden="true">📅</div><h3>First 90 days</h3><p>Week-by-week checklist on your phone.</p><a class="btn btn-secondary" href="#ninety" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon cream" aria-hidden="true">🤝</div><h3>Ask a mentor</h3><p>Real volunteer moms via centers — not AI.</p><a class="btn btn-secondary" href="#mentor" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon green" aria-hidden="true">🎁</div><h3>Concrete goods</h3><p>Diapers, formula, clothes, car seat.</p><a class="btn btn-secondary" href="#goods" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">👨‍👩‍👧</div><h3>Family / co-parent invite</h3><p>Share how loved ones can help.</p><a class="btn btn-secondary" href="#invite" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon cream" aria-hidden="true">💼</div><h3>Work &amp; schedule</h3><p>US workplace rights overview (not legal advice).</p><a class="btn btn-secondary" href="#work" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon green" aria-hidden="true">✨</div><h3>Stories of hope</h3><p>Optional opt-in stories. Never guilt.</p><a class="btn btn-secondary" href="#stories" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon cream" aria-hidden="true">📄</div><h3>Resume &amp; job emails</h3><p>Build a resume and copy application templates.</p><a class="btn btn-secondary" href="#resume" data-nav>Open</a></article>
+      </div>
+      <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="#home" data-nav>Back home</a></p>
+    </section>
+
+    <!-- CRISIS PATH -->
+    <section id="view-crisis" class="view" hidden aria-label="Pregnant and scared">
+      <div class="section-head">
+        <h2>I’m pregnant and scared</h2>
+        <p>You’re brave for being here. We’ll take this one small step at a time — you stay in control.</p>
+      </div>
+      <div id="crisis-flow" class="form-panel support-panel"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- ULTRASOUND -->
+    <section id="view-ultrasound" class="view" hidden aria-label="Ultrasound companion">
+      <div class="section-head">
+        <h2>Ultrasound &amp; appointment companion</h2>
+        <p>Plain language for confirmation visits and early ultrasounds. Not medical advice — your clinician knows your care plan.</p>
+      </div>
+      <div id="ultrasound-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- NINETY DAYS -->
+    <section id="view-ninety" class="view" hidden aria-label="First 90 days">
+      <div class="section-head">
+        <h2>Single-mom first 90 days</h2>
+        <p>Check items off as you go. Progress stays on this phone. We explain programs — we never fake government enrollment.</p>
+      </div>
+      <div class="form-panel support-panel" style="margin-bottom:1rem">
+        <label class="field-label" for="ninety-zip">Your ZIP (optional — nudges Find help)</label>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center">
+          <input type="text" id="ninety-zip" class="input input-lg" inputmode="numeric" maxlength="10" placeholder="e.g. 77002" style="flex:1 1 140px" />
+          <a class="btn btn-secondary" href="#directory" data-nav id="ninety-find-help">Find help near me</a>
+        </div>
+      </div>
+      <div id="ninety-checklist" class="checklist-board"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- MENTOR -->
+    <section id="view-mentor" class="view" hidden aria-label="Ask a mentor">
+      <div class="section-head">
+        <h2>Ask a mentor mom</h2>
+        <p><strong>Real people</strong> — volunteer peer moms and center staff. This is <strong>not</strong> an AI chat and not a live bot.</p>
+      </div>
+      <div id="mentor-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- GOODS -->
+    <section id="view-goods" class="view" hidden aria-label="Request goods">
+      <div class="section-head">
+        <h2>Request concrete goods</h2>
+        <p>Choose what you need. We’ll draft a message to nearby centers — you review before anything sends.</p>
+      </div>
+      <div id="goods-form" class="form-panel support-panel"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a> · <a href="#budget" data-nav>Open budget</a></p>
+    </section>
+
+    <!-- INVITE -->
+    <section id="view-invite" class="view" hidden aria-label="Family invite">
+      <div class="section-head">
+        <h2>How you can help</h2>
+        <p>A calm note for family or a co-parent. No shame. Clear ways to show up.</p>
+      </div>
+      <div id="invite-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- WORK -->
+    <section id="view-work" class="view" hidden aria-label="Work and schedule">
+      <div class="section-head">
+        <h2>Work &amp; schedule</h2>
+        <p>General U.S. overview in plain English. <strong>Not legal advice.</strong> Laws vary by state and job. Ask a center or attorney for your situation.</p>
+      </div>
+      <div id="work-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- STORIES -->
+    <section id="view-stories" class="view" hidden aria-label="Stories of hope">
+      <div class="section-head">
+        <h2>Stories of hope</h2>
+        <p>Optional. Short, fictionalized composites inspired by common journeys — scared → supported → parenting. Never used to guilt anyone.</p>
+      </div>
+      <div id="stories-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+
+    <!-- RESUME -->
+    <section id="view-resume" class="view" hidden aria-label="Resume builder">
+      <div class="section-head">
+        <h2>Resume &amp; job emails</h2>
+        <p>A simple resume for moms. Caregiving and volunteering count. Gaps are okay — no shame. Saved on this phone only.</p>
+      </div>
+      <div id="resume-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#work" data-nav>← Work &amp; schedule</a> · <a href="#support" data-nav>Support hub</a></p>
+    </section>
+
+    <!-- BUDGET -->
+
+    <!-- POSTPARTUM BEACON -->
+    <section id="view-postpartum" class="view" hidden aria-label="Postpartum beacon">
+      <div class="section-head">
+        <h2>Postpartum beacon</h2>
+        <p>When the night feels heavy, light a soft glow. Other moms see an approximate area — never your exact home. Opt-in only. No names, photos, or chat.</p>
+      </div>
+
+      <div class="beacon-disclaimer card soft-card">
+        <p><strong>This is not emergency care.</strong> If you are in danger, call <strong>911</strong>. For emotional crisis in the U.S., call or text <strong>988</strong>. You can also <a href="#help" data-nav>Get Help</a> nearby.</p>
+      </div>
+
+      <div class="beacon-actions">
+        <label class="field">
+          <span>ZIP or city (optional if you allow location)</span>
+          <input type="text" id="beacon-zip" class="search-input" placeholder="e.g. 10001 or Dallas, TX" autocomplete="postal-code" />
+        </label>
+        <div id="beacon-duration" class="beacon-duration-row">
+          <p class="hint">How long should your light stay on?</p>
+          <div class="btn-row">
+            <button type="button" class="btn btn-secondary" id="beacon-light-8">Tonight (8 hours)</button>
+            <button type="button" class="btn btn-primary btn-lg" id="beacon-light-24">24 hours</button>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg beacon-big" id="beacon-light-on">Light my beacon</button>
+        <button type="button" class="btn btn-secondary btn-lg beacon-big" id="beacon-light-off" hidden>Turn off my light</button>
+        <p id="beacon-status" class="hint" role="status"></p>
+        <p id="beacon-count" class="beacon-count" aria-live="polite">Looking for lights…</p>
+      </div>
+
+      <div id="beacon-map" class="beacon-map" role="img" aria-label="Map of anonymous postpartum beacons"></div>
+      <p class="legend hint">Soft glow = a mom nearby (randomized within about 10 miles of a ZIP area). Your pin is never exact.</p>
+
+      <div id="beacon-my-notes" class="beacon-my-notes" hidden>
+        <h3>Notes for you</h3>
+        <p class="hint">Encouragement from other moms while your light is on.</p>
+        <div id="beacon-notes-list"></div>
+      </div>
+
+      <div id="beacon-encourage-panel" class="beacon-encourage card" hidden>
+        <h3>Send a kind note</h3>
+        <p class="hint">Short, anonymous encouragement. No names or contact info.</p>
+        <div id="beacon-note-chips" class="chip-row"></div>
+        <label class="field">
+          <span>Your note (max 180 characters)</span>
+          <textarea id="beacon-note-text" rows="3" maxlength="180" placeholder="You’re not alone…"></textarea>
+        </label>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="beacon-note-send">Send note</button>
+          <button type="button" class="btn btn-ghost" id="beacon-note-cancel">Cancel</button>
+        </div>
+        <p id="beacon-note-feedback" class="hint" role="status"></p>
+      </div>
+
+      <p class="hint" style="margin-top:1.25rem">
+        <a class="btn btn-secondary" href="#help" data-nav>Get Help</a>
+        <a class="btn btn-ghost" href="#reminders" data-nav>Reminders</a>
+        <a class="btn btn-ghost" href="#support" data-nav>← Support hub</a>
+      </p>
+    </section>
+
+    <!-- CONTRACTIONS -->
+    <section id="view-contractions" class="view" hidden aria-label="Contraction timer">
+      <div class="section-head">
+        <h2>Contraction timer</h2>
+        <p>Big taps. We log length and time between. Private on this device.</p>
+      </div>
+      <div class="card soft-card">
+        <p id="contraction-live" class="contraction-live" hidden></p>
+        <div class="btn-row mom-big-row">
+          <button type="button" class="btn btn-primary btn-lg" id="contraction-start">Start</button>
+          <button type="button" class="btn btn-secondary btn-lg" id="contraction-stop" hidden>Stop</button>
+        </div>
+        <p id="contraction-guidance" class="hint" style="margin-top:1rem"></p>
+        <p class="hint"><strong>Not medical advice.</strong> Talk to your care team. If you’re in danger, call 911. Crisis: 988. <a href="#help" data-nav>Get Help</a></p>
+      </div>
+      <div class="section-head" style="margin-top:1.5rem">
+        <h3>Recent</h3>
+      </div>
+      <div id="contraction-list"></div>
+      <p style="margin-top:1rem">
+        <button type="button" class="btn btn-ghost" id="contraction-clear">Clear log</button>
+        <a class="btn btn-ghost" href="#support" data-nav>← Support hub</a>
+      </p>
+    </section>
+
+    <!-- BABY TRACKER -->
+    <section id="view-baby" class="view" hidden aria-label="Baby tracker">
+      <div class="section-head">
+        <h2>Baby tracker</h2>
+        <p>Feeds, diapers, sleep — stays on your phone. Never shared to the beacon map.</p>
+      </div>
+
+      <div class="card soft-card">
+        <h3>Last fed</h3>
+        <p id="baby-last-fed" class="mom-stat">Not yet</p>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="baby-fed-breast">Breast</button>
+          <button type="button" class="btn btn-primary" id="baby-fed-bottle">Bottle</button>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span>Type (optional)</span>
+            <select id="baby-feed-type">
+              <option value="">—</option>
+              <option value="breast">Breast</option>
+              <option value="bottle">Bottle</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Oz (optional)</span>
+            <input type="number" id="baby-feed-oz" min="0" step="0.5" placeholder="e.g. 3" />
+          </label>
+        </div>
+        <button type="button" class="btn btn-secondary" id="baby-log-fed">Log feed</button>
+      </div>
+
+      <div class="card soft-card">
+        <h3>Diapers left</h3>
+        <p class="mom-stat"><span id="baby-diaper-stock">40</span></p>
+        <p id="baby-diaper-low" class="warn-banner" hidden></p>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary btn-lg" id="baby-use-diaper">Used one (−1)</button>
+        </div>
+        <p class="hint">Last change: <span id="baby-last-diaper">Not yet</span></p>
+        <div class="field-row">
+          <label class="field">
+            <span>Set stock</span>
+            <input type="number" id="baby-stock-input" min="0" />
+          </label>
+          <button type="button" class="btn btn-secondary" id="baby-set-stock">Save stock</button>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span>Low-stock alert at</span>
+            <input type="number" id="baby-low-threshold" min="0" />
+          </label>
+          <button type="button" class="btn btn-ghost" id="baby-set-low">Save</button>
+        </div>
+      </div>
+
+      <div class="card soft-card">
+        <h3>Sleep</h3>
+        <p id="baby-sleep-status" class="mom-stat">No sleep logged yet</p>
+        <div class="btn-row">
+          <button type="button" class="btn btn-secondary" id="baby-sleep-start">Sleep start</button>
+          <button type="button" class="btn btn-secondary" id="baby-sleep-end" hidden>Sleep end</button>
+        </div>
+      </div>
+
+      <p style="margin-top:1rem">
+        <a class="btn btn-secondary" href="#reminders" data-nav>Reminders &amp; sounds</a>
+        <a class="btn btn-ghost" href="#support" data-nav>← Support hub</a>
+      </p>
+    </section>
+
+    <!-- REMINDERS -->
+    <section id="view-reminders" class="view" hidden aria-label="Reminders and sounds">
+      <div class="section-head">
+        <h2>Reminders &amp; sounds</h2>
+        <p>Gentle nudges while the app is open. Soft chimes only — never sirens.</p>
+      </div>
+      <div class="card soft-card">
+        <label class="check-row"><input type="checkbox" id="remind-feed-enabled" /> Feed reminder every
+          <input type="number" id="remind-feed-hours" min="1" max="12" step="0.5" style="width:4rem;display:inline-block;margin:0 0.35rem" /> hours
+        </label>
+        <p id="remind-next-feed" class="hint"></p>
+        <label class="check-row"><input type="checkbox" id="remind-diaper-enabled" checked /> Alert when diaper stock is low</label>
+        <label class="check-row"><input type="checkbox" id="remind-contraction-enabled" checked /> Soft nudge if contractions look closer (not medical advice)</label>
+        <button type="button" class="btn btn-primary" id="remind-save" style="margin-top:0.75rem">Save reminders</button>
+      </div>
+      <div class="card soft-card">
+        <h3>Sounds</h3>
+        <label class="check-row"><input type="checkbox" id="sound-mute-toggle" /> Mute gentle sounds</label>
+        <button type="button" class="btn btn-secondary" id="sound-test">Play soft chime</button>
+        <p class="hint" style="margin-top:0.75rem">On the Android app, reminders work best while Hearth &amp; Hope is open. System notifications appear when the browser/WebView allows them.</p>
+      </div>
+      <p style="margin-top:1rem">
+        <a class="btn btn-ghost" href="#baby" data-nav>← Baby tracker</a>
+        <a class="btn btn-ghost" href="#support" data-nav>Support hub</a>
+      </p>
+    </section>
+
+    <section id="view-budget" class="view" hidden aria-label="Budget">
+      <!-- Filled by js/budget.js -->
+      <div class="section-head">
+        <h2>Budget</h2>
+        <p>Plan each payday. Mark bills paid. See what’s left.</p>
+      </div>
+      <p class="hint">Loading budget…</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="view-about" class="view" hidden aria-label="Our promise">
+      <div class="section-head">
+        <h2>Our promise</h2>
+        <p>We honor moms and protect life. You are never a problem to fix.</p>
+      </div>
+
+      <div class="promise-grid">
+        <article class="promise-card">
+          <h3>Dignity for women</h3>
+          <p>You are brave and valued. We never shame past choices. No “you should have…” — only next steps that respect you.</p>
+        </article>
+        <article class="promise-card">
+          <h3>Support for life</h3>
+          <p>We support life as Christ intended: practical help, community, and hope. Faith appears as encouragement you can skip.</p>
+        </article>
+        <article class="promise-card">
+          <h3>No abortion referrals</h3>
+          <p>We do not list, link to, or refer to Planned Parenthood or any abortion clinic. Period.</p>
+        </article>
+        <article class="promise-card">
+          <h3>Your privacy</h3>
+          <p>This prototype keeps everything on your device. We draft messages you approve; your email or SMS app does the sending. We don’t upload your form to a server.</p>
+        </article>
+      </div>
+
+      <div class="disclaimer-block">
+        <h3>Important disclaimer</h3>
+        <p>
+          Hearth &amp; Hope provides general information and connection tools only. It is <strong>not</strong> a substitute for medical care, legal advice, or emergency services.
+          Always talk with a qualified clinician about your health. If you or someone else is in immediate danger, call <strong>911</strong> (or your local emergency number).
+        </p>
+        <p style="margin-top:0.75rem;margin-bottom:0">
+          Local centers come from public Option Line (Heartbeat International) and Birthright directories (retrieved September 2026). Confirm hours by phone. More verified listings may be added over time. Enter any town or ZIP to find the nearest centers.
+        </p>
+      </div>
+
+      <div class="install-tip-card" id="about-install-tip">
+        <h3>Install this app</h3>
+        <p>Add Hearth &amp; Hope to your phone’s home screen for a calm, full-screen experience and offline access to pages you’ve opened.</p>
+        <ul class="install-howto">
+          <li><strong>iPhone (Safari):</strong> Share → Add to Home Screen → Add</li>
+          <li><strong>Android (Chrome):</strong> Menu ⋮ → Install app / Add to Home screen — or use the Install banner when it appears</li>
+        </ul>
+        <button type="button" class="btn btn-secondary" id="about-install-btn" hidden>Install this app</button>
+      </div>
+
+      <p style="margin-top:1.5rem">
+        <a class="btn btn-primary" href="#help" data-nav>Get help now</a>
+        <a class="btn btn-secondary" href="#home" data-nav>Back home</a>
+      </p>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Primary mobile">
+    <a href="#home" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">⌂</span>
+      <span>Home</span>
+    </a>
+    <a href="#resources" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">📚</span>
+      <span>Resources</span>
+    </a>
+    <a href="#budget" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">💵</span>
+      <span>Budget</span>
+    </a>
+    <a href="#directory" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">📍</span>
+      <span>Find help</span>
+    </a>
+    <a href="#support" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">💛</span>
+      <span>Support</span>
+    </a>
+    <a href="#help" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">✉️</span>
+      <span>Get Help</span>
+    </a>
+    <a href="#about" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">♡</span>
+      <span>Promise</span>
+    </a>
+  </nav>
+
+  <footer class="site-footer">
+    <p><strong>Hearth &amp; Hope</strong> — a caring companion for mothers.</p>
+    <p>Not medical advice · No abortion referrals · Built with respect for Angel Feliciano’s vision</p>
+  </footer>
+
+  <script src="data/centers.js"></script>
+  <script src="data/zips.js"></script>
+  <script src="js/geo.js"></script>
+  <script src="js/firebase-beacon-config.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/app.js"></script>
+  <script src="js/budget.js"></script>
+  <script src="js/support.js"></script>
+  <script src="js/mom-tools.js"></script>
+  <script src="js/beacon.js"></script>
+</body>
+</html>
