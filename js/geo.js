@@ -30,17 +30,85 @@
     return s;
   }
 
-  /** Resolve a query string (ZIP, "City, ST", or "City ST") to {lat,lng,city,state,zip}. */
+  /**
+   * Among HEARTH_ZIPS keys sharing prefix, pick closest numeric ZIP to target.
+   * Tries 4-digit then 3-digit (SCF). Returns {key, rec} or null.
+   */
+  function nearestZipByPrefix(zipOnly, zips) {
+    var zipNum = parseInt(zipOnly, 10);
+    if (!isFinite(zipNum)) return null;
+    var prefixes = [zipOnly.slice(0, 4), zipOnly.slice(0, 3)];
+    for (var pi = 0; pi < prefixes.length; pi++) {
+      var p = prefixes[pi];
+      if (!p || p.length < 3) continue;
+      var bestKey = null;
+      var bestDist = Infinity;
+      for (var zk in zips) {
+        if (zk.indexOf(p) !== 0) continue;
+        var d = Math.abs(parseInt(zk, 10) - zipNum);
+        if (d < bestDist) {
+          bestDist = d;
+          bestKey = zk;
+        }
+      }
+      if (bestKey && zips[bestKey]) {
+        return { key: bestKey, rec: zips[bestKey] };
+      }
+    }
+    return null;
+  }
+
+  /**
+   * Resolve a query string (ZIP, "City, ST", or "City ST") to
+   * {lat,lng,city,state,zip, matchedZip?}.
+   * For PO Box / unique ZIPs missing from HEARTH_ZIPS, falls back to nearest
+   * 4-digit then 3-digit (SCF) neighbor. `.zip` stays the user-typed ZIP;
+   * `.matchedZip` is the centroid ZIP actually used when they differ.
+   */
   function lookupZip(query) {
     var q = (query || "").trim();
     if (!q) return null;
     var zips = w.HEARTH_ZIPS || {};
     var cities = w.HEARTH_CITIES || {};
+    var zipCoords = w.HEARTH_ZIP_COORDS || {};
 
     var zipOnly = normalizeZip(q);
-    if (/^\d{5}$/.test(zipOnly) && zips[zipOnly]) {
-      var z = zips[zipOnly];
-      return { lat: z.lat, lng: z.lng, city: z.city, state: z.state, zip: zipOnly };
+    if (/^\d{5}$/.test(zipOnly)) {
+      if (zips[zipOnly]) {
+        var z = zips[zipOnly];
+        return { lat: z.lat, lng: z.lng, city: z.city, state: z.state, zip: zipOnly };
+      }
+
+      // Exact miss in HEARTH_ZIPS: prefer zip-coords centroid when present,
+      // enrich city/state from nearest SCF neighbor; else use neighbor lat/lng.
+      var near = nearestZipByPrefix(zipOnly, zips);
+      if (zipCoords[zipOnly]) {
+        var pair = zipCoords[zipOnly];
+        var lat = Array.isArray(pair) ? pair[0] : pair.lat;
+        var lng = Array.isArray(pair) ? pair[1] : pair.lng;
+        if (lat != null && lng != null) {
+          return {
+            lat: lat,
+            lng: lng,
+            city: near ? near.rec.city : null,
+            state: near ? near.rec.state : null,
+            zip: zipOnly,
+            matchedZip: near ? near.key : null
+          };
+        }
+      }
+      if (near) {
+        return {
+          lat: near.rec.lat,
+          lng: near.rec.lng,
+          city: near.rec.city,
+          state: near.rec.state,
+          zip: zipOnly,
+          matchedZip: near.key
+        };
+      }
+      // Valid 5-digit with no SCF neighbor in DB — fail closed (no city parse)
+      return null;
     }
 
     // "City, ST" or "City ST"
@@ -65,13 +133,22 @@
       return { lat: h.lat, lng: h.lng, city: h.city, state: h.state, zip: hits[0] };
     }
 
-    // Partial ZIP prefix — use first matching ZIP
-    if (/^\d{3,5}$/.test(zipOnly)) {
+    // Partial ZIP prefix (3–4 digits typed) — closest numeric among matches
+    if (/^\d{3,4}$/.test(zipOnly)) {
+      var bestKey = null;
+      var bestDist = Infinity;
+      var zipNum = parseInt((zipOnly + "00000").slice(0, 5), 10);
       for (var zk in zips) {
-        if (zk.indexOf(zipOnly) === 0) {
-          var zp = zips[zk];
-          return { lat: zp.lat, lng: zp.lng, city: zp.city, state: zp.state, zip: zk };
+        if (zk.indexOf(zipOnly) !== 0) continue;
+        var d = Math.abs(parseInt(zk, 10) - zipNum);
+        if (d < bestDist) {
+          bestDist = d;
+          bestKey = zk;
         }
+      }
+      if (bestKey && zips[bestKey]) {
+        var zp = zips[bestKey];
+        return { lat: zp.lat, lng: zp.lng, city: zp.city, state: zp.state, zip: bestKey };
       }
     }
     return null;
