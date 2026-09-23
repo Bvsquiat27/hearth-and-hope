@@ -1521,3 +1521,36 @@ body { font-size: 1.05rem; }
   }
   .bottom-nav a .bn-icon { font-size: 1.05rem; }
 }
+
+/* ---------- Neighborhood safety ---------- */
+.safety-panel {
+  max-width: 40rem;
+}
+.safety-steps {
+  margin: 1rem 0 0;
+  padding: 0.85rem 0.85rem 0.85rem 1.75rem;
+  background: var(--blue-soft);
+  border-radius: var(--radius);
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+.safety-steps[hidden] { display: none !important; }
+.safety-steps li { margin: 0.35rem 0; }
+.safety-links a {
+  font-weight: 600;
+  color: var(--blue-deep);
+}
+.safety-disclaimer-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1.2rem;
+}
+.safety-disclaimer-list li {
+  margin: 0.4rem 0;
+}
+@media (max-width: 720px) {
+  .bottom-nav a {
+    font-size: 0.58rem;
+    padding: 0.35rem 0.05rem;
+  }
+  .bottom-nav a .bn-icon { font-size: 1.05rem; }
+}
