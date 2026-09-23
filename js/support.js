@@ -87,7 +87,7 @@
       root.innerHTML = `
         <p class="step-pill">Step 2 of 3</p>
         <h3 class="support-h3">What do you need most right now?</h3>
-        <p class="hint">Pick one. You can ask for more later.</p>
+        <p class="hint">Choose one need for now — you can return for others.</p>
         <div class="choice-stack">
           <button type="button" class="btn btn-secondary btn-lg choice-btn" data-need="housing">A safe place to stay</button>
           <button type="button" class="btn btn-secondary btn-lg choice-btn" data-need="food">Food help</button>
