@@ -12,24 +12,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * Loads the Hearth &amp; Hope shell from assets. Official NSOPW (nsopw.gov)
- * pages stay inside this WebView so moms see the live government map without
- * leaving the app. No scraping; no undocumented API calls — browser UI only.
- */
 public class MainActivity extends AppCompatActivity {
     private WebView webView;
-
-    private static boolean isNsopwHost(String host) {
-        if (host == null) return false;
-        String h = host.toLowerCase();
-        return h.equals("nsopw.gov")
-                || h.equals("www.nsopw.gov")
-                || h.endsWith(".nsopw.gov")
-                || h.equals("ojp.gov")
-                || h.equals("www.ojp.gov")
-                || h.endsWith(".ojp.gov");
-    }
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -55,19 +39,13 @@ public class MainActivity extends AppCompatActivity {
                 Uri uri = request.getUrl();
                 String scheme = uri.getScheme() != null ? uri.getScheme() : "";
                 String url = uri.toString();
-                String host = uri.getHost();
 
                 // Keep local asset / file navigation inside the WebView
                 if ("file".equals(scheme) || url.startsWith("file:///android_asset/")) {
                     return false;
                 }
 
-                // Official NSOPW (and OJP sibling hosts if redirected) stay in-app
-                if (("http".equals(scheme) || "https".equals(scheme)) && isNsopwHost(host)) {
-                    return false;
-                }
-
-                // tel / sms / mailto / geo / other https -> system handlers
+                // tel: / sms: / mailto: / https external -> system handlers
                 if ("tel".equals(scheme) || "sms".equals(scheme) || "mailto".equals(scheme)
                         || "http".equals(scheme) || "https".equals(scheme)
                         || "geo".equals(scheme)) {
