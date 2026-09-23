@@ -1697,7 +1697,7 @@ body { font-size: 1.05rem; }
   }
 }
 
-/* ===== Postpartum Ember & mom tools (v1.5.3) ===== */
+/* ===== Postpartum Ember & mom tools (v1.6.0) ===== */
 .soft-card { background: var(--white); }
 .beacon-disclaimer { margin: 1rem 0 1.25rem; border-left: 4px solid var(--gold); }
 .beacon-disclaimer p { margin: 0; }
@@ -1936,7 +1936,7 @@ body { font-size: 1.05rem; }
 }
 
 
-/* ===== Hub navigation (v1.5.3) ===== */
+/* ===== Hub navigation (v1.6.0) ===== */
 .hero-compact { padding-bottom: 0.5rem; }
 .hero-compact .cta-row { display: none; }
 .hub-groups { display: flex; flex-direction: column; gap: 1.5rem; margin: 1rem 0 2rem; }
@@ -2262,3 +2262,59 @@ body { font-size: 1.05rem; }
   color: var(--muted);
 }
 .cx-empty { padding: 0.5rem 0 1rem; }
+
+
+/* ===== Ember remix + Account (v1.6.0) ===== */
+.ember-duration-picks .ember-dur.is-selected {
+  outline: 2px solid #e0b36a;
+  background: rgba(224, 179, 106, 0.22);
+  color: #f6e2b8;
+}
+.ember-recent-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.ember-recent-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 12px;
+  background: rgba(8, 14, 26, 0.55);
+  border: 1px solid rgba(180, 200, 230, 0.12);
+  color: #e8eef8;
+  font-size: 0.95rem;
+}
+.ember-recent-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #f2c66a;
+  box-shadow: 0 0 10px rgba(242, 198, 106, 0.85);
+  flex: 0 0 auto;
+}
+.ember-dot-halo { fill: rgba(224, 179, 106, 0.32); }
+.ember-dot {
+  fill: #f6cb6e;
+  stroke: #fff6d8;
+  stroke-width: 2.5;
+}
+.ember-account-nudge { margin-top: 1rem; border-left: 4px solid #e0b36a; }
+.account-card .field { margin-top: 0.75rem; }
+.account-card .btn-lg { min-height: 3rem; }
+.account-email { font-weight: 600; word-break: break-all; }
+#account-status.is-error,
+#account-sync-status.is-error { color: #c0392b; }
+.ember-night .ember-duration-picks .btn { flex: 1 1 40%; }
+/* Explicit: never fill states amber */
+.ember-state.is-lit,
+.ember-state.is-lit-2,
+.ember-state.is-lit-3,
+.ember-state.is-mine {
+  fill: rgba(90, 110, 145, 0.10) !important;
+  filter: none !important;
+}

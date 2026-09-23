@@ -125,7 +125,7 @@
       "support", "contractions", "baby", "reminders", "ultrasound", "ninety",
       "mentor", "goods", "invite", "work", "resume", "resources", "budget", "stories"
     ],
-    more: ["about"]
+    more: ["about", "account"]
   };
   function navGroupFor(id) {
     for (const [group, ids] of Object.entries(NAV_GROUPS)) {
@@ -156,6 +156,9 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
     if (id === "stories" && window.HearthSupport && HearthSupport.stories) {
       try { HearthSupport.stories(); } catch (e) {}
+    }
+    if (id === "account" && window.HearthAccount && HearthAccount.onView) {
+      try { HearthAccount.onView(); } catch (e) {}
     }
     if (id === "postpartum" && window.HearthBeacon && HearthBeacon.onView) {
       try { HearthBeacon.onView(); } catch (e) {}

@@ -9,3 +9,7 @@ id = "2601e4a71df740afa85abb7c8c308116"
 [[kv_namespaces]]
 binding = "HOPE"
 id = "05f6800a9e0e4d6abbabac726b9fd805"
+
+[[kv_namespaces]]
+binding = "USERS"
+id = "51812e29f6034ca39e8d850b7309d223"

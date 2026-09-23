@@ -402,7 +402,7 @@
   function onDotTap(emberId, x, y) {
     hideClusterPicker();
     var nearby = [];
-    var R = 18;
+    var R = 28;
     for (var i = 0; i < lastDotPositions.length; i++) {
       var p = lastDotPositions[i];
       if (Math.hypot(p.x - x, p.y - y) <= R) nearby.push(p);
@@ -486,7 +486,7 @@
           var halo = document.createElementNS(svg.namespaceURI, "circle");
           halo.setAttribute("cx", String(x));
           halo.setAttribute("cy", String(y));
-          halo.setAttribute("r", "20");
+          halo.setAttribute("r", "28");
           halo.setAttribute("class", "ember-dot-halo" + (mine ? " is-mine" : ""));
           halo.setAttribute("pointer-events", "none");
           dotsLayer.appendChild(halo);
@@ -494,7 +494,7 @@
           var dot = document.createElementNS(svg.namespaceURI, "circle");
           dot.setAttribute("cx", String(x));
           dot.setAttribute("cy", String(y));
-          dot.setAttribute("r", "8.5");
+          dot.setAttribute("r", "12");
           dot.setAttribute("class", "ember-dot" + (mine ? " is-mine" : ""));
           dot.setAttribute("tabindex", "0");
           dot.setAttribute("role", "button");
@@ -534,6 +534,38 @@
           total + " embers glowing tonight. Tap a golden light to send warmth.";
       }
     }
+    renderRecentlyLit(beaconsCache);
+  }
+
+  function relativeTime(ts) {
+    var s = Math.max(0, Math.round((Date.now() - (Number(ts) || 0)) / 1000));
+    if (s < 45) return "just now";
+    if (s < 3600) return Math.max(1, Math.round(s / 60)) + "m ago";
+    if (s < 86400) return Math.max(1, Math.round(s / 3600)) + "h ago";
+    return Math.max(1, Math.round(s / 86400)) + "d ago";
+  }
+
+  function renderRecentlyLit(data) {
+    var list = $("ember-recent-list");
+    if (!list) return;
+    var now = Date.now();
+    var items = Object.keys(data || {}).map(function (id) {
+      return Object.assign({ id: id }, data[id] || {});
+    }).filter(function (b) {
+      return b && !(b.expiresAt && b.expiresAt < now);
+    }).sort(function (a, b) {
+      return (b.createdAt || 0) - (a.createdAt || 0);
+    }).slice(0, 8);
+    if (!items.length) {
+      list.innerHTML = '<li class="hint">No embers lit yet. Be the first soft light.</li>';
+      return;
+    }
+    list.innerHTML = items.map(function (b) {
+      var st = b.state ? String(b.state).toUpperCase() : "US";
+      var when = relativeTime(b.createdAt);
+      return '<li><span class="ember-recent-dot" aria-hidden="true"></span> A mom · ' +
+        escapeHtml(st) + ' · ' + escapeHtml(when) + '</li>';
+    }).join("");
   }
 
   function listenBeaconsRest() {
@@ -554,7 +586,7 @@
     }
     poll();
     if (window.__hearthBeaconPoll) clearInterval(window.__hearthBeaconPoll);
-    window.__hearthBeaconPoll = setInterval(poll, 4000);
+    window.__hearthBeaconPoll = setInterval(poll, 3500);
   }
 
   function listenBeacons() {
@@ -646,14 +678,29 @@
       if (!base) return;
       var url = existing ? base + "/beacons/" + existing : base + "/beacons";
       var method = existing ? "PUT" : "POST";
+      setStatus("Lighting your ember…");
       fetch(url, {
         method: method,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       })
-        .then(function (r) { return r.json(); })
-        .then(function (j) { done(existing || j.id); })
-        .catch(function () { setStatus("Could not light your ember. Try again.", true); });
+        .then(function (r) {
+          return r.json().then(function (j) {
+            if (!r.ok) throw new Error((j && j.error) || ("HTTP " + r.status));
+            return j;
+          });
+        })
+        .then(function (j) {
+          var id = existing || (j && j.id);
+          if (!id) throw new Error("missing id");
+          /* keep local cache warm until next poll */
+          beaconsCache = Object.assign({}, beaconsCache);
+          beaconsCache[id] = payload;
+          done(id);
+        })
+        .catch(function (e) {
+          setStatus("Could not light your ember. " + (e && e.message ? e.message : "Try again."), true);
+        });
     }
 
     if (q) return resolveState(q, place);
@@ -819,14 +866,21 @@
   }
 
   function bind() {
+    var chosenHours = 24;
     var on24 = $("beacon-light-24");
     var on8 = $("beacon-light-8");
     var off = $("beacon-light-off");
-    if (on24) on24.addEventListener("click", function () { lightBeacon(24); });
-    if (on8) on8.addEventListener("click", function () { lightBeacon(8); });
+    function markDur(h) {
+      chosenHours = h;
+      if (on8) on8.classList.toggle("is-selected", h === 8);
+      if (on24) on24.classList.toggle("is-selected", h === 24);
+    }
+    if (on24) on24.addEventListener("click", function () { markDur(24); });
+    if (on8) on8.addEventListener("click", function () { markDur(8); });
     var primary = $("beacon-light-on");
-    if (primary) primary.addEventListener("click", function () { lightBeacon(24); });
+    if (primary) primary.addEventListener("click", function () { lightBeacon(chosenHours); });
     if (off) off.addEventListener("click", turnOff);
+    markDur(24);
 
     var send = $("beacon-note-send");
     if (send) send.addEventListener("click", sendNote);
