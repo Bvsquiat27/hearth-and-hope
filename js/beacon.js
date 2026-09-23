@@ -1,9 +1,9 @@
 /**
  * Postpartum Ember — peaceful dark US night map.
- * Soft amber/gold glowing dots for each live ember (coarse lat/lng only).
- * Soft state wash optional under dots. Opt-in. Expires.
- * Tap another mom's ember → send a note to that ember id. Own ember → notes inbox.
- * Anonymous. No PII. No baby-tracker data on public DB.
+ * ONLY soft amber/gold glowing dots for each live ember (coarse lat/lng).
+ * US state paths stay dark quiet outlines — never fill/wash when lit.
+ * Tap a glowing dot (not the state) → note that ember. Own ember → notes inbox.
+ * Opt-in. Expires. Anonymous. No PII. No baby-tracker data on public DB.
  */
 (function () {
   "use strict";
@@ -285,8 +285,8 @@
       '<feGaussianBlur stdDeviation="4" result="b"/>' +
       '<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>' +
       "</filter>" +
-      '<filter id="emberDotGlow" x="-120%" y="-120%" width="340%" height="340%">' +
-      '<feGaussianBlur stdDeviation="3.2" result="b"/>' +
+      '<filter id="emberDotGlow" x="-150%" y="-150%" width="400%" height="400%">' +
+      '<feGaussianBlur stdDeviation="5.5" result="b"/>' +
       '<feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>' +
       "</filter>";
     svg.appendChild(defs);
@@ -327,7 +327,7 @@
       path.setAttribute("data-state", st);
       path.setAttribute("class", "ember-state");
       path.setAttribute("aria-label", stateName(st));
-      path.addEventListener("click", function () { onStateTap(st); });
+      path.setAttribute("pointer-events", "none");
       g.appendChild(path);
     });
     svg.appendChild(g);
@@ -452,22 +452,13 @@
     beaconsCache = data || {};
     var counts = countByState(beaconsCache);
     var mid = myId();
-    var meta = myMeta();
-    var myState = meta && meta.expiresAt > Date.now() ? meta.state : "";
     var now = Date.now();
 
     if (mapRoot) {
+      /* Never wash/fill whole states — outlines stay dark & quiet. Dots only. */
       var paths = mapRoot.querySelectorAll(".ember-state");
       for (var i = 0; i < paths.length; i++) {
-        var st = paths[i].getAttribute("data-state");
-        var n = counts[st] || 0;
         paths[i].classList.remove("is-lit", "is-lit-2", "is-lit-3", "is-mine");
-        if (n > 0) {
-          paths[i].classList.add("is-lit");
-          if (n >= 3) paths[i].classList.add("is-lit-3");
-          else if (n >= 2) paths[i].classList.add("is-lit-2");
-        }
-        if (myState && st === myState) paths[i].classList.add("is-mine");
       }
 
       var svg = mapRoot.querySelector("svg.ember-us-svg");
@@ -495,7 +486,7 @@
           var halo = document.createElementNS(svg.namespaceURI, "circle");
           halo.setAttribute("cx", String(x));
           halo.setAttribute("cy", String(y));
-          halo.setAttribute("r", "11");
+          halo.setAttribute("r", "20");
           halo.setAttribute("class", "ember-dot-halo" + (mine ? " is-mine" : ""));
           halo.setAttribute("pointer-events", "none");
           dotsLayer.appendChild(halo);
@@ -503,7 +494,7 @@
           var dot = document.createElementNS(svg.namespaceURI, "circle");
           dot.setAttribute("cx", String(x));
           dot.setAttribute("cy", String(y));
-          dot.setAttribute("r", "4.5");
+          dot.setAttribute("r", "8.5");
           dot.setAttribute("class", "ember-dot" + (mine ? " is-mine" : ""));
           dot.setAttribute("tabindex", "0");
           dot.setAttribute("role", "button");
@@ -530,7 +521,6 @@
     }
 
     var total = Object.keys(counts).reduce(function (a, k) { return a + counts[k]; }, 0);
-    var statesLit = Object.keys(counts).length;
     var countEl = $("beacon-count");
     if (countEl) {
       if (!isBackendReady()) {
@@ -538,12 +528,10 @@
       } else if (total === 0) {
         countEl.textContent = "The night is quiet. Be the first soft ember.";
       } else if (total === 1) {
-        countEl.textContent = "One soft ember is glowing tonight — tap the golden dot.";
+        countEl.textContent = "One ember is glowing tonight — tap the golden light.";
       } else {
         countEl.textContent =
-          total + " soft embers glowing" +
-          (statesLit > 1 ? " · " + statesLit + " states" : "") +
-          ". Tap a golden dot to send warmth.";
+          total + " embers glowing tonight. Tap a golden light to send warmth.";
       }
     }
   }
@@ -557,7 +545,7 @@
         .then(function (r) { return r.json(); })
         .then(function (val) {
           renderBeacons(val || {});
-          setStatus("Live · soft embers update as moms opt in.");
+          setStatus("Live · glowing embers appear as soft golden lights when moms opt in.");
           updateLightUI();
         })
         .catch(function () {
@@ -590,7 +578,7 @@
         }
       });
       renderBeacons(val);
-      setStatus("Live · soft embers update as moms opt in.");
+      setStatus("Live · glowing embers appear as soft golden lights when moms opt in.");
       updateLightUI();
     };
     ref.on("value", unsub);
@@ -629,8 +617,8 @@
         updateLightUI();
         renderBeacons(beaconsCache);
         setStatus(
-          "Your ember is lit in " + stateName(payload.state) +
-          " for about " + hours + " hours. A soft glowing dot — never your home address."
+          "Your ember is glowing near " + stateName(payload.state) +
+          " for about " + hours + " hours — a soft golden light on the map, never your home."
         );
         if (window.HearthSounds) HearthSounds.play("chime");
         /* optimistic local paint */
