@@ -35,8 +35,13 @@ Open `http://127.0.0.1:8080`.
 ## Live
 
 - GitHub Pages: https://bvsquiat27.github.io/hearth-and-hope/
-- Android APK: see GitHub Releases (v1.5.0+)
+- Android APK: see GitHub Releases (v1.5.1+)
 
 ## License / data notes
 
 Local center listings from public Option Line and Birthright directories (see `source` / `source_date` on each record). ZIP centroids from SimpleMaps US Zips basic data. Verify hours before referral. No Planned Parenthood or abortion providers.
+
+
+## Postpartum Ember
+
+Live soft state-glow map for moms who opt in. Public REST API in `beacon-api/`.

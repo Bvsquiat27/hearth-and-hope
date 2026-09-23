@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="Hearth & Hope — warm, practical support for new and expecting mothers. Resources, local help, and dignity-first care." />
-  <meta name="theme-color" content="#3d6d86" />
+  <meta name="theme-color" content="#121a2a" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="Hearth & Hope" />
@@ -15,7 +15,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
   <link rel="apple-touch-icon" href="icons/icon-180.png" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -56,7 +55,7 @@
         <a href="#budget" data-nav>Budget</a>
         <a href="#directory" data-nav>Find help</a>
         <a href="#support" data-nav>Support</a>
-        <a href="#postpartum" data-nav>Postpartum</a>
+        <a href="#postpartum" data-nav>Ember</a>
         <a href="#help" data-nav>Get Help</a>
         <a href="#about" data-nav>Our promise</a>
       </nav>
@@ -123,9 +122,9 @@
       <div class="card-grid" id="home-support-grid">
         <article class="card">
           <div class="card-icon" aria-hidden="true">🕯️</div>
-          <h3>Postpartum beacon</h3>
+          <h3>Postpartum Ember</h3>
           <p>Light an anonymous glow so nearby moms know you’re not alone — and send kind notes.</p>
-          <a class="btn btn-primary" href="#postpartum" data-nav>Open beacon</a>
+          <a class="btn btn-primary" href="#postpartum" data-nav>Open Ember</a>
         </article>
         <article class="card">
           <div class="card-icon green" aria-hidden="true">⏱️</div>
@@ -328,7 +327,7 @@
         <p>Practical tools for this season. Choose what fits — skip anything that doesn’t.</p>
       </div>
       <div class="card-grid" id="support-hub-grid">
-        <article class="card"><div class="card-icon" aria-hidden="true">🕯️</div><h3>Postpartum beacon</h3><p>Anonymous area glow + kind notes from moms nearby.</p><a class="btn btn-primary" href="#postpartum" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">🕯️</div><h3>Postpartum Ember</h3><p>A soft night glow on your state + kind notes from moms awake with you.</p><a class="btn btn-primary" href="#postpartum" data-nav>Open</a></article>
         <article class="card"><div class="card-icon green" aria-hidden="true">⏱️</div><h3>Contraction timer</h3><p>Log length and time between. Soft guidance only.</p><a class="btn btn-secondary" href="#contractions" data-nav>Open</a></article>
         <article class="card"><div class="card-icon cream" aria-hidden="true">🍼</div><h3>Baby tracker</h3><p>Feeds, diaper stock, sleep — private on-device.</p><a class="btn btn-secondary" href="#baby" data-nav>Open</a></article>
         <article class="card"><div class="card-icon green" aria-hidden="true">🔔</div><h3>Reminders &amp; sounds</h3><p>Gentle feed / stock nudges with soft chimes.</p><a class="btn btn-secondary" href="#reminders" data-nav>Open</a></article>
@@ -446,10 +445,10 @@
     <!-- BUDGET -->
 
     <!-- POSTPARTUM BEACON -->
-    <section id="view-postpartum" class="view" hidden aria-label="Postpartum beacon">
+    <section id="view-postpartum" class="view ember-night" hidden aria-label="Postpartum Ember">
       <div class="section-head">
-        <h2>Postpartum beacon</h2>
-        <p>When the night feels heavy, light a soft glow. Other moms see an approximate area — never your exact home. Opt-in only. No names, photos, or chat.</p>
+        <h2>Postpartum Ember</h2>
+        <p>When the night feels heavy, light a soft ember. Other moms see your <strong>state</strong> gently warm — never your city or home. Opt-in only. No names, photos, or chat.</p>
       </div>
 
       <div class="beacon-disclaimer card soft-card">
@@ -458,28 +457,31 @@
 
       <div class="beacon-actions">
         <label class="field">
-          <span>ZIP or city (optional if you allow location)</span>
+          <span>ZIP or City, ST (finds your state only)</span>
           <input type="text" id="beacon-zip" class="search-input" placeholder="e.g. 10001 or Dallas, TX" autocomplete="postal-code" />
         </label>
         <div id="beacon-duration" class="beacon-duration-row">
-          <p class="hint">How long should your light stay on?</p>
+          <p class="hint">How long should your ember stay warm?</p>
           <div class="btn-row">
             <button type="button" class="btn btn-secondary" id="beacon-light-8">Tonight (8 hours)</button>
             <button type="button" class="btn btn-primary btn-lg" id="beacon-light-24">24 hours</button>
           </div>
         </div>
-        <button type="button" class="btn btn-primary btn-lg beacon-big" id="beacon-light-on">Light my beacon</button>
-        <button type="button" class="btn btn-secondary btn-lg beacon-big" id="beacon-light-off" hidden>Turn off my light</button>
+        <button type="button" class="btn btn-primary btn-lg beacon-big" id="beacon-light-on">Light my ember</button>
+        <button type="button" class="btn btn-secondary btn-lg beacon-big" id="beacon-light-off" hidden>Turn off my ember</button>
         <p id="beacon-status" class="hint" role="status"></p>
-        <p id="beacon-count" class="beacon-count" aria-live="polite">Looking for lights…</p>
+        <p id="ember-state-pill" class="ember-state-pill" hidden></p>
+        <p id="beacon-count" class="beacon-count" aria-live="polite">Listening for soft embers…</p>
       </div>
 
-      <div id="beacon-map" class="beacon-map" role="img" aria-label="Map of anonymous postpartum beacons"></div>
-      <p class="legend hint">Soft glow = a mom nearby (randomized within about 10 miles of a ZIP area). Your pin is never exact.</p>
+      <div class="ember-map-shell">
+        <div id="beacon-map" class="beacon-map ember-map" role="img" aria-label="Peaceful night map of soft embers by US state"></div>
+      </div>
+      <p class="legend hint">Soft amber on a state = moms awake there. Only the state is shared — never your home or street.</p>
 
       <div id="beacon-my-notes" class="beacon-my-notes" hidden>
-        <h3>Notes for you</h3>
-        <p class="hint">Encouragement from other moms while your light is on.</p>
+        <h3>Notes by your ember</h3>
+        <p class="hint">Warm notes from other moms while your ember is lit.</p>
         <div id="beacon-notes-list"></div>
       </div>
 
@@ -534,7 +536,7 @@
     <section id="view-baby" class="view" hidden aria-label="Baby tracker">
       <div class="section-head">
         <h2>Baby tracker</h2>
-        <p>Feeds, diapers, sleep — stays on your phone. Never shared to the beacon map.</p>
+        <p>Feeds, diapers, sleep — stays on your phone. Never shared to the Ember map.</p>
       </div>
 
       <div class="card soft-card">
@@ -732,11 +734,11 @@
   <script src="js/firebase-beacon-config.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="js/app.js"></script>
+<script src="js/app.js"></script>
   <script src="js/budget.js"></script>
   <script src="js/support.js"></script>
   <script src="js/mom-tools.js"></script>
+  <script src="data/us-states.js"></script>
   <script src="js/beacon.js"></script>
 </body>
 </html>

@@ -9,3 +9,6 @@ android/build/
 .tools/
 *.iml
 .idea/
+beacon-api/node_modules/
+beacon-api/data/
+data/us-states-paths.json

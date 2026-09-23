@@ -1697,7 +1697,7 @@ body { font-size: 1.05rem; }
   }
 }
 
-/* ===== Postpartum beacon & mom tools (v1.5) ===== */
+/* ===== Postpartum Ember & mom tools (v1.5.1) ===== */
 .soft-card { background: var(--white); }
 .beacon-disclaimer { margin: 1rem 0 1.25rem; border-left: 4px solid var(--gold); }
 .beacon-disclaimer p { margin: 0; }
@@ -1716,9 +1716,9 @@ body { font-size: 1.05rem; }
 .beacon-map {
   width: 100%;
   height: min(58vh, 420px);
-  border-radius: var(--radius);
+  border-radius: calc(var(--radius) + 4px);
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
   border: 1px solid rgba(91, 143, 168, 0.2);
   background: var(--blue-soft);
   z-index: 0;
@@ -1787,3 +1787,161 @@ body { font-size: 1.05rem; }
   text-align: center;
 }
 .legend { margin-top: 0.5rem; }
+
+/* —— Ember night: tranquil dark state map —— */
+.ember-night {
+  --ember-bg: #0b1220;
+  --ember-card: rgba(18, 28, 48, 0.92);
+  --ember-ink: #e8eef8;
+  --ember-muted: #9aa8bf;
+  --ember-amber: #e0b36a;
+  --ember-amber-soft: rgba(224, 179, 106, 0.28);
+  --ember-line: rgba(180, 200, 230, 0.14);
+  color: var(--ember-ink);
+  background:
+    radial-gradient(120% 80% at 50% -10%, #1a2744 0%, transparent 55%),
+    linear-gradient(180deg, #0b1220 0%, #0a101c 100%);
+  border-radius: calc(var(--radius) + 6px);
+  padding: 1.25rem 1.1rem 2rem;
+  margin: 0 -0.35rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.ember-night .section-head h2 {
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  color: #f3f6fc;
+}
+.ember-night .section-head p,
+.ember-night .hint,
+.ember-night .legend {
+  color: var(--ember-muted);
+}
+.ember-night .beacon-disclaimer,
+.ember-night .soft-card,
+.ember-night .beacon-encourage,
+.ember-night .card {
+  background: var(--ember-card);
+  border: 1px solid var(--ember-line);
+  color: var(--ember-ink);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.28);
+}
+.ember-night .beacon-disclaimer { border-left-color: var(--ember-amber); }
+.ember-night a { color: #c9daf5; }
+.ember-night .beacon-count { color: #f0d7a8; font-weight: 600; }
+.ember-night .search-input,
+.ember-night input,
+.ember-night textarea,
+.ember-night select {
+  background: rgba(8, 14, 26, 0.85);
+  color: var(--ember-ink);
+  border: 1px solid var(--ember-line);
+}
+.ember-night .btn-primary,
+.ember-night .beacon-big.btn-primary {
+  background: linear-gradient(135deg, #c9924a 0%, #e0b36a 45%, #f0d7a8 100%);
+  color: #1a1208;
+  border: none;
+  box-shadow: 0 0 0 1px rgba(224,179,106,0.35), 0 8px 28px rgba(224, 179, 106, 0.28);
+  font-weight: 700;
+}
+.ember-night .btn-primary:hover { filter: brightness(1.05); }
+.ember-night .btn-secondary {
+  background: rgba(255,255,255,0.06);
+  color: var(--ember-ink);
+  border: 1px solid var(--ember-line);
+}
+.ember-night .btn-ghost {
+  color: var(--ember-muted);
+  background: transparent;
+}
+.ember-night .btn-ghost:hover { background: rgba(255,255,255,0.06); }
+.ember-state-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.5rem 0 0;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: var(--ember-amber-soft);
+  color: #f6e2b8;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: 1px solid rgba(224,179,106,0.35);
+}
+.ember-map-shell {
+  position: relative;
+  border-radius: calc(var(--radius) + 8px);
+  padding: 0.35rem;
+  background: linear-gradient(145deg, rgba(224,179,106,0.18), rgba(90,120,180,0.12));
+  box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+}
+.ember-night .beacon-map,
+.ember-map {
+  height: min(62vh, 460px);
+  background: #070b14;
+  border: 1px solid rgba(224,179,106,0.18);
+  border-radius: calc(var(--radius) + 4px);
+}
+.ember-us-svg { width: 100%; height: 100%; display: block; }
+.ember-state {
+  fill: rgba(120, 140, 175, 0.16);
+  stroke: rgba(170, 190, 220, 0.28);
+  stroke-width: 1.1;
+  transition: fill 0.45s ease, stroke 0.45s ease, filter 0.45s ease;
+  cursor: pointer;
+}
+.ember-state:hover,
+.ember-state:focus-visible {
+  fill: rgba(150, 170, 210, 0.28);
+  stroke: rgba(220, 230, 255, 0.55);
+  outline: none;
+}
+.ember-state.is-lit {
+  fill: rgba(224, 179, 106, 0.42);
+  stroke: rgba(240, 215, 168, 0.75);
+  filter: url(#emberGlow);
+  animation: ember-breathe 3.6s ease-in-out infinite;
+}
+.ember-state.is-lit-2 {
+  fill: rgba(232, 186, 110, 0.58);
+  stroke: rgba(255, 230, 180, 0.9);
+}
+.ember-state.is-lit-3 {
+  fill: rgba(245, 200, 120, 0.72);
+  stroke: #ffe9b8;
+}
+.ember-state.is-mine {
+  stroke: #9ec5ff;
+  stroke-width: 2;
+}
+@keyframes ember-breathe {
+  0%, 100% { opacity: 0.88; }
+  50% { opacity: 1; }
+}
+.ember-chip {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--ember-line);
+  color: var(--ember-ink);
+}
+.ember-chip:hover {
+  background: var(--ember-amber-soft);
+  border-color: rgba(224,179,106,0.45);
+}
+.ember-note-card {
+  background: rgba(8, 14, 26, 0.7);
+  border: 1px solid var(--ember-line);
+}
+.ember-map-fallback {
+  color: var(--ember-muted);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.ember-night #beacon-status { color: #c5d0e4; }
+.ember-night #beacon-status.is-error { color: #f0a0a0; }
+
+/* Calm dark-friendly companion screens sharing the hub feel */
+#view-contractions.view.active,
+#view-baby.view.active,
+#view-reminders.view.active {
+  /* keep readable; light soft cards already OK */
+}
