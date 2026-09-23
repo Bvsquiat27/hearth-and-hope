@@ -10,6 +10,7 @@
 
   var LS_ID = "hearth_beacon_id";
   var LS_META = "hearth_beacon_meta";
+  var LS_SECRETS = "hearth_beacon_secrets";
   var MAX_NOTE = 180;
   var mapRoot = null;
   var unsub = null;
@@ -221,6 +222,45 @@
   function setMyId(id) {
     if (id) localStorage.setItem(LS_ID, id);
     else localStorage.removeItem(LS_ID);
+  }
+  function readSecretsMap() {
+    try {
+      var raw = JSON.parse(localStorage.getItem(LS_SECRETS) || "{}");
+      return raw && typeof raw === "object" ? raw : {};
+    } catch (e) {
+      return {};
+    }
+  }
+  function writeSecretsMap(map) {
+    try {
+      localStorage.setItem(LS_SECRETS, JSON.stringify(map || {}));
+    } catch (e) {}
+  }
+  function getOwnerSecret(id) {
+    if (!id) return "";
+    var map = readSecretsMap();
+    return String(map[id] || "");
+  }
+  function setOwnerSecret(id, secret) {
+    if (!id || !secret) return;
+    var map = readSecretsMap();
+    map[id] = String(secret);
+    writeSecretsMap(map);
+  }
+  function clearOwnerSecret(id) {
+    if (!id) return;
+    var map = readSecretsMap();
+    if (map[id]) {
+      delete map[id];
+      writeSecretsMap(map);
+    }
+  }
+  function beaconOwnerHeaders(id, withJson) {
+    var h = {};
+    if (withJson) h["Content-Type"] = "application/json";
+    var secret = getOwnerSecret(id);
+    if (secret) h["X-Hearth-Beacon"] = secret;
+    return h;
   }
 
   function setStatus(msg, isError) {
@@ -675,12 +715,17 @@
       }
       var base = restBase();
       if (!base) return;
+      /* Updates need the owner secret from when this ember was created */
+      if (existing && !getOwnerSecret(existing)) {
+        existing = "";
+        setMyId("");
+      }
       var url = existing ? base + "/beacons/" + existing : base + "/beacons";
       var method = existing ? "PUT" : "POST";
       setStatus("Lighting your ember…");
       fetch(url, {
         method: method,
-        headers: { "Content-Type": "application/json" },
+        headers: existing ? beaconOwnerHeaders(existing, true) : { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       })
         .then(function (r) {
@@ -692,6 +737,7 @@
         .then(function (j) {
           var id = existing || (j && j.id);
           if (!id) throw new Error("missing id");
+          if (j && j.ownerSecret) setOwnerSecret(id, j.ownerSecret);
           /* keep local cache warm until next poll */
           beaconsCache = Object.assign({}, beaconsCache);
           beaconsCache[id] = payload;
@@ -723,6 +769,7 @@
     var id = myId();
     var db = getDb();
     function clearLocal() {
+      if (id) clearOwnerSecret(id);
       setMyId("");
       setMyMeta(null);
       updateLightUI();
@@ -733,7 +780,10 @@
     if (id && db) {
       db.ref("beacons/" + id).remove().then(clearLocal).catch(clearLocal);
     } else if (id && restBase()) {
-      fetch(restBase() + "/beacons/" + id, { method: "DELETE" }).then(clearLocal).catch(clearLocal);
+      fetch(restBase() + "/beacons/" + id, {
+        method: "DELETE",
+        headers: beaconOwnerHeaders(id, false)
+      }).then(clearLocal).catch(clearLocal);
     } else clearLocal();
   }
 
@@ -839,8 +889,17 @@
       db.ref("beacons/" + id + "/notes").once("value").then(function (snap) { showNotes(snap.val()); });
       return;
     }
-    fetch(restBase() + "/beacons/" + id + "/notes")
-      .then(function (r) { return r.json(); })
+    if (!getOwnerSecret(id)) {
+      list.innerHTML = "<p class=\"hint\">Kind notes from other moms will show here while your ember is lit.</p>";
+      return;
+    }
+    fetch(restBase() + "/beacons/" + id + "/notes", {
+      headers: beaconOwnerHeaders(id, false)
+    })
+      .then(function (r) {
+        if (!r.ok) throw new Error("auth");
+        return r.json();
+      })
       .then(showNotes)
       .catch(function () {
         list.innerHTML = "<p class=\"hint\">Could not load notes right now.</p>";
