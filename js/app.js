@@ -600,26 +600,133 @@
     return [...helpForm.querySelectorAll('input[name="needs"]:checked')].map((i) => i.value);
   }
 
+
+  /* Map UI need ids to directory need tags (centers use a smaller set). */
+  const NEED_ALIASES = {
+    expecting: ["expecting"],
+    "new-mom": ["new-mom"],
+    housing: ["housing"],
+    food: ["supplies", "expecting"],
+    supplies: ["supplies"],
+    ultrasound: ["expecting"],
+    ride: ["expecting"],
+    mentor: ["talk"],
+    talk: ["talk"],
+    apply: ["expecting", "new-mom"],
+    diapers: ["supplies"],
+    formula: ["supplies"],
+    clothes: ["supplies"],
+    "car-seat": ["supplies"],
+    adoption: ["adoption"]
+  };
+
+  function expandNeeds(needs) {
+    const out = new Set();
+    (needs || []).forEach((n) => {
+      (NEED_ALIASES[n] || [n]).forEach((x) => out.add(x));
+    });
+    return [...out];
+  }
+
+  function centerNeedOverlap(center, needs) {
+    const expanded = expandNeeds(needs);
+    const cNeeds = center.needs || [];
+    return expanded.filter((n) => cNeeds.includes(n));
+  }
+
+  function isNational(c) {
+    return (c.type || "").toLowerCase().includes("national") || c.zip === "00000" || (c.city || "").toLowerCase() === "nationwide";
+  }
+
+  function hasContact(c) {
+    return !!(c.email || c.phone);
+  }
+
   function matchCenters(loc, needs) {
     const q = (loc || "").trim();
     const geo = (q.toLowerCase() === "near me") ? geoOverride : (q ? null : geoOverride);
-    const result = rankCenters(q, needs || [], { limit: 12, geo });
-    let pool = result.items;
+    const result = rankCenters(q, expandNeeds(needs || []), { limit: 40, geo });
+    const pool = (result.items || []).slice();
+
+    const scored = pool.map((c) => {
+      const covered = centerNeedOverlap(c, needs);
+      const overlap = covered.length;
+      const national = isNational(c) ? 1 : 0;
+      const hasEmail = c.email ? 1 : 0;
+      const hasPhone = c.phone ? 1 : 0;
+      const contact = hasEmail || hasPhone ? 1 : 0;
+      /* Prefer: need overlap, contactable, local over national, email, closer */
+      let rank =
+        (overlap > 0 ? 0 : 3) +
+        (contact ? 0 : 2) +
+        (national ? 1 : 0);
+      /* Soft boost for email when overlapping */
+      const emailBoost = (overlap > 0 && hasEmail) ? -0.5 : 0;
+      return {
+        c,
+        covered,
+        overlap,
+        dist: c._dist,
+        national,
+        hasEmail,
+        hasPhone,
+        sortKey: rank + emailBoost,
+      };
+    }).filter((s) => hasContact(s.c));
+
+    scored.sort((a, b) =>
+      a.sortKey - b.sortKey ||
+      b.overlap - a.overlap ||
+      a.national - b.national ||
+      b.hasEmail - a.hasEmail ||
+      a.dist - b.dist ||
+      a.c.name.localeCompare(b.c.name)
+    );
+
+    /* Ensure a national helpline appears if no local email for selected needs */
+    let list = scored.map((s) => {
+      const c = s.c;
+      c._covered = s.covered;
+      c._overlap = s.overlap;
+      return c;
+    });
 
     if ((needs || []).length) {
-      const scored = pool.map((c) => {
-        const overlap = needs.filter((n) => (c.needs || []).includes(n)).length;
-        return { c, overlap, dist: c._dist };
-      });
-      scored.sort((a, b) => b.overlap - a.overlap || a.dist - b.dist || a.c.name.localeCompare(b.c.name));
-      const withOverlap = scored.filter((s) => s.overlap > 0).map((s) => s.c);
-      pool = withOverlap.length ? withOverlap : scored.map((s) => s.c);
+      const localWithEmail = list.filter((c) => !isNational(c) && c.email && (c._overlap || 0) > 0);
+      if (!localWithEmail.length) {
+        const nationals = getCenters().filter((c) => isNational(c) && hasContact(c));
+        const natScored = nationals.map((c) => {
+          const covered = centerNeedOverlap(c, needs);
+          return { c, covered, overlap: covered.length };
+        }).sort((a, b) => b.overlap - a.overlap || a.c.name.localeCompare(b.c.name));
+        const bestNat = natScored[0];
+        if (bestNat) {
+          bestNat.c._covered = bestNat.covered;
+          bestNat.c._overlap = bestNat.overlap;
+          bestNat.c._dist = bestNat.c._dist;
+          if (!list.some((c) => c.id === bestNat.c.id)) {
+            /* insert after best local phone match if any */
+            const insertAt = Math.min(1, list.length);
+            list.splice(insertAt, 0, bestNat.c);
+          }
+        }
+      }
     }
 
-    const top = pool.slice(0, 3);
+    const top = list.slice(0, 3);
     top._matchMode = result.mode;
     top._resolved = result.resolved;
     return top;
+  }
+
+  function formatDistShort(miles) {
+    if (miles == null || !isFinite(miles)) return "";
+    if (miles < 10) return miles.toFixed(1) + " mi";
+    return Math.round(miles) + " mi";
+  }
+
+  function needLabelsList(needs) {
+    return (needs || []).map((n) => NEED_LABELS[n] || n);
   }
 
   function buildMessage(data, centers) {
@@ -669,38 +776,168 @@ Thank you for the work you do. Please contact me at your earliest convenience.
     };
   }
 
+  function openMailto(email, subject, body) {
+    const mailto = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailLink = document.createElement("a");
+    mailLink.href = mailto;
+    mailLink.style.display = "none";
+    document.body.appendChild(mailLink);
+    mailLink.click();
+    mailLink.remove();
+  }
+
+  function validateForSend(data, centers) {
+    const errors = [];
+    if (!data.firstName) errors.push("Please enter your first name.");
+    if (!data.location) errors.push("Please enter a city or ZIP.");
+    if (!data.email && !data.phone) errors.push("Please share an email and/or phone so they can reach you.");
+    if (!data.needs.length) errors.push("Select at least one kind of help.");
+    if (!data.consent) errors.push("Please check the consent box before we open your mail or messages app.");
+    if (!centers.length) errors.push("We couldn’t match a place yet. Try a ZIP or nearby city.");
+    return errors;
+  }
+
   function updatePreview() {
-    if (!helpForm || !previewEl || !matchEl) return;
+    if (!helpForm || !matchEl) return;
     const data = readForm();
-    const centers = matchCenters(data.location, data.needs);
+    const centers = (data.location || data.needs.length)
+      ? matchCenters(data.location, data.needs)
+      : [];
     const msg = buildMessage(
       data.firstName ? data : { ...data, firstName: "Friend" },
-      centers.length ? centers : [{ name: "(centers will appear when you enter a city/ZIP)" }]
+      centers.length ? centers : [{ name: "(centers appear when you enter a city/ZIP)" }]
     );
 
-    const mode = centers._matchMode;
-    let heading = "Suggested centers (up to 3):";
-    if (mode === "in-state") heading = "No centers within ~100 miles — nearest in-state options:";
-    else if (mode === "national") heading = "No exact local match — nearest options:";
-    else if (mode === "local" || mode === "exact") heading = "Nearest centers for your location:";
-    matchEl.innerHTML = centers.length
-      ? `<p><strong>${heading}</strong></p><ul class="match-list">${
-          centers.map((c) => {
-            const d = (c._dist != null && isFinite(c._dist)) ? ` · ${c._dist < 10 ? c._dist.toFixed(1) : Math.round(c._dist)} mi` : "";
-            return `<li><strong>${escapeHtml(c.name)}</strong> — ${escapeHtml(c.city)}, ${escapeHtml(c.state)} ${escapeHtml(c.zip)}${d} · ${escapeHtml(c.type)}</li>`;
-          }).join("")
-        }</ul>`
-      : `<p class="hint">Enter a city or ZIP to see matching centers.</p>`;
+    const primaryBtn = document.getElementById("help-primary-btn");
+    const secondaryCall = document.getElementById("help-call-btn");
+    const secondarySms = document.getElementById("help-sms-btn");
 
-    previewEl.textContent =
+    if (!data.location && !data.needs.length) {
+      matchEl.innerHTML = `<p class="hint">Enter your city or ZIP and check what you need — we’ll show the best place right here.</p>`;
+      if (primaryBtn) primaryBtn.textContent = "Email best match now";
+      if (secondaryCall) secondaryCall.hidden = true;
+      if (secondarySms) secondarySms.hidden = true;
+      if (previewEl) previewEl.textContent = "Fill in the form to see your draft…";
+      helpForm._lastPreview = { data, centers, msg };
+      return;
+    }
+
+    if (!centers.length) {
+      matchEl.innerHTML = `<p class="hint">No match yet. Try another city or ZIP.</p>`;
+      helpForm._lastPreview = { data, centers, msg };
+      return;
+    }
+
+    const best = centers[0];
+    const needPhrase = data.needs.length
+      ? needLabelsList(data.needs).slice(0, 2).join(", ").replace(/^I /i, "").replace(/^I’m /i, "")
+      : "support";
+    const coveredLabels = (best._covered || []).map((n) => NEED_LABELS[n] || n);
+    const coveredText = coveredLabels.length
+      ? coveredLabels.join(", ")
+      : "general pregnancy help";
+
+    const cards = centers.map((c, idx) => {
+      const dist = formatDistShort(c._dist);
+      const badge = idx === 0 ? `<span class="match-badge">Best match</span>` : `<span class="match-badge quiet">Also near you</span>`;
+      const cov = (c._covered || []).map((n) => NEED_LABELS[n] || n);
+      const covLine = cov.length
+        ? `Helps with: ${cov.map(escapeHtml).join(", ")}`
+        : (isNational(c) ? "National helpline — can connect you locally" : "Life-affirming pregnancy help");
+      const actions = [];
+      if (c.email) {
+        actions.push(`<button type="button" class="btn btn-primary" data-match-email="${escapeAttr(c.id)}">Email</button>`);
+      }
+      if (c.phone) {
+        actions.push(`<a class="btn btn-secondary" href="tel:${escapeAttr(c.phone)}">Call</a>`);
+      }
+      return `
+        <article class="match-card${idx === 0 ? " match-card-best" : ""}" data-center-id="${escapeAttr(c.id)}">
+          <header class="match-card-head">${badge}
+            <h3>${escapeHtml(c.name)}</h3>
+          </header>
+          <p class="match-meta">${escapeHtml(c.city)}${c.state && c.state !== "US" ? ", " + escapeHtml(c.state) : ""}${dist ? " · " + escapeHtml(dist) : ""} · ${escapeHtml(c.type || "")}</p>
+          <p class="match-cov">${covLine}</p>
+          <div class="match-actions">${actions.join("")}</div>
+        </article>`;
+    }).join("");
+
+    matchEl.innerHTML = `
+      <div class="match-live">
+        <p class="match-lead"><strong>We found help near you for ${escapeHtml(needPhrase)}.</strong> Tap to connect.</p>
+        ${cards}
+      </div>`;
+
+    /* Wire per-card Email buttons (respect consent) */
+    matchEl.querySelectorAll("[data-match-email]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-match-email");
+        const center = centers.find((c) => c.id === id) || best;
+        const d = readForm();
+        const errors = validateForSend(d, [center]);
+        if (errors.length) {
+          if (formError) {
+            formError.hidden = false;
+            formError.textContent = errors.join(" ");
+            formError.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+          return;
+        }
+        if (formError) formError.hidden = true;
+        const m = buildMessage(d, [center]);
+        openMailto(center.email, m.subject, m.body);
+        if (formSuccess) {
+          formSuccess.hidden = false;
+          formSuccess.innerHTML = `<strong>Your mail app should open</strong> to ${escapeHtml(center.name)}. Review, then send.`;
+        }
+      });
+    });
+
+    /* Primary / secondary toolbar buttons */
+    if (primaryBtn) {
+      if (best.email) {
+        primaryBtn.textContent = `Email ${best.name.length > 28 ? best.name.slice(0, 26) + "…" : best.name} now`;
+        primaryBtn.dataset.mode = "email";
+      } else if (best.phone) {
+        primaryBtn.textContent = `Call ${best.name.length > 28 ? best.name.slice(0, 26) + "…" : best.name} now`;
+        primaryBtn.dataset.mode = "call";
+      } else {
+        primaryBtn.textContent = "Connect to best match";
+        primaryBtn.dataset.mode = "email";
+      }
+    }
+    if (secondaryCall) {
+      if (best.phone && best.email) {
+        secondaryCall.hidden = false;
+        secondaryCall.href = `tel:${best.phone}`;
+        secondaryCall.textContent = `Call ${best.phone}`;
+      } else if (best.phone && !best.email) {
+        /* primary is Call — offer SMS secondary */
+        secondaryCall.hidden = true;
+      } else {
+        secondaryCall.hidden = true;
+      }
+    }
+    if (secondarySms) {
+      if (best.phone) {
+        secondarySms.hidden = false;
+        secondarySms.textContent = "Text best match";
+      } else {
+        secondarySms.hidden = true;
+      }
+    }
+
+    if (previewEl) {
+      previewEl.textContent =
 `Subject: ${msg.subject}
 
 ${msg.body}
 
 ——— SMS version ———
 ${msg.sms}`;
+    }
 
-    helpForm._lastPreview = { data, centers, msg };
+    helpForm._lastPreview = { data, centers, msg, best };
   }
 
   if (helpForm) {
@@ -713,16 +950,9 @@ ${msg.sms}`;
       if (formSuccess) formSuccess.hidden = true;
 
       const data = readForm();
-      const errors = [];
-      if (!data.firstName) errors.push("Please enter your first name.");
-      if (!data.location) errors.push("Please enter a city or ZIP.");
-      if (!data.email && !data.phone) errors.push("Please share an email and/or phone so centers can reach you.");
-      if (!data.needs.length) errors.push("Select at least one situation that fits.");
-      if (!data.consent) errors.push("Please check the consent box so we know you allow outreach on your behalf.");
-
       const centers = matchCenters(data.location, data.needs);
-      if (!centers.length) errors.push("We couldn’t match a center. Try a ZIP code or another nearby city.");
-
+      const best = centers[0];
+      const errors = validateForSend(data, centers);
       if (errors.length) {
         if (formError) {
           formError.hidden = false;
@@ -731,41 +961,69 @@ ${msg.sms}`;
         return;
       }
 
-      const msg = buildMessage(data, centers);
-      const emails = centers.map((c) => c.email).filter(Boolean);
-      const mailto = `mailto:${encodeURIComponent(emails.join(","))}?subject=${encodeURIComponent(msg.subject)}&body=${encodeURIComponent(msg.body)}`;
+      const primaryBtn = document.getElementById("help-primary-btn");
+      const mode = (primaryBtn && primaryBtn.dataset.mode) || (best.email ? "email" : "call");
+      const msg = buildMessage(data, best.email ? [best] : centers);
 
-      /* Open mail client */
-      const mailLink = document.createElement("a");
-      mailLink.href = mailto;
-      mailLink.style.display = "none";
-      document.body.appendChild(mailLink);
-      mailLink.click();
-      mailLink.remove();
+      if (mode === "call" && best.phone) {
+        window.location.href = "tel:" + best.phone;
+        if (formSuccess) {
+          formSuccess.hidden = false;
+          formSuccess.innerHTML = `<strong>Calling ${escapeHtml(best.name)}</strong> — ${escapeHtml(best.phone)}.`;
+        }
+      } else {
+        /* Prefer best center email; else first emailable among matches; else national */
+        let target = best.email ? best : centers.find((c) => c.email);
+        if (!target || !target.email) {
+          target = getCenters().find((c) => isNational(c) && c.email) || target;
+        }
+        if (!target || !target.email) {
+          if (formError) {
+            formError.hidden = false;
+            formError.textContent = "This match has no email. Use Call or Text instead.";
+          }
+          return;
+        }
+        const m = buildMessage(data, [target]);
+        openMailto(target.email, m.subject, m.body);
+        if (formSuccess) {
+          formSuccess.hidden = false;
+          formSuccess.innerHTML = `<strong>Your mail app should open</strong> to ${escapeHtml(target.name)}. Review it, then send.`;
+        }
+      }
 
-      /* Optional SMS to first center with phone */
       const preferSms = helpForm.querySelector("#prefer-sms") && helpForm.querySelector("#prefer-sms").checked;
-      if (preferSms && centers[0] && centers[0].phone) {
-        const digits = centers[0].phone.replace(/[^\d+]/g, "");
+      if (preferSms && best && best.phone && mode !== "call") {
+        const digits = best.phone.replace(/[^\d+]/g, "");
         const smsUrl = `sms:${digits}?&body=${encodeURIComponent(msg.sms)}`;
-        window.setTimeout(() => {
-          window.location.href = smsUrl;
-        }, 600);
+        window.setTimeout(() => { window.location.href = smsUrl; }, 600);
       }
 
-      if (formSuccess) {
-        formSuccess.hidden = false;
-        formSuccess.innerHTML = `
-          <strong>You’re all set.</strong> Your mail app should open with a message to
-          ${escapeHtml(centers.map((c) => c.name).join(", "))}.
-          Review it, then send. A copyable version is below if you need to paste manually.
-        `;
-      }
-
-      helpForm._lastPreview = { data, centers, msg };
+      helpForm._lastPreview = { data, centers, msg, best };
       updatePreview();
       formSuccess && formSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
     });
+
+    const smsBtn = document.getElementById("help-sms-btn");
+    if (smsBtn) {
+      smsBtn.addEventListener("click", () => {
+        const data = readForm();
+        const centers = matchCenters(data.location, data.needs);
+        const best = centers[0];
+        const errors = validateForSend(data, centers);
+        if (errors.length) {
+          if (formError) {
+            formError.hidden = false;
+            formError.textContent = errors.join(" ");
+          }
+          return;
+        }
+        if (!best || !best.phone) return;
+        const msg = buildMessage(data, [best]);
+        const digits = best.phone.replace(/[^\d+]/g, "");
+        window.location.href = `sms:${digits}?&body=${encodeURIComponent(msg.sms)}`;
+      });
+    }
   }
 
   if (copyMsgBtn) {

@@ -212,9 +212,7 @@
     <section id="view-help" class="view" hidden aria-label="Get Help">
       <div class="section-head">
         <h2>Get help</h2>
-        <p><strong>Step 1:</strong> Tell us your name and city.<br/>
-           <strong>Step 2:</strong> Check what you need.<br/>
-           <strong>Step 3:</strong> Review the message — nothing sends until you say yes.</p>
+        <p>Tell us where you are and what you need. We’ll show the <strong>best place near you</strong> — then you tap to email or call. Nothing sends until you say yes.</p>
       </div>
 
       <form id="help-form" class="form-panel" novalidate>
@@ -260,6 +258,8 @@
           </div>
         </div>
 
+        <div id="match-preview" class="match-preview-slot" aria-live="polite"></div>
+
         <div class="field" style="margin-top:1rem">
           <label for="message">Short message to centers</label>
           <textarea class="input" id="message" name="message" rows="3" placeholder="Anything you’d like them to know (optional but helpful)"></textarea>
@@ -269,8 +269,6 @@
           <label for="church">Church preference <span class="hint" style="display:inline">(optional)</span></label>
           <input class="input" type="text" id="church" name="church" placeholder="e.g. open to any Christian church, or prefer Catholic…" />
         </div>
-
-        <div id="match-preview" style="margin-top:1.25rem"></div>
 
         <div class="preview-box">
           <h4>Message preview</h4>
@@ -288,8 +286,10 @@
           </label>
         </div>
 
-        <div class="form-actions">
-          <button type="submit" class="btn btn-success btn-lg">Review &amp; open email</button>
+        <div class="form-actions help-actions">
+          <button type="submit" class="btn btn-success btn-lg" id="help-primary-btn">Email best match now</button>
+          <a class="btn btn-secondary btn-lg" id="help-call-btn" hidden href="tel:">Call</a>
+          <button type="button" class="btn btn-secondary btn-lg" id="help-sms-btn" hidden>Text best match</button>
           <button type="button" class="btn btn-ghost btn-lg" id="copy-message">Copy message</button>
         </div>
 
