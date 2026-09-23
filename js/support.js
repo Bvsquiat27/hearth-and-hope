@@ -459,7 +459,35 @@ I’m doing my best. Thank you for standing with me.
   /* ---------- Stories of hope — live public board (real posts only) ---------- */
   const HOPE_NAME_KEY = "hearthHopeDisplayName";
   const HOPE_MAX = 400;
+  /* Known audit/test posts on live 1.6.0 until HOPE KV is purged / Worker 1.7.1 DELETE ships */
+  const KNOWN_FAKE_HOPE_IDS = {
+    e70b300904644437: true, /* prior audit/test */
+    "76e52e0f9ca747a1": true, /* 2026-09-23 ext audit clean sample */
+    d03e359c39c04db4: true /* 2026-09-23 live 1.6.0 accepted blocked slur — hide until KV purge */
+  };
+  /* Hide client-supplied absurd future timestamps (e.g. year ~2026+ far ahead) */
+  const HOPE_FUTURE_SLACK_MS = 7 * 24 * 60 * 60 * 1000;
   let hopePollTimer = null;
+
+  function isFakeHopePost(id, post) {
+    if (KNOWN_FAKE_HOPE_IDS[id]) return true;
+    const t = Number(post && post.createdAt) || 0;
+    if (t > Date.now() + HOPE_FUTURE_SLACK_MS) return true;
+    return false;
+  }
+
+  function filterHopePosts(posts) {
+    const out = {};
+    const src = posts || {};
+    Object.keys(src).forEach((id) => {
+      const post = src[id];
+      if (isFakeHopePost(id, post)) return;
+      const check = filterHopeText(post && post.text);
+      if (!check.ok) return; /* never show blocked content even if API accepted it */
+      out[id] = post;
+    });
+    return out;
+  }
 
   function hopeRestBase() {
     const c = window.HEARTH_FIREBASE;
@@ -529,7 +557,7 @@ I’m doing my best. Thank you for standing with me.
     }
     fetch(base + "/hope")
       .then((r) => r.json())
-      .then((val) => renderHopeList(val || {}))
+      .then((val) => renderHopeList(filterHopePosts(val || {})))
       .catch(() => {
         if (list) list.innerHTML = `<p class="hint">Could not load the board right now.</p>`;
       });
