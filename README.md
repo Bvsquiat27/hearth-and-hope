@@ -10,6 +10,10 @@ Enter **any US city, town, or ZIP**. Find help and Get Help sort by distance usi
 
 The directory lists **verified real** pregnancy resource centers from public **Option Line** (Heartbeat International) and **Birthright** directories (retrieved 2026-09-23), plus national helplines. More listings may be added over time. Optional **Use my location** uses browser geolocation when allowed.
 
+## Support tools
+
+Crisis path, ultrasound companion, first-90-days checklist, mentor request, goods ask, family invite, work overview, hope stories (opt-in), and a simple resume + job email templates — all under **Support**. Dignity-first; no AI mentor; no fake government enrollment.
+
 ## Payday budget
 
 Plan Wednesday paychecks on-device (`localStorage`). Mark bills paid, track leftovers, archive past weeks. No personal sample debts ship with the app.
@@ -29,7 +33,7 @@ Open `http://127.0.0.1:8080`.
 ## Live
 
 - GitHub Pages: https://bvsquiat27.github.io/hearth-and-hope/
-- Android APK: see GitHub Releases (v1.3.2+)
+- Android APK: see GitHub Releases (v1.4.0+)
 
 ## License / data notes
 

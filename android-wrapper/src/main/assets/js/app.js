@@ -98,8 +98,17 @@
     expecting: "I’m expecting",
     "new-mom": "I’m a new mom",
     housing: "I need housing",
+    food: "I need food help",
     supplies: "I need supplies",
-    talk: "I need someone to talk to"
+    ultrasound: "I need an ultrasound / appointment",
+    ride: "I need a ride to an appointment",
+    mentor: "Please connect me with a mentor mom",
+    talk: "I need someone to talk to",
+    apply: "Please help me apply for local aid",
+    diapers: "I need diapers",
+    formula: "I need formula",
+    clothes: "I need baby clothes",
+    "car-seat": "I need a car seat"
   };
 
   /* ---------- Navigation ---------- */
@@ -956,12 +965,66 @@ ${msg.sms}`;
     sync();
   }
 
+
+  function applyHelpPrefill(opts) {
+    opts = opts || {};
+    if (!helpForm) {
+      try { sessionStorage.setItem("hearthHelpPrefill", JSON.stringify(opts)); } catch (e) {}
+      location.hash = "#help";
+      return;
+    }
+    if (opts.location) {
+      const loc = document.getElementById("location");
+      if (loc) loc.value = opts.location;
+    }
+    if (opts.firstName) {
+      const fn = document.getElementById("firstName");
+      if (fn && !fn.value) fn.value = opts.firstName;
+    }
+    if (opts.message) {
+      const msg = document.getElementById("message");
+      if (msg) msg.value = opts.message;
+    }
+    if (opts.needs && opts.needs.length) {
+      helpForm.querySelectorAll('input[name="needs"]').forEach((cb) => {
+        if (opts.needs.indexOf(cb.value) !== -1) cb.checked = true;
+      });
+    }
+    updatePreview();
+    location.hash = "#help";
+    window.setTimeout(updatePreview, 50);
+  }
+
+  function consumeStoredHelpPrefill() {
+    try {
+      const raw = sessionStorage.getItem("hearthHelpPrefill");
+      if (!raw) return;
+      sessionStorage.removeItem("hearthHelpPrefill");
+      applyHelpPrefill(JSON.parse(raw));
+    } catch (e) {}
+  }
+
+  window.addEventListener("hashchange", () => {
+    if ((location.hash || "").replace(/^#/, "") === "help") {
+      window.setTimeout(consumeStoredHelpPrefill, 0);
+    }
+  });
+
+  window.HearthHelp = {
+    applyHelpPrefill: applyHelpPrefill,
+    updatePreview: updatePreview,
+    matchCenters: matchCenters,
+    rankCenters: rankCenters,
+    NEED_LABELS: NEED_LABELS
+  };
+
   /* Boot */
   populateTypeFilter();
   renderResources();
   renderCenters();
   updatePreview();
   route();
+  if ((location.hash || "").replace(/^#/, "") === "help") consumeStoredHelpPrefill();
   wireInstallUI();
 
   registerServiceWorker();

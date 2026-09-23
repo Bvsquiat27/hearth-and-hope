@@ -54,6 +54,7 @@
         <a href="#resources" data-nav>Resources</a>
         <a href="#budget" data-nav>Budget</a>
         <a href="#directory" data-nav>Find help</a>
+        <a href="#support" data-nav>Support</a>
         <a href="#help" data-nav>Get Help</a>
         <a href="#about" data-nav>Our promise</a>
       </nav>
@@ -74,7 +75,9 @@
           <a class="btn btn-primary btn-lg" href="#directory" data-nav>Find help near me</a>
           <a class="btn btn-secondary btn-lg" href="#help" data-nav>I’m pregnant — get help</a>
           <a class="btn btn-secondary btn-lg" href="#help" data-nav>I’m a new mom</a>
+          <a class="btn btn-secondary btn-lg" href="#crisis" data-nav>I’m pregnant and scared</a>
           <a class="btn btn-secondary btn-lg" href="#budget" data-nav>Plan this week’s money</a>
+          <a class="btn btn-secondary btn-lg" href="#support" data-nav>More support tools</a>
           <a class="btn btn-ghost btn-lg" href="#resources" data-nav>Read guides</a>
         </div>
         <p class="next-hint">Start with <strong>Find help near me</strong> — enter your city or ZIP.</p>
@@ -108,6 +111,67 @@
           <h3>4. Plan payday</h3>
           <p>Set weekly pay, add bills, and see what’s left — private on your phone.</p>
           <a class="btn btn-secondary" href="#budget" data-nav>Open budget</a>
+        </article>
+      </div>
+
+      <div class="section-head" style="margin-top:2rem">
+        <h2>Support for this season</h2>
+        <p>Calm tools for crisis, appointments, first months, mentors, and more.</p>
+      </div>
+      <div class="card-grid" id="home-support-grid">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">💛</div>
+          <h3>I’m pregnant and scared</h3>
+          <p>A short, gentle path to what you need most — then nearby help.</p>
+          <a class="btn btn-primary" href="#crisis" data-nav>Start here</a>
+        </article>
+        <article class="card">
+          <div class="card-icon cream" aria-hidden="true">🩺</div>
+          <h3>Ultrasound &amp; appointments</h3>
+          <p>What to expect, what to pack, and how to ask for a free or low-cost scan.</p>
+          <a class="btn btn-secondary" href="#ultrasound" data-nav>Open guide</a>
+        </article>
+        <article class="card">
+          <div class="card-icon green" aria-hidden="true">📅</div>
+          <h3>First 90 days</h3>
+          <p>A simple checklist for WIC, diapers, Medicaid pointers, and more.</p>
+          <a class="btn btn-secondary" href="#ninety" data-nav>Open checklist</a>
+        </article>
+        <article class="card">
+          <div class="card-icon cream" aria-hidden="true">🤝</div>
+          <h3>Ask a mentor mom</h3>
+          <p>Request a peer mentor through a nearby center — real people, not a bot.</p>
+          <a class="btn btn-secondary" href="#mentor" data-nav>Ask for a mentor</a>
+        </article>
+        <article class="card">
+          <div class="card-icon green" aria-hidden="true">🎁</div>
+          <h3>Request goods</h3>
+          <p>Diapers, formula, clothes, car seat — draft a kind ask to local help.</p>
+          <a class="btn btn-secondary" href="#goods" data-nav>Request supplies</a>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">👨‍👩‍👧</div>
+          <h3>Invite family to help</h3>
+          <p>Share a calm “how you can help” note with rides, money, or presence.</p>
+          <a class="btn btn-secondary" href="#invite" data-nav>Share help ideas</a>
+        </article>
+        <article class="card">
+          <div class="card-icon cream" aria-hidden="true">💼</div>
+          <h3>Work &amp; school</h3>
+          <p>Plain-English pregnancy workplace rights overview and schedule tips.</p>
+          <a class="btn btn-secondary" href="#work" data-nav>Read overview</a>
+        </article>
+        <article class="card">
+          <div class="card-icon green" aria-hidden="true">✨</div>
+          <h3>Stories of hope</h3>
+          <p>Optional short stories from scared → supported → parenting. Never guilt.</p>
+          <a class="btn btn-secondary" href="#stories" data-nav>Read stories</a>
+        </article>
+        <article class="card">
+          <div class="card-icon cream" aria-hidden="true">📄</div>
+          <h3>Build a resume</h3>
+          <p>Guided resume for moms — gaps are okay. Plus job email templates.</p>
+          <a class="btn btn-secondary" href="#resume" data-nav>Build resume</a>
         </article>
       </div>
     </section>
@@ -186,8 +250,13 @@
             <label><input type="checkbox" name="needs" value="expecting" /> I’m expecting</label>
             <label><input type="checkbox" name="needs" value="new-mom" /> I’m a new mom</label>
             <label><input type="checkbox" name="needs" value="housing" /> I need housing</label>
+            <label><input type="checkbox" name="needs" value="food" /> I need food help</label>
             <label><input type="checkbox" name="needs" value="supplies" /> I need supplies</label>
+            <label><input type="checkbox" name="needs" value="ultrasound" /> I need an ultrasound / appointment</label>
+            <label><input type="checkbox" name="needs" value="ride" /> I need a ride to an appointment</label>
+            <label><input type="checkbox" name="needs" value="mentor" /> Please connect me with a mentor mom</label>
             <label><input type="checkbox" name="needs" value="talk" /> I need someone to talk to</label>
+            <label><input type="checkbox" name="needs" value="apply" /> Please help me apply for local aid</label>
           </div>
         </div>
 
@@ -230,6 +299,125 @@
     </section>
 
 
+
+
+    <!-- SUPPORT HUB -->
+    <section id="view-support" class="view" hidden aria-label="Support">
+      <div class="section-head">
+        <h2>Support hub</h2>
+        <p>Practical tools for this season. Choose what fits — skip anything that doesn’t.</p>
+      </div>
+      <div class="card-grid" id="support-hub-grid">
+        <article class="card"><div class="card-icon" aria-hidden="true">💛</div><h3>I’m pregnant and scared</h3><p>Short guided path to nearby help.</p><a class="btn btn-primary" href="#crisis" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon cream" aria-hidden="true">🩺</div><h3>Ultrasound &amp; appointments</h3><p>What to expect and how to ask for help.</p><a class="btn btn-secondary" href="#ultrasound" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon green" aria-hidden="true">📅</div><h3>First 90 days</h3><p>Week-by-week checklist on your phone.</p><a class="btn btn-secondary" href="#ninety" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon cream" aria-hidden="true">🤝</div><h3>Ask a mentor</h3><p>Real volunteer moms via centers — not AI.</p><a class="btn btn-secondary" href="#mentor" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon green" aria-hidden="true">🎁</div><h3>Concrete goods</h3><p>Diapers, formula, clothes, car seat.</p><a class="btn btn-secondary" href="#goods" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">👨‍👩‍👧</div><h3>Family / co-parent invite</h3><p>Share how loved ones can help.</p><a class="btn btn-secondary" href="#invite" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon cream" aria-hidden="true">💼</div><h3>Work &amp; schedule</h3><p>US workplace rights overview (not legal advice).</p><a class="btn btn-secondary" href="#work" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon green" aria-hidden="true">✨</div><h3>Stories of hope</h3><p>Optional opt-in stories. Never guilt.</p><a class="btn btn-secondary" href="#stories" data-nav>Open</a></article>
+        <article class="card"><div class="card-icon cream" aria-hidden="true">📄</div><h3>Resume &amp; job emails</h3><p>Build a resume and copy application templates.</p><a class="btn btn-secondary" href="#resume" data-nav>Open</a></article>
+      </div>
+      <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="#home" data-nav>Back home</a></p>
+    </section>
+
+    <!-- CRISIS PATH -->
+    <section id="view-crisis" class="view" hidden aria-label="Pregnant and scared">
+      <div class="section-head">
+        <h2>I’m pregnant and scared</h2>
+        <p>You’re brave for being here. We’ll take this one small step at a time — you stay in control.</p>
+      </div>
+      <div id="crisis-flow" class="form-panel support-panel"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- ULTRASOUND -->
+    <section id="view-ultrasound" class="view" hidden aria-label="Ultrasound companion">
+      <div class="section-head">
+        <h2>Ultrasound &amp; appointment companion</h2>
+        <p>Plain language for confirmation visits and early ultrasounds. Not medical advice — your clinician knows your care plan.</p>
+      </div>
+      <div id="ultrasound-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- NINETY DAYS -->
+    <section id="view-ninety" class="view" hidden aria-label="First 90 days">
+      <div class="section-head">
+        <h2>Single-mom first 90 days</h2>
+        <p>Check items off as you go. Progress stays on this phone. We explain programs — we never fake government enrollment.</p>
+      </div>
+      <div class="form-panel support-panel" style="margin-bottom:1rem">
+        <label class="field-label" for="ninety-zip">Your ZIP (optional — nudges Find help)</label>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center">
+          <input type="text" id="ninety-zip" class="input input-lg" inputmode="numeric" maxlength="10" placeholder="e.g. 77002" style="flex:1 1 140px" />
+          <a class="btn btn-secondary" href="#directory" data-nav id="ninety-find-help">Find help near me</a>
+        </div>
+      </div>
+      <div id="ninety-checklist" class="checklist-board"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- MENTOR -->
+    <section id="view-mentor" class="view" hidden aria-label="Ask a mentor">
+      <div class="section-head">
+        <h2>Ask a mentor mom</h2>
+        <p><strong>Real people</strong> — volunteer peer moms and center staff. This is <strong>not</strong> an AI chat and not a live bot.</p>
+      </div>
+      <div id="mentor-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- GOODS -->
+    <section id="view-goods" class="view" hidden aria-label="Request goods">
+      <div class="section-head">
+        <h2>Request concrete goods</h2>
+        <p>Choose what you need. We’ll draft a message to nearby centers — you review before anything sends.</p>
+      </div>
+      <div id="goods-form" class="form-panel support-panel"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a> · <a href="#budget" data-nav>Open budget</a></p>
+    </section>
+
+    <!-- INVITE -->
+    <section id="view-invite" class="view" hidden aria-label="Family invite">
+      <div class="section-head">
+        <h2>How you can help</h2>
+        <p>A calm note for family or a co-parent. No shame. Clear ways to show up.</p>
+      </div>
+      <div id="invite-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- WORK -->
+    <section id="view-work" class="view" hidden aria-label="Work and schedule">
+      <div class="section-head">
+        <h2>Work &amp; schedule</h2>
+        <p>General U.S. overview in plain English. <strong>Not legal advice.</strong> Laws vary by state and job. Ask a center or attorney for your situation.</p>
+      </div>
+      <div id="work-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+    <!-- STORIES -->
+    <section id="view-stories" class="view" hidden aria-label="Stories of hope">
+      <div class="section-head">
+        <h2>Stories of hope</h2>
+        <p>Optional. Short, fictionalized composites inspired by common journeys — scared → supported → parenting. Never used to guilt anyone.</p>
+      </div>
+      <div id="stories-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+    </section>
+
+
+    <!-- RESUME -->
+    <section id="view-resume" class="view" hidden aria-label="Resume builder">
+      <div class="section-head">
+        <h2>Resume &amp; job emails</h2>
+        <p>A simple resume for moms. Caregiving and volunteering count. Gaps are okay — no shame. Saved on this phone only.</p>
+      </div>
+      <div id="resume-body" class="support-content"></div>
+      <p class="hint" style="margin-top:1rem"><a href="#work" data-nav>← Work &amp; schedule</a> · <a href="#support" data-nav>Support hub</a></p>
+    </section>
 
     <!-- BUDGET -->
     <section id="view-budget" class="view" hidden aria-label="Budget">
@@ -312,6 +500,10 @@
       <span class="bn-icon" aria-hidden="true">📍</span>
       <span>Find help</span>
     </a>
+    <a href="#support" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">💛</span>
+      <span>Support</span>
+    </a>
     <a href="#help" data-nav data-bottom-nav>
       <span class="bn-icon" aria-hidden="true">✉️</span>
       <span>Get Help</span>
@@ -332,5 +524,6 @@
   <script src="js/geo.js"></script>
   <script src="js/app.js"></script>
   <script src="js/budget.js"></script>
+  <script src="js/support.js"></script>
 </body>
 </html>
