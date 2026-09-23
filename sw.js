@@ -3,7 +3,7 @@
    Network-first with stale-while-revalidate for updates.
    Never invent medical content beyond what's cached.
 */
-const CACHE_VERSION = "hearth-hope-v1.5.3";
+const CACHE_VERSION = "hearth-hope-v1.6.0";
 const SHELL_CACHE = CACHE_VERSION + "-shell";
 
 const SHELL_ASSETS = [
@@ -89,4 +89,3 @@ self.addEventListener("fetch", (event) => {
 
   event.respondWith(networkFirst(request));
 });
-/* pages bump 2026-09-23T12:34:01+00:00 v1.5.3 */

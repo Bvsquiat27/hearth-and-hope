@@ -16,5 +16,5 @@ window.HEARTH_FIREBASE = {
   messagingSenderId: "",
   appId: "",
   /* Public Ember REST API (CORS *). */
-  restBaseUrl: "https://connected-louisiana-chambers-perfectly.trycloudflare.com"
+  restBaseUrl: "https://hearth-ember-api.piquant-filament-122.workers.dev"
 };

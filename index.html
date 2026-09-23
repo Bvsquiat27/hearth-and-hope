@@ -155,6 +155,9 @@
             <a class="hub-tile hub-tile-sm" href="#support" data-nav>
               <span class="hub-title">All tools</span>
             </a>
+            <a class="hub-tile hub-tile-sm" href="#account" data-nav>
+              <span class="hub-title">Account</span>
+            </a>
             <a class="hub-tile hub-tile-sm" href="#about" data-nav>
               <span class="hub-title">Our promise</span>
             </a>
@@ -439,24 +442,24 @@
     <!-- POSTPARTUM BEACON -->
     <section id="view-postpartum" class="view ember-night" hidden aria-label="Postpartum Ember">
       <div class="section-head">
-        <h2>Postpartum Ember</h2>
-        <p>When the night feels heavy, light a soft ember. Other moms see your <strong>glowing golden light</strong> on the night map — never your home, never a whole-state fill. Tap someone’s ember to send a kind note. Opt-in only. No names, photos, or chat.</p>
+        <h2>Ember</h2>
+        <p>Light a soft golden ember when the night feels heavy. Other moms see your <strong>glowing dot</strong> on the quiet night map — never your home, never a whole-state wash. Tap someone’s ember to send a kind note.</p>
       </div>
 
       <div class="beacon-disclaimer card soft-card">
-        <p><strong>This is not emergency care.</strong> If you are in danger, call <strong>911</strong>. For emotional crisis in the U.S., call or text <strong>988</strong>. You can also <a href="#help" data-nav>Get Help</a> nearby.</p>
+        <p><strong>Not emergency care.</strong> Danger → <strong>911</strong>. Emotional crisis (U.S.) → call or text <strong>988</strong>. Or <a href="#help" data-nav>Get Help</a> nearby.</p>
       </div>
 
       <div class="beacon-actions">
         <label class="field">
-          <span>ZIP or City, ST (finds your state only)</span>
-          <input type="text" id="beacon-zip" class="search-input" placeholder="e.g. 10001 or Dallas, TX" autocomplete="postal-code" />
+          <span>ZIP or City, ST <span class="hint">(state only — never your street)</span></span>
+          <input type="text" id="beacon-zip" class="search-input" placeholder="e.g. 10001 or Dallas, TX" autocomplete="postal-code" inputmode="text" />
         </label>
         <div id="beacon-duration" class="beacon-duration-row">
           <p class="hint">How long should your ember stay warm?</p>
-          <div class="btn-row">
-            <button type="button" class="btn btn-secondary" id="beacon-light-8">Tonight (8 hours)</button>
-            <button type="button" class="btn btn-primary btn-lg" id="beacon-light-24">24 hours</button>
+          <div class="btn-row ember-duration-picks" role="group" aria-label="Duration">
+            <button type="button" class="btn btn-secondary ember-dur" id="beacon-light-8" data-hours="8">8 hours</button>
+            <button type="button" class="btn btn-secondary ember-dur is-selected" id="beacon-light-24" data-hours="24">24 hours</button>
           </div>
         </div>
         <button type="button" class="btn btn-primary btn-lg beacon-big" id="beacon-light-on">Light my ember</button>
@@ -469,7 +472,15 @@
       <div class="ember-map-shell">
         <div id="beacon-map" class="beacon-map ember-map" role="img" aria-label="Peaceful night map of glowing embers across the United States"></div>
       </div>
-      <p class="legend hint">Golden glowing lights = live embers. Tap a light (not the map outlines) to send warmth. Never your street address.</p>
+      <p class="legend hint">Golden dots = live embers. Tap a light to send warmth. Empty map means nobody is lit right now.</p>
+
+      <div class="ember-recent card soft-card" id="ember-recent-wrap">
+        <h3>Recently lit</h3>
+        <p class="hint">Newest real embers from the live map — proves posts last and show up.</p>
+        <ul id="ember-recent-list" class="ember-recent-list">
+          <li class="hint">No embers lit yet. Be the first soft light.</li>
+        </ul>
+      </div>
 
       <div id="ember-cluster-picker" class="ember-cluster-picker card" hidden>
         <h3 id="ember-cluster-title">Moms here — pick one</h3>
@@ -478,15 +489,9 @@
         <button type="button" class="btn btn-ghost" id="ember-cluster-cancel" style="margin-top:0.75rem">Cancel</button>
       </div>
 
-      <div id="beacon-my-notes" class="beacon-my-notes" hidden>
-        <h3>Notes for you</h3>
-        <p class="hint">Warm notes sent to your ember while it is lit.</p>
-        <div id="beacon-notes-list"></div>
-      </div>
-
       <div id="beacon-encourage-panel" class="beacon-encourage card" hidden>
         <h3>Send a kind note</h3>
-        <p class="hint">Goes to the ember you tapped. Anonymous — “A mom nearby.” No chat threads.</p>
+        <p class="hint">Goes to the ember you tapped. Anonymous — “A mom nearby.” No chat.</p>
         <div id="beacon-note-chips" class="chip-row"></div>
         <label class="field">
           <span>Your note (max 180 characters)</span>
@@ -499,11 +504,23 @@
         <p id="beacon-note-feedback" class="hint" role="status"></p>
       </div>
 
+      <div id="beacon-my-notes" class="beacon-my-notes" hidden>
+        <h3>Notes for you</h3>
+        <p class="hint">Warm notes sent to your ember while it is lit.</p>
+        <div id="beacon-notes-list"></div>
+      </div>
+
+      <div class="ember-account-nudge card soft-card" id="ember-account-nudge">
+        <p><strong>Keep baby tracking safe.</strong> Guest mode stays on this phone only. <a href="#account" data-nav>Create a free account</a> so feeds, diapers, and your ember inbox come back after a reinstall.</p>
+      </div>
+
       <p class="screen-back">
         <a class="btn btn-ghost" href="#home" data-nav>← Home</a>
         <a class="btn btn-secondary" href="#help" data-nav>Get Help</a>
+        <a class="btn btn-ghost" href="#account" data-nav>Account</a>
       </p>
     </section>
+
 
     <!-- CONTRACTIONS -->
     <section id="view-contractions" class="view contraction-view" hidden aria-label="Contraction timer">
@@ -657,6 +674,51 @@
     </section>
 
     <!-- ABOUT -->
+    <section id="view-account" class="view" hidden aria-label="Account">
+      <div class="section-head">
+        <h2>Account</h2>
+        <p>A free, simple login keeps baby tracking, contraction history, and your ember inbox with you — private, never on the public map.</p>
+      </div>
+
+      <div class="card soft-card account-card" id="account-guest">
+        <h3>Create or sign in</h3>
+        <p class="hint">Email + password (at least 6 characters). Big taps. Short words.</p>
+        <label class="field">
+          <span>Email</span>
+          <input type="email" id="account-email" class="search-input" autocomplete="email" inputmode="email" placeholder="you@example.com" />
+        </label>
+        <label class="field">
+          <span>Password</span>
+          <input type="password" id="account-password" class="search-input" autocomplete="current-password" placeholder="At least 6 characters" />
+        </label>
+        <div class="btn-row" style="margin-top:0.85rem">
+          <button type="button" class="btn btn-primary btn-lg" id="account-signup">Create account</button>
+          <button type="button" class="btn btn-secondary btn-lg" id="account-login">Sign in</button>
+        </div>
+        <p id="account-status" class="hint" role="status"></p>
+      </div>
+
+      <div class="card soft-card account-card" id="account-signed" hidden>
+        <h3>You’re signed in</h3>
+        <p id="account-email-display" class="account-email"></p>
+        <p class="hint">Private cloud sync: baby tracker, contractions (optional), reminders prefs, and your ember id/inbox. Never shared on the Ember map.</p>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="account-sync-now">Sync now</button>
+          <button type="button" class="btn btn-secondary" id="account-logout">Sign out</button>
+        </div>
+        <p id="account-sync-status" class="hint" role="status"></p>
+      </div>
+
+      <div class="disclaimer-block" style="margin-top:1.25rem">
+        <p>Guest mode still works with on-phone storage. We’ll gently remind you to create an account so you don’t lose baby tracking.</p>
+      </div>
+
+      <p class="screen-back">
+        <a class="btn btn-ghost" href="#home" data-nav>← Home</a>
+        <a class="btn btn-secondary" href="#postpartum" data-nav>Ember</a>
+      </p>
+    </section>
+
     <section id="view-about" class="view" hidden aria-label="Our promise">
       <div class="section-head">
         <h2>Our promise</h2>
@@ -749,6 +811,7 @@
   <script src="js/support.js"></script>
   <script src="js/mom-tools.js"></script>
   <script src="data/us-states.js"></script>
+  <script src="js/account.js"></script>
   <script src="js/beacon.js"></script>
 </body>
 </html>
