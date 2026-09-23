@@ -94,6 +94,7 @@
           <button type="button" class="btn btn-secondary btn-lg choice-btn" data-need="ultrasound">Ultrasound or appointment</button>
           <button type="button" class="btn btn-secondary btn-lg choice-btn" data-need="ride">A ride to care</button>
           <button type="button" class="btn btn-secondary btn-lg choice-btn" data-need="talk">Someone to talk to</button>
+          <button type="button" class="btn btn-secondary btn-lg choice-btn" data-need="counseling">Pregnancy counseling</button>
           <button type="button" class="btn btn-secondary btn-lg choice-btn" data-need="mentor">A mentor mom</button>
         </div>
         <button type="button" class="btn btn-ghost" id="crisis-back">← Back</button>`;
@@ -116,6 +117,7 @@
       ultrasound: { needs: ["expecting", "ultrasound"], label: "an ultrasound or appointment" },
       ride: { needs: ["expecting", "ride"], label: "a ride to an appointment" },
       talk: { needs: ["expecting", "talk"], label: "someone to talk to" },
+      counseling: { needs: ["expecting", "counseling"], label: "pregnancy counseling" },
       mentor: { needs: ["expecting", "mentor"], label: "a mentor mom" }
     };
     const pack = needMap[s.need] || { needs: ["expecting", "talk"], label: "support" };
