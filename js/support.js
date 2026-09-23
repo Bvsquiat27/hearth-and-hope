@@ -6,7 +6,6 @@
 (function () {
   "use strict";
 
-  const STORIES_KEY = "hearthStoriesOptIn";
   const NINETY_KEY = "hearthNinetyDays";
   const RESUME_KEY = "hearthResumeDraft";
   const CRISIS_KEY = "hearthCrisisDraft";
@@ -455,50 +454,160 @@ I’m doing my best. Thank you for standing with me.
     });
   }
 
-  /* ---------- Stories (opt-in) ---------- */
-  const STORIES = [
-    { title: "Maya — scared at the test", body: "Maya cried in the pharmacy bathroom. A center answered the same week, helped with a free scan, and never rushed her. Today she texts another new mom: “One day at a time.”" },
-    { title: "Jordan — alone on night shift", body: "Jordan worried about shifts and rent. A mentor mom brought a meal and a list of diaper banks. Gaps on her resume didn’t matter — they practiced interview answers together." },
-    { title: "Ava — telling her family", body: "Ava shared a calm “how you can help” note. Her sister took her to appointments. Her dad paid for a car seat. Love showed up in rides and quiet presence." },
-    { title: "Grace — first 90 days", body: "Grace checked off WIC, a pediatrician, and a budget week by week. Some days were hard. Asking for help became easier. Her baby is thriving — and so is she." }
-  ];
+  /* ---------- Stories of hope — live public board (real posts only) ---------- */
+  const HOPE_NAME_KEY = "hearthHopeDisplayName";
+  const HOPE_MAX = 400;
+  let hopePollTimer = null;
+
+  function hopeRestBase() {
+    const c = window.HEARTH_FIREBASE;
+    return (c && c.restBaseUrl) ? String(c.restBaseUrl).replace(/\/$/, "") : "";
+  }
+
+  function filterHopeText(text) {
+    if (window.HearthBeacon && typeof HearthBeacon.filterNote === "function") {
+      const r = HearthBeacon.filterNote(String(text || "").slice(0, HOPE_MAX));
+      if (!r.ok && r.reason === "long") return { ok: false, reason: "long" };
+      /* filterNote caps at 180 — re-check length ourselves for hope board */
+    }
+    let t = String(text || "").trim().replace(/\s+/g, " ");
+    if (!t) return { ok: false, reason: "empty" };
+    if (t.length > HOPE_MAX) return { ok: false, reason: "long" };
+    const BLOCK = [
+      /\b(kill|murder|rape|suicide|kms|kys|die\s*bitch|hurt\s*you|stalk|bomb|shoot)\b/i,
+      /\b(fuck|fucking|shit|bitch|asshole|cunt|slut|whore|nigg|faggot|retard)\b/i,
+      /\b(sex|sexy|nude|porn|onlyfans)\b/i,
+      /\b(kill\s*yourself|hang\s*yourself|cut\s*yourself)\b/i,
+      /\b(https?:\/\/|www\.|\.com\b|\.net\b|\.org\b)/i,
+      /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i,
+      /\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b/,
+      /(?:^|\s)@[a-z0-9_]{3,}/i,
+      /\b(snapchat|instagram|tiktok|discord|telegram|whatsapp|dm\s*me|text\s*me|call\s*me)\b/i
+    ];
+    for (let i = 0; i < BLOCK.length; i++) {
+      if (BLOCK[i].test(t)) return { ok: false, reason: "blocked" };
+    }
+    return { ok: true, text: t };
+  }
+
+  function sanitizeHopeName(name) {
+    let n = String(name || "").trim().replace(/\s+/g, " ").slice(0, 24);
+    if (!n) return "A mom";
+    const check = filterHopeText(n);
+    if (!check.ok) return "A mom";
+    /* first-name-ish only — no emails/handles */
+    if (/[@./]/.test(n) || /\d{3}/.test(n)) return "A mom";
+    return n;
+  }
+
+  function renderHopeList(posts) {
+    const list = $("hope-list");
+    if (!list) return;
+    const items = Object.keys(posts || {}).map((k) => Object.assign({ id: k }, posts[k]));
+    items.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+    if (!items.length) {
+      list.innerHTML = `<p class="hint hope-empty">No stories yet — share yours when you’re ready.</p>`;
+      return;
+    }
+    list.innerHTML = items.slice(0, 80).map((p) => {
+      const when = p.createdAt ? new Date(p.createdAt).toLocaleString() : "";
+      return `<article class="story-card hope-card">
+        <p>${escapeHtml(p.text || "")}</p>
+        <p class="meta">${escapeHtml(p.fromLabel || "A mom")}${when ? " · " + escapeHtml(when) : ""}</p>
+      </article>`;
+    }).join("");
+  }
+
+  function loadHopePosts() {
+    const base = hopeRestBase();
+    const list = $("hope-list");
+    if (!base) {
+      if (list) list.innerHTML = `<p class="hint">The hope board needs a live connection. Try again soon.</p>`;
+      return;
+    }
+    fetch(base + "/hope")
+      .then((r) => r.json())
+      .then((val) => renderHopeList(val || {}))
+      .catch(() => {
+        if (list) list.innerHTML = `<p class="hint">Could not load the board right now.</p>`;
+      });
+  }
+
+  function postHopeMessage() {
+    const ta = $("hope-text");
+    const nameEl = $("hope-name");
+    const fb = $("hope-feedback");
+    const checked = filterHopeText(ta ? ta.value : "");
+    if (!checked.ok) {
+      if (fb) fb.textContent = "That couldn’t be posted. Try a kind word instead.";
+      return;
+    }
+    const fromLabel = sanitizeHopeName(nameEl ? nameEl.value : "");
+    try {
+      if (nameEl && nameEl.value.trim()) localStorage.setItem(HOPE_NAME_KEY, nameEl.value.trim().slice(0, 24));
+    } catch (e) {}
+    const base = hopeRestBase();
+    if (!base) {
+      if (fb) fb.textContent = "The hope board needs a live connection.";
+      return;
+    }
+    const body = {
+      text: checked.text,
+      createdAt: Date.now(),
+      fromLabel
+    };
+    fetch(base + "/hope", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    })
+      .then((r) => {
+        if (!r.ok) throw new Error("blocked");
+        return r.json();
+      })
+      .then(() => {
+        if (fb) fb.textContent = "Posted — thank you for sharing.";
+        if (ta) ta.value = "";
+        loadHopePosts();
+      })
+      .catch(() => {
+        if (fb) fb.textContent = "That couldn’t be posted. Try a kind word instead.";
+      });
+  }
 
   function renderStories() {
     const root = $("stories-body");
     if (!root) return;
-    let opted = false;
-    try { opted = localStorage.getItem(STORIES_KEY) === "1"; } catch (e) {}
-
-    if (!opted) {
-      root.innerHTML = `
-        <div class="form-panel support-panel">
-          <h3 class="support-h3">Show stories of hope?</h3>
-          <p>Short, fictional composites. Tone: scared → supported → parenting. Never used to shame anyone.</p>
-          <div class="choice-stack" style="margin-top:1rem">
-            <button type="button" class="btn btn-primary btn-lg" id="stories-yes">Yes, show stories</button>
-            <a class="btn btn-ghost btn-lg" href="#support" data-nav>Not now</a>
-          </div>
-        </div>`;
-      $("stories-yes").onclick = () => {
-        try { localStorage.setItem(STORIES_KEY, "1"); } catch (e) {}
-        renderStories();
-      };
-      return;
-    }
+    let savedName = "";
+    try { savedName = localStorage.getItem(HOPE_NAME_KEY) || ""; } catch (e) {}
 
     root.innerHTML = `
-      <div class="stories-list">
-        ${STORIES.map((s) => `
-          <article class="story-card">
-            <h3>${escapeHtml(s.title)}</h3>
-            <p>${escapeHtml(s.body)}</p>
-          </article>`).join("")}
+      <div class="form-panel support-panel hope-compose">
+        <h3 class="support-h3">Share a real note of hope</h3>
+        <p class="hint">Public board for moms. Be kind. No names required. No contact info, links, or threats.</p>
+        <label class="field">
+          <span>Display name (optional — default “A mom”)</span>
+          <input type="text" id="hope-name" class="search-input" maxlength="24" placeholder="A mom" value="${escapeHtml(savedName)}" autocomplete="nickname" />
+        </label>
+        <label class="field">
+          <span>Your message (max ${HOPE_MAX} characters)</span>
+          <textarea id="hope-text" rows="4" maxlength="${HOPE_MAX}" placeholder="Something true that might help another mom…"></textarea>
+        </label>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="hope-post">Post to the board</button>
+        </div>
+        <p id="hope-feedback" class="hint" role="status"></p>
       </div>
-      <button type="button" class="btn btn-ghost" id="stories-hide" style="margin-top:1rem">Hide stories on this phone</button>`;
-    $("stories-hide").onclick = () => {
-      try { localStorage.removeItem(STORIES_KEY); } catch (e) {}
-      renderStories();
-    };
+      <h3 class="support-h3" style="margin-top:1.5rem">Recent messages</h3>
+      <div id="hope-list" class="stories-list" aria-live="polite">
+        <p class="hint">Loading…</p>
+      </div>`;
+
+    const postBtn = $("hope-post");
+    if (postBtn) postBtn.onclick = postHopeMessage;
+    loadHopePosts();
+    if (hopePollTimer) clearInterval(hopePollTimer);
+    hopePollTimer = setInterval(loadHopePosts, 8000);
   }
 
   /* ---------- Resume + job email templates ---------- */
@@ -814,5 +923,5 @@ Thank you,
     onRoute();
   }
 
-  window.HearthSupport = { renderCrisis, renderResume, goHelp };
+  window.HearthSupport = { renderCrisis, renderResume, goHelp, stories: renderStories };
 })();
