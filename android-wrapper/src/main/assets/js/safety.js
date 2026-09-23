@@ -1,6 +1,7 @@
 /**
- * Neighborhood safety — opens official NSOPW (U.S. DOJ) in a new tab.
- * No scraping, no caching of offender records, no paid APIs.
+ * Neighborhood safety — opens official NSOPW (U.S. DOJ) live in the same
+ * WebView / browser tab. No scraping, no caching of offender records,
+ * no paid or undocumented APIs — government browser UI only.
  */
 (function () {
   "use strict";
@@ -55,14 +56,30 @@
     if (z) zipInput.value = z;
   }
 
+  /** Android WebView / file assets / installed PWA — navigate in the same view. */
+  function isInAppWebView() {
+    try {
+      if (location.protocol === "file:") return true;
+      const ua = navigator.userAgent || "";
+      /* Android WebView typically includes "; wv)" */
+      if (/;\s*wv\)/i.test(ua)) return true;
+      if (/\bWebView\b/i.test(ua)) return true;
+      if (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) {
+        return true;
+      }
+      if (navigator.standalone === true) return true;
+    } catch { /* ignore */ }
+    return false;
+  }
+
   function showSteps(zip) {
     if (stepsEl) stepsEl.hidden = false;
     if (zipReminder) zipReminder.textContent = zip || "your ZIP";
     if (openNote) {
       openNote.hidden = false;
       openNote.textContent = zip
-        ? "On the next page, type " + zip + " in the ZIP field and Search."
-        : "On the next page, type your ZIP and Search.";
+        ? "On the next page, type " + zip + " in the ZIP field and Search. Use Back to return here."
+        : "On the next page, type your ZIP and Search. Use Back to return here.";
     }
   }
 
@@ -73,12 +90,22 @@
 
     showSteps(zip);
 
-    /* No reliable official query-param deep link; open the government search page. */
-    const win = window.open(NSOPW_SEARCH, "_blank", "noopener,noreferrer");
-    if (!win && openNote) {
-      openNote.hidden = false;
-      openNote.textContent =
-        "Pop-up blocked. Use the button again, or open NSOPW home and choose Search.";
+    /* Live official NSOPW page only — never scrape or call internal APIs. */
+    if (isInAppWebView() || location.protocol === "file:") {
+      window.location.href = NSOPW_SEARCH;
+      return;
+    }
+
+    /* Mobile browser / GitHub Pages: full-screen navigate so Back returns to Hearth. */
+    try {
+      window.location.assign(NSOPW_SEARCH);
+    } catch {
+      const win = window.open(NSOPW_SEARCH, "_blank", "noopener,noreferrer");
+      if (!win && openNote) {
+        openNote.hidden = false;
+        openNote.textContent =
+          "Could not open NSOPW. Tap again, or open NSOPW home and choose Search.";
+      }
     }
   }
 
