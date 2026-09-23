@@ -122,6 +122,14 @@
     if (siteNav) siteNav.classList.remove("open");
     if (navToggle) navToggle.setAttribute("aria-expanded", "false");
     window.scrollTo({ top: 0, behavior: "smooth" });
+    if (window.HearthVoice) {
+      window.HearthVoice.stop();
+      if (window.HearthVoice.getPref()) {
+        setTimeout(function () {
+          if (window.HearthVoice.getPref()) window.HearthVoice.speakSection(id);
+        }, 350);
+      }
+    }
   }
 
   function route() {
@@ -180,12 +188,24 @@
       ${r.body.map((p) => `<p>${escapeHtml(p)}</p>`).join("")}
       ${r.medical ? `<div class="disclaimer"><strong>Not medical advice.</strong> Talk with your doctor or midwife about your situation. If you are in danger, call 911.</div>` : ""}
       ${r.faith ? `<details class="optional-faith"><summary>Optional encouragement (skip anytime)</summary><p>${escapeHtml(r.faith)}</p></details>` : ""}
-      <p style="margin-top:1rem"><button type="button" class="btn btn-ghost" id="close-resource">Close</button>
+      <p style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.5rem">
+        <button type="button" class="btn btn-secondary" id="read-resource" aria-label="Read this guide aloud">Read aloud</button>
+        <button type="button" class="btn btn-ghost" id="close-resource">Close</button>
       <a class="btn btn-primary" href="#help">Ask centers for help</a></p>
     `;
     resourceDetail.scrollIntoView({ behavior: "smooth", block: "nearest" });
     const closeBtn = document.getElementById("close-resource");
-    if (closeBtn) closeBtn.addEventListener("click", () => { resourceDetail.hidden = true; });
+    if (closeBtn) closeBtn.addEventListener("click", () => {
+      resourceDetail.hidden = true;
+      if (window.HearthVoice) window.HearthVoice.stop();
+    });
+    const readBtn = document.getElementById("read-resource");
+    if (readBtn) readBtn.addEventListener("click", () => {
+      if (window.HearthVoice) window.HearthVoice.speakResource(r);
+    });
+    if (window.HearthVoice && window.HearthVoice.getPref()) {
+      window.HearthVoice.speakResource(r);
+    }
   }
 
   if (resourceChips) {
@@ -492,26 +512,53 @@
     }
 
     if (!list.length) {
-      centerList.innerHTML = `<div class="empty-state">No centers available yet. Try another city or ZIP, or clear the filter to browse the national starter network.</div>`;
+      centerList.innerHTML = `<div class="empty-state">No centers matched. Try another city or ZIP, or clear the search to browse.</div>`;
       return;
     }
 
-    centerList.innerHTML = list.map((c) => `
+    centerList.innerHTML = list.map((c) => {
+      const actions = [];
+      if (c.phone) actions.push(`<a class="btn-call" href="tel:${escapeAttr(c.phone)}" aria-label="Call ${escapeAttr(c.name)}">Call ${escapeHtml(c.phone)}</a>`);
+      if (c.website) actions.push(`<a href="${escapeAttr(c.website)}" target="_blank" rel="noopener noreferrer">Website</a>`);
+      if (c.email) actions.push(`<a href="mailto:${escapeAttr(c.email)}">Email</a>`);
+      actions.push(`<a href="#help" data-pref-zip="${escapeAttr(c.zip)}">Ask via app</a>`);
+      return `
       <article class="center-card">
         <header>
           <h3>${escapeHtml(c.name)}</h3>
           <span class="tag green">${escapeHtml(c.type)}</span>
         </header>
-        <p class="loc">${escapeHtml(c.city)}, ${escapeHtml(c.state)} ${escapeHtml(c.zip)}${formatDist(c._dist)} · ${escapeHtml(c.faith)}</p>
-        <p class="blurb">${escapeHtml(c.blurb || c.blurb || "")}</p>
-        <div class="services">${(c.services || []).map((s) => `<span class="service-pill">${escapeHtml(s)}</span>`).join("")}</div>
-        <div class="center-actions">
-          <a href="tel:${escapeAttr(c.phone)}">Call ${escapeHtml(c.phone)}</a>
-          <a href="mailto:${escapeAttr(c.email)}">Email</a>
-          <a href="#help" data-pref-zip="${escapeAttr(c.zip)}">Contact via app</a>
-        </div>
-      </article>
-    `).join("");
+        <p class="loc">${escapeHtml(c.city)}, ${escapeHtml(c.state)} ${escapeHtml(c.zip)}${formatDist(c._dist)}</p>
+        <p class="blurb">${escapeHtml(c.blurb || "")}</p>
+        <div class="services">${(c.services || []).slice(0, 6).map((s) => `<span class="service-pill">${escapeHtml(s)}</span>`).join("")}</div>
+        <div class="center-actions">${actions.join("")}</div>
+      </article>`;
+    }).join("");
+  }
+
+  function speakDirectoryResults() {
+    if (!window.HearthVoice) return;
+    const cards = document.querySelectorAll("#center-list .center-card");
+    if (!cards.length) {
+      window.HearthVoice.speak("No centers matched. Try another city or ZIP.");
+      return;
+    }
+    const note = document.getElementById("dir-match-note");
+    const parts = [];
+    if (note && !note.hidden && note.textContent) parts.push(note.textContent);
+    parts.push("Here are the first " + Math.min(5, cards.length) + " centers.");
+    cards.forEach((card, i) => {
+      if (i >= 5) return;
+      const name = card.querySelector("h3");
+      const loc = card.querySelector(".loc");
+      const phone = card.querySelector("a[href^='tel:']");
+      parts.push(
+        (name ? name.textContent : "") + ". " +
+        (loc ? loc.textContent : "") + ". " +
+        (phone ? "Phone " + phone.textContent.replace(/^Call\s+/i, "") : "")
+      );
+    });
+    window.HearthVoice.speak(parts.join(". "));
   }
 
   function useBrowserLocation(target) {
@@ -538,6 +585,9 @@
         if (target === "dir" || target === "both") {
           if (locFilter && !locFilter.value) locFilter.value = "Near me";
           renderCenters();
+          if (window.HearthVoice && window.HearthVoice.getPref()) {
+            setTimeout(speakDirectoryResults, 200);
+          }
         }
         if (target === "help" || target === "both") {
           const loc = document.getElementById("location");
@@ -957,6 +1007,30 @@ ${msg.sms}`;
   updatePreview();
   route();
   wireInstallUI();
+    if (window.HearthVoice) window.HearthVoice.wire();
+
+  /* Get Help step prompts (voice) */
+  (function wireHelpVoice() {
+    const form = document.getElementById("help-form");
+    if (!form || !window.HearthVoice) return;
+    const tips = {
+      firstName: "Type your first name.",
+      location: "Type your city or ZIP code. Or tap Use my location.",
+      email: "Email is optional if you share a phone number.",
+      phone: "Phone is optional if you share an email.",
+      message: "You can add a short message for the centers. This is optional.",
+      consent: "Check this box only if you allow the app to open a message to centers for you.",
+    };
+    form.querySelectorAll("input, textarea, select").forEach((el) => {
+      el.addEventListener("focus", () => {
+        if (!window.HearthVoice.getPref()) return;
+        const id = el.id || el.name;
+        const tip = tips[id] || (el.name === "needs" ? "Check everything that fits your situation." : "");
+        if (tip) window.HearthVoice.speak(tip);
+      });
+    });
+  })();
+
   registerServiceWorker();
   wireOfflineToast();
 })();

@@ -48,6 +48,17 @@
         <span class="logo-mark" aria-hidden="true">♥</span>
         <span>Hearth &amp; Hope</span>
       </a>
+      <div class="voice-bar" role="group" aria-label="Voice help" data-voice-state="idle">
+        <button type="button" class="voice-btn voice-toggle" id="voice-help-toggle" data-voice-action="toggle-pref" aria-pressed="false" aria-label="Turn voice help on or off" title="Voice help">
+          <span aria-hidden="true">🔊</span>
+          <span class="voice-toggle-label">Voice</span>
+        </button>
+        <button type="button" class="voice-btn" data-voice-action="play-pause" aria-label="Read this screen aloud, or pause">
+          <span aria-hidden="true">▶</span>
+          <span data-voice-label-play>Read aloud</span>
+        </button>
+        <button type="button" class="voice-btn voice-stop" data-voice-action="stop" aria-label="Stop reading">Stop</button>
+      </div>
       <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
         <a href="#home" data-nav>Home</a>
@@ -62,52 +73,63 @@
   <main id="main">
     <!-- HOME -->
     <section id="view-home" class="view active" aria-label="Home">
+      <div class="voice-section-row">
+        <button type="button" class="voice-btn voice-section" data-voice-action="read-section" data-voice-section="home" aria-label="Read the home screen aloud">
+          <span aria-hidden="true">🔊</span> Read this page
+        </button>
+      </div>
       <div class="hero">
-        <p class="hero-eyebrow">For new &amp; expecting mothers</p>
-        <h1>You are valued. You are not alone. Help is near.</h1>
+        <p class="hero-eyebrow">For moms &amp; moms-to-be</p>
+        <h1>You matter. Help is near.</h1>
         <p class="hero-lead">
-          Practical resources, kind local partners, and a simple way to reach out — at your pace, with your consent.
+          Simple guides. Real local help. You choose what happens next.
         </p>
-        <p class="faith-line">Supporting life as Christ intended — with dignity for every mother.</p>
+        <p class="faith-line">We support life as Christ intended — with dignity for every mother.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#resources" data-nav>Explore resources</a>
-          <a class="btn btn-secondary" href="#directory" data-nav>Find help nearby</a>
-          <a class="btn btn-secondary" href="#help" data-nav>I’m pregnant</a>
-          <a class="btn btn-ghost" href="#help" data-nav>I’m a new mom</a>
+          <a class="btn btn-primary btn-lg" href="#directory" data-nav>Find help near me</a>
+          <a class="btn btn-secondary btn-lg" href="#help" data-nav>I’m pregnant — get help</a>
+          <a class="btn btn-secondary btn-lg" href="#help" data-nav>I’m a new mom</a>
+          <a class="btn btn-ghost btn-lg" href="#resources" data-nav>Read guides</a>
         </div>
+        <p class="next-hint">Start with <strong>Find help near me</strong> — enter your city or ZIP.</p>
       </div>
 
       <div class="section-head">
-        <h2>How we walk with you</h2>
-        <p>Small, clear steps — never shame, never pressure.</p>
+        <h2>Three easy steps</h2>
+        <p>No shame. No pressure. Go at your pace.</p>
       </div>
       <div class="card-grid">
         <article class="card">
           <div class="card-icon green" aria-hidden="true">📚</div>
-          <h3>Learn what you need</h3>
-          <p>Short, trustworthy guides on pregnancy, parenting, adoption, aid, and emotional support. Skip anything that isn’t for you today.</p>
-          <a class="btn btn-secondary" href="#resources" data-nav>Browse resources</a>
+          <h3>1. Read short guides</h3>
+          <p>Pregnancy, parenting, adoption, money help, and someone to talk to.</p>
+          <a class="btn btn-secondary" href="#resources" data-nav>Open guides</a>
         </article>
         <article class="card">
           <div class="card-icon" aria-hidden="true">📍</div>
-          <h3>Find local care</h3>
-          <p>Pregnancy centers, maternity homes, churches, food and housing partners — pro-life aligned, woman-honoring.</p>
-          <a class="btn btn-secondary" href="#directory" data-nav>Open directory</a>
+          <h3>2. Find local help</h3>
+          <p>Real pregnancy centers and maternity help near your ZIP. We never list abortion clinics.</p>
+          <a class="btn btn-primary" href="#directory" data-nav>Find help</a>
         </article>
         <article class="card">
           <div class="card-icon cream" aria-hidden="true">✉️</div>
-          <h3>Let us draft the ask</h3>
-          <p>Tell us what you need. With your explicit OK, we open an email (or text) to nearby centers on your behalf.</p>
-          <a class="btn btn-secondary" href="#help" data-nav>Contact centers for me</a>
+          <h3>3. Ask for help</h3>
+          <p>We draft a message. You review it. Nothing sends until you say yes.</p>
+          <a class="btn btn-secondary" href="#help" data-nav>Contact centers</a>
         </article>
       </div>
     </section>
 
     <!-- RESOURCES -->
     <section id="view-resources" class="view" hidden aria-label="Resources">
+      <div class="voice-section-row">
+        <button type="button" class="voice-btn voice-section" data-voice-action="read-section" data-voice-section="resources" aria-label="Read the resources screen aloud">
+          <span aria-hidden="true">🔊</span> Read this page
+        </button>
+      </div>
       <div class="section-head">
-        <h2>Resources</h2>
-        <p>Practical information — not a substitute for your doctor. You’re brave for seeking clarity.</p>
+        <h2>Guides</h2>
+        <p>Short, plain answers. Not a doctor — call your clinic for medical care.</p>
       </div>
       <div class="toolbar">
         <label class="visually-hidden" for="resource-search" style="position:absolute;left:-9999px">Search resources</label>
@@ -120,16 +142,21 @@
 
     <!-- DIRECTORY -->
     <section id="view-directory" class="view" hidden aria-label="Directory">
-      <div class="section-head">
-        <h2>Find help nearby</h2>
-        <p>Starter partner network across all 50 states + DC. Enter any city or ZIP to see the nearest centers. We never list abortion providers.</p>
+      <div class="voice-section-row">
+        <button type="button" class="voice-btn voice-section" data-voice-action="read-section" data-voice-section="directory" aria-label="Read the find help screen aloud">
+          <span aria-hidden="true">🔊</span> Read this page
+        </button>
       </div>
-      <div class="toolbar" style="flex-wrap:wrap;gap:0.5rem;align-items:center">
-        <label class="visually-hidden" for="loc-filter" style="position:absolute;left:-9999px">City or ZIP</label>
-        <input type="search" id="loc-filter" class="filter-input" placeholder="Any city or ZIP (e.g. New York 10001, Boise, 83702)" autocomplete="off" style="flex:1 1 200px" />
-        <label class="visually-hidden" for="type-filter" style="position:absolute;left:-9999px">Type</label>
-        <select id="type-filter" class="select-input" style="flex:0 1 200px"></select>
-        <button type="button" class="btn btn-secondary" id="use-my-location-dir" style="flex:0 0 auto">Use my location</button>
+      <div class="section-head">
+        <h2>Find help near you</h2>
+        <p>Enter your <strong>city or ZIP</strong>. We’ll show real pregnancy help centers nearby. No abortion clinics. No Planned Parenthood.</p>
+      </div>
+      <div class="toolbar toolbar-friendly">
+        <label class="field-label" for="loc-filter">Your city or ZIP</label>
+        <input type="search" id="loc-filter" class="filter-input input-lg" placeholder="Example: Houston or 77002" autocomplete="off" />
+        <label class="field-label" for="type-filter">Type of help</label>
+        <select id="type-filter" class="select-input input-lg"></select>
+        <button type="button" class="btn btn-secondary btn-lg" id="use-my-location-dir">Use my location</button>
       </div>
       <p id="dir-match-note" class="hint" style="margin:0.5rem 0 0" hidden></p>
       <div class="center-list" id="center-list"></div>
@@ -137,19 +164,26 @@
 
     <!-- GET HELP -->
     <section id="view-help" class="view" hidden aria-label="Get Help">
+      <div class="voice-section-row">
+        <button type="button" class="voice-btn voice-section" data-voice-action="read-section" data-voice-section="help" aria-label="Read the get help form aloud">
+          <span aria-hidden="true">🔊</span> Read this page
+        </button>
+      </div>
       <div class="section-head">
-        <h2>Contact centers for me</h2>
-        <p>We’ll match nearby partners and draft a message. Nothing is sent until you consent and your own mail or messaging app opens.</p>
+        <h2>Get help</h2>
+        <p><strong>Step 1:</strong> Tell us your name and city.<br/>
+           <strong>Step 2:</strong> Check what you need.<br/>
+           <strong>Step 3:</strong> Review the message — nothing sends until you say yes.</p>
       </div>
 
       <form id="help-form" class="form-panel" novalidate>
         <div class="form-grid two">
           <div class="field">
-            <label for="firstName">First name</label>
+            <label for="firstName">Your first name</label>
             <input class="input" type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="e.g. Maria" />
           </div>
           <div class="field">
-            <label for="location">City or ZIP</label>
+            <label for="location">Your city or ZIP</label>
             <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center">
               <input class="input" type="text" id="location" name="location" required placeholder="e.g. New York 10001, Boise, or your ZIP" autocomplete="postal-code" style="flex:1 1 160px" />
               <button type="button" class="btn btn-secondary" id="use-my-location-help" style="flex:0 0 auto">Use my location</button>
@@ -209,8 +243,8 @@
         </div>
 
         <div class="form-actions">
-          <button type="submit" class="btn btn-success">Preview &amp; open email</button>
-          <button type="button" class="btn btn-ghost" id="copy-message">Copy message</button>
+          <button type="submit" class="btn btn-success btn-lg">Review &amp; open email</button>
+          <button type="button" class="btn btn-ghost btn-lg" id="copy-message">Copy message</button>
         </div>
 
         <div id="form-error" class="alert alert-error" hidden role="alert"></div>
@@ -220,9 +254,14 @@
 
     <!-- ABOUT -->
     <section id="view-about" class="view" hidden aria-label="Our promise">
+      <div class="voice-section-row">
+        <button type="button" class="voice-btn voice-section" data-voice-action="read-section" data-voice-section="about" aria-label="Read our promise aloud">
+          <span aria-hidden="true">🔊</span> Read this page
+        </button>
+      </div>
       <div class="section-head">
         <h2>Our promise</h2>
-        <p>Hearth &amp; Hope exists to honor mothers and protect life — without treating women as problems to solve.</p>
+        <p>We honor moms and protect life. You are never a problem to fix.</p>
       </div>
 
       <div class="promise-grid">
@@ -251,7 +290,7 @@
           Always talk with a qualified clinician about your health. If you or someone else is in immediate danger, call <strong>911</strong> (or your local emergency number).
         </p>
         <p style="margin-top:0.75rem;margin-bottom:0">
-          Directory entries are fictional placeholders for product testing — a starter network across all 50 states + DC. Enter any town or ZIP to find the nearest listed centers (not every municipality has its own unique entry).
+          Local centers come from public Option Line (Heartbeat International) and Birthright directories (retrieved September 2026). Confirm hours by phone. More verified listings may be added over time. Enter any town or ZIP to find the nearest centers.
         </p>
       </div>
 
@@ -303,6 +342,7 @@
   <script src="data/centers.js"></script>
   <script src="data/zips.js"></script>
   <script src="js/geo.js"></script>
+  <script src="js/voice.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
