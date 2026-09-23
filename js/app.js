@@ -104,6 +104,7 @@
     ride: "I need a ride to an appointment",
     mentor: "Please connect me with a mentor mom",
     talk: "I need someone to talk to",
+    counseling: "I need pregnancy counseling",
     apply: "Please help me apply for local aid",
     diapers: "I need diapers",
     formula: "I need formula",
@@ -461,12 +462,23 @@
       return { c, tier, dist, overlap };
     });
 
-    scored.sort((a, b) =>
-      a.tier - b.tier ||
-      a.dist - b.dist ||
-      b.overlap - a.overlap ||
-      a.c.name.localeCompare(b.c.name)
-    );
+    scored.sort((a, b) => {
+      const needFirst = (needs || []).length > 0;
+      if (needFirst) {
+        return (
+          a.tier - b.tier ||
+          b.overlap - a.overlap ||
+          a.dist - b.dist ||
+          a.c.name.localeCompare(b.c.name)
+        );
+      }
+      return (
+        a.tier - b.tier ||
+        a.dist - b.dist ||
+        b.overlap - a.overlap ||
+        a.c.name.localeCompare(b.c.name)
+      );
+    });
 
     const local = scored.filter((s) => s.dist <= LOCAL_MILES || s.tier <= 4);
     let mode = "all";
@@ -644,6 +656,7 @@
     ride: ["expecting"],
     mentor: ["talk"],
     talk: ["talk"],
+    counseling: ["counseling"],
     apply: ["expecting", "new-mom"],
     diapers: ["supplies"],
     formula: ["supplies"],
@@ -680,9 +693,10 @@
     const result = rankCenters(q, expandNeeds(needs || []), { limit: 40, geo });
     const pool = (result.items || []).slice();
 
+    const wantCounseling = (needs || []).includes("counseling");
     const scored = pool.map((c) => {
       const covered = centerNeedOverlap(c, needs);
-      const overlap = covered.length;
+      let overlap = covered.length;
       const national = isNational(c) ? 1 : 0;
       const hasEmail = c.email ? 1 : 0;
       const hasPhone = c.phone ? 1 : 0;
@@ -694,6 +708,21 @@
         (national ? 1 : 0);
       /* Soft boost for email when overlapping */
       const emailBoost = (overlap > 0 && hasEmail) ? -0.5 : 0;
+      /* Prefer centers whose own services already list counseling */
+      let counselBoost = 0;
+      if (wantCounseling) {
+        const svc = ((c.services || []).join(" ") + " " + (c.blurb || "")).toLowerCase();
+        const offers =
+          (c.needs || []).includes("counseling") ||
+          /pregnancy\s*counsel|options\s*counsel|decision\s*coach|\bcounsel(?:ing|ling)?\b/.test(svc);
+        if (offers) {
+          counselBoost = -1;
+          if (!(c.needs || []).includes("counseling") && !covered.includes("counseling")) {
+            covered.push("counseling");
+            overlap = covered.length;
+          }
+        }
+      }
       return {
         c,
         covered,
@@ -702,7 +731,7 @@
         national,
         hasEmail,
         hasPhone,
-        sortKey: rank + emailBoost,
+        sortKey: rank + emailBoost + counselBoost,
       };
     }).filter((s) => hasContact(s.c));
 
