@@ -48,17 +48,6 @@
         <span class="logo-mark" aria-hidden="true">♥</span>
         <span>Hearth &amp; Hope</span>
       </a>
-      <div class="voice-bar" role="group" aria-label="Voice help" data-voice-state="idle">
-        <button type="button" class="voice-btn voice-toggle" id="voice-help-toggle" data-voice-action="toggle-pref" aria-pressed="false" aria-label="Turn voice help on or off" title="Voice help">
-          <span aria-hidden="true">🔊</span>
-          <span class="voice-toggle-label">Voice</span>
-        </button>
-        <button type="button" class="voice-btn" data-voice-action="play-pause" aria-label="Read this screen aloud, or pause">
-          <span aria-hidden="true">▶</span>
-          <span data-voice-label-play>Read aloud</span>
-        </button>
-        <button type="button" class="voice-btn voice-stop" data-voice-action="stop" aria-label="Stop reading">Stop</button>
-      </div>
       <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
         <a href="#home" data-nav>Home</a>
@@ -73,11 +62,6 @@
   <main id="main">
     <!-- HOME -->
     <section id="view-home" class="view active" aria-label="Home">
-      <div class="voice-section-row">
-        <button type="button" class="voice-btn voice-section" data-voice-action="read-section" data-voice-section="home" aria-label="Read the home screen aloud">
-          <span aria-hidden="true">🔊</span> Read this page
-        </button>
-      </div>
       <div class="hero">
         <p class="hero-eyebrow">For moms &amp; moms-to-be</p>
         <h1>You matter. Help is near.</h1>
@@ -122,11 +106,6 @@
 
     <!-- RESOURCES -->
     <section id="view-resources" class="view" hidden aria-label="Resources">
-      <div class="voice-section-row">
-        <button type="button" class="voice-btn voice-section" data-voice-action="read-section" data-voice-section="resources" aria-label="Read the resources screen aloud">
-          <span aria-hidden="true">🔊</span> Read this page
-        </button>
-      </div>
       <div class="section-head">
         <h2>Guides</h2>
         <p>Short, plain answers. Not a doctor — call your clinic for medical care.</p>
@@ -142,11 +121,6 @@
 
     <!-- DIRECTORY -->
     <section id="view-directory" class="view" hidden aria-label="Directory">
-      <div class="voice-section-row">
-        <button type="button" class="voice-btn voice-section" data-voice-action="read-section" data-voice-section="directory" aria-label="Read the find help screen aloud">
-          <span aria-hidden="true">🔊</span> Read this page
-        </button>
-      </div>
       <div class="section-head">
         <h2>Find help near you</h2>
         <p>Enter your <strong>city or ZIP</strong>. We’ll show real pregnancy help centers nearby. No abortion clinics. No Planned Parenthood.</p>
@@ -164,11 +138,6 @@
 
     <!-- GET HELP -->
     <section id="view-help" class="view" hidden aria-label="Get Help">
-      <div class="voice-section-row">
-        <button type="button" class="voice-btn voice-section" data-voice-action="read-section" data-voice-section="help" aria-label="Read the get help form aloud">
-          <span aria-hidden="true">🔊</span> Read this page
-        </button>
-      </div>
       <div class="section-head">
         <h2>Get help</h2>
         <p><strong>Step 1:</strong> Tell us your name and city.<br/>
@@ -254,11 +223,6 @@
 
     <!-- ABOUT -->
     <section id="view-about" class="view" hidden aria-label="Our promise">
-      <div class="voice-section-row">
-        <button type="button" class="voice-btn voice-section" data-voice-action="read-section" data-voice-section="about" aria-label="Read our promise aloud">
-          <span aria-hidden="true">🔊</span> Read this page
-        </button>
-      </div>
       <div class="section-head">
         <h2>Our promise</h2>
         <p>We honor moms and protect life. You are never a problem to fix.</p>
@@ -342,7 +306,6 @@
   <script src="data/centers.js"></script>
   <script src="data/zips.js"></script>
   <script src="js/geo.js"></script>
-  <script src="js/voice.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

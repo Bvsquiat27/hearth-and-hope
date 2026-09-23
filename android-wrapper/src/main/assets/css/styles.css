@@ -951,7 +951,7 @@ body.standalone-mode .site-header {
   }
 }
 
-/* ===== v1.1 UX: larger taps, high contrast, voice ===== */
+/* ===== v1.1 UX: larger taps, high contrast ===== */
 :root {
   --ink: #1a2430;
   --ink-soft: #3d4d5c;
@@ -1079,65 +1079,6 @@ body { font-size: 1.05rem; }
   font-size: 1rem;
 }
 
-/* Voice controls */
-.voice-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: 0.35rem;
-}
-.voice-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  min-height: 44px;
-  padding: 0.45rem 0.75rem;
-  border-radius: 999px;
-  border: 2px solid var(--blue-deep);
-  background: #fff;
-  color: var(--blue-deep);
-  font-weight: 700;
-  font-size: 0.88rem;
-  cursor: pointer;
-  font-family: inherit;
-}
-.voice-btn:hover, .voice-btn:focus-visible {
-  background: var(--blue-soft);
-}
-.voice-btn.is-on, .voice-toggle.is-on {
-  background: var(--blue-deep);
-  color: #fff;
-}
-.voice-btn.voice-stop {
-  border-color: var(--ink-soft);
-  color: var(--ink);
-}
-.voice-section-row {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 0.65rem;
-}
-.voice-section {
-  background: var(--green-soft);
-  border-color: var(--green);
-  color: #1e4a2e;
-}
-html.voice-unsupported .voice-bar,
-html.voice-unsupported .voice-section-row {
-  display: none !important;
-}
-[data-voice-state="speaking"] .voice-btn[data-voice-action="play-pause"] {
-  background: var(--blue-deep);
-  color: #fff;
-}
-[data-voice-state="paused"] .voice-btn[data-voice-action="play-pause"] {
-  background: var(--gold);
-  color: var(--ink);
-  border-color: var(--gold);
-}
 
 .center-actions a, .center-actions button {
   min-height: 44px;
@@ -1159,8 +1100,3 @@ html.voice-unsupported .voice-section-row {
   border-bottom: 2px solid #e0a0a0;
 }
 
-@media (max-width: 720px) {
-  .voice-toggle-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-  .header-inner { flex-wrap: wrap; }
-  .voice-bar { order: 3; width: 100%; margin: 0.25rem 0 0; justify-content: flex-start; }
-}
