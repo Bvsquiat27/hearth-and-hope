@@ -267,7 +267,27 @@
   const typeFilter = document.getElementById("type-filter");
   const dirMatchNote = document.getElementById("dir-match-note");
   const LOCAL_MILES = 100;
-  let geoOverride = null; // { lat, lng, label } from "Use my location"
+  let geoOverride = null; // { lat, lng, label } from "Use my location" — GPS mode only
+
+  function isNearMeQuery(q) {
+    return String(q || "").trim().toLowerCase() === "near me";
+  }
+
+  /** GPS only when field is empty or "Near me". Any typed city/ZIP clears GPS ranking. */
+  function geoForQuery(q) {
+    const t = String(q || "").trim();
+    if (!t || isNearMeQuery(t)) return geoOverride;
+    return null;
+  }
+
+  function clearGeoMode() {
+    geoOverride = null;
+  }
+
+  function syncGeoModeFromTypedLocation(raw) {
+    const t = String(raw || "").trim();
+    if (t && !isNearMeQuery(t)) clearGeoMode();
+  }
 
   function getCenters() {
     const all = window.HEARTH_CENTERS || [];
@@ -488,7 +508,8 @@
   function rankCenters(locRaw, needs, opts) {
     opts = opts || {};
     const limit = opts.limit || 50;
-    const geo = opts.geo || geoOverride;
+    /* Explicit opts.geo (including null) must win — never fall back to stale GPS via || */
+    const geo = Object.prototype.hasOwnProperty.call(opts, "geo") ? opts.geo : geoOverride;
     const resolved = resolveLocation(locRaw, geo);
     const type = opts.type || "";
     let pool = getCenters().filter((c) => !type || c.type === type);
@@ -610,37 +631,66 @@
       types.map((t) => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("");
   }
 
+  function setDirMatchNote(msg, ok) {
+    if (!dirMatchNote) return;
+    if (!msg) {
+      dirMatchNote.hidden = true;
+      dirMatchNote.textContent = "";
+      dirMatchNote.style.color = "";
+      return;
+    }
+    dirMatchNote.hidden = false;
+    dirMatchNote.textContent = msg;
+    dirMatchNote.style.color = ok === false ? "#8a4b2e" : "";
+  }
+
   function renderCenters() {
     if (!centerList) return;
     const q = (locFilter && locFilter.value || "").trim();
     const type = (typeFilter && typeFilter.value) || "";
-    const qNorm = q.trim().toLowerCase();
-    const useGeo = geoOverride && (!q || qNorm === "near me");
-    const result = rankCenters(qNorm === "near me" ? "" : q, [], { type, limit: 40, geo: useGeo ? geoOverride : null });
+    syncGeoModeFromTypedLocation(q);
+    const geo = geoForQuery(q);
+    const queryForRank = isNearMeQuery(q) ? "" : q;
+    const result = rankCenters(queryForRank, [], { type, limit: 40, geo: geo });
     const list = result.items;
+    const resolved = result.resolved;
+    const usingGps = !!(geo && resolved && resolved.source === "geo");
+    const hasQuery = !!(queryForRank || usingGps);
 
-    if (dirMatchNote) {
-      if (!q && !geoOverride) {
-        dirMatchNote.hidden = true;
-        dirMatchNote.textContent = "";
-      } else if (result.mode === "exact" || result.mode === "local") {
-        dirMatchNote.hidden = false;
-        dirMatchNote.textContent = `Showing nearest centers${result.resolved && result.resolved.label ? " near " + result.resolved.label : ""}.`;
-      } else if (result.mode === "in-state" || String(result.mode).startsWith("in-state")) {
-        dirMatchNote.hidden = false;
-        dirMatchNote.textContent = "Few centers in this area — showing in-state options plus nearby and national backups so you are never left without a number to call.";
-      } else if (result.mode === "national" || String(result.mode).includes("backup")) {
-        dirMatchNote.hidden = false;
-        dirMatchNote.textContent = "Limited local listings here — showing the nearest life-affirming centers across the area, plus national helplines.";
-      } else {
-        dirMatchNote.hidden = true;
-      }
+    if (!q && !geoOverride) {
+      setDirMatchNote("Enter a city or ZIP, or use your current location, to see nearest life-affirming centers.");
+    } else if (q && !isNearMeQuery(q) && resolved && resolved.source === "unresolved") {
+      setDirMatchNote("Could not place that location on the map. Check the ZIP or try a nearby city.", false);
+    } else if (usingGps) {
+      setDirMatchNote("Using your current location — showing nearest centers.");
+    } else if (resolved && resolved.lat != null && (result.mode === "exact" || result.mode === "local")) {
+      setDirMatchNote("Showing nearest centers near " + (resolved.label || q) + ".");
+    } else if (result.mode === "in-state" || String(result.mode).startsWith("in-state")) {
+      setDirMatchNote("Few centers right here — showing in-state options plus nearby and national backups.");
+    } else if (result.mode === "national" || String(result.mode).includes("backup")) {
+      setDirMatchNote("Limited local listings — showing the nearest life-affirming centers plus national helplines.");
+    } else if (hasQuery && resolved && resolved.lat != null) {
+      setDirMatchNote("Showing nearest centers near " + (resolved.label || q) + ".");
+    } else if (!hasQuery) {
+      setDirMatchNote("");
+    } else {
+      setDirMatchNote("");
     }
 
     if (!list.length) {
       const nationals = getCenters().filter((c) => (c.type || "").toLowerCase().includes("national") || c.zip === "00000");
-      if (nationals.length) {
-        centerList.innerHTML = `<div class="empty-state">We could not match that place to a map point, but these national life-affirming helplines are ready now. Try another city or ZIP for local centers.</div>` +
+      if (q && resolved && resolved.source === "unresolved" && nationals.length) {
+        centerList.innerHTML = `<div class="empty-state">That place did not match a map point. National life-affirming helplines are below — or try another city or ZIP.</div>` +
+          nationals.slice(0, 3).map((c) => {
+            const actions = [];
+            if (c.phone) actions.push(`<a class="btn-call" href="tel:${escapeAttr(c.phone)}">Call ${escapeHtml(c.phone)}</a>`);
+            if (c.website) actions.push(`<a href="${escapeAttr(c.website)}" target="_blank" rel="noopener noreferrer">Website</a>`);
+            return `<article class="center-card"><header><h3>${escapeHtml(c.name)}</h3><span class="tag green">${escapeHtml(c.type)}</span></header><p class="blurb">${escapeHtml(c.blurb || "")}</p><div class="center-actions">${actions.join("")}</div></article>`;
+          }).join("");
+        return;
+      }
+      if (nationals.length && hasQuery) {
+        centerList.innerHTML = `<div class="empty-state">No local centers matched that search. These national life-affirming helplines can still connect you.</div>` +
           nationals.slice(0, 3).map((c) => {
             const actions = [];
             if (c.phone) actions.push(`<a class="btn-call" href="tel:${escapeAttr(c.phone)}">Call ${escapeHtml(c.phone)}</a>`);
@@ -659,13 +709,14 @@
       if (c.website) actions.push(`<a href="${escapeAttr(c.website)}" target="_blank" rel="noopener noreferrer">Website</a>`);
       if (c.email) actions.push(`<a href="mailto:${escapeAttr(c.email)}">Email</a>`);
       actions.push(`<a href="#help" data-pref-zip="${escapeAttr(c.zip)}">Ask via app</a>`);
+      const distLabel = (resolved && resolved.lat != null) ? formatDist(c._dist) : "";
       return `
       <article class="center-card">
         <header>
           <h3>${escapeHtml(c.name)}</h3>
           <span class="tag green">${escapeHtml(c.type)}</span>
         </header>
-        <p class="loc">${escapeHtml(c.city)}, ${escapeHtml(c.state)} ${escapeHtml(c.zip)}${formatDist(c._dist)}</p>
+        <p class="loc">${escapeHtml(c.city)}, ${escapeHtml(c.state)} ${escapeHtml(c.zip)}${distLabel}</p>
         <p class="blurb">${escapeHtml(c.blurb || "")}</p>
         <div class="services">${(c.services || []).slice(0, 6).map((s) => `<span class="service-pill">${escapeHtml(s)}</span>`).join("")}</div>
         <div class="center-actions">${actions.join("")}</div>
@@ -683,45 +734,43 @@
       el.style.color = ok ? "" : "#8a4b2e";
     };
     if (!navigator.geolocation) {
-      setNote(target === "help" ? helpNote : dirMatchNote, "Location is not supported in this browser.", false);
+      if (target === "help") setNote(helpNote, "Location is not supported in this browser.", false);
+      else setDirMatchNote("Location is not supported in this browser.", false);
       return;
     }
-    setNote(target === "help" ? helpNote : dirMatchNote, "Getting your location…", true);
+    if (target === "help") setNote(helpNote, "Getting your location…", true);
+    else setDirMatchNote("Getting your location…");
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         geoOverride = {
           lat: pos.coords.latitude,
           lng: pos.coords.longitude,
-          label: "Your location"
+          label: "Your location",
+          source: "geo"
         };
-        // Reverse-approximate: nearest ZIP from loaded zip coords is expensive; leave label as-is
+        /* GPS mode owns the field so status, origin, and miles never disagree with a leftover ZIP */
         if (target === "dir" || target === "both") {
-          if (locFilter && !locFilter.value) locFilter.value = "Near me";
+          if (locFilter) locFilter.value = "Near me";
           renderCenters();
         }
         if (target === "help" || target === "both") {
           const loc = document.getElementById("location");
-          if (loc) loc.value = loc.value && loc.value !== "Near me" ? loc.value : "Near me";
+          if (loc) loc.value = "Near me";
           setNote(helpNote, "Using your current location for matching.", true);
           updatePreview();
         }
-        if (target === "dir") setNote(dirMatchNote, "Using your current location — showing nearest centers.", true);
       },
       () => {
-        setNote(target === "help" ? helpNote : dirMatchNote, "Location denied or unavailable. You can still type a city or ZIP.", false);
+        if (target === "help") setNote(helpNote, "Location denied or unavailable. You can still type a city or ZIP.", false);
+        else setDirMatchNote("Location denied or unavailable. You can still type a city or ZIP.", false);
       },
-      { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 }
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 60000 }
     );
   }
 
   if (locFilter) {
     locFilter.addEventListener("input", () => {
-      if (locFilter.value.trim() && locFilter.value.trim().toLowerCase() !== "near me") {
-        // keep geo as soft boost only when explicitly Near me
-        if (geoOverride && locFilter.value.trim().toLowerCase() !== "near me") {
-          /* typed query wins over stale geo for resolveLocation when raw is set — pass geo only for Near me */
-        }
-      }
+      syncGeoModeFromTypedLocation(locFilter.value);
       renderCenters();
     });
   }
@@ -794,9 +843,11 @@
 
   function matchCenters(loc, needs) {
     const q = (loc || "").trim();
-    const geo = (q.toLowerCase() === "near me") ? geoOverride : (q ? null : geoOverride);
+    syncGeoModeFromTypedLocation(q);
+    const geo = geoForQuery(q);
+    const queryForRank = isNearMeQuery(q) ? "" : q;
     /* Rank by proximity first (no need-first) so locals beat nationals; soft need boosts applied below */
-    const result = rankCenters(q, [], { limit: 80, geo });
+    const result = rankCenters(queryForRank, [], { limit: 80, geo: geo });
     const resolved = result.resolved;
     const wantCounseling = (needs || []).includes("counseling");
     const SOFT_BAND_MI = 20;
@@ -993,7 +1044,22 @@ Thank you for the work you do. Please contact me at your earliest convenience.
   function updatePreview() {
     if (!helpForm || !matchEl) return;
     const data = readForm();
-    const centers = (data.location || data.needs.length)
+    const helpNote = document.getElementById("help-geo-note");
+    syncGeoModeFromTypedLocation(data.location);
+    if (helpNote) {
+      if (geoOverride && (isNearMeQuery(data.location) || !String(data.location || "").trim())) {
+        helpNote.hidden = false;
+        helpNote.textContent = "Using your current location for matching.";
+        helpNote.style.color = "";
+      } else if (String(data.location || "").trim() && !isNearMeQuery(data.location)) {
+        /* Typed ZIP/city — do not leave a stale GPS status */
+        if (helpNote.textContent && /current location/i.test(helpNote.textContent)) {
+          helpNote.hidden = true;
+          helpNote.textContent = "";
+        }
+      }
+    }
+    const centers = (data.location || data.needs.length || geoOverride)
       ? matchCenters(data.location, data.needs)
       : [];
     const msg = buildMessage(
@@ -1005,8 +1071,8 @@ Thank you for the work you do. Please contact me at your earliest convenience.
     const secondaryCall = document.getElementById("help-call-btn");
     const secondarySms = document.getElementById("help-sms-btn");
 
-    if (!data.location && !data.needs.length) {
-      matchEl.innerHTML = `<p class="hint">Enter your city or ZIP and check what you need — we’ll show the best place right here.</p>`;
+    if (!data.location && !data.needs.length && !geoOverride) {
+      matchEl.innerHTML = `<p class="hint">Enter your city or ZIP and check what you need — we’ll show the nearest places here.</p>`;
       if (primaryBtn) primaryBtn.textContent = "Email best match now";
       if (secondaryCall) secondaryCall.hidden = true;
       if (secondarySms) secondarySms.hidden = true;
@@ -1016,7 +1082,10 @@ Thank you for the work you do. Please contact me at your earliest convenience.
     }
 
     if (!centers.length) {
-      matchEl.innerHTML = `<p class="hint">No match yet. Try another city or ZIP.</p>`;
+      const unresolved = centers._resolved && centers._resolved.source === "unresolved";
+      matchEl.innerHTML = unresolved
+        ? `<p class="hint">Could not place that location. Check the ZIP or try a nearby city.</p>`
+        : `<p class="hint">No match yet. Try another city or ZIP.</p>`;
       helpForm._lastPreview = { data, centers, msg };
       return;
     }
@@ -1031,9 +1100,11 @@ Thank you for the work you do. Please contact me at your earliest convenience.
       : "general pregnancy help";
 
     const resolved = centers._resolved;
-    const placeLabel = resolved && resolved.label
-      ? resolved.label
-      : (data.location || "").trim();
+    const placeLabel = (resolved && resolved.source === "geo")
+      ? "your current location"
+      : (resolved && resolved.label
+        ? resolved.label
+        : (isNearMeQuery(data.location) ? "your current location" : (data.location || "").trim()));
     const bestIsNational = isNational(best);
 
     const cards = centers.map((c, idx) => {
