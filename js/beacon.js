@@ -22,14 +22,13 @@
   var SUGGESTED = [
     "You're not alone tonight",
     "Praying quiet strength for you",
-    "One breath at a time",
     "You're a good mom",
     "This hard night will pass",
     "Sending gentle warmth",
     "Rest when you can",
     "God sees you",
     "Other moms are awake with you",
-    "You've got this"
+    "Holding you in prayer"
   ];
 
   var BLOCK = [

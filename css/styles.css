@@ -1697,7 +1697,7 @@ body { font-size: 1.05rem; }
   }
 }
 
-/* ===== Postpartum Ember & mom tools (v1.6.0) ===== */
+/* ===== Postpartum Ember & mom tools (v1.6.1) ===== */
 .soft-card { background: var(--white); }
 .beacon-disclaimer { margin: 1rem 0 1.25rem; border-left: 4px solid var(--gold); }
 .beacon-disclaimer p { margin: 0; }
@@ -1936,7 +1936,7 @@ body { font-size: 1.05rem; }
 }
 
 
-/* ===== Hub navigation (v1.6.0) ===== */
+/* ===== Hub navigation (v1.6.1) ===== */
 .hero-compact { padding-bottom: 0.5rem; }
 .hero-compact .cta-row { display: none; }
 .hub-groups { display: flex; flex-direction: column; gap: 1.5rem; margin: 1rem 0 2rem; }
@@ -2264,7 +2264,7 @@ body { font-size: 1.05rem; }
 .cx-empty { padding: 0.5rem 0 1rem; }
 
 
-/* ===== Ember remix + Account (v1.6.0) ===== */
+/* ===== Ember remix + Account (v1.6.1) ===== */
 .ember-duration-picks .ember-dur.is-selected {
   outline: 2px solid #e0b36a;
   background: rgba(224, 179, 106, 0.22);
