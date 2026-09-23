@@ -52,6 +52,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Primary">
         <a href="#home" data-nav>Home</a>
         <a href="#resources" data-nav>Resources</a>
+        <a href="#budget" data-nav>Budget</a>
         <a href="#directory" data-nav>Find help</a>
         <a href="#help" data-nav>Get Help</a>
         <a href="#about" data-nav>Our promise</a>
@@ -73,6 +74,7 @@
           <a class="btn btn-primary btn-lg" href="#directory" data-nav>Find help near me</a>
           <a class="btn btn-secondary btn-lg" href="#help" data-nav>I’m pregnant — get help</a>
           <a class="btn btn-secondary btn-lg" href="#help" data-nav>I’m a new mom</a>
+          <a class="btn btn-secondary btn-lg" href="#budget" data-nav>Plan this week’s money</a>
           <a class="btn btn-ghost btn-lg" href="#resources" data-nav>Read guides</a>
         </div>
         <p class="next-hint">Start with <strong>Find help near me</strong> — enter your city or ZIP.</p>
@@ -100,6 +102,12 @@
           <h3>3. Ask for help</h3>
           <p>We draft a message. You review it. Nothing sends until you say yes.</p>
           <a class="btn btn-secondary" href="#help" data-nav>Contact centers</a>
+        </article>
+        <article class="card">
+          <div class="card-icon green" aria-hidden="true">💵</div>
+          <h3>4. Plan payday</h3>
+          <p>Set weekly pay, add bills, and see what’s left — private on your phone.</p>
+          <a class="btn btn-secondary" href="#budget" data-nav>Open budget</a>
         </article>
       </div>
     </section>
@@ -221,6 +229,17 @@
       </form>
     </section>
 
+
+    <!-- BUDGET -->
+    <section id="view-budget" class="view" hidden aria-label="Budget">
+      <!-- Filled by js/budget.js -->
+      <div class="section-head">
+        <h2>Budget</h2>
+        <p>Plan each payday. Mark bills paid. See what’s left.</p>
+      </div>
+      <p class="hint">Loading budget…</p>
+    </section>
+
     <!-- ABOUT -->
     <section id="view-about" class="view" hidden aria-label="Our promise">
       <div class="section-head">
@@ -284,6 +303,10 @@
       <span class="bn-icon" aria-hidden="true">📚</span>
       <span>Resources</span>
     </a>
+    <a href="#budget" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">💵</span>
+      <span>Budget</span>
+    </a>
     <a href="#directory" data-nav data-bottom-nav>
       <span class="bn-icon" aria-hidden="true">📍</span>
       <span>Find help</span>
@@ -307,5 +330,6 @@
   <script src="data/zips.js"></script>
   <script src="js/geo.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/budget.js"></script>
 </body>
 </html>

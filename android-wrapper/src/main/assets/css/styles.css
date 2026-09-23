@@ -1100,3 +1100,400 @@ body { font-size: 1.05rem; }
   border-bottom: 2px solid #e0a0a0;
 }
 
+
+/* ========== Payday Budget ========== */
+.budget-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.budget-save-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+.budget-save-status {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--green);
+}
+.budget-save-status.budget-save-error { color: var(--danger); }
+
+.budget-actions { margin: 0.5rem 0 1rem; }
+.budget-actions .btn { width: 100%; max-width: 420px; }
+
+.budget-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0.35rem;
+}
+.budget-tab {
+  appearance: none;
+  border: 1.5px solid rgba(61, 109, 134, 0.25);
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.1rem;
+  min-height: 48px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.budget-tab.active {
+  background: var(--blue-deep);
+  border-color: var(--blue-deep);
+  color: #fff;
+}
+.budget-tz-note { margin: 0 0 1rem; }
+
+.budget-dash {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.budget-dash-main {
+  background: var(--blue-deep);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 1.15rem 1.25rem;
+  box-shadow: var(--shadow);
+}
+.budget-dash-label {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+.budget-dash-main .budget-dash-label { color: rgba(255,255,255,0.85); }
+.budget-dash-value {
+  margin: 0.25rem 0 0.35rem;
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.budget-dash-sub {
+  margin: 0;
+  font-size: 0.88rem;
+  opacity: 0.9;
+}
+.budget-dash-side {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+.budget-stat {
+  background: var(--white);
+  border: 1px solid rgba(61, 109, 134, 0.15);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  box-shadow: var(--shadow);
+}
+.budget-stat-value {
+  margin: 0.2rem 0 0.25rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+.budget-stat .budget-dash-sub { color: var(--ink-soft); opacity: 1; }
+.budget-stat .budget-dash-label { color: var(--muted); }
+
+@media (min-width: 640px) {
+  .budget-dash {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: stretch;
+  }
+  .budget-dash-side { grid-template-columns: 1fr; }
+}
+@media (min-width: 900px) {
+  .budget-dash {
+    grid-template-columns: 1.3fr 1fr 1fr;
+  }
+  .budget-dash-side {
+    display: contents;
+  }
+}
+
+.budget-weeks-head h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+}
+
+.budget-week-list {
+  display: grid;
+  gap: 0.75rem;
+}
+@media (min-width: 720px) {
+  .budget-week-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .budget-week.is-open {
+    grid-column: 1 / -1;
+  }
+}
+
+.budget-week {
+  background: var(--white);
+  border: 1px solid rgba(61, 109, 134, 0.14);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.budget-week-head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+  text-align: left;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  padding: 1rem 1.1rem;
+  cursor: pointer;
+  min-height: 72px;
+}
+.budget-week-date {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+.budget-week-range {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+.budget-week-summary { text-align: right; }
+.budget-week-left {
+  margin: 0;
+  font-weight: 800;
+  color: var(--blue-deep);
+  font-size: 1rem;
+}
+.budget-week-left span {
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+.budget-week-handled {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+.budget-week-body {
+  border-top: 1px solid rgba(61, 109, 134, 0.12);
+  padding: 1rem 1.1rem 1.15rem;
+  background: var(--cream);
+}
+.budget-week-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.budget-week-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.budget-inline-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.budget-inline-field .input {
+  min-width: 140px;
+  max-width: 180px;
+}
+
+.budget-empty-hint {
+  margin: 0.5rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.budget-item-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.budget-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: var(--white);
+  border: 1px solid rgba(61, 109, 134, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.75rem;
+}
+.budget-item.is-done {
+  opacity: 0.72;
+}
+.budget-item.is-done .budget-item-name {
+  text-decoration: line-through;
+}
+.budget-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  flex: 1 1 180px;
+  cursor: pointer;
+  min-height: 44px;
+}
+.budget-check input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.2rem;
+  accent-color: var(--blue-deep);
+  flex-shrink: 0;
+}
+.budget-item-body { display: flex; flex-direction: column; gap: 0.15rem; }
+.budget-item-name { font-weight: 700; }
+.budget-item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+}
+.budget-cat {
+  background: var(--blue-soft);
+  color: var(--blue-deep);
+  font-weight: 700;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+}
+.budget-once {
+  background: var(--cream-dark);
+  color: var(--ink-soft);
+  font-weight: 600;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+}
+.budget-item-right {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+.budget-item-amt {
+  font-weight: 800;
+  min-width: 4.5rem;
+  text-align: right;
+}
+.budget-link-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--blue-deep);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.35rem 0.45rem;
+  min-height: 40px;
+}
+.budget-icon-btn {
+  appearance: none;
+  border: 1px solid rgba(61, 109, 134, 0.2);
+  background: var(--cream);
+  color: var(--ink);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.budget-icon-btn.danger {
+  color: var(--danger);
+  border-color: rgba(184, 92, 92, 0.35);
+}
+
+.budget-add-week-wrap {
+  margin: 1.25rem 0 1.5rem;
+  text-align: center;
+}
+.budget-add-week-wrap .btn { width: 100%; max-width: 360px; }
+.budget-settings { margin-top: 0.5rem; margin-bottom: 2rem; }
+.budget-settings h3 { margin-top: 0; }
+
+.budget-check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+  font-weight: 600;
+  min-height: 44px;
+}
+.budget-check-row input {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.2rem;
+  accent-color: var(--blue-deep);
+}
+
+.budget-modal[hidden] { display: none !important; }
+.budget-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+}
+.budget-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(44, 58, 71, 0.45);
+}
+.budget-modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  max-height: min(92vh, 720px);
+  overflow: auto;
+  background: var(--white);
+  border-radius: 20px 20px 0 0;
+  padding: 1.25rem 1.25rem calc(1.25rem + var(--safe-bottom, 0px));
+  box-shadow: var(--shadow-lg);
+}
+.budget-modal-panel h3 { margin: 0 0 1rem; }
+.budget-form .field { margin-bottom: 0.85rem; }
+
+@media (min-width: 560px) {
+  .budget-modal {
+    align-items: center;
+    padding: 1.5rem;
+  }
+  .budget-modal-panel {
+    border-radius: var(--radius);
+    padding: 1.5rem;
+  }
+}
+
+/* Slightly tighter bottom nav with 6 items */
+@media (max-width: 720px) {
+  .bottom-nav a {
+    font-size: 0.62rem;
+    padding: 0.35rem 0.05rem;
+  }
+  .bottom-nav a .bn-icon { font-size: 1.05rem; }
+}
