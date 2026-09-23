@@ -1,6 +1,7 @@
 /**
- * Postpartum Beacon — anonymous area-glow map + one-way encouragement notes.
- * Never stores or displays exact GPS. Opt-in only. Lights expire.
+ * Postpartum Ember — peaceful dark US night map.
+ * Lights a whole state (soft amber glow), never a city pin. Opt-in. Expires.
+ * Anonymous encouragement notes. No PII. No baby-tracker data on public DB.
  */
 (function () {
   "use strict";
@@ -8,29 +9,25 @@
   var LS_ID = "hearth_beacon_id";
   var LS_META = "hearth_beacon_meta";
   var MAX_NOTE = 180;
-  var MAX_OFFSET_DEG = 0.12; /* ~10 miles */
-  var NEAR_MILES = 40;
-  var map = null;
-  var markersLayer = null;
-  var myCircle = null;
+  var mapRoot = null;
   var unsub = null;
   var beaconsCache = {};
   var viewReady = false;
+  var selectedState = "";
 
   var SUGGESTED = [
-    "You're not alone",
-    "Praying for you",
-    "One day at a time",
+    "You're not alone tonight",
+    "Praying quiet strength for you",
+    "One breath at a time",
     "You're a good mom",
     "This hard night will pass",
-    "Sending quiet strength",
+    "Sending gentle warmth",
     "Rest when you can",
     "God sees you",
-    "Take a slow breath",
+    "Other moms are awake with you",
     "You've got this"
   ];
 
-  /* Client blocklist — profanity, threats, contact sharing */
   var BLOCK = [
     /\b(kill|murder|rape|suicide|kms|kys|die\s*bitch|hurt\s*you|stalk|bomb|shoot)\b/i,
     /\b(fuck|fucking|shit|bitch|asshole|cunt|slut|whore|nigg|faggot|retard)\b/i,
@@ -43,19 +40,32 @@
     /\b(snapchat|instagram|tiktok|discord|telegram|whatsapp|dm\s*me|text\s*me|call\s*me)\b/i
   ];
 
-  function $(id) { return document.getElementById(id); }
+  /* Approximate state centroids (lat/lng) for legacy payload compat — never shown as pins */
+  var STATE_CENTROID = {
+    AL:[32.8,-86.8],AK:[64.2,-153.3],AZ:[34.3,-111.7],AR:[34.9,-92.4],CA:[37.2,-119.5],
+    CO:[39.0,-105.5],CT:[41.6,-72.7],DE:[39.0,-75.5],DC:[38.9,-77.0],FL:[27.8,-81.7],
+    GA:[32.7,-83.4],HI:[20.8,-156.3],ID:[44.4,-114.6],IL:[40.0,-89.2],IN:[39.9,-86.3],
+    IA:[42.0,-93.5],KS:[38.5,-98.3],KY:[37.5,-85.3],LA:[31.0,-92.0],ME:[45.3,-69.2],
+    MD:[39.0,-76.7],MA:[42.3,-71.8],MI:[43.7,-84.5],MN:[46.3,-94.3],MS:[32.7,-89.7],
+    MO:[38.4,-92.5],MT:[47.0,-110.0],NE:[41.5,-99.8],NV:[39.3,-116.6],NH:[43.7,-71.6],
+    NJ:[40.2,-74.6],NM:[34.4,-106.1],NY:[42.9,-75.5],NC:[35.6,-79.4],ND:[47.5,-100.5],
+    OH:[40.3,-82.8],OK:[35.6,-97.5],OR:[44.0,-120.5],PA:[40.9,-77.2],RI:[41.7,-71.6],
+    SC:[33.9,-80.9],SD:[44.4,-100.2],TN:[35.9,-86.3],TX:[31.5,-99.3],UT:[39.3,-111.7],
+    VT:[44.1,-72.7],VA:[37.5,-78.8],WA:[47.4,-120.5],WV:[38.6,-80.6],WI:[44.6,-89.8],WY:[43.0,-107.6]
+  };
 
+  function $(id) { return document.getElementById(id); }
 
   function restBase() {
     var c = window.HEARTH_FIREBASE;
     return (c && c.restBaseUrl) ? String(c.restBaseUrl).replace(/\/$/, "") : "";
   }
-  function isBackendReady() {
-    return isFirebaseReady() || !!restBase();
-  }
   function isFirebaseReady() {
     var c = window.HEARTH_FIREBASE;
     return !!(c && c.configured && c.databaseURL && c.apiKey && window.firebase);
+  }
+  function isBackendReady() {
+    return isFirebaseReady() || !!restBase();
   }
 
   function filterNote(text) {
@@ -81,53 +91,58 @@
     return 2 * R * Math.asin(Math.min(1, Math.sqrt(h)));
   }
 
-  /** Snap query/geo → zip/city centroid, then random offset ≤ ~10 mi. Never exact home. */
-  function coarseLocation(queryOrCoords, cb) {
-    function fromCentroid(lat, lng, zip) {
-      var ang = Math.random() * Math.PI * 2;
-      var dist = Math.random() * MAX_OFFSET_DEG;
-      cb(null, {
-        lat: lat + Math.cos(ang) * dist,
-        lng: lng + Math.sin(ang) * dist * Math.cos((lat * Math.PI) / 180),
-        coarseZip: zip || ""
-      });
-    }
-
-    function resolveZip(q) {
-      var zip = null;
-      if (window.HearthGeo && HearthGeo.lookupZip) zip = HearthGeo.lookupZip(q);
-      if (zip && zip.lat != null) return fromCentroid(zip.lat, zip.lng, zip.zip);
-      /* HEARTH_ZIP_COORDS fallback */
-      var coords = window.HEARTH_ZIP_COORDS || {};
-      var z = String(q || "").replace(/\D/g, "").slice(0, 5);
-      if (/^\d{5}$/.test(z) && coords[z]) return fromCentroid(coords[z][0], coords[z][1], z);
-      cb(new Error("Could not find that ZIP or city."));
+  /** Resolve ZIP/city/geo → US state only. Never exact home. */
+  function resolveState(queryOrCoords, cb) {
+    function done(state, zip) {
+      if (!state || !STATE_CENTROID[state]) {
+        return cb(new Error("Could not find that place. Try a ZIP or City, ST."));
+      }
+      var c = STATE_CENTROID[state];
+      cb(null, { state: state, lat: c[0], lng: c[1], coarseZip: zip || "" });
     }
 
     if (queryOrCoords && typeof queryOrCoords === "object" && queryOrCoords.lat != null) {
-      /* Reverse: find nearest zip centroid, then offset from THAT — never raw GPS */
       var best = null, bestD = Infinity;
       var zips = window.HEARTH_ZIPS || {};
       var keys = Object.keys(zips);
       if (!keys.length && window.HEARTH_ZIP_COORDS) {
-        var c = window.HEARTH_ZIP_COORDS;
-        keys = Object.keys(c);
+        var coords = window.HEARTH_ZIP_COORDS;
+        keys = Object.keys(coords);
         for (var i = 0; i < keys.length; i++) {
-          var p = c[keys[i]];
+          var p = coords[keys[i]];
           var d = haversineMiles(queryOrCoords, { lat: p[0], lng: p[1] });
-          if (d < bestD) { bestD = d; best = { lat: p[0], lng: p[1], zip: keys[i] }; }
+          if (d < bestD) {
+            bestD = d;
+            best = { state: (p[3] || p.state || ""), zip: keys[i] };
+            if (Array.isArray(p) && p.length >= 4) best = { state: p[3], zip: keys[i] };
+          }
         }
       } else {
         for (var j = 0; j < keys.length; j++) {
           var z = zips[keys[j]];
           var dd = haversineMiles(queryOrCoords, z);
-          if (dd < bestD) { bestD = dd; best = { lat: z.lat, lng: z.lng, zip: keys[j] }; }
+          if (dd < bestD) {
+            bestD = dd;
+            best = { state: z.state, zip: keys[j] };
+          }
         }
       }
-      if (!best) return cb(new Error("No ZIP data loaded."));
-      return fromCentroid(best.lat, best.lng, best.zip);
+      if (!best || !best.state) return cb(new Error("Could not place you in a state. Enter a ZIP instead."));
+      return done(String(best.state).toUpperCase(), best.zip);
     }
-    resolveZip(queryOrCoords);
+
+    var q = String(queryOrCoords || "").trim();
+    if (/^[A-Za-z]{2}$/.test(q) && STATE_CENTROID[q.toUpperCase()]) {
+      return done(q.toUpperCase(), "");
+    }
+    var hit = null;
+    if (window.HearthGeo && HearthGeo.lookupZip) hit = HearthGeo.lookupZip(q);
+    if (hit && hit.state) return done(String(hit.state).toUpperCase(), hit.zip || "");
+    var zOnly = q.replace(/\D/g, "").slice(0, 5);
+    if (/^\d{5}$/.test(zOnly) && window.HEARTH_ZIPS && window.HEARTH_ZIPS[zOnly]) {
+      return done(String(window.HEARTH_ZIPS[zOnly].state).toUpperCase(), zOnly);
+    }
+    cb(new Error("Could not find that ZIP or city. Try e.g. 10001 or Dallas, TX."));
   }
 
   function getDb() {
@@ -161,6 +176,12 @@
     el.classList.toggle("is-error", !!isError);
   }
 
+  function stateName(st) {
+    var data = window.HEARTH_US_STATES;
+    if (data && data.names && data.names[st]) return data.names[st];
+    return st;
+  }
+
   function updateLightUI() {
     var meta = myMeta();
     var on = !!(meta && meta.expiresAt > Date.now());
@@ -172,124 +193,228 @@
     if (dur) dur.hidden = on;
     var notesWrap = $("beacon-my-notes");
     if (notesWrap) notesWrap.hidden = !on;
+    var pill = $("ember-state-pill");
+    if (pill) {
+      if (on && meta.state) {
+        pill.hidden = false;
+        pill.textContent = "Your ember · " + stateName(meta.state);
+      } else {
+        pill.hidden = true;
+      }
+    }
     if (on) loadMyNotes();
   }
 
   function initMap() {
-    if (map || !window.L) return;
     var el = $("beacon-map");
-    if (!el) return;
-    map = L.map(el, { scrollWheelZoom: false, attributionControl: true }).setView([39.5, -98.35], 4);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 12,
-      attribution: "&copy; OpenStreetMap"
-    }).addTo(map);
-    markersLayer = L.layerGroup().addTo(map);
-    setTimeout(function () { map.invalidateSize(); }, 200);
+    if (!el || mapRoot) return;
+    var data = window.HEARTH_US_STATES;
+    if (!data || !data.paths) {
+      el.innerHTML = '<p class="ember-map-fallback">Night map loading…</p>';
+      return;
+    }
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", data.viewBox || "0 0 975 610");
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Peaceful night map of the United States");
+    svg.classList.add("ember-us-svg");
+
+    var defs = document.createElementNS(svg.namespaceURI, "defs");
+    defs.innerHTML =
+      '<radialGradient id="emberSky" cx="50%" cy="35%" r="70%">' +
+      '<stop offset="0%" stop-color="#1a2744"/>' +
+      '<stop offset="55%" stop-color="#0d1526"/>' +
+      '<stop offset="100%" stop-color="#070b14"/>' +
+      "</radialGradient>" +
+      '<filter id="emberGlow" x="-40%" y="-40%" width="180%" height="180%">' +
+      '<feGaussianBlur stdDeviation="4" result="b"/>' +
+      '<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>' +
+      "</filter>";
+    svg.appendChild(defs);
+
+    var bg = document.createElementNS(svg.namespaceURI, "rect");
+    bg.setAttribute("x", "-80");
+    bg.setAttribute("y", "-20");
+    bg.setAttribute("width", "1200");
+    bg.setAttribute("height", "700");
+    bg.setAttribute("fill", "url(#emberSky)");
+    svg.appendChild(bg);
+
+    /* soft starfield */
+    var stars = document.createElementNS(svg.namespaceURI, "g");
+    stars.setAttribute("opacity", "0.45");
+    var seed = 7;
+    for (var s = 0; s < 48; s++) {
+      seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+      var sx = (seed % 980) - 40;
+      seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+      var sy = (seed % 560) + 10;
+      seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+      var sr = 0.6 + (seed % 10) / 12;
+      var star = document.createElementNS(svg.namespaceURI, "circle");
+      star.setAttribute("cx", String(sx));
+      star.setAttribute("cy", String(sy));
+      star.setAttribute("r", String(sr));
+      star.setAttribute("fill", "#c9d4e8");
+      stars.appendChild(star);
+    }
+    svg.appendChild(stars);
+
+    var g = document.createElementNS(svg.namespaceURI, "g");
+    g.classList.add("ember-states");
+    Object.keys(data.paths).forEach(function (st) {
+      var path = document.createElementNS(svg.namespaceURI, "path");
+      path.setAttribute("d", data.paths[st]);
+      path.setAttribute("data-state", st);
+      path.setAttribute("class", "ember-state");
+      path.setAttribute("tabindex", "0");
+      path.setAttribute("role", "button");
+      path.setAttribute("aria-label", stateName(st));
+      path.addEventListener("click", function () { onStateTap(st); });
+      path.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onStateTap(st); }
+      });
+      g.appendChild(path);
+    });
+    svg.appendChild(g);
+
+    el.innerHTML = "";
+    el.appendChild(svg);
+    mapRoot = el;
   }
 
-  function glowIcon(mine) {
-    var cls = mine ? "beacon-glow mine" : "beacon-glow";
-    return L.divIcon({
-      className: "",
-      html: '<div class="' + cls + '" aria-hidden="true"></div>',
-      iconSize: [48, 48],
-      iconAnchor: [24, 24]
+  function onStateTap(st) {
+    selectedState = st;
+    var counts = countByState(beaconsCache);
+    var n = counts[st] || 0;
+    var mine = myMeta();
+    var isMine = !!(mine && mine.state === st && mine.expiresAt > Date.now());
+    if (isMine) {
+      openEncourage(null, true);
+      setStatus("Your ember is warming " + stateName(st) + ".");
+      return;
+    }
+    if (n > 0) {
+      /* pick a live ember in this state to encourage */
+      var now = Date.now();
+      var pick = null;
+      Object.keys(beaconsCache).forEach(function (id) {
+        var b = beaconsCache[id];
+        if (!b || b.state !== st) return;
+        if (b.expiresAt && b.expiresAt < now) return;
+        if (id === myId()) return;
+        pick = id;
+      });
+      if (pick) openEncourage(pick, false);
+      setStatus(
+        n === 1
+          ? "One soft ember in " + stateName(st) + ". Send a kind note if you want."
+          : n + " soft embers in " + stateName(st) + ". Send a kind note if you want."
+      );
+    } else {
+      setStatus(stateName(st) + " is quiet tonight. You can light an ember for your own state.");
+      var panel = $("beacon-encourage-panel");
+      if (panel) panel.hidden = true;
+    }
+  }
+
+  function countByState(data) {
+    var now = Date.now();
+    var counts = {};
+    Object.keys(data || {}).forEach(function (id) {
+      var b = data[id];
+      if (!b || !b.state) return;
+      if (b.expiresAt && b.expiresAt < now) return;
+      counts[b.state] = (counts[b.state] || 0) + 1;
     });
+    return counts;
   }
 
   function renderBeacons(data) {
     beaconsCache = data || {};
-    if (!markersLayer) return;
-    markersLayer.clearLayers();
-    var now = Date.now();
-    var origin = null;
-    var meta = myMeta();
-    if (meta && meta.lat != null) origin = { lat: meta.lat, lng: meta.lng };
+    var counts = countByState(beaconsCache);
     var mid = myId();
-    var near = 0;
-    var all = [];
-    Object.keys(beaconsCache).forEach(function (id) {
-      var b = beaconsCache[id];
-      if (!b || b.lat == null || b.lng == null) return;
-      if (b.expiresAt && b.expiresAt < now) return;
-      all.push({ id: id, b: b });
-      var mine = id === mid;
-      var marker = L.marker([b.lat, b.lng], { icon: glowIcon(mine), keyboard: true, title: mine ? "Your light" : "A mom nearby" });
-      marker.on("click", function () { openEncourage(id, mine); });
-      markersLayer.addLayer(marker);
-      if (origin && !mine) {
-        var miles = haversineMiles(origin, b);
-        if (miles <= NEAR_MILES) near++;
-      } else if (!origin && !mine) {
-        near++;
-      }
-    });
+    var meta = myMeta();
+    var myState = meta && meta.expiresAt > Date.now() ? meta.state : "";
 
+    if (mapRoot) {
+      var paths = mapRoot.querySelectorAll(".ember-state");
+      for (var i = 0; i < paths.length; i++) {
+        var st = paths[i].getAttribute("data-state");
+        var n = counts[st] || 0;
+        paths[i].classList.remove("is-lit", "is-lit-2", "is-lit-3", "is-mine");
+        if (n > 0) {
+          paths[i].classList.add("is-lit");
+          if (n >= 3) paths[i].classList.add("is-lit-3");
+          else if (n >= 2) paths[i].classList.add("is-lit-2");
+        }
+        if (myState && st === myState) paths[i].classList.add("is-mine");
+      }
+    }
+
+    var total = Object.keys(counts).reduce(function (a, k) { return a + counts[k]; }, 0);
+    var statesLit = Object.keys(counts).length;
     var countEl = $("beacon-count");
     if (countEl) {
       if (!isBackendReady()) {
-        countEl.textContent = "Live map needs a one-time Firebase connect.";
-      } else if (near === 0 && all.length === 0) {
-        countEl.textContent = "Be the first light in your area.";
-      } else if (near === 0) {
-        countEl.textContent = all.length === 1
-          ? "1 light is on. Zoom out or light yours so others nearby can find you."
-          : (all.length + " lights are on across the map.");
-      } else if (near === 1) {
-        countEl.textContent = "1 mom has a light on near you.";
+        countEl.textContent = "Live map needs a quick server connect.";
+      } else if (total === 0) {
+        countEl.textContent = "The night is quiet. Be the first soft ember.";
+      } else if (statesLit === 1) {
+        countEl.textContent =
+          total === 1
+            ? "One mom has a soft ember lit tonight."
+            : total + " moms share a soft ember across one state.";
       } else {
-        countEl.textContent = near + " moms have a light on near you.";
+        countEl.textContent =
+          total + " soft embers · " + statesLit + " states glowing tonight.";
       }
     }
-
-    if (meta && meta.lat != null && map) {
-      map.setView([meta.lat, meta.lng], 9);
-    }
   }
-
 
   function listenBeaconsRest() {
     var base = restBase();
     if (!base) return;
-    setStatus("Listening for lights…");
+    setStatus("Listening for embers…");
     function poll() {
-      fetch(base + "/beacons").then(function (r) { return r.json(); }).then(function (val) {
-        renderBeacons(val || {});
-        setStatus("Live · lights update as moms opt in.");
-        updateLightUI();
-      }).catch(function () {
-        setStatus("Could not reach live map server.", true);
-      });
+      fetch(base + "/beacons")
+        .then(function (r) { return r.json(); })
+        .then(function (val) {
+          renderBeacons(val || {});
+          setStatus("Live · soft embers update as moms opt in.");
+          updateLightUI();
+        })
+        .catch(function () {
+          setStatus("Could not reach the live ember map.", true);
+        });
     }
     poll();
     if (window.__hearthBeaconPoll) clearInterval(window.__hearthBeaconPoll);
-    window.__hearthBeaconPoll = setInterval(poll, 8000);
+    window.__hearthBeaconPoll = setInterval(poll, 4000);
   }
+
   function listenBeacons() {
     var db = getDb();
     if (!db) {
       if (restBase()) return listenBeaconsRest();
       renderBeacons({});
-      setStatus("Live map needs a one-time Firebase connect (see js/firebase-beacon-config.js).", true);
+      setStatus("Live map is offline right now. Try again soon.", true);
       return;
     }
-    setStatus("Listening for lights…");
+    setStatus("Listening for embers…");
     var ref = db.ref("beacons");
     if (unsub) { try { ref.off("value", unsub); } catch (e) {} }
     unsub = function (snap) {
       var val = snap.val() || {};
-      /* prune expired locally */
       var now = Date.now();
       Object.keys(val).forEach(function (id) {
         if (val[id] && val[id].expiresAt && val[id].expiresAt < now) {
-          /* best-effort delete expired */
           try { db.ref("beacons/" + id).remove(); } catch (e) {}
           delete val[id];
         }
       });
       renderBeacons(val);
-      setStatus("Live · lights update as moms opt in.");
+      setStatus("Live · soft embers update as moms opt in.");
       updateLightUI();
     };
     ref.on("value", unsub);
@@ -297,7 +422,7 @@
 
   function lightBeacon(hours) {
     if (!isBackendReady()) {
-      setStatus("Live map needs a one-time Firebase connect before lights can be shared.", true);
+      setStatus("Live map is offline right now — try again in a moment.", true);
       return;
     }
     var zipInput = $("beacon-zip");
@@ -308,27 +433,48 @@
       var now = Date.now();
       var expires = now + hours * 3600 * 1000;
       var payload = {
-        lat: Math.round(coarse.lat * 10000) / 10000,
-        lng: Math.round(coarse.lng * 10000) / 10000,
+        lat: coarse.lat,
+        lng: coarse.lng,
         createdAt: now,
         expiresAt: expires,
-        coarseZip: coarse.coarseZip || ""
+        coarseZip: coarse.coarseZip || "",
+        state: coarse.state
       };
       var existing = myId();
       var done = function (id) {
         setMyId(id);
-        setMyMeta({ lat: payload.lat, lng: payload.lng, expiresAt: expires, hours: hours });
+        setMyMeta({
+          lat: payload.lat,
+          lng: payload.lng,
+          expiresAt: expires,
+          hours: hours,
+          state: payload.state
+        });
         updateLightUI();
-        setStatus("Your light is on for about " + hours + " hours. Location is approximate — never your exact home.");
+        renderBeacons(beaconsCache);
+        setStatus(
+          "Your ember is warming " + stateName(payload.state) +
+          " for about " + hours + " hours. Only your state is shared — never your home."
+        );
         if (window.HearthSounds) HearthSounds.play("chime");
+        /* optimistic local paint */
+        var local = Object.assign({}, beaconsCache);
+        local[id] = payload;
+        renderBeacons(local);
       };
       var db = getDb();
       if (db) {
         var ref = existing ? db.ref("beacons/" + existing) : db.ref("beacons").push();
         if (existing) {
-          ref.set(payload).then(function () { done(existing); }).catch(function (e) { setStatus("Could not update light. Try again.", true); console.warn(e); });
+          ref.set(payload).then(function () { done(existing); }).catch(function (e) {
+            setStatus("Could not update your ember. Try again.", true);
+            console.warn(e);
+          });
         } else {
-          ref.set(payload).then(function () { done(ref.key); }).catch(function (e) { setStatus("Could not light beacon. Try again.", true); console.warn(e); });
+          ref.set(payload).then(function () { done(ref.key); }).catch(function (e) {
+            setStatus("Could not light your ember. Try again.", true);
+            console.warn(e);
+          });
         }
         return;
       }
@@ -336,24 +482,28 @@
       if (!base) return;
       var url = existing ? base + "/beacons/" + existing : base + "/beacons";
       var method = existing ? "PUT" : "POST";
-      fetch(url, { method: method, headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
+      fetch(url, {
+        method: method,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      })
         .then(function (r) { return r.json(); })
         .then(function (j) { done(existing || j.id); })
-        .catch(function () { setStatus("Could not light beacon. Try again.", true); });
+        .catch(function () { setStatus("Could not light your ember. Try again.", true); });
     }
 
-    if (q) return coarseLocation(q, place);
+    if (q) return resolveState(q, place);
     if (!navigator.geolocation) {
-      setStatus("Enter a ZIP or city so we can place a soft glow nearby (never exact).", true);
+      setStatus("Enter a ZIP or City, ST so we can warm your state (never your exact home).", true);
       return;
     }
-    setStatus("Finding a nearby area (not your exact pin)…");
+    setStatus("Finding your state (not your exact pin)…");
     navigator.geolocation.getCurrentPosition(
       function (pos) {
-        coarseLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude }, place);
+        resolveState({ lat: pos.coords.latitude, lng: pos.coords.longitude }, place);
       },
       function () {
-        setStatus("Location unavailable. Enter a ZIP or city instead.", true);
+        setStatus("Location unavailable. Enter a ZIP or City, ST instead.", true);
       },
       { enableHighAccuracy: false, timeout: 12000, maximumAge: 300000 }
     );
@@ -366,7 +516,9 @@
       setMyId("");
       setMyMeta(null);
       updateLightUI();
-      setStatus("Your light is off. You can light it again anytime.");
+      setStatus("Your ember is resting. You can light it again anytime.");
+      if (restBase()) listenBeaconsRest();
+      else renderBeacons(beaconsCache);
     }
     if (id && db) {
       db.ref("beacons/" + id).remove().then(clearLocal).catch(clearLocal);
@@ -388,12 +540,14 @@
     var chips = $("beacon-note-chips");
     if (chips) {
       chips.innerHTML = SUGGESTED.map(function (s) {
-        return '<button type="button" class="chip beacon-chip" data-note="' + s.replace(/"/g, "&quot;") + '">' + s + "</button>";
+        return '<button type="button" class="chip beacon-chip ember-chip" data-note="' +
+          s.replace(/"/g, "&quot;") + '">' + s + "</button>";
       }).join("");
     }
     var ta = $("beacon-note-text");
     if (ta) ta.value = "";
-    $("beacon-note-feedback").textContent = "";
+    var fb = $("beacon-note-feedback");
+    if (fb) fb.textContent = "";
     panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
@@ -409,7 +563,7 @@
       return;
     }
     if (!isBackendReady()) {
-      if (fb) fb.textContent = "Live notes need Firebase connect.";
+      if (fb) fb.textContent = "Live notes need the map server.";
       return;
     }
     var note = {
@@ -432,8 +586,13 @@
       return;
     }
     fetch(restBase() + "/beacons/" + beaconId + "/notes", {
-      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(note)
-    }).then(function (r) { if (!r.ok) throw new Error(); return r.json(); }).then(ok).catch(fail);
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(note)
+    })
+      .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+      .then(ok)
+      .catch(fail);
   }
 
   function loadMyNotes() {
@@ -441,7 +600,7 @@
     if (!list) return;
     var id = myId();
     if (!id || !isBackendReady()) {
-      list.innerHTML = "<p class=\"hint\">Notes from other moms will show here while your light is on.</p>";
+      list.innerHTML = "<p class=\"hint\">Kind notes from other moms will show here while your ember is lit.</p>";
       return;
     }
     function showNotes(val) {
@@ -449,13 +608,14 @@
       var items = Object.keys(val).map(function (k) { return val[k]; });
       items.sort(function (a, b) { return (b.createdAt || 0) - (a.createdAt || 0); });
       if (!items.length) {
-        list.innerHTML = "<p class=\"hint\">No notes yet — when another mom sends encouragement, it will appear here.</p>";
+        list.innerHTML = "<p class=\"hint\">No notes yet — when another mom sends warmth, it will appear here.</p>";
         return;
       }
       list.innerHTML = items.slice(0, 40).map(function (n) {
         var when = n.createdAt ? new Date(n.createdAt).toLocaleString() : "";
-        return '<article class="beacon-note-card"><p>' + escapeHtml(n.text) + '</p><p class="meta">' +
-          escapeHtml(n.fromLabel || "A mom nearby") + (when ? " · " + when : "") + "</p></article>";
+        return '<article class="beacon-note-card ember-note-card"><p>' + escapeHtml(n.text) +
+          '</p><p class="meta">' + escapeHtml(n.fromLabel || "A mom nearby") +
+          (when ? " · " + when : "") + "</p></article>";
       }).join("");
     }
     var db = getDb();
@@ -483,8 +643,7 @@
       initMap();
       listenBeacons();
       updateLightUI();
-    } else if (map) {
-      setTimeout(function () { map.invalidateSize(); }, 100);
+    } else {
       updateLightUI();
     }
   }
@@ -495,7 +654,6 @@
     var off = $("beacon-light-off");
     if (on24) on24.addEventListener("click", function () { lightBeacon(24); });
     if (on8) on8.addEventListener("click", function () { lightBeacon(8); });
-    /* primary big button defaults to 24h */
     var primary = $("beacon-light-on");
     if (primary) primary.addEventListener("click", function () { lightBeacon(24); });
     if (off) off.addEventListener("click", turnOff);
