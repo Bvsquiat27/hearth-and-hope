@@ -17,6 +17,11 @@ const MAX_HOURS = 48;
 
 /** @type {Record<string, any>} */
 let beacons = {};
+/** @type {Record<string, any>} */
+let hopePosts = {};
+const HOPE_FILE = process.env.HOPE_FILE || path.join(__dirname, "data", "hope.json");
+const MAX_HOPE = 400;
+const MAX_HOPE_POSTS = 200;
 
 function ensureDataDir() {
   const dir = path.dirname(DATA_FILE);
@@ -34,7 +39,17 @@ function load() {
     console.warn("load failed", e.message);
     beacons = {};
   }
+  try {
+    if (fs.existsSync(HOPE_FILE)) {
+      const raw = JSON.parse(fs.readFileSync(HOPE_FILE, "utf8"));
+      hopePosts = raw && typeof raw === "object" ? raw : {};
+    }
+  } catch (e) {
+    console.warn("hope load failed", e.message);
+    hopePosts = {};
+  }
   prune();
+  pruneHope();
 }
 
 function save() {
@@ -44,6 +59,25 @@ function save() {
   } catch (e) {
     console.warn("save failed", e.message);
   }
+}
+
+function saveHope() {
+  try {
+    ensureDataDir();
+    fs.writeFileSync(HOPE_FILE, JSON.stringify(hopePosts));
+  } catch (e) {
+    console.warn("hope save failed", e.message);
+  }
+}
+
+function pruneHope() {
+  const ids = Object.keys(hopePosts).sort((a, b) => {
+    return (hopePosts[a].createdAt || 0) - (hopePosts[b].createdAt || 0);
+  });
+  if (ids.length <= MAX_HOPE_POSTS) return;
+  const drop = ids.slice(0, ids.length - MAX_HOPE_POSTS);
+  for (const id of drop) delete hopePosts[id];
+  saveHope();
 }
 
 function prune() {
@@ -123,7 +157,7 @@ app.get("/", (_req, res) => {
     ok: true,
     service: "hearth-ember-api",
     version: "1.0.0",
-    endpoints: ["/beacons", "/beacons/:id", "/beacons/:id/notes", "/health"]
+    endpoints: ["/beacons", "/beacons/:id", "/beacons/:id/notes", "/hope", "/health"]
   });
 });
 
@@ -188,6 +222,38 @@ app.post("/beacons/:id/notes", (req, res) => {
   save();
   res.status(201).json({ id: nid });
 });
+
+app.get("/hope", (_req, res) => {
+  pruneHope();
+  const out = {};
+  for (const [id, p] of Object.entries(hopePosts)) {
+    out[id] = {
+      text: p.text,
+      createdAt: p.createdAt,
+      fromLabel: p.fromLabel || "A mom"
+    };
+  }
+  res.json(out);
+});
+
+app.post("/hope", (req, res) => {
+  const textBody = String((req.body && req.body.text) || "").trim().slice(0, MAX_HOPE);
+  if (!textBody) return res.status(400).json({ error: "empty" });
+  const fromLabel = String((req.body && req.body.fromLabel) || "A mom").trim().slice(0, 40) || "A mom";
+  /* Server-side soft block (client also filters) */
+  const blocked = /\b(kill|murder|rape|suicide|bomb|shoot|fuck|shit|bitch|cunt|nigg|faggot|https?:\/\/|www\.|@[a-z0-9_]{3,}|\d{3}[-.\s]?\d{3}[-.\s]?\d{4})\b/i;
+  if (blocked.test(textBody)) return res.status(400).json({ error: "blocked" });
+  const id = newId();
+  hopePosts[id] = {
+    text: textBody,
+    createdAt: Number(req.body.createdAt) || Date.now(),
+    fromLabel
+  };
+  pruneHope();
+  saveHope();
+  res.status(201).json({ id });
+});
+
 
 load();
 setInterval(prune, 60 * 1000);

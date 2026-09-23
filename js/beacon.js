@@ -1,7 +1,9 @@
 /**
  * Postpartum Ember — peaceful dark US night map.
- * Lights a whole state (soft amber glow), never a city pin. Opt-in. Expires.
- * Anonymous encouragement notes. No PII. No baby-tracker data on public DB.
+ * Soft amber/gold glowing dots for each live ember (coarse lat/lng only).
+ * Soft state wash optional under dots. Opt-in. Expires.
+ * Tap another mom's ember → send a note to that ember id. Own ember → notes inbox.
+ * Anonymous. No PII. No baby-tracker data on public DB.
  */
 (function () {
   "use strict";
@@ -14,6 +16,8 @@
   var beaconsCache = {};
   var viewReady = false;
   var selectedState = "";
+  var dotsLayer = null;
+  var lastDotPositions = []; /* {id,x,y,mine,state} for hit testing / clusters */
 
   var SUGGESTED = [
     "You're not alone tonight",
@@ -54,6 +58,44 @@
     VT:[44.1,-72.7],VA:[37.5,-78.8],WA:[47.4,-120.5],WV:[38.6,-80.6],WI:[44.6,-89.8],WY:[43.0,-107.6]
   };
 
+
+  /* Affine fit: continental US lat/lng → HEARTH_US_STATES SVG space (overview only) */
+  var PROJ_X = [17.02288797798043, -0.7165883759352383, 2165.2810719993367];
+  var PROJ_Y = [-0.3482647797506093, -25.130762061751128, 1228.373186375625];
+
+  function latLngToSvg(lat, lng) {
+    lat = Number(lat); lng = Number(lng);
+    if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+    /* AK / HI inset: pin near path centroids rather than geographic projection */
+    if (lat > 50 && lng < -130) return { x: 100, y: 540 };
+    if (lat < 24 && lng < -150) return { x: 280, y: 545 };
+    var x = PROJ_X[0] * lng + PROJ_X[1] * lat + PROJ_X[2];
+    var y = PROJ_Y[0] * lng + PROJ_Y[1] * lat + PROJ_Y[2];
+    return { x: x, y: y };
+  }
+
+  function hashJitter(id) {
+    var h = 2166136261;
+    var s = String(id || "");
+    for (var i = 0; i < s.length; i++) {
+      h ^= s.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    var a = ((h & 0xffff) / 0xffff - 0.5) * 16;
+    var b = (((h >>> 16) & 0xffff) / 0xffff - 0.5) * 16;
+    return { dx: a, dy: b };
+  }
+
+  /** Coarse fuzz — never raw GPS. Keeps dots state/ZIP-ish. */
+  function fuzzCoarse(lat, lng) {
+    var o1 = (Math.random() - 0.5) * 0.4;
+    var o2 = (Math.random() - 0.5) * 0.4;
+    return {
+      lat: Math.round((Number(lat) + o1) * 100) / 100,
+      lng: Math.round((Number(lng) + o2) * 100) / 100
+    };
+  }
+
   function $(id) { return document.getElementById(id); }
 
   function restBase() {
@@ -93,12 +135,15 @@
 
   /** Resolve ZIP/city/geo → US state only. Never exact home. */
   function resolveState(queryOrCoords, cb) {
-    function done(state, zip) {
+    function done(state, zip, lat, lng) {
       if (!state || !STATE_CENTROID[state]) {
         return cb(new Error("Could not find that place. Try a ZIP or City, ST."));
       }
       var c = STATE_CENTROID[state];
-      cb(null, { state: state, lat: c[0], lng: c[1], coarseZip: zip || "" });
+      var baseLat = Number.isFinite(lat) ? lat : c[0];
+      var baseLng = Number.isFinite(lng) ? lng : c[1];
+      var fuzzed = fuzzCoarse(baseLat, baseLng);
+      cb(null, { state: state, lat: fuzzed.lat, lng: fuzzed.lng, coarseZip: zip || "" });
     }
 
     if (queryOrCoords && typeof queryOrCoords === "object" && queryOrCoords.lat != null) {
@@ -128,7 +173,16 @@
         }
       }
       if (!best || !best.state) return cb(new Error("Could not place you in a state. Enter a ZIP instead."));
-      return done(String(best.state).toUpperCase(), best.zip);
+      /* nearest ZIP centroid + fuzz — never raw GPS */
+      var zips = window.HEARTH_ZIPS || {};
+      var zLat, zLng;
+      if (best.zip && zips[best.zip]) {
+        zLat = zips[best.zip].lat; zLng = zips[best.zip].lng;
+      } else if (window.HEARTH_ZIP_COORDS && best.zip && window.HEARTH_ZIP_COORDS[best.zip]) {
+        zLat = window.HEARTH_ZIP_COORDS[best.zip][0];
+        zLng = window.HEARTH_ZIP_COORDS[best.zip][1];
+      }
+      return done(String(best.state).toUpperCase(), best.zip, zLat, zLng);
     }
 
     var q = String(queryOrCoords || "").trim();
@@ -137,10 +191,11 @@
     }
     var hit = null;
     if (window.HearthGeo && HearthGeo.lookupZip) hit = HearthGeo.lookupZip(q);
-    if (hit && hit.state) return done(String(hit.state).toUpperCase(), hit.zip || "");
+    if (hit && hit.state) return done(String(hit.state).toUpperCase(), hit.zip || "", hit.lat, hit.lng);
     var zOnly = q.replace(/\D/g, "").slice(0, 5);
     if (/^\d{5}$/.test(zOnly) && window.HEARTH_ZIPS && window.HEARTH_ZIPS[zOnly]) {
-      return done(String(window.HEARTH_ZIPS[zOnly].state).toUpperCase(), zOnly);
+      var zz = window.HEARTH_ZIPS[zOnly];
+      return done(String(zz.state).toUpperCase(), zOnly, zz.lat, zz.lng);
     }
     cb(new Error("Could not find that ZIP or city. Try e.g. 10001 or Dallas, TX."));
   }
@@ -229,6 +284,10 @@
       '<filter id="emberGlow" x="-40%" y="-40%" width="180%" height="180%">' +
       '<feGaussianBlur stdDeviation="4" result="b"/>' +
       '<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>' +
+      "</filter>" +
+      '<filter id="emberDotGlow" x="-120%" y="-120%" width="340%" height="340%">' +
+      '<feGaussianBlur stdDeviation="3.2" result="b"/>' +
+      '<feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>' +
       "</filter>";
     svg.appendChild(defs);
 
@@ -267,16 +326,15 @@
       path.setAttribute("d", data.paths[st]);
       path.setAttribute("data-state", st);
       path.setAttribute("class", "ember-state");
-      path.setAttribute("tabindex", "0");
-      path.setAttribute("role", "button");
       path.setAttribute("aria-label", stateName(st));
       path.addEventListener("click", function () { onStateTap(st); });
-      path.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onStateTap(st); }
-      });
       g.appendChild(path);
     });
     svg.appendChild(g);
+
+    dotsLayer = document.createElementNS(svg.namespaceURI, "g");
+    dotsLayer.classList.add("ember-dots");
+    svg.appendChild(dotsLayer);
 
     el.innerHTML = "";
     el.appendChild(svg);
@@ -287,34 +345,94 @@
     selectedState = st;
     var counts = countByState(beaconsCache);
     var n = counts[st] || 0;
-    var mine = myMeta();
-    var isMine = !!(mine && mine.state === st && mine.expiresAt > Date.now());
-    if (isMine) {
-      openEncourage(null, true);
-      setStatus("Your ember is warming " + stateName(st) + ".");
-      return;
-    }
+    hideClusterPicker();
     if (n > 0) {
-      /* pick a live ember in this state to encourage */
-      var now = Date.now();
-      var pick = null;
-      Object.keys(beaconsCache).forEach(function (id) {
-        var b = beaconsCache[id];
-        if (!b || b.state !== st) return;
-        if (b.expiresAt && b.expiresAt < now) return;
-        if (id === myId()) return;
-        pick = id;
-      });
-      if (pick) openEncourage(pick, false);
       setStatus(
         n === 1
-          ? "One soft ember in " + stateName(st) + ". Send a kind note if you want."
-          : n + " soft embers in " + stateName(st) + ". Send a kind note if you want."
+          ? "One soft ember in " + stateName(st) + " — tap the glowing dot to send warmth."
+          : n + " soft embers in " + stateName(st) + " — tap a glowing dot to send warmth."
       );
     } else {
       setStatus(stateName(st) + " is quiet tonight. You can light an ember for your own state.");
       var panel = $("beacon-encourage-panel");
       if (panel) panel.hidden = true;
+    }
+  }
+
+  function hideClusterPicker() {
+    var p = $("ember-cluster-picker");
+    if (p) p.hidden = true;
+  }
+
+  function showClusterPicker(embers) {
+    var panel = $("ember-cluster-picker");
+    var list = $("ember-cluster-list");
+    var title = $("ember-cluster-title");
+    if (!panel || !list) return;
+    var encourage = $("beacon-encourage-panel");
+    if (encourage) encourage.hidden = true;
+    var mid = myId();
+    var others = embers.filter(function (e) { return e.id !== mid; });
+    var mine = embers.filter(function (e) { return e.id === mid; });
+    if (title) {
+      title.textContent =
+        others.length + mine.length > 1
+          ? (others.length + mine.length) + " moms here — pick one"
+          : "Pick an ember";
+    }
+    var html = "";
+    if (mine.length) {
+      html += '<button type="button" class="btn btn-secondary ember-pick-btn" data-pick="mine">Your ember — view notes</button>';
+    }
+    others.forEach(function (e, i) {
+      var label = "A mom nearby" + (e.state ? " · " + stateName(e.state) : "");
+      if (others.length > 1) label = "Mom " + (i + 1) + (e.state ? " · " + stateName(e.state) : "");
+      html +=
+        '<button type="button" class="btn btn-primary ember-pick-btn" data-pick="' +
+        escapeHtml(e.id) +
+        '">' +
+        escapeHtml(label) +
+        "</button>";
+    });
+    list.innerHTML = html;
+    panel.hidden = false;
+    panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  function onDotTap(emberId, x, y) {
+    hideClusterPicker();
+    var nearby = [];
+    var R = 18;
+    for (var i = 0; i < lastDotPositions.length; i++) {
+      var p = lastDotPositions[i];
+      if (Math.hypot(p.x - x, p.y - y) <= R) nearby.push(p);
+    }
+    if (!nearby.length) {
+      var solo = lastDotPositions.filter(function (p) { return p.id === emberId; });
+      nearby = solo;
+    }
+    var mid = myId();
+    var others = nearby.filter(function (p) { return p.id !== mid; });
+    var hasMine = nearby.some(function (p) { return p.id === mid; });
+
+    if (nearby.length === 1 && nearby[0].id === mid) {
+      openEncourage(null, true);
+      setStatus("Your ember — notes from other moms show below.");
+      return;
+    }
+    if (nearby.length > 1 && (others.length > 1 || (others.length >= 1 && hasMine))) {
+      showClusterPicker(nearby);
+      setStatus("A few embers glow together here — pick one.");
+      return;
+    }
+    if (others.length === 1) {
+      openEncourage(others[0].id, false);
+      setStatus("Send a kind note to this ember. Anonymous — no names or chat.");
+      return;
+    }
+    if (hasMine) {
+      openEncourage(null, true);
+      setStatus("Your ember — notes from other moms show below.");
     }
   }
 
@@ -336,6 +454,7 @@
     var mid = myId();
     var meta = myMeta();
     var myState = meta && meta.expiresAt > Date.now() ? meta.state : "";
+    var now = Date.now();
 
     if (mapRoot) {
       var paths = mapRoot.querySelectorAll(".ember-state");
@@ -350,6 +469,64 @@
         }
         if (myState && st === myState) paths[i].classList.add("is-mine");
       }
+
+      var svg = mapRoot.querySelector("svg.ember-us-svg");
+      if (svg) {
+        if (!dotsLayer || !dotsLayer.parentNode) {
+          dotsLayer = document.createElementNS(svg.namespaceURI, "g");
+          dotsLayer.classList.add("ember-dots");
+          svg.appendChild(dotsLayer);
+        }
+        while (dotsLayer.firstChild) dotsLayer.removeChild(dotsLayer.firstChild);
+        lastDotPositions = [];
+
+        Object.keys(beaconsCache).forEach(function (id) {
+          var b = beaconsCache[id];
+          if (!b) return;
+          if (b.expiresAt && b.expiresAt < now) return;
+          var xy = latLngToSvg(b.lat, b.lng);
+          if (!xy) return;
+          var jit = hashJitter(id);
+          var x = xy.x + jit.dx;
+          var y = xy.y + jit.dy;
+          var mine = id === mid;
+          lastDotPositions.push({ id: id, x: x, y: y, mine: mine, state: b.state || "" });
+
+          var halo = document.createElementNS(svg.namespaceURI, "circle");
+          halo.setAttribute("cx", String(x));
+          halo.setAttribute("cy", String(y));
+          halo.setAttribute("r", "11");
+          halo.setAttribute("class", "ember-dot-halo" + (mine ? " is-mine" : ""));
+          halo.setAttribute("pointer-events", "none");
+          dotsLayer.appendChild(halo);
+
+          var dot = document.createElementNS(svg.namespaceURI, "circle");
+          dot.setAttribute("cx", String(x));
+          dot.setAttribute("cy", String(y));
+          dot.setAttribute("r", "4.5");
+          dot.setAttribute("class", "ember-dot" + (mine ? " is-mine" : ""));
+          dot.setAttribute("tabindex", "0");
+          dot.setAttribute("role", "button");
+          dot.setAttribute(
+            "aria-label",
+            mine ? "Your ember" : "A mom nearby" + (b.state ? " in " + stateName(b.state) : "")
+          );
+          dot.setAttribute("data-ember-id", id);
+          (function (eid, ex, ey) {
+            dot.addEventListener("click", function (ev) {
+              ev.stopPropagation();
+              onDotTap(eid, ex, ey);
+            });
+            dot.addEventListener("keydown", function (e) {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onDotTap(eid, ex, ey);
+              }
+            });
+          })(id, x, y);
+          dotsLayer.appendChild(dot);
+        });
+      }
     }
 
     var total = Object.keys(counts).reduce(function (a, k) { return a + counts[k]; }, 0);
@@ -360,14 +537,13 @@
         countEl.textContent = "Live map needs a quick server connect.";
       } else if (total === 0) {
         countEl.textContent = "The night is quiet. Be the first soft ember.";
-      } else if (statesLit === 1) {
-        countEl.textContent =
-          total === 1
-            ? "One mom has a soft ember lit tonight."
-            : total + " moms share a soft ember across one state.";
+      } else if (total === 1) {
+        countEl.textContent = "One soft ember is glowing tonight — tap the golden dot.";
       } else {
         countEl.textContent =
-          total + " soft embers · " + statesLit + " states glowing tonight.";
+          total + " soft embers glowing" +
+          (statesLit > 1 ? " · " + statesLit + " states" : "") +
+          ". Tap a golden dot to send warmth.";
       }
     }
   }
@@ -453,8 +629,8 @@
         updateLightUI();
         renderBeacons(beaconsCache);
         setStatus(
-          "Your ember is warming " + stateName(payload.state) +
-          " for about " + hours + " hours. Only your state is shared — never your home."
+          "Your ember is lit in " + stateName(payload.state) +
+          " for about " + hours + " hours. A soft glowing dot — never your home address."
         );
         if (window.HearthSounds) HearthSounds.play("chime");
         /* optimistic local paint */
@@ -530,8 +706,14 @@
   function openEncourage(beaconId, mine) {
     var panel = $("beacon-encourage-panel");
     if (!panel) return;
+    hideClusterPicker();
     if (mine) {
       panel.hidden = true;
+      var notesWrap = $("beacon-my-notes");
+      if (notesWrap) {
+        notesWrap.hidden = false;
+        notesWrap.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
       loadMyNotes();
       return;
     }
@@ -672,6 +854,25 @@
       var p = $("beacon-encourage-panel");
       if (p) p.hidden = true;
     });
+
+    var clusterCancel = $("ember-cluster-cancel");
+    if (clusterCancel) clusterCancel.addEventListener("click", hideClusterPicker);
+    var clusterList = $("ember-cluster-list");
+    if (clusterList) {
+      clusterList.addEventListener("click", function (e) {
+        var btn = e.target.closest("[data-pick]");
+        if (!btn) return;
+        var pick = btn.getAttribute("data-pick");
+        hideClusterPicker();
+        if (pick === "mine") {
+          openEncourage(null, true);
+          setStatus("Your ember — notes from other moms show below.");
+        } else if (pick) {
+          openEncourage(pick, false);
+          setStatus("Send a kind note to this ember. Anonymous — no names or chat.");
+        }
+      });
+    }
 
     window.addEventListener("hashchange", function () {
       if ((location.hash || "") === "#postpartum") onView();

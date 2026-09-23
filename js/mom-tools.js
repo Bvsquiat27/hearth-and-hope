@@ -62,55 +62,103 @@
       var list = $("contraction-list");
       var live = $("contraction-live");
       var guidance = $("contraction-guidance");
+      var status = $("contraction-status");
+      var toggle = $("contraction-toggle");
+      var label = $("contraction-toggle-label");
+      var sub = $("contraction-toggle-sub");
+      var active = !!Contractions.activeStart;
+
       if (live) {
-        if (Contractions.activeStart) {
-          live.textContent = "In progress: " + Contractions.fmtDur(Date.now() - Contractions.activeStart);
+        if (active) {
+          live.textContent = Contractions.fmtDur(Date.now() - Contractions.activeStart);
           live.hidden = false;
         } else {
           live.hidden = true;
         }
       }
-      var startBtn = $("contraction-start");
-      var stopBtn = $("contraction-stop");
-      if (startBtn) startBtn.hidden = !!Contractions.activeStart;
-      if (stopBtn) stopBtn.hidden = !Contractions.activeStart;
+      if (status) status.textContent = active ? "Contraction started" : "Ready";
+      if (toggle) {
+        toggle.classList.toggle("is-active", active);
+        toggle.setAttribute("aria-pressed", active ? "true" : "false");
+        toggle.setAttribute("aria-label", active ? "Stop contraction" : "Start contraction");
+      }
+      if (label) label.textContent = active ? "Stop" : "Start";
+      if (sub) sub.textContent = active ? "Tap when it ends" : "Tap when it begins";
+
+      /* Summary stats */
+      var summary = $("contraction-summary");
+      var recent = d.log.slice(-12);
+      if (summary) {
+        if (!recent.length) {
+          summary.hidden = true;
+        } else {
+          summary.hidden = false;
+          var avgDur = recent.reduce(function (a, c) { return a + (c.durationMs || 0); }, 0) / recent.length;
+          var freqs = recent.map(function (c) { return c.intervalMs; }).filter(function (x) { return x != null && x > 0; });
+          var avgFreq = freqs.length ? freqs.reduce(function (a, b) { return a + b; }, 0) / freqs.length : null;
+          var elDur = $("cx-avg-dur");
+          var elCount = $("cx-count");
+          var elFreq = $("cx-avg-freq");
+          if (elDur) elDur.textContent = Contractions.fmtDur(avgDur);
+          if (elCount) elCount.textContent = String(d.log.length);
+          if (elFreq) elFreq.textContent = avgFreq != null ? Contractions.fmtDur(avgFreq) : "—";
+        }
+      }
 
       if (list) {
         if (!d.log.length) {
-          list.innerHTML = "<p class=\"hint\">No contractions logged yet.</p>";
+          list.innerHTML = "<p class=\"hint cx-empty\">No contractions yet — tap Start when one begins.</p>";
         } else {
-          var rows = d.log.slice().reverse().slice(0, 30).map(function (c, idx, arr) {
-            /* arr is reversed newest-first; interval = gap from this start to previous contraction start in chronological log */
-            var interval = c.intervalMs != null ? Contractions.fmtDur(c.intervalMs) : "—";
-            return "<tr><td>" + Contractions.fmtTime(c.start) + "</td><td>" +
-              Contractions.fmtDur(c.durationMs) + "</td><td>" + interval + "</td></tr>";
-          }).join("");
-          list.innerHTML = "<table class=\"mom-table\"><thead><tr><th>Started</th><th>Length</th><th>Since last</th></tr></thead><tbody>" +
-            rows + "</tbody></table>";
+          var chrono = d.log.slice();
+          var newestFirst = chrono.slice().reverse().slice(0, 40);
+          var total = chrono.length;
+          var html = '<ol class="cx-tl">';
+          newestFirst.forEach(function (c, i) {
+            var num = total - i;
+            var interval = c.intervalMs != null ? Contractions.fmtDur(c.intervalMs) : null;
+            var durSec = Math.max(1, Math.round((c.durationMs || 0) / 1000));
+            var bar = Math.min(100, Math.round((durSec / 90) * 100));
+            html += '<li class="cx-tl-item">' +
+              '<div class="cx-tl-rail" aria-hidden="true"><span class="cx-tl-dot">' + num + '</span>' +
+              (i < newestFirst.length - 1 ? '<span class="cx-tl-line"></span>' : '') +
+              '</div>' +
+              '<div class="cx-tl-card">' +
+              '<div class="cx-tl-top"><strong>' + Contractions.fmtTime(c.start) + '</strong>' +
+              '<span class="cx-tl-len">' + Contractions.fmtDur(c.durationMs) + '</span></div>' +
+              '<div class="cx-tl-bar"><span style="width:' + bar + '%"></span></div>' +
+              (interval ? '<p class="cx-tl-gap">' + interval + ' apart</p>' : '<p class="cx-tl-gap">First in log</p>') +
+              '</div></li>';
+          });
+          html += '</ol>';
+          list.innerHTML = html;
         }
       }
 
       /* Soft pattern hint — not medical advice */
       if (guidance) {
-        var recent = d.log.filter(function (c) { return Date.now() - c.start < 2 * 3600 * 1000; });
-        if (recent.length >= 3) {
-          var intervals = recent.slice(1).map(function (c) { return c.intervalMs; }).filter(Boolean);
+        var recent2 = d.log.filter(function (c) { return Date.now() - c.start < 2 * 3600 * 1000; });
+        if (recent2.length >= 3) {
+          var intervals = recent2.map(function (c) { return c.intervalMs; }).filter(Boolean);
           var avg = intervals.length ? intervals.reduce(function (a, b) { return a + b; }, 0) / intervals.length : null;
           if (avg && avg <= 6 * 60 * 1000) {
-            guidance.textContent = "Contractions look closer together in the last couple of hours. This is not medical advice — talk to your care team or get checked if you’re unsure. If you’re in danger, call 911.";
+            guidance.textContent = "These look closer together. Not medical advice — check with your care team if you’re unsure. Danger: 911.";
           } else {
-            guidance.textContent = "Keep tracking. Share this list with your care team if you call them. This app is not medical advice.";
+            guidance.textContent = "Keep tracking. Share this timeline if you call your care team. Not medical advice.";
           }
         } else {
-          guidance.textContent = "Soft tip: many care teams like to know length and how far apart contractions are. This app is not medical advice — when patterns get closer or you feel unsure, get checked.";
+          guidance.textContent = "Care teams often ask how long and how far apart. This app is not medical advice.";
         }
       }
+    },
+    toggle: function () {
+      if (Contractions.activeStart) Contractions.stop();
+      else Contractions.start();
     },
     start: function () {
       if (Contractions.activeStart) return;
       Contractions.activeStart = Date.now();
-      Sounds.play("ping");
-      Contractions.tickTimer = setInterval(Contractions.render, 500);
+      Sounds.play("chime");
+      Contractions.tickTimer = setInterval(Contractions.render, 250);
       Contractions.render();
     },
     stop: function () {
@@ -125,7 +173,7 @@
       Contractions.persist(d);
       Contractions.activeStart = null;
       if (Contractions.tickTimer) { clearInterval(Contractions.tickTimer); Contractions.tickTimer = null; }
-      Sounds.play("chime");
+      Sounds.play("ping");
       Contractions.render();
       Reminders.maybeContractionNudge();
     },
@@ -386,9 +434,11 @@
     var cs = $("contraction-start");
     var cp = $("contraction-stop");
     var cc = $("contraction-clear");
+    var ct = $("contraction-toggle");
     if (cs) cs.addEventListener("click", Contractions.start);
     if (cp) cp.addEventListener("click", Contractions.stop);
     if (cc) cc.addEventListener("click", Contractions.clear);
+    if (ct) ct.addEventListener("click", Contractions.toggle);
 
     /* Baby */
     var fedBtn = $("baby-log-fed");

@@ -51,13 +51,10 @@
       <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
         <a href="#home" data-nav>Home</a>
-        <a href="#resources" data-nav>Resources</a>
-        <a href="#budget" data-nav>Budget</a>
-        <a href="#directory" data-nav>Find help</a>
-        <a href="#support" data-nav>Support</a>
+        <a href="#directory" data-nav>Get Help</a>
         <a href="#postpartum" data-nav>Ember</a>
-        <a href="#help" data-nav>Get Help</a>
-        <a href="#about" data-nav>Our promise</a>
+        <a href="#support" data-nav>Tools</a>
+        <a href="#about" data-nav>More</a>
       </nav>
     </div>
   </header>
@@ -65,133 +62,104 @@
   <main id="main">
     <!-- HOME -->
     <section id="view-home" class="view active" aria-label="Home">
-      <div class="hero">
+      <div class="hero hero-compact">
         <p class="hero-eyebrow">For moms &amp; moms-to-be</p>
         <h1>You matter. Help is near.</h1>
-        <p class="hero-lead">
-          Simple guides. Real local help. You choose what happens next.
-        </p>
+        <p class="hero-lead">Pick one path. Big taps. Plain words. You stay in control.</p>
         <p class="faith-line">We support life as Christ intended — with dignity for every mother.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary btn-lg" href="#directory" data-nav>Find help near me</a>
-          <a class="btn btn-secondary btn-lg" href="#help" data-nav>I’m pregnant — get help</a>
-          <a class="btn btn-secondary btn-lg" href="#help" data-nav>I’m a new mom</a>
-          <a class="btn btn-secondary btn-lg" href="#crisis" data-nav>I’m pregnant and scared</a>
-          <a class="btn btn-secondary btn-lg" href="#budget" data-nav>Plan this week’s money</a>
-          <a class="btn btn-secondary btn-lg" href="#support" data-nav>More support tools</a>
-          <a class="btn btn-ghost btn-lg" href="#resources" data-nav>Read guides</a>
-        </div>
-        <p class="next-hint">Start with <strong>Find help near me</strong> — enter your city or ZIP.</p>
       </div>
 
-      <div class="section-head">
-        <h2>Three easy steps</h2>
-        <p>No shame. No pressure. Go at your pace.</p>
-      </div>
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-icon green" aria-hidden="true">📚</div>
-          <h3>1. Read short guides</h3>
-          <p>Pregnancy, parenting, adoption, money help, and someone to talk to.</p>
-          <a class="btn btn-secondary" href="#resources" data-nav>Open guides</a>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">📍</div>
-          <h3>2. Find local help</h3>
-          <p>Real pregnancy centers and maternity help near your ZIP. We never list abortion clinics.</p>
-          <a class="btn btn-primary" href="#directory" data-nav>Find help</a>
-        </article>
-        <article class="card">
-          <div class="card-icon cream" aria-hidden="true">✉️</div>
-          <h3>3. Ask for help</h3>
-          <p>We draft a message. You review it. Nothing sends until you say yes.</p>
-          <a class="btn btn-secondary" href="#help" data-nav>Contact centers</a>
-        </article>
-        <article class="card">
-          <div class="card-icon green" aria-hidden="true">💵</div>
-          <h3>4. Plan payday</h3>
-          <p>Set weekly pay, add bills, and see what’s left — private on your phone.</p>
-          <a class="btn btn-secondary" href="#budget" data-nav>Open budget</a>
-        </article>
-      </div>
+      <div class="hub-groups">
+        <section class="hub-group" aria-labelledby="hub-help">
+          <h2 id="hub-help" class="hub-label">Get Help</h2>
+          <div class="hub-grid">
+            <a class="hub-tile hub-tile-primary" href="#directory" data-nav>
+              <span class="hub-emoji" aria-hidden="true">📍</span>
+              <span class="hub-title">Find help near me</span>
+              <span class="hub-desc">Centers by ZIP — never abortion clinics</span>
+            </a>
+            <a class="hub-tile" href="#help" data-nav>
+              <span class="hub-emoji" aria-hidden="true">✉️</span>
+              <span class="hub-title">Ask a center</span>
+              <span class="hub-desc">Draft a message. You send it.</span>
+            </a>
+            <a class="hub-tile" href="#crisis" data-nav>
+              <span class="hub-emoji" aria-hidden="true">💛</span>
+              <span class="hub-title">I’m scared</span>
+              <span class="hub-desc">Short calm path to help</span>
+            </a>
+          </div>
+        </section>
 
-      <div class="section-head" style="margin-top:2rem">
-        <h2>Support for this season</h2>
-        <p>Calm tools for crisis, appointments, first months, mentors, and more.</p>
-      </div>
-      <div class="card-grid" id="home-support-grid">
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🕯️</div>
-          <h3>Postpartum Ember</h3>
-          <p>Light an anonymous glow so nearby moms know you’re not alone — and send kind notes.</p>
-          <a class="btn btn-primary" href="#postpartum" data-nav>Open Ember</a>
-        </article>
-        <article class="card">
-          <div class="card-icon green" aria-hidden="true">⏱️</div>
-          <h3>Contraction timer</h3>
-          <p>Big Start/Stop taps. Track length and time between — private on your phone.</p>
-          <a class="btn btn-secondary" href="#contractions" data-nav>Open timer</a>
-        </article>
-        <article class="card">
-          <div class="card-icon cream" aria-hidden="true">🍼</div>
-          <h3>Baby tracker</h3>
-          <p>Last fed, diapers left, simple sleep — stays on this device only.</p>
-          <a class="btn btn-secondary" href="#baby" data-nav>Open tracker</a>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">💛</div>
-          <h3>I’m pregnant and scared</h3>
-          <p>A short, gentle path to what you need most — then nearby help.</p>
-          <a class="btn btn-primary" href="#crisis" data-nav>Start here</a>
-        </article>
-        <article class="card">
-          <div class="card-icon cream" aria-hidden="true">🩺</div>
-          <h3>Ultrasound &amp; appointments</h3>
-          <p>What to expect, what to pack, and how to ask for a free or low-cost scan.</p>
-          <a class="btn btn-secondary" href="#ultrasound" data-nav>Open guide</a>
-        </article>
-        <article class="card">
-          <div class="card-icon green" aria-hidden="true">📅</div>
-          <h3>First 90 days</h3>
-          <p>A simple checklist for WIC, diapers, Medicaid pointers, and more.</p>
-          <a class="btn btn-secondary" href="#ninety" data-nav>Open checklist</a>
-        </article>
-        <article class="card">
-          <div class="card-icon cream" aria-hidden="true">🤝</div>
-          <h3>Ask a mentor mom</h3>
-          <p>Request a peer mentor through a nearby center — real people, not a bot.</p>
-          <a class="btn btn-secondary" href="#mentor" data-nav>Ask for a mentor</a>
-        </article>
-        <article class="card">
-          <div class="card-icon green" aria-hidden="true">🎁</div>
-          <h3>Request goods</h3>
-          <p>Diapers, formula, clothes, car seat — draft a kind ask to local help.</p>
-          <a class="btn btn-secondary" href="#goods" data-nav>Request supplies</a>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">👨‍👩‍👧</div>
-          <h3>Invite family to help</h3>
-          <p>Share a calm “how you can help” note with rides, money, or presence.</p>
-          <a class="btn btn-secondary" href="#invite" data-nav>Share help ideas</a>
-        </article>
-        <article class="card">
-          <div class="card-icon cream" aria-hidden="true">💼</div>
-          <h3>Work &amp; school</h3>
-          <p>Plain-English pregnancy workplace rights overview and schedule tips.</p>
-          <a class="btn btn-secondary" href="#work" data-nav>Read overview</a>
-        </article>
-        <article class="card">
-          <div class="card-icon green" aria-hidden="true">✨</div>
-          <h3>Stories of hope</h3>
-          <p>Optional short stories from scared → supported → parenting. Never guilt.</p>
-          <a class="btn btn-secondary" href="#stories" data-nav>Read stories</a>
-        </article>
-        <article class="card">
-          <div class="card-icon cream" aria-hidden="true">📄</div>
-          <h3>Build a resume</h3>
-          <p>Guided resume for moms — gaps are okay. Plus job email templates.</p>
-          <a class="btn btn-secondary" href="#resume" data-nav>Build resume</a>
-        </article>
+        <section class="hub-group" aria-labelledby="hub-ember">
+          <h2 id="hub-ember" class="hub-label">Ember</h2>
+          <div class="hub-grid">
+            <a class="hub-tile hub-tile-primary" href="#postpartum" data-nav>
+              <span class="hub-emoji" aria-hidden="true">🕯️</span>
+              <span class="hub-title">Light my ember</span>
+              <span class="hub-desc">Soft glowing dots · kind notes to moms awake</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="hub-group" aria-labelledby="hub-baby">
+          <h2 id="hub-baby" class="hub-label">Baby &amp; labor</h2>
+          <div class="hub-grid">
+            <a class="hub-tile" href="#contractions" data-nav>
+              <span class="hub-emoji" aria-hidden="true">⏱️</span>
+              <span class="hub-title">Contraction timer</span>
+              <span class="hub-desc">Start / stop · private on phone</span>
+            </a>
+            <a class="hub-tile" href="#baby" data-nav>
+              <span class="hub-emoji" aria-hidden="true">🍼</span>
+              <span class="hub-title">Baby tracker</span>
+              <span class="hub-desc">Feeds · diapers · sleep</span>
+            </a>
+            <a class="hub-tile" href="#reminders" data-nav>
+              <span class="hub-emoji" aria-hidden="true">🔔</span>
+              <span class="hub-title">Reminders</span>
+              <span class="hub-desc">Gentle nudges &amp; soft sounds</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="hub-group" aria-labelledby="hub-money">
+          <h2 id="hub-money" class="hub-label">Money</h2>
+          <div class="hub-grid">
+            <a class="hub-tile hub-tile-primary" href="#budget" data-nav>
+              <span class="hub-emoji" aria-hidden="true">💵</span>
+              <span class="hub-title">Budget</span>
+              <span class="hub-desc">Payday plan · bills · what’s left</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="hub-group" aria-labelledby="hub-hope">
+          <h2 id="hub-hope" class="hub-label">Hope board</h2>
+          <div class="hub-grid">
+            <a class="hub-tile hub-tile-primary" href="#stories" data-nav>
+              <span class="hub-emoji" aria-hidden="true">✨</span>
+              <span class="hub-title">Hope board</span>
+              <span class="hub-desc">Real moms post real notes · filtered</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="hub-group" aria-labelledby="hub-tools">
+          <h2 id="hub-tools" class="hub-label">More tools</h2>
+          <p class="hub-sub">Guides, checklist, resume, and other helpers — one tap.</p>
+          <div class="hub-grid hub-grid-secondary">
+            <a class="hub-tile hub-tile-sm" href="#resources" data-nav>
+              <span class="hub-title">Guides</span>
+            </a>
+            <a class="hub-tile hub-tile-sm" href="#support" data-nav>
+              <span class="hub-title">All tools</span>
+            </a>
+            <a class="hub-tile hub-tile-sm" href="#about" data-nav>
+              <span class="hub-title">Our promise</span>
+            </a>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -321,27 +289,51 @@
 
 
     <!-- SUPPORT HUB -->
-    <section id="view-support" class="view" hidden aria-label="Support">
+    <section id="view-support" class="view" hidden aria-label="Tools">
       <div class="section-head">
-        <h2>Support hub</h2>
-        <p>Practical tools for this season. Choose what fits — skip anything that doesn’t.</p>
+        <h2>Tools</h2>
+        <p>Extra helpers for this season. Main paths stay on Home.</p>
       </div>
-      <div class="card-grid" id="support-hub-grid">
-        <article class="card"><div class="card-icon" aria-hidden="true">🕯️</div><h3>Postpartum Ember</h3><p>A soft night glow on your state + kind notes from moms awake with you.</p><a class="btn btn-primary" href="#postpartum" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon green" aria-hidden="true">⏱️</div><h3>Contraction timer</h3><p>Log length and time between. Soft guidance only.</p><a class="btn btn-secondary" href="#contractions" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon cream" aria-hidden="true">🍼</div><h3>Baby tracker</h3><p>Feeds, diaper stock, sleep — private on-device.</p><a class="btn btn-secondary" href="#baby" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon green" aria-hidden="true">🔔</div><h3>Reminders &amp; sounds</h3><p>Gentle feed / stock nudges with soft chimes.</p><a class="btn btn-secondary" href="#reminders" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon" aria-hidden="true">💛</div><h3>I’m pregnant and scared</h3><p>Short guided path to nearby help.</p><a class="btn btn-primary" href="#crisis" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon cream" aria-hidden="true">🩺</div><h3>Ultrasound &amp; appointments</h3><p>What to expect and how to ask for help.</p><a class="btn btn-secondary" href="#ultrasound" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon green" aria-hidden="true">📅</div><h3>First 90 days</h3><p>Week-by-week checklist on your phone.</p><a class="btn btn-secondary" href="#ninety" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon cream" aria-hidden="true">🤝</div><h3>Ask a mentor</h3><p>Real volunteer moms via centers — not AI.</p><a class="btn btn-secondary" href="#mentor" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon green" aria-hidden="true">🎁</div><h3>Concrete goods</h3><p>Diapers, formula, clothes, car seat.</p><a class="btn btn-secondary" href="#goods" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon" aria-hidden="true">👨‍👩‍👧</div><h3>Family / co-parent invite</h3><p>Share how loved ones can help.</p><a class="btn btn-secondary" href="#invite" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon cream" aria-hidden="true">💼</div><h3>Work &amp; schedule</h3><p>US workplace rights overview (not legal advice).</p><a class="btn btn-secondary" href="#work" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon green" aria-hidden="true">✨</div><h3>Stories of hope</h3><p>Optional opt-in stories. Never guilt.</p><a class="btn btn-secondary" href="#stories" data-nav>Open</a></article>
-        <article class="card"><div class="card-icon cream" aria-hidden="true">📄</div><h3>Resume &amp; job emails</h3><p>Build a resume and copy application templates.</p><a class="btn btn-secondary" href="#resume" data-nav>Open</a></article>
+      <div class="hub-groups">
+        <section class="hub-group">
+          <h3 class="hub-label">Quick open</h3>
+          <div class="hub-grid">
+            <a class="hub-tile" href="#postpartum" data-nav><span class="hub-emoji" aria-hidden="true">🕯️</span><span class="hub-title">Ember</span><span class="hub-desc">Live map &amp; notes</span></a>
+            <a class="hub-tile" href="#stories" data-nav><span class="hub-emoji" aria-hidden="true">✨</span><span class="hub-title">Hope board</span><span class="hub-desc">Real mom messages</span></a>
+            <a class="hub-tile" href="#budget" data-nav><span class="hub-emoji" aria-hidden="true">💵</span><span class="hub-title">Budget</span><span class="hub-desc">This week’s money</span></a>
+            <a class="hub-tile" href="#directory" data-nav><span class="hub-emoji" aria-hidden="true">📍</span><span class="hub-title">Find help</span><span class="hub-desc">Centers near you</span></a>
+          </div>
+        </section>
+        <section class="hub-group">
+          <h3 class="hub-label">Baby &amp; labor</h3>
+          <div class="hub-grid hub-grid-secondary">
+            <a class="hub-tile hub-tile-sm" href="#contractions" data-nav><span class="hub-title">Contraction timer</span></a>
+            <a class="hub-tile hub-tile-sm" href="#baby" data-nav><span class="hub-title">Baby tracker</span></a>
+            <a class="hub-tile hub-tile-sm" href="#reminders" data-nav><span class="hub-title">Reminders</span></a>
+          </div>
+        </section>
+        <section class="hub-group">
+          <h3 class="hub-label">Support path</h3>
+          <div class="hub-grid hub-grid-secondary">
+            <a class="hub-tile hub-tile-sm" href="#crisis" data-nav><span class="hub-title">I’m scared</span></a>
+            <a class="hub-tile hub-tile-sm" href="#ultrasound" data-nav><span class="hub-title">Ultrasound guide</span></a>
+            <a class="hub-tile hub-tile-sm" href="#ninety" data-nav><span class="hub-title">First 90 days</span></a>
+            <a class="hub-tile hub-tile-sm" href="#mentor" data-nav><span class="hub-title">Ask a mentor</span></a>
+            <a class="hub-tile hub-tile-sm" href="#goods" data-nav><span class="hub-title">Request goods</span></a>
+            <a class="hub-tile hub-tile-sm" href="#invite" data-nav><span class="hub-title">Family invite</span></a>
+          </div>
+        </section>
+        <section class="hub-group">
+          <h3 class="hub-label">Work &amp; guides</h3>
+          <div class="hub-grid hub-grid-secondary">
+            <a class="hub-tile hub-tile-sm" href="#work" data-nav><span class="hub-title">Work &amp; schedule</span></a>
+            <a class="hub-tile hub-tile-sm" href="#resume" data-nav><span class="hub-title">Resume &amp; emails</span></a>
+            <a class="hub-tile hub-tile-sm" href="#resources" data-nav><span class="hub-title">Guides</span></a>
+            <a class="hub-tile hub-tile-sm" href="#about" data-nav><span class="hub-title">Our promise</span></a>
+          </div>
+        </section>
       </div>
-      <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="#home" data-nav>Back home</a></p>
+      <p class="screen-back"><a class="btn btn-ghost" href="#home" data-nav>← Home</a></p>
     </section>
 
     <!-- CRISIS PATH -->
@@ -351,7 +343,7 @@
         <p>You’re brave for being here. We’ll take this one small step at a time — you stay in control.</p>
       </div>
       <div id="crisis-flow" class="form-panel support-panel"></div>
-      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+      <p class="hint" style="margin-top:1rem"><a href="#home" data-nav>← Home</a></p>
     </section>
 
     <!-- ULTRASOUND -->
@@ -361,7 +353,7 @@
         <p>Plain language for confirmation visits and early ultrasounds. Not medical advice — your clinician knows your care plan.</p>
       </div>
       <div id="ultrasound-body" class="support-content"></div>
-      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+      <p class="hint" style="margin-top:1rem"><a href="#home" data-nav>← Home</a></p>
     </section>
 
     <!-- NINETY DAYS -->
@@ -378,7 +370,7 @@
         </div>
       </div>
       <div id="ninety-checklist" class="checklist-board"></div>
-      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+      <p class="hint" style="margin-top:1rem"><a href="#home" data-nav>← Home</a></p>
     </section>
 
     <!-- MENTOR -->
@@ -388,7 +380,7 @@
         <p><strong>Real people</strong> — volunteer peer moms and center staff. This is <strong>not</strong> an AI chat and not a live bot.</p>
       </div>
       <div id="mentor-body" class="support-content"></div>
-      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+      <p class="hint" style="margin-top:1rem"><a href="#home" data-nav>← Home</a></p>
     </section>
 
     <!-- GOODS -->
@@ -398,7 +390,7 @@
         <p>Choose what you need. We’ll draft a message to nearby centers — you review before anything sends.</p>
       </div>
       <div id="goods-form" class="form-panel support-panel"></div>
-      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a> · <a href="#budget" data-nav>Open budget</a></p>
+      <p class="hint" style="margin-top:1rem"><a href="#home" data-nav>← Home</a> · <a href="#budget" data-nav>Open budget</a></p>
     </section>
 
     <!-- INVITE -->
@@ -408,7 +400,7 @@
         <p>A calm note for family or a co-parent. No shame. Clear ways to show up.</p>
       </div>
       <div id="invite-body" class="support-content"></div>
-      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+      <p class="hint" style="margin-top:1rem"><a href="#home" data-nav>← Home</a></p>
     </section>
 
     <!-- WORK -->
@@ -418,17 +410,17 @@
         <p>General U.S. overview in plain English. <strong>Not legal advice.</strong> Laws vary by state and job. Ask a center or attorney for your situation.</p>
       </div>
       <div id="work-body" class="support-content"></div>
-      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+      <p class="hint" style="margin-top:1rem"><a href="#home" data-nav>← Home</a></p>
     </section>
 
     <!-- STORIES -->
-    <section id="view-stories" class="view" hidden aria-label="Stories of hope">
+    <section id="view-stories" class="view" hidden aria-label="Hope board">
       <div class="section-head">
-        <h2>Stories of hope</h2>
-        <p>Optional. Short, fictionalized composites inspired by common journeys — scared → supported → parenting. Never used to guilt anyone.</p>
+        <h2>Hope board</h2>
+        <p>Real messages from real moms. Be kind. No names required. Harmful or contact-sharing posts are blocked.</p>
       </div>
       <div id="stories-body" class="support-content"></div>
-      <p class="hint" style="margin-top:1rem"><a href="#support" data-nav>← Support hub</a></p>
+      <p class="screen-back"><a class="btn btn-ghost" href="#home" data-nav>← Home</a></p>
     </section>
 
 
@@ -439,7 +431,7 @@
         <p>A simple resume for moms. Caregiving and volunteering count. Gaps are okay — no shame. Saved on this phone only.</p>
       </div>
       <div id="resume-body" class="support-content"></div>
-      <p class="hint" style="margin-top:1rem"><a href="#work" data-nav>← Work &amp; schedule</a> · <a href="#support" data-nav>Support hub</a></p>
+      <p class="hint" style="margin-top:1rem"><a href="#work" data-nav>← Work &amp; schedule</a> · <a href="#support" data-nav>Home</a></p>
     </section>
 
     <!-- BUDGET -->
@@ -448,7 +440,7 @@
     <section id="view-postpartum" class="view ember-night" hidden aria-label="Postpartum Ember">
       <div class="section-head">
         <h2>Postpartum Ember</h2>
-        <p>When the night feels heavy, light a soft ember. Other moms see your <strong>state</strong> gently warm — never your city or home. Opt-in only. No names, photos, or chat.</p>
+        <p>When the night feels heavy, light a soft ember. Other moms see a <strong>glowing golden dot</strong> near your state — never your home. Tap someone’s ember to send a kind note. Opt-in only. No names, photos, or chat.</p>
       </div>
 
       <div class="beacon-disclaimer card soft-card">
@@ -475,19 +467,26 @@
       </div>
 
       <div class="ember-map-shell">
-        <div id="beacon-map" class="beacon-map ember-map" role="img" aria-label="Peaceful night map of soft embers by US state"></div>
+        <div id="beacon-map" class="beacon-map ember-map" role="img" aria-label="Peaceful night map of glowing embers across the United States"></div>
       </div>
-      <p class="legend hint">Soft amber on a state = moms awake there. Only the state is shared — never your home or street.</p>
+      <p class="legend hint">Golden dots = live embers. Tap a dot to send warmth to that mom. Soft state wash is only a hint — never your street.</p>
+
+      <div id="ember-cluster-picker" class="ember-cluster-picker card" hidden>
+        <h3 id="ember-cluster-title">Moms here — pick one</h3>
+        <p class="hint">A few embers glow close together.</p>
+        <div id="ember-cluster-list" class="choice-stack"></div>
+        <button type="button" class="btn btn-ghost" id="ember-cluster-cancel" style="margin-top:0.75rem">Cancel</button>
+      </div>
 
       <div id="beacon-my-notes" class="beacon-my-notes" hidden>
-        <h3>Notes by your ember</h3>
-        <p class="hint">Warm notes from other moms while your ember is lit.</p>
+        <h3>Notes for you</h3>
+        <p class="hint">Warm notes sent to your ember while it is lit.</p>
         <div id="beacon-notes-list"></div>
       </div>
 
       <div id="beacon-encourage-panel" class="beacon-encourage card" hidden>
         <h3>Send a kind note</h3>
-        <p class="hint">Short, anonymous encouragement. No names or contact info.</p>
+        <p class="hint">Goes to the ember you tapped. Anonymous — “A mom nearby.” No chat threads.</p>
         <div id="beacon-note-chips" class="chip-row"></div>
         <label class="field">
           <span>Your note (max 180 characters)</span>
@@ -500,35 +499,54 @@
         <p id="beacon-note-feedback" class="hint" role="status"></p>
       </div>
 
-      <p class="hint" style="margin-top:1.25rem">
+      <p class="screen-back">
+        <a class="btn btn-ghost" href="#home" data-nav>← Home</a>
         <a class="btn btn-secondary" href="#help" data-nav>Get Help</a>
-        <a class="btn btn-ghost" href="#reminders" data-nav>Reminders</a>
-        <a class="btn btn-ghost" href="#support" data-nav>← Support hub</a>
       </p>
     </section>
 
     <!-- CONTRACTIONS -->
-    <section id="view-contractions" class="view" hidden aria-label="Contraction timer">
+    <section id="view-contractions" class="view contraction-view" hidden aria-label="Contraction timer">
       <div class="section-head">
         <h2>Contraction timer</h2>
-        <p>Big taps. We log length and time between. Private on this device.</p>
+        <p>Tap the big circle when one starts and when it ends. Private on this phone.</p>
       </div>
-      <div class="card soft-card">
-        <p id="contraction-live" class="contraction-live" hidden></p>
-        <div class="btn-row mom-big-row">
-          <button type="button" class="btn btn-primary btn-lg" id="contraction-start">Start</button>
-          <button type="button" class="btn btn-secondary btn-lg" id="contraction-stop" hidden>Stop</button>
+
+      <div class="cx-stage card soft-card">
+        <p id="contraction-status" class="cx-status">Ready</p>
+        <p id="contraction-live" class="contraction-live cx-live" hidden>0:00</p>
+
+        <div class="cx-ring-wrap">
+          <button type="button" class="cx-ring" id="contraction-toggle" aria-pressed="false" aria-label="Start contraction">
+            <span class="cx-ring-glow" aria-hidden="true"></span>
+            <span class="cx-ring-core">
+              <span class="cx-ring-label" id="contraction-toggle-label">Start</span>
+              <span class="cx-ring-sub" id="contraction-toggle-sub">Tap when it begins</span>
+            </span>
+          </button>
+          <!-- keep hidden legacy ids for any external hooks -->
+          <button type="button" id="contraction-start" hidden tabindex="-1" aria-hidden="true">Start</button>
+          <button type="button" id="contraction-stop" hidden tabindex="-1" aria-hidden="true">Stop</button>
         </div>
-        <p id="contraction-guidance" class="hint" style="margin-top:1rem"></p>
-        <p class="hint"><strong>Not medical advice.</strong> Talk to your care team. If you’re in danger, call 911. Crisis: 988. <a href="#help" data-nav>Get Help</a></p>
+
+        <div id="contraction-summary" class="cx-summary" hidden>
+          <div class="cx-stat"><span class="cx-stat-val" id="cx-avg-dur">—</span><span class="cx-stat-lbl">Avg length</span></div>
+          <div class="cx-stat"><span class="cx-stat-val" id="cx-count">0</span><span class="cx-stat-lbl">Count</span></div>
+          <div class="cx-stat"><span class="cx-stat-val" id="cx-avg-freq">—</span><span class="cx-stat-lbl">Avg apart</span></div>
+        </div>
+
+        <p id="contraction-guidance" class="hint cx-guidance"></p>
+        <p class="hint cx-disclaimer"><strong>Not medical advice.</strong> Share this with your care team. Danger → 911. Crisis → 988. <a href="#help" data-nav>Get Help</a></p>
       </div>
+
       <div class="section-head" style="margin-top:1.5rem">
-        <h3>Recent</h3>
+        <h3>Timeline</h3>
+        <p class="hint">Newest at the top. Dots show length; gaps show how far apart.</p>
       </div>
-      <div id="contraction-list"></div>
-      <p style="margin-top:1rem">
+      <div id="contraction-list" class="cx-timeline"></div>
+      <p class="screen-back">
         <button type="button" class="btn btn-ghost" id="contraction-clear">Clear log</button>
-        <a class="btn btn-ghost" href="#support" data-nav>← Support hub</a>
+        <a class="btn btn-ghost" href="#home" data-nav>← Home</a>
       </p>
     </section>
 
@@ -598,7 +616,7 @@
 
       <p style="margin-top:1rem">
         <a class="btn btn-secondary" href="#reminders" data-nav>Reminders &amp; sounds</a>
-        <a class="btn btn-ghost" href="#support" data-nav>← Support hub</a>
+        <a class="btn btn-ghost" href="#home" data-nav>← Home</a>
       </p>
     </section>
 
@@ -625,7 +643,7 @@
       </div>
       <p style="margin-top:1rem">
         <a class="btn btn-ghost" href="#baby" data-nav>← Baby tracker</a>
-        <a class="btn btn-ghost" href="#support" data-nav>Support hub</a>
+        <a class="btn btn-ghost" href="#support" data-nav>Home</a>
       </p>
     </section>
 
@@ -697,29 +715,21 @@
       <span class="bn-icon" aria-hidden="true">⌂</span>
       <span>Home</span>
     </a>
-    <a href="#resources" data-nav data-bottom-nav>
-      <span class="bn-icon" aria-hidden="true">📚</span>
-      <span>Resources</span>
-    </a>
-    <a href="#budget" data-nav data-bottom-nav>
-      <span class="bn-icon" aria-hidden="true">💵</span>
-      <span>Budget</span>
-    </a>
     <a href="#directory" data-nav data-bottom-nav>
       <span class="bn-icon" aria-hidden="true">📍</span>
-      <span>Find help</span>
+      <span>Help</span>
+    </a>
+    <a href="#postpartum" data-nav data-bottom-nav>
+      <span class="bn-icon" aria-hidden="true">🕯️</span>
+      <span>Ember</span>
     </a>
     <a href="#support" data-nav data-bottom-nav>
-      <span class="bn-icon" aria-hidden="true">💛</span>
-      <span>Support</span>
-    </a>
-    <a href="#help" data-nav data-bottom-nav>
-      <span class="bn-icon" aria-hidden="true">✉️</span>
-      <span>Get Help</span>
+      <span class="bn-icon" aria-hidden="true">🧰</span>
+      <span>Tools</span>
     </a>
     <a href="#about" data-nav data-bottom-nav>
-      <span class="bn-icon" aria-hidden="true">♡</span>
-      <span>Promise</span>
+      <span class="bn-icon" aria-hidden="true">⋯</span>
+      <span>More</span>
     </a>
   </nav>
 

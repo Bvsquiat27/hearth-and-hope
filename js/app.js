@@ -117,6 +117,24 @@
   const navToggle = document.getElementById("nav-toggle");
   const siteNav = document.getElementById("site-nav");
 
+  const NAV_GROUPS = {
+    home: ["home"],
+    help: ["directory", "help", "crisis"],
+    ember: ["postpartum"],
+    tools: [
+      "support", "contractions", "baby", "reminders", "ultrasound", "ninety",
+      "mentor", "goods", "invite", "work", "resume", "resources", "budget", "stories"
+    ],
+    more: ["about"]
+  };
+  function navGroupFor(id) {
+    for (const [group, ids] of Object.entries(NAV_GROUPS)) {
+      if (ids.indexOf(id) !== -1) return group;
+    }
+    return "";
+  }
+  const BOTTOM_HREF = { home: "#home", help: "#directory", ember: "#postpartum", tools: "#support", more: "#about" };
+
   function showView(hash) {
     const id = (hash || "#home").replace(/^#/, "") || "home";
     views.forEach((v) => {
@@ -124,13 +142,24 @@
       v.classList.toggle("active", active);
       v.hidden = !active;
     });
+    const group = navGroupFor(id);
     navLinks.forEach((a) => {
       const target = (a.getAttribute("href") || "").replace(/^#/, "");
-      a.classList.toggle("active", target === id);
+      let on = target === id;
+      if (a.hasAttribute("data-bottom-nav") && group) {
+        on = (BOTTOM_HREF[group] || "").replace(/^#/, "") === target;
+      }
+      a.classList.toggle("active", on);
     });
     if (siteNav) siteNav.classList.remove("open");
     if (navToggle) navToggle.setAttribute("aria-expanded", "false");
     window.scrollTo({ top: 0, behavior: "smooth" });
+    if (id === "stories" && window.HearthSupport && HearthSupport.stories) {
+      try { HearthSupport.stories(); } catch (e) {}
+    }
+    if (id === "postpartum" && window.HearthBeacon && HearthBeacon.onView) {
+      try { HearthBeacon.onView(); } catch (e) {}
+    }
   }
 
   function route() {
