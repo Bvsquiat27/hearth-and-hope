@@ -16,8 +16,8 @@ android {
         applicationId "com.hearthandhope.app"
         minSdk 24
         targetSdk 34
-        versionCode 21
-        versionName "1.6.5"
+        versionCode 22
+        versionName "1.6.6"
     }
 
     signingConfigs {

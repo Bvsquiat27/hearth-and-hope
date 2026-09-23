@@ -168,12 +168,17 @@
     <!-- RESOURCES -->
     <section id="view-resources" class="view" hidden aria-label="Resources">
       <div class="section-head">
-        <h2>Guides</h2>
-        <p>Short, plain answers. Not a doctor — call your clinic for medical care.</p>
+        <h2>Resources</h2>
+        <p>Short, plain guides for pregnancy and early motherhood. This app points you to <strong>life-affirming</strong> help only — never abortion providers or Planned Parenthood.</p>
+      </div>
+      <div class="resource-find-cta card" style="margin-bottom:1.25rem;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:0.65rem">
+        <p style="margin:0;font-size:1.05rem"><strong>Ready for a real place to call?</strong> Find pregnancy help near you by city or ZIP — every listing is life-affirming.</p>
+        <a class="btn btn-primary btn-lg" href="#directory" data-nav style="align-self:flex-start;min-height:3rem;padding:0.85rem 1.35rem;font-size:1.05rem">Find help near me</a>
+        <p class="hint" style="margin:0">Covers all 50 U.S. states and D.C. If your state has few listings, we still show nearby centers and national helplines.</p>
       </div>
       <div class="toolbar">
         <label class="visually-hidden" for="resource-search" style="position:absolute;left:-9999px">Search resources</label>
-        <input type="search" id="resource-search" class="search-input" placeholder="Search resources…" autocomplete="off" />
+        <input type="search" id="resource-search" class="search-input" placeholder="Search guides…" autocomplete="off" />
       </div>
       <div class="chip-row" id="resource-chips" role="group" aria-label="Filter by category"></div>
       <div class="card-grid" id="resource-grid" style="margin-top:1.25rem"></div>
@@ -184,7 +189,7 @@
     <section id="view-directory" class="view" hidden aria-label="Directory">
       <div class="section-head">
         <h2>Find help near you</h2>
-        <p>Enter your <strong>city or ZIP</strong>. We’ll show real pregnancy help centers nearby. No abortion clinics. No Planned Parenthood.</p>
+        <p>Enter your <strong>city or ZIP</strong>. We’ll show real <strong>life-affirming</strong> pregnancy help nearby — every U.S. state and D.C. No abortion clinics. No Planned Parenthood. Ever.</p>
       </div>
       <div class="toolbar toolbar-friendly">
         <label class="field-label" for="loc-filter">Your city or ZIP</label>
@@ -233,12 +238,19 @@
 
         <div class="field" style="margin-top:1rem">
           <label>Your situation <span class="hint">(select all that apply)</span></label>
-          <div class="checkbox-group">
+                    <div class="checkbox-group">
             <label><input type="checkbox" name="needs" value="expecting" /> I’m expecting</label>
             <label><input type="checkbox" name="needs" value="new-mom" /> I’m a new mom</label>
             <label><input type="checkbox" name="needs" value="housing" /> I need housing</label>
             <label><input type="checkbox" name="needs" value="food" /> I need food help</label>
-            <label><input type="checkbox" name="needs" value="supplies" /> I need supplies</label>
+            <label><input type="checkbox" name="needs" value="diapers" /> I need diapers</label>
+            <label><input type="checkbox" name="needs" value="formula" /> I need formula</label>
+            <label><input type="checkbox" name="needs" value="clothes" /> I need baby clothes</label>
+            <label><input type="checkbox" name="needs" value="car-seat" /> I need a car seat</label>
+            <label><input type="checkbox" name="needs" value="supplies" /> I need other baby supplies</label>
+            <label><input type="checkbox" name="needs" value="parenting" /> I need parenting classes</label>
+            <label><input type="checkbox" name="needs" value="childcare" /> I need childcare</label>
+            <label><input type="checkbox" name="needs" value="job" /> I need help with a job</label>
             <label><input type="checkbox" name="needs" value="ultrasound" /> I need an ultrasound / appointment</label>
             <label><input type="checkbox" name="needs" value="ride" /> I need a ride to an appointment</label>
             <label><input type="checkbox" name="needs" value="mentor" /> Please connect me with a mentor mom</label>
@@ -806,7 +818,8 @@
   <script src="js/firebase-beacon-config.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
-<script src="js/app.js"></script>
+<script src="js/centers-filter.js"></script>
+  <script src="js/app.js"></script>
   <script src="js/budget.js"></script>
   <script src="js/support.js"></script>
   <script src="js/mom-tools.js"></script>

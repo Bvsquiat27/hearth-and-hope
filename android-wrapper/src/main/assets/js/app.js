@@ -99,17 +99,21 @@
     "new-mom": "I’m a new mom",
     housing: "I need housing",
     food: "I need food help",
-    supplies: "I need supplies",
+    diapers: "I need diapers",
+    formula: "I need formula",
+    clothes: "I need baby clothes",
+    "car-seat": "I need a car seat",
+    supplies: "I need other baby supplies",
+    parenting: "I need parenting classes",
+    childcare: "I need childcare",
+    job: "I need help with a job",
     ultrasound: "I need an ultrasound / appointment",
     ride: "I need a ride to an appointment",
     mentor: "Please connect me with a mentor mom",
     talk: "I need someone to talk to",
     counseling: "I need pregnancy counseling",
     apply: "Please help me apply for local aid",
-    diapers: "I need diapers",
-    formula: "I need formula",
-    clothes: "I need baby clothes",
-    "car-seat": "I need a car seat"
+    adoption: "I want to learn about adoption"
   };
 
   /* ---------- Navigation ---------- */
@@ -223,8 +227,10 @@
       ${r.medical ? `<div class="disclaimer"><strong>Not medical advice.</strong> Talk with your doctor or midwife about your situation. If you are in danger, call 911.</div>` : ""}
       ${r.faith ? `<details class="optional-faith"><summary>Optional encouragement (skip anytime)</summary><p>${escapeHtml(r.faith)}</p></details>` : ""}
       <p style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.5rem">
+        <a class="btn btn-primary" href="#directory" data-nav>Find help near me</a>
+        <a class="btn btn-secondary" href="#help" data-nav>Ask a center</a>
         <button type="button" class="btn btn-ghost" id="close-resource">Close</button>
-      <a class="btn btn-primary" href="#help">Ask centers for help</a></p>
+      </p>
     `;
     resourceDetail.scrollIntoView({ behavior: "smooth", block: "nearest" });
     const closeBtn = document.getElementById("close-resource");
@@ -264,7 +270,12 @@
   let geoOverride = null; // { lat, lng, label } from "Use my location"
 
   function getCenters() {
-    return window.HEARTH_CENTERS || [];
+    const all = window.HEARTH_CENTERS || [];
+    const f = window.HearthCentersFilter;
+    if (f && typeof f.filterLifeAffirming === "function") {
+      return f.filterLifeAffirming(all);
+    }
+    return all;
   }
 
   function toRad(d) { return (d * Math.PI) / 180; }
@@ -552,10 +563,37 @@
       }
     }
 
+    // Thin-state / sparse results: never leave a mom with nothing — pad with
+    // nearest across the border and national helplines.
+    let items = list.slice(0, limit).map((s) => ({ ...s.c, _dist: s.dist, _tier: s.tier }));
+    const localNonNat = items.filter((c) => !((c.type || "").toLowerCase().includes("national") || c.zip === "00000"));
+    if (locRaw || geo) {
+      const thin = localNonNat.length < 5;
+      if (thin) {
+        const have = new Set(items.map((c) => c.id));
+        const nationals = scored
+          .filter((s) => (s.c.type || "").toLowerCase().includes("national") || s.c.zip === "00000")
+          .map((s) => ({ ...s.c, _dist: s.dist, _tier: s.tier }));
+        const nearestExtra = scored
+          .filter((s) => !have.has(s.c.id))
+          .slice(0, Math.max(0, 8 - items.length))
+          .map((s) => ({ ...s.c, _dist: s.dist, _tier: s.tier }));
+        for (const c of nearestExtra) {
+          if (!have.has(c.id)) { items.push(c); have.add(c.id); }
+        }
+        for (const c of nationals) {
+          if (!have.has(c.id) && items.length < Math.max(limit, 8)) {
+            items.push(c); have.add(c.id);
+          }
+        }
+        if (thin && mode !== "browse") mode = mode === "national" ? "national" : (mode + "+backup");
+      }
+    }
+
     return {
       resolved,
       mode,
-      items: list.slice(0, limit).map((s) => ({ ...s.c, _dist: s.dist, _tier: s.tier }))
+      items: items.slice(0, Math.max(limit, 8))
     };
   }
 
@@ -588,18 +626,29 @@
       } else if (result.mode === "exact" || result.mode === "local") {
         dirMatchNote.hidden = false;
         dirMatchNote.textContent = `Showing nearest centers${result.resolved && result.resolved.label ? " near " + result.resolved.label : ""}.`;
-      } else if (result.mode === "in-state") {
+      } else if (result.mode === "in-state" || String(result.mode).startsWith("in-state")) {
         dirMatchNote.hidden = false;
-        dirMatchNote.textContent = "No centers within ~100 miles — nearest in-state options:";
-      } else if (result.mode === "national") {
+        dirMatchNote.textContent = "Few centers in this area — showing in-state options plus nearby and national backups so you are never left without a number to call.";
+      } else if (result.mode === "national" || String(result.mode).includes("backup")) {
         dirMatchNote.hidden = false;
-        dirMatchNote.textContent = "No exact local match — nearest options nationwide:";
+        dirMatchNote.textContent = "Limited local listings here — showing the nearest life-affirming centers across the area, plus national helplines.";
       } else {
         dirMatchNote.hidden = true;
       }
     }
 
     if (!list.length) {
+      const nationals = getCenters().filter((c) => (c.type || "").toLowerCase().includes("national") || c.zip === "00000");
+      if (nationals.length) {
+        centerList.innerHTML = `<div class="empty-state">We could not match that place to a map point, but these national life-affirming helplines are ready now. Try another city or ZIP for local centers.</div>` +
+          nationals.slice(0, 3).map((c) => {
+            const actions = [];
+            if (c.phone) actions.push(`<a class="btn-call" href="tel:${escapeAttr(c.phone)}">Call ${escapeHtml(c.phone)}</a>`);
+            if (c.website) actions.push(`<a href="${escapeAttr(c.website)}" target="_blank" rel="noopener noreferrer">Website</a>`);
+            return `<article class="center-card"><header><h3>${escapeHtml(c.name)}</h3><span class="tag green">${escapeHtml(c.type)}</span></header><p class="blurb">${escapeHtml(c.blurb || "")}</p><div class="center-actions">${actions.join("")}</div></article>`;
+          }).join("");
+        return;
+      }
       centerList.innerHTML = `<div class="empty-state">No centers matched. Try another city or ZIP, or clear the search to browse.</div>`;
       return;
     }
@@ -702,18 +751,22 @@
     expecting: ["expecting"],
     "new-mom": ["new-mom"],
     housing: ["housing"],
-    food: ["supplies", "expecting"],
+    /* Specific supply needs prefer exact tags, then generic supplies */
+    food: ["food", "supplies"],
+    diapers: ["diapers", "supplies"],
+    formula: ["formula", "supplies"],
+    clothes: ["clothes", "supplies"],
+    "car-seat": ["car-seat", "supplies"],
     supplies: ["supplies"],
+    parenting: ["parenting", "new-mom"],
+    childcare: ["childcare", "new-mom", "supplies"],
+    job: ["job", "apply", "talk"],
     ultrasound: ["expecting"],
     ride: ["expecting"],
     mentor: ["talk"],
     talk: ["talk"],
     counseling: ["counseling"],
-    apply: ["expecting", "new-mom"],
-    diapers: ["supplies"],
-    formula: ["supplies"],
-    clothes: ["supplies"],
-    "car-seat": ["supplies"],
+    apply: ["apply", "expecting", "new-mom"],
     adoption: ["adoption"]
   };
 
