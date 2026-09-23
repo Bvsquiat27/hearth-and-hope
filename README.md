@@ -22,3 +22,9 @@ On iPhone Safari: Share → **Add to Home Screen**.
 ## Privacy & safety
 
 This app is not emergency care. If you are in danger, call **911**. For emotional crisis in the U.S., call or text **988**.
+
+## Nationwide directory
+
+Find Help matches any US city/ZIP via distance to partner centers across all 50 states + DC.
+ZIP centroids: SimpleMaps US Zips (free). Sample partner listings at real city centroids — no abortion providers.
+See `INTEGRATION.md` and data file headers for details.
