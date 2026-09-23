@@ -89,3 +89,4 @@ self.addEventListener("fetch", (event) => {
 
   event.respondWith(networkFirst(request));
 });
+/* pages bump 2026-09-23T12:34:01+00:00 v1.5.3 */
