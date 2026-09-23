@@ -90,6 +90,33 @@ function newId() {
   return crypto.randomBytes(8).toString("hex");
 }
 
+function newOwnerSecret() {
+  return crypto.randomBytes(32).toString("base64url");
+}
+function hashOwnerSecret(secret) {
+  return crypto.createHash("sha256").update(String(secret || ""), "utf8").digest("base64");
+}
+function timingSafeEqualStr(a, b) {
+  if (typeof a !== "string" || typeof b !== "string") return false;
+  const ba = Buffer.from(a);
+  const bb = Buffer.from(b);
+  if (ba.length !== bb.length) return false;
+  return crypto.timingSafeEqual(ba, bb);
+}
+function extractBeaconSecret(req) {
+  const h = String(req.get("Authorization") || "");
+  const m = h.match(/^Beacon\s+(.+)$/i);
+  if (m) return m[1].trim();
+  return String(req.get("X-Hearth-Beacon") || "").trim();
+}
+function verifyBeaconOwner(req, beacon) {
+  if (!beacon || !beacon.ownerHash) return false;
+  const secret = extractBeaconSecret(req);
+  if (!secret) return false;
+  return timingSafeEqualStr(hashOwnerSecret(secret), beacon.ownerHash);
+}
+
+
 function sanitizeBeacon(body, existing) {
   const now = Date.now();
   let lat = Number(body && (body.lat != null ? body.lat : body.latitude));
@@ -118,6 +145,7 @@ function sanitizeBeacon(body, existing) {
     state
   };
   if (existing && existing.notes) out.notes = existing.notes;
+  if (existing && existing.ownerHash) out.ownerHash = existing.ownerHash;
   return { value: out };
 }
 
@@ -210,7 +238,7 @@ const app = express();
 app.use(cors({
   origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization", "X-Hearth-Token"]
+  allowedHeaders: ["Content-Type", "Authorization", "X-Hearth-Token", "X-Hearth-Beacon"]
 }));
 app.use(express.json({ limit: "256kb" }));
 
@@ -218,7 +246,7 @@ app.get("/", (_req, res) => {
   res.json({
     ok: true,
     service: "hearth-ember-api",
-    version: "1.6.0",
+    version: "1.6.2",
     endpoints: [
       "/health", "/beacons", "/beacons/:id", "/beacons/:id/notes", "/hope",
       "/auth/signup", "/auth/login", "/auth/logout", "/auth/me", "/me/sync"
@@ -232,7 +260,7 @@ app.get("/health", (_req, res) => {
     ok: true,
     lights: Object.keys(beacons).length,
     accounts: Object.keys(users).length,
-    version: "1.6.0"
+    version: "1.6.2"
   });
 });
 
@@ -244,15 +272,18 @@ app.post("/beacons", (req, res) => {
   const { value, error } = sanitizeBeacon(req.body, null);
   if (error) return res.status(400).json({ error });
   const id = newId();
+  const ownerSecret = newOwnerSecret();
+  value.ownerHash = hashOwnerSecret(ownerSecret);
   beacons[id] = value;
   save();
-  res.status(201).json({ id, beacon: publicBeacons()[id] });
+  res.status(201).json({ id, ownerSecret, beacon: publicBeacons()[id] });
 });
 
 app.put("/beacons/:id", (req, res) => {
   const id = req.params.id;
   const existing = beacons[id];
   if (!existing) return res.status(404).json({ error: "not found" });
+  if (!verifyBeaconOwner(req, existing)) return res.status(401).json({ error: "auth" });
   const { value, error } = sanitizeBeacon(req.body, existing);
   if (error) return res.status(400).json({ error });
   beacons[id] = value;
@@ -262,10 +293,10 @@ app.put("/beacons/:id", (req, res) => {
 
 app.delete("/beacons/:id", (req, res) => {
   const id = req.params.id;
-  if (beacons[id]) {
-    delete beacons[id];
-    save();
-  }
+  if (!beacons[id]) return res.status(404).json({ error: "not found" });
+  if (!verifyBeaconOwner(req, beacons[id])) return res.status(401).json({ error: "auth" });
+  delete beacons[id];
+  save();
   res.json({ ok: true });
 });
 
@@ -273,6 +304,7 @@ app.get("/beacons/:id/notes", (req, res) => {
   prune();
   const b = beacons[req.params.id];
   if (!b) return res.status(404).json({ error: "not found" });
+  if (!verifyBeaconOwner(req, b)) return res.status(401).json({ error: "auth" });
   res.json(b.notes || {});
 });
 

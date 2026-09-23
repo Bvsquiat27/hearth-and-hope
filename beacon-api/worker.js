@@ -15,7 +15,7 @@ function corsHeaders() {
   return {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Hearth-Token",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Hearth-Token, X-Hearth-Beacon",
     "Content-Type": "application/json"
   };
 }
@@ -24,6 +24,36 @@ function json(data, status = 200) {
 }
 function newId() {
   return crypto.randomUUID().replace(/-/g, "").slice(0, 16);
+}
+
+function newOwnerSecret() {
+  const bytes = crypto.getRandomValues(new Uint8Array(32));
+  return b64(bytes).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+async function hashOwnerSecret(secret) {
+  const dig = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(String(secret || "")));
+  return b64(dig);
+}
+function timingSafeEqualStr(a, b) {
+  if (typeof a !== "string" || typeof b !== "string" || a.length !== b.length) return false;
+  let out = 0;
+  for (let i = 0; i < a.length; i++) out |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return out === 0;
+}
+function extractBeaconSecret(req) {
+  const h = String(req.headers.get("Authorization") || "");
+  const m = h.match(/^Beacon\s+(.+)$/i);
+  if (m) return m[1].trim();
+  const hdr = String(req.headers.get("X-Hearth-Beacon") || "").trim();
+  if (hdr) return hdr;
+  return "";
+}
+async function verifyBeaconOwner(req, beacon) {
+  if (!beacon || !beacon.ownerHash) return false;
+  const secret = extractBeaconSecret(req);
+  if (!secret) return false;
+  const hash = await hashOwnerSecret(secret);
+  return timingSafeEqualStr(hash, beacon.ownerHash);
 }
 async function loadMap(kv, key) {
   try {
@@ -84,6 +114,7 @@ function sanitizeBeacon(body, existing) {
     state
   };
   if (existing && existing.notes) out.notes = existing.notes;
+  if (existing && existing.ownerHash) out.ownerHash = existing.ownerHash;
   return { value: out };
 }
 function publicBeacons(beacons) {
@@ -197,12 +228,12 @@ export default {
         accounts = Object.keys(users).length;
       } catch (_) {}
       if (p === "/health") {
-        return json({ ok: true, lights: Object.keys(beacons).length, accounts, version: "1.6.0" });
+        return json({ ok: true, lights: Object.keys(beacons).length, accounts, version: "1.6.2" });
       }
       return json({
         ok: true,
         service: "hearth-ember-api",
-        version: "1.6.0",
+        version: "1.6.2",
         host: "cloudflare-workers-kv",
         endpoints: [
           "/beacons", "/beacons/:id", "/beacons/:id/notes", "/hope", "/health",
@@ -224,15 +255,20 @@ export default {
       const beacons = await loadMap(env.BEACONS, BEACONS_KEY);
       pruneBeacons(beacons);
       const id = newId();
+      const ownerSecret = newOwnerSecret();
+      value.ownerHash = await hashOwnerSecret(ownerSecret);
       beacons[id] = value;
       await saveMap(env.BEACONS, BEACONS_KEY, beacons);
-      return json({ id, beacon: publicBeacons(beacons)[id] }, 201);
+      return json({ id, ownerSecret, beacon: publicBeacons(beacons)[id] }, 201);
     }
     const beaconPut = p.match(/^\/beacons\/([^/]+)$/);
     if (beaconPut && request.method === "PUT") {
       const id = beaconPut[1];
       const beacons = await loadMap(env.BEACONS, BEACONS_KEY);
       if (!beacons[id]) return json({ error: "not found" }, 404);
+      if (!(await verifyBeaconOwner(request, beacons[id]))) {
+        return json({ error: "auth" }, 401);
+      }
       const body = await request.json().catch(() => ({}));
       const { value, error } = sanitizeBeacon(body, beacons[id]);
       if (error) return json({ error }, 400);
@@ -243,10 +279,12 @@ export default {
     if (beaconPut && request.method === "DELETE") {
       const id = beaconPut[1];
       const beacons = await loadMap(env.BEACONS, BEACONS_KEY);
-      if (beacons[id]) {
-        delete beacons[id];
-        await saveMap(env.BEACONS, BEACONS_KEY, beacons);
+      if (!beacons[id]) return json({ error: "not found" }, 404);
+      if (!(await verifyBeaconOwner(request, beacons[id]))) {
+        return json({ error: "auth" }, 401);
       }
+      delete beacons[id];
+      await saveMap(env.BEACONS, BEACONS_KEY, beacons);
       return json({ ok: true });
     }
     const notesMatch = p.match(/^\/beacons\/([^/]+)\/notes$/);
@@ -255,6 +293,9 @@ export default {
       pruneBeacons(beacons);
       const b = beacons[notesMatch[1]];
       if (!b) return json({ error: "not found" }, 404);
+      if (!(await verifyBeaconOwner(request, b))) {
+        return json({ error: "auth" }, 401);
+      }
       return json(b.notes || {});
     }
     if (notesMatch && request.method === "POST") {
