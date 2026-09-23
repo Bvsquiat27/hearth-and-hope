@@ -1,19 +1,19 @@
 name = "hearth-ember-api"
 main = "worker.js"
 compatibility_date = "2026-09-01"
+account_id = "9dfa3f6855e752c53df1b9b8632cf51e"
 
-# Live host: hearth-ember-api.piquant-filament-122.workers.dev (Piquant Filament account).
-# Do NOT set account_id to 9dfa3f… (new sandbox account) — that Worker/KV is empty and not live.
-# Deploy only with Piquant Filament Cloudflare credentials.
+# Secure 1.7.1 deploy on Paisiosphilotimo account (reachable via wrangler OAuth).
+# Old Piquant Filament host remains 1.6.0 until that account is accessible — app will switch restBaseUrl.
 
 [[kv_namespaces]]
 binding = "BEACONS"
-id = "2601e4a71df740afa85abb7c8c308116"
+id = "329df45338984f96afd0c5447fac9f04"
 
 [[kv_namespaces]]
 binding = "HOPE"
-id = "05f6800a9e0e4d6abbabac726b9fd805"
+id = "7c5a12267069487887fd676edd36a2ce"
 
 [[kv_namespaces]]
 binding = "USERS"
-id = "51812e29f6034ca39e8d850b7309d223"
+id = "d4a3d992530b4f108c38fa3b708d0961"

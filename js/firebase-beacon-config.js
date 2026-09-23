@@ -16,5 +16,5 @@ window.HEARTH_FIREBASE = {
   messagingSenderId: "",
   appId: "",
   /* Public Ember REST API (CORS *). */
-  restBaseUrl: "https://hearth-ember-api.piquant-filament-122.workers.dev"
+  restBaseUrl: "https://hearth-ember-api.hearthandhope.workers.dev"
 };
