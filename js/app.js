@@ -99,17 +99,21 @@
     "new-mom": "I’m a new mom",
     housing: "I need housing",
     food: "I need food help",
-    supplies: "I need supplies",
+    diapers: "I need diapers",
+    formula: "I need formula",
+    clothes: "I need baby clothes",
+    "car-seat": "I need a car seat",
+    supplies: "I need other baby supplies",
+    parenting: "I need parenting classes",
+    childcare: "I need childcare",
+    job: "I need help with a job",
     ultrasound: "I need an ultrasound / appointment",
     ride: "I need a ride to an appointment",
     mentor: "Please connect me with a mentor mom",
     talk: "I need someone to talk to",
     counseling: "I need pregnancy counseling",
     apply: "Please help me apply for local aid",
-    diapers: "I need diapers",
-    formula: "I need formula",
-    clothes: "I need baby clothes",
-    "car-seat": "I need a car seat"
+    adoption: "I want to learn about adoption"
   };
 
   /* ---------- Navigation ---------- */
@@ -223,8 +227,10 @@
       ${r.medical ? `<div class="disclaimer"><strong>Not medical advice.</strong> Talk with your doctor or midwife about your situation. If you are in danger, call 911.</div>` : ""}
       ${r.faith ? `<details class="optional-faith"><summary>Optional encouragement (skip anytime)</summary><p>${escapeHtml(r.faith)}</p></details>` : ""}
       <p style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.5rem">
+        <a class="btn btn-primary" href="#directory" data-nav>Find help near me</a>
+        <a class="btn btn-secondary" href="#help" data-nav>Ask a center</a>
         <button type="button" class="btn btn-ghost" id="close-resource">Close</button>
-      <a class="btn btn-primary" href="#help">Ask centers for help</a></p>
+      </p>
     `;
     resourceDetail.scrollIntoView({ behavior: "smooth", block: "nearest" });
     const closeBtn = document.getElementById("close-resource");
@@ -264,7 +270,12 @@
   let geoOverride = null; // { lat, lng, label } from "Use my location"
 
   function getCenters() {
-    return window.HEARTH_CENTERS || [];
+    const all = window.HEARTH_CENTERS || [];
+    const f = window.HearthCentersFilter;
+    if (f && typeof f.filterLifeAffirming === "function") {
+      return f.filterLifeAffirming(all);
+    }
+    return all;
   }
 
   function toRad(d) { return (d * Math.PI) / 180; }
@@ -338,18 +349,66 @@
       const exact = fromZip(zip);
       if (exact) return exact;
       const z3 = zip.slice(0, 3);
-      const z3Centers = getCenters().filter((c) => String(c.zip).startsWith(z3));
-      if (z3Centers.length) {
-        const lat = z3Centers.reduce((s, c) => s + c.lat, 0) / z3Centers.length;
-        const lng = z3Centers.reduce((s, c) => s + c.lng, 0) / z3Centers.length;
-        return { lat, lng, zip, state: z3Centers[0].state, city: null, source: "zip3", label: `Near ZIP ${zip}` };
-      }
-      const pool = zipObj || zipCoords;
-      for (const z of Object.keys(pool)) {
-        if (z.startsWith(z3)) {
-          const got = fromZip(z);
-          if (got) return { ...got, zip, source: "zip3-db", label: `Near ZIP ${zip}` };
+      const zipNum = parseInt(zip, 10);
+
+      function nearestZipKey(keys) {
+        let best = null;
+        let bestDist = Infinity;
+        for (const z of keys) {
+          if (!z || z.length < 3 || !z.startsWith(z3)) continue;
+          const d = Math.abs(parseInt(z, 10) - zipNum);
+          if (d < bestDist) {
+            bestDist = d;
+            best = z;
+          }
         }
+        return best;
+      }
+
+      function labelFor(city, state, z) {
+        const c = (city || "").trim();
+        const st = (state || "").trim();
+        if (c && st) return `${c}, ${st} ${z}`;
+        if (st) return `${st} ${z}`;
+        return `ZIP ${z}`;
+      }
+
+      /* Prefer nearest ZIP in HEARTH_ZIPS / zip-coords within same zip3 (e.g. 30301→30303 Atlanta) */
+      const dbKeys = zipObj ? Object.keys(zipObj) : Object.keys(zipCoords);
+      const nearDb = nearestZipKey(dbKeys);
+      if (nearDb) {
+        const got = fromZip(nearDb);
+        if (got && got.lat != null) {
+          return {
+            lat: got.lat,
+            lng: got.lng,
+            zip,
+            state: got.state,
+            city: got.city,
+            source: "zip3-nearest",
+            label: labelFor(got.city, got.state, zip)
+          };
+        }
+      }
+
+      const z3Centers = getCenters().filter((c) => {
+        if (c.lat == null || !String(c.zip || "").startsWith(z3)) return false;
+        const nat = (c.type || "").toLowerCase().includes("national") || c.zip === "00000" || (c.city || "").toLowerCase() === "nationwide";
+        return !nat;
+      });
+      if (z3Centers.length) {
+        const nearest = z3Centers.slice().sort((a, b) =>
+          Math.abs(parseInt(a.zip, 10) - zipNum) - Math.abs(parseInt(b.zip, 10) - zipNum)
+        )[0];
+        return {
+          lat: nearest.lat,
+          lng: nearest.lng,
+          zip,
+          state: nearest.state,
+          city: nearest.city,
+          source: "zip3-center",
+          label: labelFor(nearest.city, nearest.state, zip)
+        };
       }
     }
 
@@ -437,10 +496,14 @@
     const scored = pool.map((c) => {
       let tier = 50;
       let dist = Infinity;
-      if (resolved && resolved.lat != null && c.lat != null) {
+      const national = (c.type || "").toLowerCase().includes("national") || c.zip === "00000" || (c.city || "").toLowerCase() === "nationwide";
+      if (resolved && resolved.lat != null && c.lat != null && !national) {
         dist = haversineMiles(resolved, c);
       }
-      if (resolved && resolved.zip && c.zip === resolved.zip) tier = 0;
+      if (national) {
+        tier = 9; /* always after real locals / in-state */
+        dist = Infinity;
+      } else if (resolved && resolved.zip && c.zip === resolved.zip) tier = 0;
       else if (resolved && resolved.zip && c.zip.slice(0, 3) === resolved.zip.slice(0, 3)) tier = 1;
       else if (resolved && resolved.city && c.city.toLowerCase() === String(resolved.city).toLowerCase()) tier = 2;
       else if (resolved && resolved.state && c.state === resolved.state && dist <= LOCAL_MILES) tier = 3;
@@ -480,7 +543,7 @@
       );
     });
 
-    const local = scored.filter((s) => s.dist <= LOCAL_MILES || s.tier <= 4);
+    const local = scored.filter((s) => s.tier < 9 && (s.dist <= LOCAL_MILES || s.tier <= 4));
     let mode = "all";
     let list;
     if (!locRaw && !geo) {
@@ -500,10 +563,37 @@
       }
     }
 
+    // Thin-state / sparse results: never leave a mom with nothing — pad with
+    // nearest across the border and national helplines.
+    let items = list.slice(0, limit).map((s) => ({ ...s.c, _dist: s.dist, _tier: s.tier }));
+    const localNonNat = items.filter((c) => !((c.type || "").toLowerCase().includes("national") || c.zip === "00000"));
+    if (locRaw || geo) {
+      const thin = localNonNat.length < 5;
+      if (thin) {
+        const have = new Set(items.map((c) => c.id));
+        const nationals = scored
+          .filter((s) => (s.c.type || "").toLowerCase().includes("national") || s.c.zip === "00000")
+          .map((s) => ({ ...s.c, _dist: s.dist, _tier: s.tier }));
+        const nearestExtra = scored
+          .filter((s) => !have.has(s.c.id))
+          .slice(0, Math.max(0, 8 - items.length))
+          .map((s) => ({ ...s.c, _dist: s.dist, _tier: s.tier }));
+        for (const c of nearestExtra) {
+          if (!have.has(c.id)) { items.push(c); have.add(c.id); }
+        }
+        for (const c of nationals) {
+          if (!have.has(c.id) && items.length < Math.max(limit, 8)) {
+            items.push(c); have.add(c.id);
+          }
+        }
+        if (thin && mode !== "browse") mode = mode === "national" ? "national" : (mode + "+backup");
+      }
+    }
+
     return {
       resolved,
       mode,
-      items: list.slice(0, limit).map((s) => ({ ...s.c, _dist: s.dist, _tier: s.tier }))
+      items: items.slice(0, Math.max(limit, 8))
     };
   }
 
@@ -536,18 +626,29 @@
       } else if (result.mode === "exact" || result.mode === "local") {
         dirMatchNote.hidden = false;
         dirMatchNote.textContent = `Showing nearest centers${result.resolved && result.resolved.label ? " near " + result.resolved.label : ""}.`;
-      } else if (result.mode === "in-state") {
+      } else if (result.mode === "in-state" || String(result.mode).startsWith("in-state")) {
         dirMatchNote.hidden = false;
-        dirMatchNote.textContent = "No centers within ~100 miles — nearest in-state options:";
-      } else if (result.mode === "national") {
+        dirMatchNote.textContent = "Few centers in this area — showing in-state options plus nearby and national backups so you are never left without a number to call.";
+      } else if (result.mode === "national" || String(result.mode).includes("backup")) {
         dirMatchNote.hidden = false;
-        dirMatchNote.textContent = "No exact local match — nearest options nationwide:";
+        dirMatchNote.textContent = "Limited local listings here — showing the nearest life-affirming centers across the area, plus national helplines.";
       } else {
         dirMatchNote.hidden = true;
       }
     }
 
     if (!list.length) {
+      const nationals = getCenters().filter((c) => (c.type || "").toLowerCase().includes("national") || c.zip === "00000");
+      if (nationals.length) {
+        centerList.innerHTML = `<div class="empty-state">We could not match that place to a map point, but these national life-affirming helplines are ready now. Try another city or ZIP for local centers.</div>` +
+          nationals.slice(0, 3).map((c) => {
+            const actions = [];
+            if (c.phone) actions.push(`<a class="btn-call" href="tel:${escapeAttr(c.phone)}">Call ${escapeHtml(c.phone)}</a>`);
+            if (c.website) actions.push(`<a href="${escapeAttr(c.website)}" target="_blank" rel="noopener noreferrer">Website</a>`);
+            return `<article class="center-card"><header><h3>${escapeHtml(c.name)}</h3><span class="tag green">${escapeHtml(c.type)}</span></header><p class="blurb">${escapeHtml(c.blurb || "")}</p><div class="center-actions">${actions.join("")}</div></article>`;
+          }).join("");
+        return;
+      }
       centerList.innerHTML = `<div class="empty-state">No centers matched. Try another city or ZIP, or clear the search to browse.</div>`;
       return;
     }
@@ -650,18 +751,22 @@
     expecting: ["expecting"],
     "new-mom": ["new-mom"],
     housing: ["housing"],
-    food: ["supplies", "expecting"],
+    /* Specific supply needs prefer exact tags, then generic supplies */
+    food: ["food", "supplies"],
+    diapers: ["diapers", "supplies"],
+    formula: ["formula", "supplies"],
+    clothes: ["clothes", "supplies"],
+    "car-seat": ["car-seat", "supplies"],
     supplies: ["supplies"],
+    parenting: ["parenting", "new-mom"],
+    childcare: ["childcare", "new-mom", "supplies"],
+    job: ["job", "apply", "talk"],
     ultrasound: ["expecting"],
     ride: ["expecting"],
     mentor: ["talk"],
     talk: ["talk"],
     counseling: ["counseling"],
-    apply: ["expecting", "new-mom"],
-    diapers: ["supplies"],
-    formula: ["supplies"],
-    clothes: ["supplies"],
-    "car-seat": ["supplies"],
+    apply: ["apply", "expecting", "new-mom"],
     adoption: ["adoption"]
   };
 
@@ -690,93 +795,120 @@
   function matchCenters(loc, needs) {
     const q = (loc || "").trim();
     const geo = (q.toLowerCase() === "near me") ? geoOverride : (q ? null : geoOverride);
-    const result = rankCenters(q, expandNeeds(needs || []), { limit: 40, geo });
-    const pool = (result.items || []).slice();
-
+    /* Rank by proximity first (no need-first) so locals beat nationals; soft need boosts applied below */
+    const result = rankCenters(q, [], { limit: 80, geo });
+    const resolved = result.resolved;
     const wantCounseling = (needs || []).includes("counseling");
-    const scored = pool.map((c) => {
+    const SOFT_BAND_MI = 20;
+
+    function scoreOne(c) {
       const covered = centerNeedOverlap(c, needs);
       let overlap = covered.length;
-      const national = isNational(c) ? 1 : 0;
-      const hasEmail = c.email ? 1 : 0;
-      const hasPhone = c.phone ? 1 : 0;
-      const contact = hasEmail || hasPhone ? 1 : 0;
-      /* Prefer: need overlap, contactable, local over national, email, closer */
-      let rank =
-        (overlap > 0 ? 0 : 3) +
-        (contact ? 0 : 2) +
-        (national ? 1 : 0);
-      /* Soft boost for email when overlapping */
-      const emailBoost = (overlap > 0 && hasEmail) ? -0.5 : 0;
-      /* Prefer centers whose own services already list counseling */
+      const national = isNational(c);
+      const hasEmail = !!c.email;
+      const hasPhone = !!c.phone;
       let counselBoost = 0;
-      if (wantCounseling) {
+      if (wantCounseling && !national) {
         const svc = ((c.services || []).join(" ") + " " + (c.blurb || "")).toLowerCase();
         const offers =
           (c.needs || []).includes("counseling") ||
           /pregnancy\s*counsel|options\s*counsel|decision\s*coach|\bcounsel(?:ing|ling)?\b/.test(svc);
         if (offers) {
-          counselBoost = -1;
+          counselBoost = 1;
           if (!(c.needs || []).includes("counseling") && !covered.includes("counseling")) {
             covered.push("counseling");
             overlap = covered.length;
           }
         }
       }
-      return {
-        c,
-        covered,
-        overlap,
-        dist: c._dist,
-        national,
-        hasEmail,
-        hasPhone,
-        sortKey: rank + emailBoost + counselBoost,
-      };
-    }).filter((s) => hasContact(s.c));
+      const dist = (c._dist != null && isFinite(c._dist)) ? c._dist : Infinity;
+      return { c, covered, overlap, dist, national, hasEmail, hasPhone, counselBoost };
+    }
 
-    scored.sort((a, b) =>
-      a.sortKey - b.sortKey ||
-      b.overlap - a.overlap ||
-      a.national - b.national ||
-      b.hasEmail - a.hasEmail ||
-      a.dist - b.dist ||
-      a.c.name.localeCompare(b.c.name)
-    );
-
-    /* Ensure a national helpline appears if no local email for selected needs */
-    let list = scored.map((s) => {
-      const c = s.c;
-      c._covered = s.covered;
-      c._overlap = s.overlap;
-      return c;
+    const allContactable = getCenters().filter(hasContact).map((c) => {
+      let dist = Infinity;
+      if (!isNational(c) && resolved && resolved.lat != null && c.lat != null) {
+        dist = haversineMiles(resolved, c);
+      }
+      const copy = Object.assign({}, c, { _dist: dist });
+      return scoreOne(copy);
     });
 
-    if ((needs || []).length) {
-      const localWithEmail = list.filter((c) => !isNational(c) && c.email && (c._overlap || 0) > 0);
-      if (!localWithEmail.length) {
-        const nationals = getCenters().filter((c) => isNational(c) && hasContact(c));
-        const natScored = nationals.map((c) => {
-          const covered = centerNeedOverlap(c, needs);
-          return { c, covered, overlap: covered.length };
-        }).sort((a, b) => b.overlap - a.overlap || a.c.name.localeCompare(b.c.name));
-        const bestNat = natScored[0];
-        if (bestNat) {
-          bestNat.c._covered = bestNat.covered;
-          bestNat.c._overlap = bestNat.overlap;
-          bestNat.c._dist = bestNat.c._dist;
-          if (!list.some((c) => c.id === bestNat.c.id)) {
-            /* insert after best local phone match if any */
-            const insertAt = Math.min(1, list.length);
-            list.splice(insertAt, 0, bestNat.c);
-          }
+    const locals = allContactable
+      .filter((s) => !s.national && s.dist <= LOCAL_MILES)
+      .sort((a, b) => a.dist - b.dist || b.overlap - a.overlap || a.c.name.localeCompare(b.c.name));
+
+    function softSortLocals(list) {
+      if (!list.length) return list;
+      const closest = list[0].dist;
+      return list.slice().sort((a, b) => {
+        const aNear = a.dist <= closest + SOFT_BAND_MI;
+        const bNear = b.dist <= closest + SOFT_BAND_MI;
+        if (aNear && bNear) {
+          return (
+            b.overlap - a.overlap ||
+            b.counselBoost - a.counselBoost ||
+            (b.hasEmail ? 1 : 0) - (a.hasEmail ? 1 : 0) ||
+            a.dist - b.dist ||
+            a.c.name.localeCompare(b.c.name)
+          );
         }
+        return a.dist - b.dist || b.overlap - a.overlap || a.c.name.localeCompare(b.c.name);
+      });
+    }
+
+    let chosen = [];
+    let mode = result.mode || "browse";
+
+    if (locals.length) {
+      chosen = softSortLocals(locals);
+      mode = (resolved && resolved.zip && chosen[0] && chosen[0].c.zip === resolved.zip) ? "exact" : "local";
+    } else if (resolved && resolved.state) {
+      const inState = allContactable
+        .filter((s) => !s.national && s.c.state === resolved.state)
+        .sort((a, b) => a.dist - b.dist || b.overlap - a.overlap || a.c.name.localeCompare(b.c.name));
+      if (inState.length) {
+        chosen = inState;
+        mode = "in-state";
       }
     }
 
-    const top = list.slice(0, 3);
-    top._matchMode = result.mode;
-    top._resolved = result.resolved;
+    if (!chosen.length && resolved && resolved.lat != null) {
+      const byDist = allContactable
+        .filter((s) => !s.national)
+        .sort((a, b) => a.dist - b.dist || b.overlap - a.overlap);
+      if (byDist.length) {
+        chosen = byDist;
+        mode = "national-geo";
+      }
+    }
+
+    /* Nationals only after locals — never Best match when a contactable local exists */
+    const nationals = allContactable
+      .filter((s) => s.national)
+      .sort((a, b) => b.overlap - a.overlap || a.c.name.localeCompare(b.c.name));
+
+    let list;
+    if (chosen.length) {
+      list = chosen.concat(nationals.filter((n) => !chosen.some((x) => x.c.id === n.c.id)));
+    } else {
+      list = nationals.length ? nationals : allContactable.sort((a, b) => b.overlap - a.overlap);
+      mode = "national";
+    }
+
+    const mapped = list.map((s) => {
+      const c = s.c;
+      c._covered = s.covered;
+      c._overlap = s.overlap;
+      c._dist = s.dist;
+      c._national = s.national;
+      c._isLocalBest = !s.national && (mode === "local" || mode === "exact" || mode === "in-state");
+      return c;
+    });
+
+    const top = mapped.slice(0, 3);
+    top._matchMode = mode;
+    top._resolved = resolved;
     return top;
   }
 
@@ -898,34 +1030,59 @@ Thank you for the work you do. Please contact me at your earliest convenience.
       ? coveredLabels.join(", ")
       : "general pregnancy help";
 
+    const resolved = centers._resolved;
+    const placeLabel = resolved && resolved.label
+      ? resolved.label
+      : (data.location || "").trim();
+    const bestIsNational = isNational(best);
+
     const cards = centers.map((c, idx) => {
       const dist = formatDistShort(c._dist);
-      const badge = idx === 0 ? `<span class="match-badge">Best match</span>` : `<span class="match-badge quiet">Also near you</span>`;
+      const nat = isNational(c);
+      let badge;
+      if (nat) {
+        badge = `<span class="match-badge quiet">National line</span>`;
+      } else if (idx === 0) {
+        badge = `<span class="match-badge">Best match</span>`;
+      } else {
+        badge = `<span class="match-badge quiet">Also nearby</span>`;
+      }
       const cov = (c._covered || []).map((n) => NEED_LABELS[n] || n);
       const covLine = cov.length
         ? `Helps with: ${cov.map(escapeHtml).join(", ")}`
-        : (isNational(c) ? "National helpline — can connect you locally" : "Life-affirming pregnancy help");
+        : (nat ? "National helpline — can connect you locally" : "Life-affirming pregnancy help");
       const actions = [];
-      if (c.email) {
-        actions.push(`<button type="button" class="btn btn-primary" data-match-email="${escapeAttr(c.id)}">Email</button>`);
+      /* Prefer Call on phone-only locals; Email only when the center has email (user taps national Email explicitly). */
+      if (!nat && c.phone && !c.email) {
+        actions.push(`<a class="btn ${idx === 0 ? "btn-primary" : "btn-secondary"}" href="tel:${escapeAttr(c.phone)}">Call</a>`);
+      } else {
+        if (c.email) {
+          actions.push(`<button type="button" class="btn ${idx === 0 && c.email ? "btn-primary" : "btn-secondary"}" data-match-email="${escapeAttr(c.id)}">Email</button>`);
+        }
+        if (c.phone) {
+          actions.push(`<a class="btn btn-secondary" href="tel:${escapeAttr(c.phone)}">Call</a>`);
+        }
       }
-      if (c.phone) {
-        actions.push(`<a class="btn btn-secondary" href="tel:${escapeAttr(c.phone)}">Call</a>`);
-      }
+      const locBits = nat
+        ? "Nationwide"
+        : `${escapeHtml(c.city)}${c.state && c.state !== "US" ? ", " + escapeHtml(c.state) : ""}${dist ? " · " + escapeHtml(dist) : ""}`;
       return `
-        <article class="match-card${idx === 0 ? " match-card-best" : ""}" data-center-id="${escapeAttr(c.id)}">
+        <article class="match-card${idx === 0 && !nat ? " match-card-best" : ""}" data-center-id="${escapeAttr(c.id)}">
           <header class="match-card-head">${badge}
             <h3>${escapeHtml(c.name)}</h3>
           </header>
-          <p class="match-meta">${escapeHtml(c.city)}${c.state && c.state !== "US" ? ", " + escapeHtml(c.state) : ""}${dist ? " · " + escapeHtml(dist) : ""} · ${escapeHtml(c.type || "")}</p>
+          <p class="match-meta">${locBits} · ${escapeHtml(nat ? "National helpline" : (c.type || ""))}</p>
           <p class="match-cov">${covLine}</p>
           <div class="match-actions">${actions.join("")}</div>
         </article>`;
     }).join("");
 
+    const leadNear = placeLabel
+      ? `Near ${escapeHtml(placeLabel)}`
+      : "Near you";
     matchEl.innerHTML = `
       <div class="match-live">
-        <p class="match-lead"><strong>We found help near you for ${escapeHtml(needPhrase)}.</strong> Tap to connect.</p>
+        <p class="match-lead"><strong>${leadNear} — help for ${escapeHtml(needPhrase)}.</strong> Tap to connect.</p>
         ${cards}
       </div>`;
 
@@ -954,26 +1111,41 @@ Thank you for the work you do. Please contact me at your earliest convenience.
       });
     });
 
-    /* Primary / secondary toolbar buttons */
+    /* Primary / secondary toolbar buttons — never mailto a national when local phone is best */
     if (primaryBtn) {
-      if (best.email) {
-        primaryBtn.textContent = `Email ${best.name.length > 28 ? best.name.slice(0, 26) + "…" : best.name} now`;
+      const short = best.name.length > 28 ? best.name.slice(0, 26) + "…" : best.name;
+      if (!bestIsNational && best.phone && !best.email) {
+        primaryBtn.textContent = `Call ${short} now`;
+        primaryBtn.dataset.mode = "call";
+      } else if (!bestIsNational && best.phone && best.email) {
+        primaryBtn.textContent = `Email ${short} now`;
+        primaryBtn.dataset.mode = "email";
+      } else if (!bestIsNational && best.phone) {
+        primaryBtn.textContent = `Call ${short} now`;
+        primaryBtn.dataset.mode = "call";
+      } else if (best.email && (bestIsNational || !best.phone)) {
+        primaryBtn.textContent = bestIsNational
+          ? `Email national line`
+          : `Email ${short} now`;
         primaryBtn.dataset.mode = "email";
       } else if (best.phone) {
-        primaryBtn.textContent = `Call ${best.name.length > 28 ? best.name.slice(0, 26) + "…" : best.name} now`;
+        primaryBtn.textContent = `Call ${short} now`;
         primaryBtn.dataset.mode = "call";
       } else {
         primaryBtn.textContent = "Connect to best match";
-        primaryBtn.dataset.mode = "email";
+        primaryBtn.dataset.mode = "call";
       }
     }
     if (secondaryCall) {
-      if (best.phone && best.email) {
+      if (best.phone && best.email && !bestIsNational) {
         secondaryCall.hidden = false;
         secondaryCall.href = `tel:${best.phone}`;
         secondaryCall.textContent = `Call ${best.phone}`;
+      } else if (bestIsNational && best.phone) {
+        secondaryCall.hidden = false;
+        secondaryCall.href = `tel:${best.phone}`;
+        secondaryCall.textContent = `Call national line`;
       } else if (best.phone && !best.email) {
-        /* primary is Call — offer SMS secondary */
         secondaryCall.hidden = true;
       } else {
         secondaryCall.hidden = true;
@@ -1023,21 +1195,29 @@ ${msg.sms}`;
       }
 
       const primaryBtn = document.getElementById("help-primary-btn");
-      const mode = (primaryBtn && primaryBtn.dataset.mode) || (best.email ? "email" : "call");
+      const bestNat = isNational(best);
+      const mode = (primaryBtn && primaryBtn.dataset.mode) ||
+        ((!bestNat && best.phone && !best.email) ? "call" : (best.email ? "email" : "call"));
       const msg = buildMessage(data, best.email ? [best] : centers);
 
-      if (mode === "call" && best.phone) {
+      if ((mode === "call" || (!best.email && best.phone)) && best.phone) {
         window.location.href = "tel:" + best.phone;
         if (formSuccess) {
           formSuccess.hidden = false;
           formSuccess.innerHTML = `<strong>Calling ${escapeHtml(best.name)}</strong> — ${escapeHtml(best.phone)}.`;
         }
-      } else {
-        /* Prefer best center email; else first emailable among matches; else national */
-        let target = best.email ? best : centers.find((c) => c.email);
-        if (!target || !target.email) {
-          target = getCenters().find((c) => isNational(c) && c.email) || target;
+      } else if (best.email && (mode === "email" || bestNat)) {
+        /* Email only the selected best (or explicit card). Do not silently swap to a national
+           when a local phone best-match exists — that path is handled by Call above. */
+        const m = buildMessage(data, [best]);
+        openMailto(best.email, m.subject, m.body);
+        if (formSuccess) {
+          formSuccess.hidden = false;
+          formSuccess.innerHTML = `<strong>Your mail app should open</strong> to ${escapeHtml(best.name)}. Review it, then send.`;
         }
+      } else {
+        /* No local contact: allow national email fallback */
+        let target = centers.find((c) => c.email) || getCenters().find((c) => isNational(c) && c.email);
         if (!target || !target.email) {
           if (formError) {
             formError.hidden = false;

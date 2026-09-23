@@ -3,7 +3,8 @@
  * Birthright chapter directory. Retrieved 2026-09-23.
  * Absolutely NO Planned Parenthood, abortion clinics, or abortion referrals.
  * Option Line network states centers do not offer or refer for abortion.
- * National helplines retained. More affiliates may be added over time.
+ * Abortion recovery / post-abortion healing support IS allowed.
+ * National helplines retained. Runtime filter: js/centers-filter.js.
  * See hearth-data/README.md for source notes.
  */
 window.HEARTH_CENTERS = [
@@ -107,7 +108,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Anchorage, AK. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  appointments can be requested outside of normal business hours based on staff availability*Appointments scheduled after hours through PL.*.",
@@ -170,7 +172,10 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "diapers",
+      "formula",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fairbanks, AK. Hours: M 10-3 T 10-3 W 10-3 Th 10-3   Boutique shopping and Diapers/Wipes/Formula by appointment for after hours or Fridays..",
@@ -233,7 +238,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Homer, AK. Hours: W 11-4 Th 11-4   24 Hour Hotline. We offer miscarriage/infant loss support..",
@@ -265,7 +271,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Juneau, AK. Hours: M 11-3 T 11-3   F 11-3 Sat 10-1 24-hour Option Line*Appointments scheduled after hours through PL.*.",
@@ -298,7 +305,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kenai, AK. Hours: M 11-4 T 11-4 W 11-4 Th 11-4   24/7 Online Nurse Chat; Some appointments after normal hours may be available by appointment only*Appointments scheduled after hours through PL.*.",
@@ -328,7 +336,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Sitka, AK. Hours: M 1-5     Sat 10-2 Tuesday through Friday by prearranged appointments 8am to 5pm..",
@@ -358,7 +367,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Valdez, AK. Hours: Th 10-3 F 10-3 Sat 10-3.",
@@ -392,7 +402,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wasilla, AK. Hours: M 10-4 T 10-4 W 10-4 Th 1-7   24/7 # 1-800-412-4357      ARP # 1-877-558-9333     Text 313131*Appointments scheduled after hours through PL.*.",
@@ -452,7 +463,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Albertville, AL. Hours: M 10-2  W 9-5 Th 2-5.",
@@ -482,7 +494,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Alexander City, AL. Hours: M 8-4 T 8-4 W 8-4 Th 8-4   Closed for major holidays only..",
@@ -516,7 +529,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in ANDALUSIA, AL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -549,7 +563,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Anniston, AL. Hours: M 9-1 T 9-5 W 9-1 Th 9-5 F 9-1  *Appointments scheduled after hours through PL.*.",
@@ -582,7 +597,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Athens, AL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -615,7 +631,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Atmore, AL. Hours: M 12-5 T 9-5 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -648,7 +665,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Auburn, AL. Hours: M 8-5 T 8-5 W 8-5 Th 8-5 F 8-12.",
@@ -681,7 +699,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bay Minette, AL. Hours: T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -715,7 +734,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Birmingham, AL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-2.",
@@ -748,7 +768,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Birmingham, AL. Hours: M 9-4 T 9-7 W 9-4 Th 9-4 F 9-2  Our staff takes after-hours calls on nights and weekends..",
@@ -782,7 +803,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Birmingham, AL. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30   24 hour Hotline.",
@@ -865,7 +887,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Birmingham, AL. Hours: M 10-4 T 10-4 W 10-4.",
@@ -897,7 +920,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Centre, AL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -929,7 +953,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chelsea, AL. Hours: T 9-4 W 9-4    *Appointments scheduled after hours through PL.*.",
@@ -963,7 +988,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clanton, AL. Hours: M 9-4 T 9-4 W 9-4 Th 9-3.",
@@ -997,7 +1023,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cropwell, AL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   After hour appointments available upon request*Appointments scheduled after hours through PL.*.",
@@ -1059,7 +1086,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Demopolis, AL. Hours: M 8:30-4 T 8:30-4 W 8:30-4:30 Th 8:30-4:30   *Appointments scheduled after hours through PL.*.",
@@ -1092,7 +1120,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dothan, AL. Hours: M 9-8 T 9-5 W 9-5 Th 9-5.",
@@ -1121,7 +1150,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Elberta, AL. Hours: M 7-10 T 7-10 W 7-10 Th 7-10 F 7-10 Sat 7-9:30 Sun 7-10We are open and staffed 24/7 we never close due to this being a maternity home..",
@@ -1155,7 +1185,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Enterprise, AL. Hours: M 10-3 T 10-6 W 10-3 Th 10-3   Available after hours by appointment..",
@@ -1188,7 +1219,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Eufaula, AL. Hours: M 1-5 T 9-7 W 9-5.",
@@ -1221,7 +1253,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fairhope, AL. Hours: M 9-4 T 9-4  Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -1255,7 +1288,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Fayette, AL. Hours: M 8-3 T 8-3 W 8-3 Th 10-2   Open every 3rd Saturday from 9 am until 12 pm.",
@@ -1288,7 +1322,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Florence, AL. Hours: M 8-4 T 8-6 W 8-4 Th 8-4.",
@@ -1322,7 +1357,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Payne, AL. Hours: M 9-4 T 10-2 W 10-2 Th 10-2   (limited obstetric ultrasound services).",
@@ -1355,7 +1391,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fultondale, AL. Hours: M 10-4:30 T 10-4:30 W 10-4:30 Th 10-4:30   10am to 4:30pm Monday through Friday.",
@@ -1388,7 +1425,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gulf Shores, AL. Hours: T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -1422,7 +1460,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Guntersville, AL. Hours: M 10-4 T 10-4  Th 9-12.",
@@ -1487,7 +1526,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hueytown, AL. Hours: M 9-4 T 9-6 W 9-4 Th 9-4.",
@@ -1521,7 +1561,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Huntsville, AL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-12:30  24 hour texting.",
@@ -1585,7 +1626,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jackson, AL. Hours: T 9-5 W 9-5 Th 9-5   24-hour chat widget with nurse on client website at alphahealthnetwork.com.",
@@ -1619,7 +1661,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jacksonville, AL. Hours: M 9-1 T 9-1  Th 9-5   Also offer infant loss small group.",
@@ -1653,7 +1696,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jasper, AL. Hours: M 9-4 T 9-4 W 8-2 Th 9-5   Our Friday hours are for our mobile unit. Location for this unit varies from week to week, and there are some Fridays that are mobile unit is closed. Clients",
@@ -1687,7 +1731,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lanett, AL. Hours: M 9-5 T 9-5 W 9-3 Th 9-3   We operate on Eastern Time.&#10;Spanish speaking translator available on Wednesdays only..",
@@ -1721,7 +1766,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Leeds, AL. Hours: M 9-4  W 9-4    After hour appointments available upon request*Appointments scheduled after hours through PL.*.",
@@ -1755,7 +1801,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mobile, AL. Hours: M 8-4 T 8-4 W 8-4 Th 8-4 F 8-4.",
@@ -1789,7 +1836,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Monroeville, AL. Hours: M 9-5.",
@@ -1823,7 +1871,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Montgomery, AL. Hours: M 8:30-3:30 T 8:30-3:30 W 8:30-3:30 Th 8:30-3:30 F 8:30-12:30  COPE is closed for lunch from 10:30am-12:00pm Monday -Thursday..",
@@ -1855,7 +1904,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Montgomery, AL. Hours: M 9-2 T 9-2 W 9-2 Th 9-2   *Appointments scheduled after hours through PL.*.",
@@ -1888,7 +1938,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Montgomery, AL. Hours: M 8:30-5 T 8:30-5 W 8:30-5 Th 8:30-5 F 8:30-12  *Appointments scheduled after hours through PL.*.",
@@ -1952,7 +2003,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Northport, AL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -1961,6 +2013,33 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "4300 Hwy 69 North, Northport, AL 35473"
+  },
+  {
+    "id": "al-quiver-ranch-mother-s-home-111924",
+    "name": "Quiver Ranch Mother's Home",
+    "type": "Maternity home",
+    "city": "Northport",
+    "state": "AL",
+    "zip": "35476",
+    "phone": "205-792-0232",
+    "website": "",
+    "email": "",
+    "services": [
+      "baby supplies",
+      "housing support"
+    ],
+    "needs": [
+      "housing",
+      "new-mom",
+      "supplies"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Maternity home in Northport, AL. Hours: M 9-10 T 9-10 W 9-10 Th 9-10 F 9-10.",
+    "lat": 33.230008,
+    "lng": -87.593949,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": ", Northport, AL 35476 United States"
   },
   {
     "id": "al-blount-county-sav-a-life-20410",
@@ -1985,7 +2064,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Oneonta, AL. Hours: M 9-4 T 9-2  Th 9-6.",
@@ -2018,7 +2098,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ozark, AL. Hours: T 9-4  Th 9-4 F 9-12  Text HELP to the text number for a call back. Closed for lunch daily from 12-1pm*Appointments scheduled after hours through PL.*.",
@@ -2074,7 +2155,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pelham, AL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -2108,7 +2190,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Prattville, AL. Hours: M 10-8 T 10-8 W 10-1 Th 10-4.",
@@ -2141,7 +2224,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Rainbow City, AL. Hours: M 9:30-4 T 9:30-4 W 9:30-12 Th 9:30-4   Closed each day from 12pm-1pm.",
@@ -2173,7 +2257,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Robertsdale, AL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -2233,7 +2318,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Scottsboro, AL. Hours: M 10-2 T 10:30-2 W 12-4 Th 10-2   We can be contacted through our website and Facebook page.",
@@ -2267,7 +2353,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Selma, AL. Hours: M 9-1 T 9-1 W 9-1 Th 9-1   *Appointments scheduled after hours through PL.*.",
@@ -2327,7 +2414,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Spanish Fort, AL. Hours: T 8:30-3:30 W 8:30-3:30 Th 8:30-3:30   We will open after hours as needed for a client. Many of our community outreach programs are outside of operating hours. We are open for lu",
@@ -2361,7 +2449,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Springville, AL. Hours: M 10-4 T 10-4 W 10-4 Th 10-8   *Appointments scheduled after hours through PL.*.",
@@ -2427,7 +2516,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sylacauga, AL. Hours: T 10-4 W 10-4 Th 10-4.",
@@ -2457,7 +2547,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Tallassee, AL. Hours: M 8-4 T 8-4.",
@@ -2490,7 +2581,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Trinity, AL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4.",
@@ -2523,7 +2615,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Troy, AL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-2  Every second Tuesday, open from 10am to 6pm*Appointments scheduled after hours through PL.*.",
@@ -2617,7 +2710,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wetumpka, AL. Hours: M 9-2 T 9-2 W 9-2 Th 9-2   *Appointments scheduled after hours through PL.*.",
@@ -2648,7 +2742,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Arkadelphia, AR. Hours: M 10-5  W 10-5 Th 10-5   We do offer a 24 hour hotline number, 1-800-712-4357*Appointments scheduled after hours through PL.*.",
@@ -2678,7 +2773,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Batesville, AR. Hours: M 11-4  W 11-4 Th 11-4.",
@@ -2711,7 +2807,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Beebe, AR. Hours: T 1-5  Th 10-5   After Hours call (866)-254-7836*Appointments scheduled after hours through NXL.*.",
@@ -2740,7 +2837,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Benton, AR. Hours: T 9-4:30 W 9-4:30 Th 9-4:30   Available for APR 24/7. Nurse manager answers texts that come through our website..",
@@ -2771,7 +2869,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Berryville, AR. Hours: T 10-5  Th 10-5.",
@@ -2866,7 +2965,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Camden, AR. Hours: T 11-5.",
@@ -2899,7 +2999,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cherokee Village, AR. Hours: M 10-5 T 10-5 W 10-5 Th 10-5.",
@@ -2931,7 +3032,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clarksville, AR. Hours: M 9-3  W 9-3 Th 10-5   Available for contact after hours via phone, text, FB Messenger, and email link on our web site.",
@@ -2965,7 +3067,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Conway, AR. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -2999,7 +3102,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Crossett, AR. Hours: T 9-3 W 9-3 Th 9-3.",
@@ -3032,7 +3136,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in El Dorado, AR. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   Camden location is only open on Mondays and Tuesdays. Magnolia location is only open on Wednesdays and Thursdays..",
@@ -3065,7 +3170,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fayetteville, AR. Hours: M 10-5 T 10-7 W 10-5 Th 10-7 F 8-4  24 hour call for Abortion reversal is available..",
@@ -3098,7 +3204,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Fordyce, AR. Hours: M 1-5 T 1-5     Call and Text forwards to a staff member outside of operational hours. For special/emergency situations an appointment will be made outside of standard operational ho",
@@ -3131,7 +3238,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Smith, AR. Hours: M 9-6 T 9-6 W 9-3 Th 9-3 F 10-2  24 hour hotline*Appointments scheduled after hours through PL.*.",
@@ -3164,7 +3272,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Smith, AR. Hours: M 9-3 T 9-3 W 9-3 Th 9-3.",
@@ -3198,7 +3307,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Harrison, AR. Hours: M 9:30-5:30 T 9:30-5:30 W 9:30-5:30 Th 9:30-5:30   *Appointments scheduled after hours through PL.*.",
@@ -3232,7 +3342,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hope, AR. Hours: T 5:30-7:30.",
@@ -3265,7 +3376,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hot Springs, AR. Hours: M 9-3 T 9-3 W 9-3 Th 9-6   Additionally open by appoinment only Fri.",
@@ -3298,7 +3410,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jacksonville, AR. Hours: M 12-5   Th 10-5 F 10-2  After-hours can call 866-254-7836*Appointments scheduled after hours through NXL.*.",
@@ -3330,7 +3443,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jonesboro, AR. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4.",
@@ -3361,7 +3475,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Little Rock, AR. Hours: M 8-4 T 8-4 W 8-1 Th 8-4 F 8-2  Nurses are available by text to give support to clients already seen.*Appointments scheduled after hours through PL.*.",
@@ -3450,7 +3565,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Little Rock, AR. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-3  *Appointments scheduled after hours through NXL.*.",
@@ -3517,7 +3633,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Magnolia, AR. Hours: Th 10-4.",
@@ -3548,7 +3665,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Monticello, AR. Hours: T 9-4:30 W 9:30-4:30 Th 9:30-4:30   Lunch daily from 12:30-1:30*Appointments scheduled after hours through PL.*.",
@@ -3581,7 +3699,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Morrilton, AR. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   After hours by appointment. Often closed for lunch 12-1.",
@@ -3614,7 +3733,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mountain Home, AR. Hours: M 9:30-5:30 T 9:30-5:30 W 9:30-5:30 Th 9:30-5:30   24 Hour Hotline with Option Line, emails can be sent through our website 24 hours.*Appointments scheduled after hours through ",
@@ -3648,7 +3768,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Nashville, AR. Hours: T 10-4 W 10-4 Th 10-4   na.",
@@ -3682,7 +3803,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Newport, AR. Hours: T 10-4:30 W 10-4:30 Th 10-4:30.",
@@ -3715,7 +3837,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in North Little Rock, AR. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-3  We prefer appointments but some walk-in appointments available (but availability not guarenteed).*Appointments scheduled after hours thr",
@@ -3769,7 +3892,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Paragould, AR. Hours: W 10-4 Th 10-4 F 10-4.",
@@ -3802,7 +3926,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pine Bluff, AR. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30.",
@@ -3862,7 +3987,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rogers, AR. Hours: T 10-5 W 10-5 Th 11-7 F 8-4.",
@@ -3895,7 +4021,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rogers, AR. Hours: M 10-5 T 10-5 W 10-5 Th 10-7 F 8-4.",
@@ -3928,7 +4055,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Russellville, AR. Hours: M 9-5 T 9-5 W 9-3 Th 9-5.",
@@ -3985,7 +4113,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Searcy, AR. Hours: M 9-5  W 9-5.",
@@ -4018,7 +4147,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Siloam Springs, AR. Hours: M 10-5 T 10-5 W 10-5 Th 10-7 F 10-2  *Appointments scheduled after hours through PL.*.",
@@ -4087,7 +4217,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Texarkana, AR. Hours: M 4-7 T 6:30-8 W 1-2:30 Th 10-2  Sat 10-2 Open the first Saturday of each month..",
@@ -4120,7 +4251,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Warren, AR. Hours: M 1-5 T 1-5 W 10-2.",
@@ -4151,7 +4283,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Memphis, AR. Hours: T 10-4 W 10-4 Th 10-4.",
@@ -4185,7 +4318,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Benson, AZ. Hours: M 11-3  W 11-3  F 11-3  We are closed on national holidays.",
@@ -4213,7 +4347,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Casa Grande, AZ. Hours: T 1-5 W 1-5 Th 10-2   Provide Basic English Class for Spanish Speakers weekly..",
@@ -4246,7 +4381,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chandler, AZ. Hours: M 9-4 T 9-4 W 9-4 Th 1-8.",
@@ -4311,7 +4447,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cottonwood, AZ. Hours: M 11-4 T 11-4 W 11-11 Th 11-4.",
@@ -4343,7 +4480,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Flagstaff, AZ. Hours: T 10-4 W 10-4 Th 10-4 F 10-2  24 hour Option Line available on weekends.*Appointments scheduled after hours through PL.*.",
@@ -4377,7 +4515,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Glendale, AZ. Hours: M 9-5 T 9-7 W 9-5 Th 9-7 F 9-5 Sat 9-1.",
@@ -4409,7 +4548,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kingman, AZ. Hours: M 11-4 T 10-3 W 10-3 Th 10-3 F 10-3  Ultrasounds are by appointment..",
@@ -4442,7 +4582,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mesa, AZ. Hours: M 9-5 T 9-7 W 9-5 Th 9-5 F 9-1.",
@@ -4475,7 +4616,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mesa, AZ. Hours: M 9-12  W 9-12    Walk-Ins Welcome.",
@@ -4508,7 +4650,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Oracle, AZ. Hours: M 9-4:30 T 9-4:30 W 9-4:30    Closed for lunch 12pm-1:30pm.",
@@ -4541,7 +4684,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Payson, AZ. Hours: T 11-6 W 2-7 Th 11-3  Sat 11-3.",
@@ -4600,7 +4744,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Phoenix, AZ. Hours: T 9-5 W 9-5 Th 9-5 F 9-5  24 hours hotline.",
@@ -4634,7 +4779,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Phoenix, AZ. Hours: M 9-5 T 9-5:30 W 9-5 Th 9-5 F 9-2.",
@@ -4666,7 +4812,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Phoenix, AZ. Hours: M 8:30-12:30 T 12:30-4:30 W 8:30-12:30    Walk-Ins Welcome. Ultrasounds By appointment only..",
@@ -4699,7 +4846,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Phoenix, AZ. Hours: T 9-12  Th 9-12   Walk-Ins Welcome.",
@@ -4831,7 +4979,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Prescott, AZ. Hours: M 10-4 T 10-7 W 10-4 Th 10-4 F 10-4.",
@@ -4865,7 +5014,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Prescott Valley, AZ. Hours: T 10-4 W 10-4 Th 10-4   Evenings and/or Saturday by appt only.",
@@ -4896,7 +5046,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Queen Creek, AZ. Hours: T 9-8     Closed for lunch 12-1..",
@@ -4930,7 +5081,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Safford, AZ. Hours: T 10-1 W 10-5 Th 10-5.",
@@ -4959,7 +5111,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in San Tan Valley, AZ. Hours: Closed for lunch.  Hours vary as need arises..",
@@ -4987,7 +5140,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Show Low, AZ. Hours: T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -5020,7 +5174,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Show Low, AZ. Hours: T 9-1   F 9-1  Walk-Ins Welcome.",
@@ -5054,7 +5209,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sierra Vista, AZ. Hours: M 9-1 T 9-1 W 9-12 Th 9-3   Thursday lunch 12pm-1pm.",
@@ -5088,7 +5244,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Springerville, AZ. Hours: T 10-4.",
@@ -5121,7 +5278,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Tempe, AZ. Hours: T 9:30-1:30     Walk-Ins Welcome.",
@@ -5186,7 +5344,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tucson, AZ. Hours: M 8:30-12:30 T 8-4 W 8:30-12:30 Th 8-4 F 9-1  Hours vary by location.",
@@ -5251,7 +5410,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Whiteriver, AZ.",
@@ -5284,7 +5444,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Yuma, AZ. Hours: T 8-4  Th 8-4   Walk-Ins Welcome.",
@@ -5317,7 +5478,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Anaheim, CA. Hours: T 9:30-3 W 9:30-3   Sat 9:30-3 Located in Anaheim on Tuesdays & Wednesdays, & Tustin on Saturdays*Appointments scheduled after hours through PL.*.",
@@ -5350,7 +5512,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Angels Camp, CA. Hours: T 8:30-4 W 10-2 Th 8:30-4.",
@@ -5439,7 +5602,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Maternity home in Atwater, CA. Hours: M 7-10 T 7-10 W 7-10 Th 7-10 F 7-10 Sat 7-10 Sun 7-10Our maternity home shelter program is open 24/7.",
@@ -5472,7 +5636,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bakersfield, CA. Hours: M 9-4 T 9-4 W 9-4 Th 9-8 F 9-12 Sat 10-1.",
@@ -5532,7 +5697,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Bishop, CA. Hours: T 11-6 W 10-4 Th 10-4   Walk-in welcome. Other times available by appointment..",
@@ -5565,7 +5731,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chico, CA. Hours: M 10-5 T 10-5 W 10-5 Th 10-5  Sat 10-10 *Appointments scheduled after hours through PL.*.",
@@ -5599,7 +5766,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Chino, CA. Hours: M 10-3 T 10-3  Th 10-3 F 10-3.",
@@ -5632,7 +5800,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Chowchilla, CA. Hours: T 10-5 W 10-5 Th 10-5.",
@@ -5665,7 +5834,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chula Vista, CA. Hours: M 9-4 T 9-5 W 9-5 Th 9-5 F 9-5  Medical services are by appointment.  We can be flexible on timing - if someone needs to come in after 5:00 we would do our best to accommodate.*Ap",
@@ -5698,7 +5868,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Colusa, CA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  Closed for lunch 12-1.",
@@ -5757,7 +5928,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Corona, CA. Hours: M 9-7 T 9-4 W 9-4 Th 9-4 F 9-3  *Appointments scheduled after hours through PL.*.",
@@ -5823,7 +5995,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Dinuba, CA. Hours: T 10-4 W 10-4    by appt Thursday. Closed from 12-1 for lunch.",
@@ -5856,7 +6029,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Duarte, CA. Hours: M 11-3 T 2-7 W 11-3 Th 2-7 F 11-3.",
@@ -5923,7 +6097,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in El Centro, CA. Hours: T 2-6  Th 11-3   We are available to meet with clients at their convenience, if they request other days and times.&#10;They may call or text 442.225.5000 to set up an appointment..",
@@ -5957,7 +6132,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Escondido, CA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  We can do same day appointments, but no walk-ins..",
@@ -5966,6 +6142,33 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "362 W. Mission Ave.  Ste. 105, Escondido, CA 92025"
+  },
+  {
+    "id": "ca-lamb-of-god-maternity-home-44848",
+    "name": "Lamb of God Maternity Home",
+    "type": "Maternity home",
+    "city": "Escondido",
+    "state": "CA",
+    "zip": "92025",
+    "phone": "760-715-6463",
+    "website": "",
+    "email": "",
+    "services": [
+      "baby supplies",
+      "housing support"
+    ],
+    "needs": [
+      "housing",
+      "new-mom",
+      "supplies"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Maternity home in Escondido, CA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  24/7 Hotline    (760) 715-6463.",
+    "lat": 33.118747,
+    "lng": -117.083371,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "243 S Escondido Blvd, #127, Escondido, CA 92025 United States"
   },
   {
     "id": "ca-hope-clinic-for-women-18654",
@@ -5988,7 +6191,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fallbrook, CA. Hours: M 10-8 T 10-5 W 10-5 Th 10-5  Sat 9-12 Closed for lunch from 1pm-2pm.  We are open on the 2nd and 4th Saturdays for additional men's programming.  Mondays we are open from 6pm-8pm f",
@@ -6073,7 +6277,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fresno, CA. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 10:30-6:30 F 9-2  Open one Saturday per month from 10 AM- 2 PM.  We have a 24 hour hotline.*Appointments scheduled after hours through PL.*.",
@@ -6106,7 +6311,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fresno, CA. Hours: M 9-4  W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -6262,7 +6468,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grover Beach, CA. Hours: M 10-4 T 10-4 W 10-4 Th 12-6   24/7 Nurse chat with Infinite Worth/HopeSync*Appointments scheduled after hours through PL.*.",
@@ -6295,7 +6502,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Hanford, CA. Hours: M 9:30-4 T 11-5 W 9:30-4 Th 9:30-4   Available 24/7 to answer Helpline phone calls, text messages, or online appointment requests..",
@@ -6327,7 +6535,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hemet, CA. Hours: T 10-5  Th 10-5.",
@@ -6361,7 +6570,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Huntington Beach, CA. Hours: M 9-4:30 T 9-7 W 9-4:30 Th 11-7 F 9-4:30 Sat 9-2 we are also open in Long beach m-f 9-3 and Santa Ana M-Tu-Th 9-3 Mobile clinic is Tuesday, Wed & Saturday 9-3*Appointments sc",
@@ -6427,7 +6637,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Jackson, CA. Hours: M 10-2  W 10-4 Th 10-2   Late afternoon appointments on M/W/Th can be made to accomodate working parents.  Will accept walk-ins but prefer appointments.",
@@ -6461,7 +6672,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Kerman, CA. Hours: T 10-5  Th 10-5 F 10-5.",
@@ -6522,7 +6734,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in La Jolla, CA. Hours: M 9-5 T 9-5 W 9-5.",
@@ -6584,7 +6797,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lake Elsinore, CA. Hours: M 10-3 T 10-3 W 10-3 Th 10-3  Sat 10-12 24HourHotline, 951-245-8884.",
@@ -6618,7 +6832,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lake Isabella, CA. Hours: T 1-5  Th 1-5   Additionally open the last Friday of the month from 1pm-5pm.",
@@ -6652,7 +6867,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lancaster, CA. Hours: M 10-5 T 11-7 W 10-5 Th 10-5 F 10-5 Sat 10-3 Our Saturday hours are only for the last Saturday of the month. November and December we are opened the 3rd Saturday of the month..",
@@ -6686,7 +6902,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Livermore, CA. Hours: M 11-5 T 1-6 W 11-5 Th 11-2   We respond to text messages on Fridays/weekends.  Option Line available after hours for callers.",
@@ -6718,7 +6935,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lodi, CA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -6752,7 +6970,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lompoc, CA. Hours: T 1-4 W 1-4 Th 1-4   After hour appointments available upon request..",
@@ -6785,7 +7004,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Long Beach, CA. Hours: M 9-3 T 9-3 W 9-3 Th 9-3 F 9-3  Appointment preferred but walk-ins and Spanish speakers are welcome*Appointments scheduled after hours through PL.*.",
@@ -6874,7 +7094,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Manteca, CA. Hours: M 10-4 T 1-4 W 10-4 Th 1-4.",
@@ -6907,7 +7128,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mariposa, CA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -6940,7 +7162,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Merced, CA. Hours: M 9-5 T 9-7 W 9-5 Th 9-5   Also offer prenatal vitamins and reproductive loss support.",
@@ -6974,7 +7197,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mission Hills, CA. Hours: M 9:30-4 T 9:30-4 W 9:30-4 Th 9:30-1  Sat 9:30-1 Open 2nd & 4th Saturday of every month.*Appointments scheduled after hours through PL.*.",
@@ -7005,7 +7229,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Modesto, CA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-2  staff meeting every third Wednesday of the month, Open at 10:30am*Appointments scheduled after hours through PL.*.",
@@ -7037,7 +7262,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Modesto, CA.",
@@ -7070,7 +7296,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Moreno Valley, CA. Hours: M 1-5 T 1-5 W 10-2 Th 1-5   *Appointments scheduled after hours through NXL.*.",
@@ -7105,7 +7332,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Napa, CA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  Closed for lunch from 12 - 12:30 pm*Appointments scheduled after hours through NXL.*.",
@@ -7139,7 +7367,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Northridge, CA. Hours: M 9-7 T 9-5 W 10-7 Th 9-5 F 9-5 Sat 9-1 *Appointments scheduled after hours through PL.*.",
@@ -7172,7 +7401,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Oakhurst, CA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -7205,7 +7435,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Oakland, CA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  We offer low-cost pregnancy testing.*Appointments scheduled after hours through PL.*.",
@@ -7239,7 +7470,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Orange, CA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  We are open on the 2nd and 4th Saturdays of each month, from 9 am to 12 pm..",
@@ -7273,7 +7505,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Oroville, CA. Hours: F 10-3.",
@@ -7306,7 +7539,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Oroville, CA. Hours: M 1-5 T 10-5 W 10-5 Th 10-5   Use a 24 hour hotline..",
@@ -7337,7 +7571,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Palm Desert, CA. Hours: M 10-5 T 10-5 W 10-5.",
@@ -7365,7 +7600,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Palm Desert, CA. Hours: M 8-5 T 8-5 W 8-5 Th 8-5 F 8-5.",
@@ -7399,7 +7635,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Palmdale, CA. Hours: M 9-2 T 9-2 W 9-2 Th 1:30-6:30  Sat 9-2.",
@@ -7432,7 +7669,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Paradise, CA. Hours: M 11-4 T 11-4 W 11-4 Th 11-4.",
@@ -7551,7 +7789,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pittsburg, CA. Hours: M 10-2 T 10-5 W 10-5 Th 10-5.",
@@ -7583,7 +7822,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Placerville, CA. Hours: M 9-4 T 9-1 W 9-4 Th 1-7   Use Options United.",
@@ -7610,7 +7850,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Porterville, CA. Hours: M 9-2 T 9-2  Th 12-6   *Appointments scheduled after hours through PL.*.",
@@ -7674,7 +7915,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Poway, CA. Hours: M 12-5 T 10-5 W 12-5 Th 12-5   Additional hours by appointment to meet client's needs.",
@@ -7705,7 +7947,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ramona, CA. Hours: M 3-6 T 10-4 W 10-5 Th 10-6 F 10:30-3.",
@@ -7738,7 +7981,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Red Bluff, CA. Hours: M 12-5 T 12-5 W 12-5 Th 12-5.",
@@ -7766,7 +8010,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Redding, CA. Hours: M 9:30-2:30 T 9:30-2:30  Th 9:30-11:30 F 11:30-3:30  Infinite worth on web site.",
@@ -7800,7 +8045,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Redding, CA. Hours: T 9-4 W 9-7 Th 9-4 F 9-4  *Appointments scheduled after hours through PL.*.",
@@ -7834,7 +8080,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ridgecrest, CA. Hours: T 2-6 W 10-2 Th 2-6.",
@@ -7868,7 +8115,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Riverside, CA. Hours: M 9-3 T 9-8 W 9-3 Th 9-3 F 9-3  Tuesday: we close from 3pm to 4pm for a lunch break.*Appointments scheduled after hours through PL.*.",
@@ -7902,7 +8150,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Rosemead, CA. Hours: T 12-4:30  Th 12-6  Sat 9-1 Call/text 626-238-5476 for assessment or urgent matter.",
@@ -7935,7 +8184,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Roseville, CA. Hours: M 9-4 T 9-4 W 9-4 Th 9-8 F 9-4  Nurse chat available 24 x 7.",
@@ -7969,7 +8219,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sacramento, CA. Hours: M 9-4 T 9-7 W 9-4 Th 9-4 F 9-4  Closed for lunch:12 pm - 1 pm (M-F).",
@@ -8002,7 +8253,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sacramento, CA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-7  N/A.",
@@ -8036,7 +8288,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Salinas, CA. Hours: M 9-3 T 9-3 W 9-3 Th 9-3.",
@@ -8070,7 +8323,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Bernardino, CA. Hours: M 1-8 T 9-4 W 9-4 Th 9-4 F 9-4  Our mobile unit is open on Saturdays from 7am to 1pm and our second location is open on Tuesdays and Thursdays from 10am to 4pm. We do have 24 h",
@@ -8103,7 +8357,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Clemente, CA. Hours: M 10-4 T 10-4 W 10-4 Th 11-5 F 9-3 Sat 9-12 *Appointments scheduled after hours through PL.*.",
@@ -8136,7 +8391,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Diego, CA. Hours: M 9-1  W 12-8 Th 9-8 F 9-1.",
@@ -8196,7 +8452,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Diego, CA. Hours: M 9-8 T 9-5 W 9-8 Th 9-8 F 9-5 Sat 9-1 Multiple Clinics.",
@@ -8230,7 +8487,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Diego, CA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -8263,7 +8521,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Diego, CA. Hours: M 8:30-5:30 T 8:30-5:30 W 8:30-5:30 Th 8:30-5:30 F 8:30-5:30.",
@@ -8296,7 +8555,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Diego, CA. Hours: M 9-5 T 9-5  Th 9-5  Sat 9-1.",
@@ -8329,7 +8589,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Diego, CA. Hours: T 9-8 W 9-5  F 9-5.",
@@ -8362,7 +8623,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Diego, CA. Hours: M 10-4 T 10-5 W 10-5    *Appointments scheduled after hours through PL.*.",
@@ -8394,7 +8656,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Diego, CA. Hours: M 9-4 T 9-5:30  Th 9-5:30 F 9-4.",
@@ -8428,7 +8691,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Dimas, CA. Hours: M 9-1 T 9-1  Th 1-6 F 9-1.",
@@ -8522,7 +8786,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Jose, CA. Hours: M 12-4 T 12-4 W 12-4 Th 12-4   APR treatment and APR through Heartbeat network outside stated hours are by appointment..",
@@ -8588,7 +8853,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Jose, CA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  We offer low-cost pregnancy testing.*Appointments scheduled after hours through PL.*.",
@@ -8646,7 +8912,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Marcos, CA. Hours: M 9-5 T 9-5 W 9-8 Th 9-5 F 9-5 Sat 9:30-1 24 hour hotline.",
@@ -8680,7 +8947,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Santa Ana, CA. Hours: M 9-4 T 9-4  Th 9-4   Appointment preferred but walk-ins are welcome / Spanish Welcome*Appointments scheduled after hours through PL.*.",
@@ -8735,7 +9003,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Santa Ana, CA. Hours: T 9:30-3 W 9:30-3 Th 9:30-3 F 9:30-1 Sat 9:30-3 Phone calls are covered by option line after hours.*Appointments scheduled after hours through NXL.*.",
@@ -8770,7 +9039,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Santa Clarita, CA. Hours: M 8-5 T 8-5 W 8-5 Th 8-7 F 8-5 Sat 8:30-1 Closed 12p-1p for lunch, M-F&#10;Open every other Saturday, 8:30a-1p*Appointments scheduled after hours through PL.*.",
@@ -8804,7 +9074,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Santa Maria, CA. Hours: M 10-2 T 10-4 W 10-4 Th 1-6.",
@@ -8838,7 +9109,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Santa Rosa, CA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   We are available outside of normal hours upon request..",
@@ -8871,7 +9143,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Santee, CA. Hours: T 11-7 W 11-6 Th 11-6 F 11-4.",
@@ -8933,7 +9206,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sonora, CA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -8964,7 +9238,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Stockton, CA. Hours: M 10-4 T 8-4 W 10-4.",
@@ -8997,7 +9272,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tehachapi, CA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -9058,7 +9334,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Thousand Oaks, CA. Hours: M 12-5 T 12-5 W 12-5 Th 12-5 F 12-5.",
@@ -9091,7 +9368,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Torrance, CA. Hours: M 9:30-3:30 T 9:30-3:30 W 9:30-3:30 Th 9:30-3:30 F 9:30-3:30  Thursday Evenings 5:00 p.m. - 8:30 p.m.; 3rd Saturday of the month 1:00 p.m.-3:00 p.m.; 24-hours helpline.",
@@ -9124,7 +9402,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Torrance, CA. Hours: M 9:30-3:30 T 11:30-5:30 W 9:30-3:30 Th 11:30-8:30 F 9:30-3:30  3rd Saturday of every month 1:00pm – 3:00pm.",
@@ -9157,7 +9436,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tracy, CA. Hours: M 12-7 T 12-4 W 12-7 Th 12-4   *Appointments scheduled after hours through PL.*.",
@@ -9190,7 +9470,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tulare, CA. Hours: M 10-5 T 10-5 W 10-5 Th 10-5.",
@@ -9224,7 +9505,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Turlock, CA. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   N/A*Appointments scheduled after hours through PL.*.",
@@ -9281,7 +9563,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Union City, CA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  We offer low-cost pregnancy testing.*Appointments scheduled after hours through PL.*.",
@@ -9314,7 +9597,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Vacaville, CA. Hours: M 11-3 T 11-5 W 11-5 Th 11-5   We are available 24-7, 7 days a week for APR cases.",
@@ -9376,7 +9660,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ventura, CA. Hours: M 10-4 T 10-4 W 8-4 Th 10-4.",
@@ -9409,7 +9694,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Victorville, CA. Hours: M 10-3 T 10-3  Th 10-3.",
@@ -9471,7 +9757,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Visalia, CA. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5  *Appointments scheduled after hours through PL.*.",
@@ -9504,7 +9791,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Watsonville, CA. Hours: M 11-4 T 11-4 W 11-4 Th 11-4 F 11-4  Exceptions are made for emergency situations.*Appointments scheduled after hours through PL.*.",
@@ -9537,7 +9825,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Whittier, CA. Hours: M 9-5  W 9-5 Th 9-5   Closed for lunch (12-1 pm). We offer low-cost pregnancy testing..",
@@ -9570,7 +9859,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Woodland, CA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  We use Choose Life Marketing, HopeSync and 24/7 nurse chat*Appointments scheduled after hours through PL.*.",
@@ -9603,7 +9893,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Yuba City, CA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   24-Hour hotline*Appointments scheduled after hours through PL.*.",
@@ -9638,7 +9929,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Yucaipa, CA. Hours: M 1-8 T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -9668,7 +9960,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in yucca valley, CA. Hours: T 9-4 W 9-4 Th 9-4   24-hour hotline.",
@@ -9701,7 +9994,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Alamosa, CO. Hours: M 2-5:30 T 2-5:30 W 2-5:30 Th 2-5:30.",
@@ -9801,7 +10095,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Aurora, CO. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   *Appointments scheduled after hours through PL.*.",
@@ -9834,7 +10129,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Boulder, CO. Hours: M 10-4 T 9-4 W 10-4 Th 10-4   We have hours for emergencies. along with an on-call Ultrasound technician(s).",
@@ -9867,7 +10163,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Brighton, CO. Hours: M 10-3  W 2-7    Able to meet with clients on other days/times depending on the situation..",
@@ -9901,7 +10198,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brush, CO. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  We have a 24-hour hotline and provide after-hours appointments as needed..",
@@ -9934,7 +10232,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Buena Vista, CO. Hours: T 10-4 W 3-7 Th 10-4.",
@@ -9967,7 +10266,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Byers, CO. Hours: M 1-5 T 1-5 W 1-5    Open Boutique the fourth Saturday from 10 am to 12 pm each month except November and December.  Nov & Dec monthly boutique are combined into one Holiday Boutique h",
@@ -10000,7 +10300,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Canon City, CO. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   24 hour hotline and if clients cannot make it in during normal hours, we will meet them after hours.*Appointments scheduled after hours through PL.*.",
@@ -10062,7 +10363,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Colorado Springs, CO. Hours: T 8:30-4 W 8:30-4 Th 8:30-7 F 8:30-2 Sat 8:30-2.",
@@ -10095,7 +10397,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Colorado Springs, CO. Hours: M 9:30-7 T 9:30-7 W 9:30-5 Th 9:30-5 F 9:30-5  These hours apply to two of our locations (Galley and Meridian Rd), we have two additional locations (Centennial and Widefield)",
@@ -10185,7 +10488,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Cortez, CO. Hours: M 10-6 T 10-4 W 10-4.",
@@ -10219,7 +10523,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Craig, CO. Hours: Th 9-2 F 9-2.",
@@ -10252,7 +10557,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Delta, CO. Hours: T 1-6 W 1-6 Th 1-6.",
@@ -10377,7 +10683,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Evergreen, CO. Hours: T 10-4 W 10-4 Th 10-4.",
@@ -10410,7 +10717,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Collins, CO. Hours: M 9-4 T 3-7:30 W 9:30-2 Th 9-4 F 9-12:30  Scheduling line and live chat are available during open clinic hours*Appointments scheduled after hours through PL.*.",
@@ -10478,7 +10786,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Granby, CO. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   We offer an in-person women's health clinic for prenatal & postpartum care, birth control removal, etc. one Fri & Sat each month (10-5) on Fri, and (9-1)",
@@ -10541,7 +10850,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Grand Junction, CO. Hours: M 9:30-5 T 9:30-5 W 9:30-5 Th 9:30-1  Sat 9:30-1.",
@@ -10574,7 +10884,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greeley, CO. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5  &#10;*Appointments scheduled after hours through PL.*.",
@@ -10607,7 +10918,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Holyoke, CO. Hours: T 3:30-5:30     Text: (970) 842-4324.",
@@ -10640,7 +10952,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in La Junta, CO. Hours: M 11-5 T 11-5 W 11-5 Th 11-5.",
@@ -10669,7 +10982,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lakewood, CO. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30 F 9-4:30.",
@@ -10733,7 +11047,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Longmont, CO. Hours: M 11-5 T 11-6 W 11-5 Th 11-5 F 11-5  *Appointments scheduled after hours through PL.*.",
@@ -10817,7 +11132,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Loveland, CO. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -10912,7 +11228,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Montrose, CO. Hours: T 10-4 W 10-7 Th 10-4.",
@@ -10971,7 +11288,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pagosa Springs, CO. Hours: M 11-5 T 11-5 W 11-5.",
@@ -11002,7 +11320,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Peyton, CO. Hours: M 9:30-7 T 9:30-7 W 9:30-5 Th 9:30-5 F 9:30-5  Monday and Tuesday 9:30 am to 7:00 pm&#10;Wednesday, Thursday and Friday 9:30 am to 5:00 pm&#10;Closed Saturday and Sunday.",
@@ -11035,7 +11354,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pueblo, CO. Hours: M 9-1 T 9-6 W 8-4 Th 9-4   Friday's open 2nd Friday of the month.  Tues open late only if appts are scheduled, same with 8am Wed appt.  Looking to open Friday and Saturday by end of 20",
@@ -11067,7 +11387,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Salida, CO. Hours: M 10-3  W 12-5 Th 12-5 F 11-4  Closed on Federal Holidays.*Appointments scheduled after hours through PL.*.",
@@ -11133,7 +11454,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Steamboat Springs, CO. Hours: T 9-5 W 9-5 Th 9-5.",
@@ -11166,7 +11488,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sterling, CO. Hours: M 12-2 T 12-2 W 12-2 Th 12-2 F 12-2.",
@@ -11199,7 +11522,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wray, CO. Hours: M 3-5      Also available 9 a.m.-12 p.m. on the first Saturday of every month.",
@@ -11232,7 +11556,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Yuma, CO. Hours: M 3-5.",
@@ -11265,7 +11590,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Cheshire, CT. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -11355,7 +11681,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Danbury, CT. Hours: M 9:30-4 T 9:30-4 W 9:30-4 Th 9:30-4   *Appointments scheduled after hours through PL.*.",
@@ -11474,7 +11801,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Middletown, CT. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-3.",
@@ -11508,7 +11836,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in New Haven, CT. Hours: M 9-3  W 9-12   Sat 9-12 Open the 1st and 3rd Sat of the month from 9am-12pm. Open every Wed (except the 5th Wed when it occurs) from 9am-12pm. The 2nd Wed open from 9am-3pm..",
@@ -11541,7 +11870,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in New London, CT. Hours: M 9:30-4:30 T 9:30-8 W 9:30-4:30 Th 9:30-4:30 F 9:30-4:30  We have a 24 hour text line, email, and Facebook Messenger where clients can make appointment request and correspond with",
@@ -11603,7 +11933,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Stamford, CT. Hours: M 9-4 T 10-4 W 10-6 Th 9-4 F 9-3  *Appointments scheduled after hours through PL.*.",
@@ -11670,7 +12001,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Torrington, CT. Hours: T 10-2  Th 10-2  Sat 10-2 *Appointments scheduled after hours through PL.*.",
@@ -11703,7 +12035,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Unionville, CT. Hours: M 10-4 T 10-4  Th 10-4.",
@@ -11822,7 +12155,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Willimantic, CT. Hours: M 10-2 T 10-4  Th 10-4   *Appointments scheduled after hours through NXL.*.",
@@ -11856,7 +12190,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Washington, DC. Hours: M 10-8 T 10-8 W 10-8 Th 10-8 F 11-2  We are closed from 5-6pm everyday for shift changes.",
@@ -11889,7 +12224,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dover, DE. Hours: M 9:30-4:30 T 9:30-4:30 W 9:30-4:30 Th 9:30-4:30.",
@@ -11921,7 +12257,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Georgetown, DE. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30.",
@@ -11955,7 +12292,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Seaford, DE. Hours: M 9-3  W 9-3 Th 9-3   Mon, Wed, Thur 9am-3pm; Additional parking available behind the building for privacy*Appointments scheduled after hours through NXL.*.",
@@ -11988,7 +12326,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wilmington, DE. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -12045,7 +12384,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Altamonte Springs, FL. Hours: T 9:30-4 W 9:30-3 Th 9:30-3 F 9:30-3 Sat 9-1.",
@@ -12078,7 +12418,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Apopka, FL. Hours: M 10-3 T 10-3 W 10-3 Th 10-3   Friday and Saturday by appointment. 24 hr emergency hotline.",
@@ -12112,7 +12453,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Apopka, FL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  Sat and other hrs. by appt. only. Does not offer Women's Wellness Exams/ referrals at this time..",
@@ -12142,7 +12484,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Arcadia, FL. Hours: M 9-5   Th 9-5 F 9-5  Closed for lunch 12-1.",
@@ -12174,7 +12517,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Avon Park, FL. Hours: T 9-5 W 1-5 Th 9-5   The above hours are for our Avon Park office only.  Medical appointments are on Wednesday's only..",
@@ -12271,7 +12615,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Boynton Beach, FL. Hours: M 9:30-3:30 T 9:30-3:30 W 9:30-3:30 Th 12-3:30 F 9:30-12:30  Clients can request an appt. via our website. Cannot offer women's wellness exams/ referrals at this time..",
@@ -12304,7 +12649,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bradenton, FL. Hours: M 9:30-4 T 9:30-4 W 9:30-4 Th 12-6:30 F 9-12  *Appointments scheduled after hours through PL.*.",
@@ -12335,7 +12681,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Maternity home in Bradenton, FL. Hours: M 8:30-5 T 8:30-5 W 8:30-5 Th 8:30-5 F 8:30-5  Our maternity home operates 24/7 for residents..",
@@ -12368,7 +12715,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brandon, FL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-12  Open 1 Saturday per month from 9 am-1 pm.*Appointments scheduled after hours through PL.*.",
@@ -12432,7 +12780,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clearwater, FL. Hours: M 9-7 T 9-7 W 9-7 Th 9-4.",
@@ -12463,7 +12812,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clearwater, FL. Hours: M 9-5      Additionally open by appoinment only Thursday.",
@@ -12497,7 +12847,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clearwater, FL. Hours: M 8-5 T 8-5 W 8-5 Th 8-5 F 8-5  Appts. preferred, walk-ins welcome.",
@@ -12531,7 +12882,9 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting",
+      "childcare"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Maternity home in Clearwater, FL. Hours: M 9-4 T 9-4 W 9-4 Th 11-6 F 9-4  We prefer appointments but welcome walk-ins whenever possible. - An onsite licensed childcare center ages 2mos to 3yrs. available for clients.",
@@ -12590,7 +12943,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Clermont, FL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-12  Closed 12-1p for lunch.  Cannot refer for/ provide Women's Wellness Exams at this time..",
@@ -12622,7 +12976,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Crestview, FL. Hours: M 10:30-5 T 10:30-5 W 10:30-4 Th 10:30-3.",
@@ -12655,7 +13010,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Crystal River, FL. Hours: T 9:30-4:30 W 9:30-4:30 Th 9:30-4:30.",
@@ -12689,7 +13045,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dade City, FL. Hours: M 8-5 T 8-5 W 8-5 Th 8-5 F 8-5  Walk-ins welcome. Appointments after hours are available upon request..",
@@ -12722,7 +13079,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dade City, FL. Hours: M 10-3 T 9-3 W 12-5 Th 9-3 F 9-3  Does not provide/ refer for wellness exams at this time..",
@@ -12755,7 +13113,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Daytona Beach, FL. Hours: M 9:30-4:30 T 9:30-4:30 W 9:30-4:30 Th 9:30-4:30 F 9:30-2  *Appointments scheduled after hours through PL.*.",
@@ -12789,7 +13148,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Defuniak Springs, FL. Hours: M 8-4 T 10-5 W 8-4 Th 8-4.",
@@ -12822,7 +13182,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in DeLand, FL. Hours: M 10-3 T 10-3 W 9-5 Th 9-5   Mondays & Tuesdays: appointments are held on the mobile unit&#10;Wednesdays & Thursdays: appointments are in the clinic offices&#10;Lunch is between 12 & 1",
@@ -12855,7 +13216,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Deltona, FL. Hours: M 9:30-1:30 T 12-6 W 9:30-1:30 Th 11-7   Free testing for chlamydia and gonorrhea. Free ultrasound services.*Appointments scheduled after hours through PL.*.",
@@ -12889,7 +13251,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Dover, FL. Hours: T 9-4  Th 9-4.",
@@ -12921,7 +13284,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Maternity home in Englewood, FL. Hours: M 8:30-5 T 8:30-5 W 8:30-5 Th 8:30-5 F 8:30-5  Maternity Home in operation 24/7/365 - All inquiries run through Administrative Office at 941-748-0094 or Info@SolveHomes.org.",
@@ -12954,7 +13318,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Eustis, FL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   We offer a 24 hours hotline*Appointments scheduled after hours through PL.*.",
@@ -13052,7 +13417,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Myers, FL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -13085,7 +13451,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Myers, FL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   Baby supplies are offered to current clients only..",
@@ -13118,7 +13485,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Myers, FL. Hours: M 10-4 T 9-5 W 9-5 Th 9-5 F 10-4  Offers wellness exam referrals. *Appointments scheduled after hours through PL.*.",
@@ -13152,7 +13520,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Pierce, FL. Hours: M 9:30-3 T 9:30-3 W 9:30-3 Th 12-3 F 9:30-3  Clients can request an appointment via our website..",
@@ -13178,7 +13547,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "adoption",
       "expecting",
-      "new-mom"
+      "new-mom",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Fort Walton Beach, FL. Hours: M 8-4 T 8-4 W 8-4 Th 8-4   We are available by appointment outside of our regular hours..",
@@ -13247,7 +13617,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Freeport, FL. Hours: M 9-4 T 9-4 W 9-4 Th 12-7   *Appointments scheduled after hours through PL.*.",
@@ -13312,7 +13683,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Gainesville, FL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  Other times available by appt. Serving 21 counties including the cities of Jacksonville, St. Augustine, Gainesville, Lake City, and surrounding ar",
@@ -13374,7 +13746,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gainesville, FL. Hours: M 8-7 T 8-7 W 8-7 Th 8-7 F 8-7 Sat 9-6 Sun 10-5At Circle of Hope, we’re here for you, day or night. You can call or text us 24/7. We offer evening, weekend, & virtual appointments",
@@ -13408,7 +13781,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gainesville, FL. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30   M - Thurs.  9am - 4:30pm*Appointments scheduled after hours through PL.*.",
@@ -13441,7 +13815,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gainesville, FL. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30   Offers Women's Wellness Exams. Some of our classes are in the evenings. *Appointments scheduled after hours through PL.*.",
@@ -13474,7 +13849,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hialeah, FL. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5 Sat 9-12 Cannot offer Women's Wellness Exams/ referrals at this time..",
@@ -13507,7 +13883,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hollywood, FL. Hours: M 11-7 T 9-3 W 9-3 Th 9-3 F 9-3 Sat 9-3 A Respect Life location. Creole-speaking staff on Mon. & Sat. Cannot offer wellness exams/ referrals at this time..",
@@ -13540,7 +13917,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Homestead, FL. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5  Does not refer for/ provide Women's Wellness Exams..",
@@ -13574,7 +13952,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Immokalee, FL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Optionline available to schedule 24/7.*Appointments scheduled after hours through PL.*.",
@@ -13608,7 +13987,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Inverness, FL. Hours: M 9-5 T 10-6 W 9-5 Th 9-5 F 9-3  *Appointments scheduled after hours through PL.*.",
@@ -13666,7 +14046,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Inverness, FL. Hours: M 10-4 T 10-6:30 W 10-4 Th 10-4.",
@@ -13697,7 +14078,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jacksonville, FL. Hours: M 9-4 T 12-7 W 9-4 Th 12-7 F 9-4.",
@@ -13779,7 +14161,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jacksonville, FL. Hours: M 10-8 T 2-8 W 10-1 Th 10-4 F 10-1  Monday closed 4p-6p & Tuesday closed 5p-6p. Closed the 1st Wednesday of the month.",
@@ -13812,7 +14195,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jacksonville, FL. Hours: M 10-8 T 10-8 W 10-1 Th 10-8 F 10-1  Monday closed 4p-6p, Tuesday & Thursday closed 1p-2p & 5p-6p, Wednesday closed the first of the month..",
@@ -13845,7 +14229,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jacksonville, FL. Hours: T 10-6 W 10-5 Th 10-1 F 10-1  Closed 1p-2p. Closed the 1st Wednesday of the month.",
@@ -13911,7 +14296,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jacksonville, FL. Hours: M 9-4 T 9-8  Th 9-4 F 9-4.",
@@ -13974,7 +14360,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jacksonville, FL. Hours: M 9-3  W 9-3  F 9-3  Offers/ refers for well women's exams..",
@@ -14039,7 +14426,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kissimmee, FL. Hours: M 10-4 T 10-4 W 10-4 Th 2-7   *Appointments scheduled after hours through PL.*.",
@@ -14073,7 +14461,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kissimmee, FL. Hours: T 10-2  Th 10-2  Sat 10-2 We have 3 locations. At this location, we are open for clients on T / Th / S from 10am-2pm..",
@@ -14107,7 +14496,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kissimmee, FL. Hours: M 10-2 T 10-2 W 3-6  F 10-2  Also open on Tuesdays from 6-8 pm.*Appointments scheduled after hours through PL.*.",
@@ -14141,7 +14531,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lake City, FL. Hours: M 10-4 T 10-4 W 10-4 Th 12-6 F 10-4.",
@@ -14175,7 +14566,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lake Ciy, FL. Hours: W 10-4 Th 10-4   1st and 3rd Wed of the month is Mayo- 2nd and 4th Wed is Jasper-1st and 3rd Thursday is Alachua-2nd and 4th Thursday is Lake Butler. Our mobile unit is available any",
@@ -14207,7 +14599,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lake Placid, FL. Hours: T 9-3   F 9-12  Appts. may be available outside business hrs. Fill out a contact request form at  choicesfrc.com/contact/ to have someone from the center reach out to schedule..",
@@ -14239,7 +14632,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lake Wales, FL. Hours: T 10-5 W 10-5  F 9-1  *Appointments scheduled after hours through PL.*.",
@@ -14271,7 +14665,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lakeland, FL. Hours: M 10-4 T 10-4 W 10-4 Th 10-7 F 10-2.",
@@ -14414,7 +14809,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Land O'Lakes, FL. Hours: M 1-5  W 1-5 Th 1-5   24 hour Nurse Chat through our website.",
@@ -14473,7 +14869,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Leesburg, FL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -14535,7 +14932,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Live Oak, FL. Hours: M 12-6 T 10-4 W 10-4 Th 10-4 F 10-4.",
@@ -14568,7 +14966,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in MacClenny, FL. Hours: M 10-8 T 10-4 W 11-3 Th 1-8   Closed 1st Wed. of Month and closed Mon & Thurs. from 4p-6p.",
@@ -14601,7 +15000,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marianna, FL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   We are part of Option Line so we have a 24/hour hotline.*Appointments scheduled after hours through PL.*.",
@@ -14629,7 +15029,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Melbourne, FL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -14663,7 +15064,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Merritt Island, FL. Hours: M 10-5 T 12-4 W 10-6 Th 10-5.",
@@ -14721,7 +15123,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Miami, FL. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5  Provides Women's Wellness Exams/ referrals..",
@@ -14780,7 +15183,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Miami, FL. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5  Does not refer for/ provide women's wellness exams at this time..",
@@ -14845,7 +15249,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Milton, FL. Hours: M 10-4:30 T 10-4:30 W 10-4:30 Th 10-4:30   24 hour hotline. After-hour appointments available upon request*Appointments scheduled after hours through PL.*.",
@@ -14873,7 +15278,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Naples, FL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -14906,7 +15312,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Naples, FL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  *Appointments scheduled after hours through PL.*.",
@@ -14967,7 +15374,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Navarre, FL. Hours: T 10-4 W 10:30-4 Th 10-4:30 F 10:30-4  *Appointments scheduled after hours through PL.*.",
@@ -15001,7 +15409,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in New Port Richey, FL. Hours: M 9-3 T 9-3  Th 9-3.",
@@ -15095,7 +15504,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in North Miami, FL. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5  Offers wellness exams for pregnant clients only..",
@@ -15128,7 +15538,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in North Port, FL. Hours: T 11-7 W 12-5 Th 11-7  Sat 10-2 Closed for lunch 12-1*Appointments scheduled after hours through PL.*.",
@@ -15217,7 +15628,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ocala, FL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-1  Weekend Texting 8am - 10pm&#10;24hr Option Line*Appointments scheduled after hours through PL.*.",
@@ -15251,7 +15663,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Okeechobee, FL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -15284,7 +15697,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Orange Park, FL. Hours: M 10-8 T 1-8 W 10-1 Th 10-4 F 10-1  Monday & Tuesday closed 4p-6p & Thursday closed 1p-2p. Closed the 1st Wednesday of the month.",
@@ -15380,7 +15794,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Orlando, FL. Hours: M 10-2  W 10-2  F 10-2  We have 3 locations. At this location, we are open for clients on M / W / F from 10am-2pm..",
@@ -15414,7 +15829,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Orlando, FL. Hours: M 10-2  W 10-2  F 10-2  We have 3 locations. At this location, we are open for clients on M / W / F from 10am-2pm..",
@@ -15448,7 +15864,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Orlando, FL. Hours: M 9-4:30 T 2-7 W 9-3:30 Th 9-4:30 F 9-2.",
@@ -15478,7 +15895,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Oviedo, FL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-1  Call/text 24/7 to set up an appt. STD testing for pregnant women only..",
@@ -15544,7 +15962,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Palatka, FL. Hours: T 9-2:30 W 9-2:30 Th 9-2:30   Phone line 24/7.  Limited ultrasound by appointment..",
@@ -15575,7 +15994,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Palm Bay, FL. Hours: M 10:30-3:30 T 10:30-3:30 W 10:30-3:30 Th 10:30-3:30   Option LIne.",
@@ -15640,7 +16060,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Palm Coast, FL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  24 hour hotline and nurses' chat; some after hours availability in emergencies (ex. APR clients)*Appointments scheduled after hours through PL.",
@@ -15674,7 +16095,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Palmetto, FL. Hours: M 7:30-5:30 T 7:30-5:30 W 7:30-5:30 Th 7:30-5:30 F 12:30-5  Available by appointment on Fridays..",
@@ -15707,7 +16129,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Palmetto Bay, FL. Hours: M 9:30-1:30 T 9:30-5 W 9:30-5 Th 9:30-5   Additionally open 2nd & 4th Fridays from 9:30 AM-1:00 PM*Appointments scheduled after hours through PL.*.",
@@ -15736,7 +16159,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Panama City, FL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   Wednesdays we do not take Clients.  Take lunch from 12-1.",
@@ -15801,7 +16225,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pensacola, FL. Hours: M 9-4 T 9-4 W 9-4 Th 9-1 F 9-1  Phones are answered 9am-4pm Monday-Friday. Website email submissions answered all hours daily, including weekends. Facebook messages answered all hou",
@@ -15829,7 +16254,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Pensacola, FL. Hours: M 8:30-4 T 8:30-4 W 8:30-4 Th 8:30-4 F 8:30-4.",
@@ -15862,7 +16288,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pensacola, FL. Hours: M 9-5 T 12-5 W 9-4 Th 9-5 F 9-12  *Appointments scheduled after hours through PL.*.",
@@ -15895,7 +16322,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pinellas Park, FL. Hours: M 10:30-6:30 T 9-5 W 9-5 Th 9-5 F 9-2  STD testing for women only. Wellness exams must be scheduled by phone.*Appointments scheduled after hours through PL.*.",
@@ -15929,7 +16357,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Plant City, FL. Hours: M 9-7 T 9-7 W 9-5 Th 9-7 F 9-12  Closed for lunch 12-1 pm. Does not refer for/ provide Women's Wellness Exams at this time..",
@@ -15958,7 +16387,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Port Charlotte, FL. Hours: M 9-5 T 9-5 W 10-5 Th 9-5   Closed for lunch 12-1*Appointments scheduled after hours through PL.*.",
@@ -15991,7 +16421,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Port St Lucie, FL. Hours: M 1-5 T 1-5 W 10-2 Th 9-1 F 9-1  Also open Mondays 7p-9p to all clients. *Appointments scheduled after hours through PL.*.",
@@ -16025,7 +16456,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Port St Lucie, FL. Hours: M 9-4 T 9-5 W 9-5 Th 9-1 F 9-1  On Thursday, we re-open from 7-9 pm for pregnancy tests and ultrasounds.*Appointments scheduled after hours through PL.*.",
@@ -16082,7 +16514,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Quincy, FL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   F by appt. Every second Saturday. *Appointments scheduled after hours through PL.*.",
@@ -16115,7 +16548,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Quincy, FL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   We are open by appointment only on Friday and Saturday.*Appointments scheduled after hours through PL.*.",
@@ -16146,7 +16580,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Riviera Beach, FL. Hours: M 9:30-3:30 T 9:30-3:30 W 9:30-3:30 Th 9:30-3:30 F 9:30-3:30 Sat 9-12.",
@@ -16205,7 +16640,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Riviera Beach, FL. Hours: M 8:30-4 T 8:30-4 W 7-3 Th 8:30-4 F 8-12 Sat 8:30-4:30 *Appointments scheduled after hours through PL.*.",
@@ -16238,7 +16674,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Saint Augustine, FL. Hours: M 10-2 T 10-2  Th 10-2.",
@@ -16321,7 +16758,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Saint Petersburg, FL. Hours: T 9-3  Th 9-3.",
@@ -16442,7 +16880,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sarasota, FL. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30 F 8:30-4:30  Early prenatal care, behavioral health services, and resource navigation..",
@@ -16475,7 +16914,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sarasota, FL. Hours: M 9:30-4:30 T 9:30-4:30 W 9:30-4:30 Th 9:30-4:30 F 9:30-4:30  24 hr. nurse chat line*Appointments scheduled after hours through PL.*.",
@@ -16507,7 +16947,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Maternity home in Sarasota, FL. Hours: M 8:30-5 T 8:30-5 W 8:30-5 Th 8:30-5 F 8:30-5  &#10;.",
@@ -16539,7 +16980,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sebring, FL. Hours: M 9-2  W 9-2 Th 9-2   Appts. may be available outside business hrs. Fill out a contact request form at  choicesfrc.com/contact/ to have someone from the center reach out to schedule..",
@@ -16607,7 +17049,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Spring Hill, FL. Hours: M 8-5 T 8-5 W 8-5 Th 8-5 F 8-5  Appts preferred, walk-ins welcome. After hours by appt. only..",
@@ -16641,7 +17084,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in St. Cloud, FL. Hours: M 10-4 T 2-7 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -16756,7 +17200,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Tallahassee, FL. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30   We provide pregnancy and parenting support..",
@@ -16870,7 +17315,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tallahassee, FL. Hours: M 1-8 T 9-6 W 9-4 Th 9-4.",
@@ -16933,7 +17379,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tampa, FL. Hours: M 10:30-6:30 T 9-5 W 9-5 Th 9-5 F 9-2  STD testing for women only. Wellness exams must be scheduled by phone.*Appointments scheduled after hours through PL.*.",
@@ -16966,7 +17413,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tampa, FL. Hours: M 10:30-6:30 T 9-5 W 9-5 Th 9-5 F 9-2  STD testing for women only. Wellness exams must be scheduled by phone.*Appointments scheduled after hours through PL.*.",
@@ -17050,7 +17498,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tampa, FL. Hours: M 8-5 T 8-5 W 8-5 Th 8-5 F 8-5  After hours available upon request. Cannot offer wellness exams/ referrals at this time..",
@@ -17112,7 +17561,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tampa, FL. Hours: T 9-4 W 9-4 Th 9-4 F 9-4  Appts. preferred, walk-ins welcome!.",
@@ -17145,7 +17595,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tampa, FL. Hours: T 9-3 W 9-3 Th 9-3 F 9-3 Sat 10-2 *Appointments scheduled after hours through PL.*.",
@@ -17173,7 +17624,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Maternity home in Tequesta, FL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -17207,7 +17659,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Titusville, FL. Hours: M 9:30-2 T 9:30-2  Th 9:30-2   We are open 10 am-2 pm every other Saturday..",
@@ -17240,7 +17693,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Venice, FL. Hours: M 9-5 T 9-5   F 9-5  24 hour answering service, 24 hour texting with nurses, closed for lunch from 12pm-1pm. Closed for major holidays.*Appointments scheduled after hours through PL.*.",
@@ -17273,7 +17727,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Vero Beach, FL. Hours: M 9-5 T 9-7 W 9-5 Th 9-7 F 9-4  Wellness exam referrals. Men's Program Saturday morning 9:30 am and Sunday 6:00 pm.*Appointments scheduled after hours through PL.*.",
@@ -17306,7 +17761,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Vero Beach, FL. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 1-8   Can be contacted through the carenet.org webpage.",
@@ -17338,7 +17794,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Wauchula, FL. Hours: M 8-12 T 8-12 W 8-12 Th 12-5   Appts. may be available outside business hrs. Fill out a contact request form at  choicesfrc.com/contact/ to have someone from the center reach out to",
@@ -17371,7 +17828,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wesley Chapel, FL. Hours: T 9-3 W 9-3 Th 11-4 F 9-3 Sat 10-2.",
@@ -17404,7 +17862,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Palm Beach, FL. Hours: M 9:30-3:30 T 9:30-3:30 W 9:30-3:30 Th 9:30-3:30 F 9:30-12:30  Clients can request an appt. via our website. Cannot offer Well Women Exams/ referrals at this time..",
@@ -17464,7 +17923,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Winter Haven, FL. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   24 hour hotline*Appointments scheduled after hours through PL.*.",
@@ -17503,6 +17963,43 @@ window.HEARTH_CENTERS = [
     "address": "2425 Lee Rd., Winter Park, FL 32789"
   },
   {
+    "id": "fl-pregnancy-care-center-of-zephyrhills-fpp-19687",
+    "name": "Pregnancy Care Center of Zephyrhills (FPPSSP)",
+    "type": "Pregnancy resource center",
+    "city": "Zephyrhills",
+    "state": "FL",
+    "zip": "33542",
+    "phone": "813-780-6885",
+    "website": "",
+    "email": "",
+    "services": [
+      "pregnancy tests",
+      "parenting classes",
+      "baby supplies",
+      "STI testing",
+      "adoption information",
+      "abortion recovery support",
+      "mentoring",
+      "pregnancy counseling"
+    ],
+    "needs": [
+      "adoption",
+      "counseling",
+      "expecting",
+      "new-mom",
+      "supplies",
+      "talk",
+      "parenting"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Zephyrhills, FL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Does not refer for/ provide Women's Wellness Exams at this time..",
+    "lat": 28.244867,
+    "lng": -82.180562,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "38435 North Avenue, Zephyrhills, FL 33542 United States"
+  },
+  {
     "id": "ga-alpha-pregnancy-center-albany-18078",
     "name": "Alpha Pregnancy Center Albany",
     "type": "Pregnancy medical center",
@@ -17526,7 +18023,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Albany, GA. Hours: M 10-4 T 10-4 W 10-1 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -17559,7 +18057,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Americus, GA. Hours: M 12-5 T 12-5 W 12-4    *Appointments scheduled after hours through PL.*.",
@@ -17806,7 +18305,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Blue Ridge, GA. Hours: T 9:30-4:30 W 9:30-4:30 Th 9:30-4:30.",
@@ -17839,7 +18339,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brunswick, GA. Hours: M 9-8 T 9-5 W 9-5 Th 9-8 F 9-1  *Appointments scheduled after hours through PL.*.",
@@ -17872,7 +18373,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cairo, GA. Hours: M 10-4 T 10-4 W 10-4.",
@@ -17937,7 +18439,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Camilla, GA. Hours: M 10-4   Th 10-4.",
@@ -17970,7 +18473,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Cedartown, GA. Hours: W 10-2 Th 2-6 F 10-2.",
@@ -18031,7 +18535,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clayton, GA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   We have a 24 hour hot line and our weekends is closed however it is booked by appointment only.",
@@ -18064,7 +18569,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cleveland, GA. Hours: T 10-3 W 10-3 Th 10-3.",
@@ -18158,7 +18664,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbus, GA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   24-7 live nurse chat on our website.*Appointments scheduled after hours through PL.*.",
@@ -18192,7 +18699,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Conyers, GA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-1  Web Chat*Appointments scheduled after hours through PL.*.",
@@ -18226,7 +18734,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Covington, GA. Hours: T 10-4 W 10-4 Th 10-2.",
@@ -18259,7 +18768,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cumming, GA. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   24 hour chatline*Appointments scheduled after hours through PL.*.",
@@ -18318,7 +18828,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dahlonega, GA. Hours: Th 11:30-4:30 F 11:30-4:30  May book initial medical assessment appointment by calling (706) 867-7452 or online at ngpregnancyservices.com   *Appointments scheduled after hours thro",
@@ -18351,7 +18862,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dalton, GA. Hours: M 10-5 T 10-7 W 10-5 Th 10-5   Closed for lunch from 12pm - 1pm.*Appointments scheduled after hours through NXL.*.",
@@ -18379,7 +18891,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Donalsonville, GA. Hours: T 10-4 W 10-1.",
@@ -18412,7 +18925,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Doraville, GA. Hours: M 10:30-3 T 10:30-3 W 10:30-2 Th 10:30-3   *Appointments scheduled after hours through PL.*.",
@@ -18473,7 +18987,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ellijay, GA. Hours: M 11-5 T 11-6  Th 11-5 F 11-4.",
@@ -18507,7 +19022,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Evans, GA. Hours: M 9-5 T 9-6 W 9-5 Th 9-6 F 9-3  *Appointments scheduled after hours through PL.*.",
@@ -18541,7 +19057,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fayetteville, GA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   On Tuesday evenings we reopen 6pm-8pm.",
@@ -18574,7 +19091,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Forest Park, GA. Hours: M 9-5 T 9-5 W 9-5 Th 11-6 F 9-5  We also offer REACH and Year of Hope resource programs, FEMM and teenFEMM.",
@@ -18608,7 +19126,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Franklin, GA.",
@@ -18641,7 +19160,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gainesville, GA. Hours: M 11-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -18674,7 +19194,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greensboro, GA. Hours: M 10-5 T 10-5 W 10-5 Th 10-5.",
@@ -18736,7 +19257,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grovetown, GA. Hours: M 10-4 T 10-4 W 10-4 Th 10-8 F 10-2  *Appointments scheduled after hours through NXL.*.",
@@ -18768,7 +19290,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hartwell, GA. Hours: M 12-4 T 3-7  Th 12-4   24 hour hotline.",
@@ -18801,7 +19324,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hiram, GA. Hours: M 9-2 T 9-4 W 9-4 Th 9-2 F 9-2  *Appointments scheduled after hours through PL.*.",
@@ -18835,7 +19359,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jackson, GA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Ultrasounds done once a month Thursday 6-8pm.",
@@ -18898,7 +19423,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jesup, GA. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -18932,7 +19458,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Jonesboro, GA. Hours: M 9:30-4:30 T 9:30-4:30  Th 9:30-4:30   We are open M, T, TH 9:30 am-4:15 pm..",
@@ -18965,7 +19492,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kingsland, GA. Hours: M 10-5 T 10-7 W 10-5 Th 10-5.",
@@ -18999,7 +19527,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in LaGrange, GA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -19060,7 +19589,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Loganville, GA. Hours: M 9-5 T 10-8  Th 10-6 F 9-1  *Appointments scheduled after hours through PL.*.",
@@ -19093,7 +19623,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Macon, GA. Hours: M 9-5 T 9-7 W 9-5 Th 9-7 F 9-1.",
@@ -19126,7 +19657,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marietta, GA. Hours: M 9-6 T 9-4 W 9-6 Th 9-4 F 9-4 Sat 10-2.",
@@ -19158,7 +19690,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Marietta, GA. Hours: M 9-4 T 9-4 W 11:30-1 Th 9-4   Closed each day 12pm-2:30pm. There are times we close for meetings outside of the office. In special cases we will open the Center on Fri or Sat if a ",
@@ -19254,7 +19787,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Moultrie, GA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   24-Hour Nurse Line through Infinite Worth&#10;Closed for lunch from 12pm to 1pm&#10;Open Fridays once a month, 9 am to 12 pm*Appointments scheduled after h",
@@ -19339,7 +19873,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rincon, GA. Hours: M 9-1 T 9-5 W 9-1 Th 9-5 F 9-1  *Appointments scheduled after hours through PL.*.",
@@ -19397,7 +19932,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rome, GA. Hours: M 9-5 T 9-5 W 8-4 Th 8-4   Closed for lunch daily 12:30-1:30 pm. Tuesdays we are open 5-8 pm by appointment only.*Appointments scheduled after hours through PL.*.",
@@ -19429,7 +19965,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Roswell, GA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -19463,7 +20000,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Savannah, GA. Hours: M 9-4 T 9-4 W 9-4 Th 9-5 F 9-4  our phones roll over to the Option Line after hours*Appointments scheduled after hours through PL.*.",
@@ -19548,7 +20086,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Statesboro, GA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  Choices 24/7 Care Line 912.317.3602 Client advocate phone.",
@@ -19582,7 +20121,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Statesboro, GA. Hours: M 10-3 T 10-3  Th 10-3.",
@@ -19616,7 +20156,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Summerville, GA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -19647,7 +20188,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sylvester, GA. Hours: T 10-4  Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -19681,7 +20223,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tallapoosa, GA. Hours: W 9-4.",
@@ -19714,7 +20257,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Thomaston, GA. Hours: M 9-5 T 9-5  Th 9-5.",
@@ -19747,7 +20291,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Thomasville, GA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -19780,7 +20325,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Valdosta, GA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  24-Hour Hotline online appointment scheduling*Appointments scheduled after hours through PL.*.",
@@ -19808,7 +20354,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Vidalia, GA. Hours: M 10-5 T 10-5  Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -19841,7 +20388,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Vienna, GA. Hours: M 10-2 T 10-2 W 10-2.",
@@ -19901,7 +20449,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waycross, GA. Hours: M 9-5 T 9-5 W 9-5  F 9-5  24 hour Option Line*Appointments scheduled after hours through PL.*.",
@@ -19910,6 +20459,43 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "2007 Tebeau St., Waycross, GA 31501"
+  },
+  {
+    "id": "ga-cam-pregnancy-care-center-18702",
+    "name": "CAM Pregnancy Care Center",
+    "type": "Pregnancy resource center",
+    "city": "Winder",
+    "state": "GA",
+    "zip": "30680",
+    "phone": "770-867-3000",
+    "website": "",
+    "email": "",
+    "services": [
+      "pregnancy tests",
+      "parenting classes",
+      "baby supplies",
+      "STI testing",
+      "adoption information",
+      "mentoring",
+      "pregnancy counseling",
+      "community referrals"
+    ],
+    "needs": [
+      "adoption",
+      "counseling",
+      "expecting",
+      "new-mom",
+      "supplies",
+      "talk",
+      "parenting"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Winder, GA. Hours: M 11-5 T 11-5 W 11-5 Th 11-5   *Appointments scheduled after hours through NXL.*.",
+    "lat": 33.989336,
+    "lng": -83.725259,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "46 S. Broad St, Winder, GA 30680 United States"
   },
   {
     "id": "ga-the-hope-center-inc-18149",
@@ -19934,7 +20520,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Woodstock, GA. Hours: M 10-5 T 10-8 W 10-5 Th 10-8 F 9-1  Additionally open 1st & 3rd Saturdays from 10:00 AM-2:00 PM.",
@@ -20031,7 +20618,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Kailua, HI. Hours: T 10-2   F 10-2.",
@@ -20120,7 +20708,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wailuku, HI. Hours: M 12-5 T 12-5 W 9-1 Th 12-5   We receive and respond to calls outside of our open business hours..",
@@ -20208,7 +20797,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ames, IA. Hours: M 8-5 T 8-5 W 8-5 Th 8-5 F 8-5  We are a maternity home and we are open 24/7 for our residents. Our office hours, where we answer emails and phone calls, are typically Monday-Friday, 8a",
@@ -20241,7 +20831,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ames, IA. Hours: M 9-7 T 9-5 W 9-5 Th 9-7 F 9-1  Nurse is on call 24/7 to answer calls from the Abortion Reversal Hotline. We offer low-cost pregnancy testing..",
@@ -20274,7 +20865,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ankeny, IA. Hours: M 9-5  W 9-5.",
@@ -20307,7 +20899,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Atlantic, IA. Hours: M 11-5  W 11-5.",
@@ -20490,7 +21083,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cedar Rapids, IA. Hours: M 9-7 T 9-5 W 9-5 Th 10-7 F 9-4  Bridgehaven uses Option Line to ensure after-hours access.*Appointments scheduled after hours through PL.*.",
@@ -20523,7 +21117,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Charles City, IA. Hours: M 12-5 T 12-5 W 12-5 Th 12-5.",
@@ -20557,7 +21152,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clinton, IA. Hours: M 12-5 T 12-5 W 12-5 Th 12-5   We offer a Healthy Relationships Program..",
@@ -20618,7 +21214,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Creston, IA. Hours: M 10-2 T 1-7  Th 1-7   *Appointments scheduled after hours through PL.*.",
@@ -20652,7 +21249,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Davenport, IA. Hours: M 9-5 T 9-5 W 9-5 Th 9-8   *Appointments scheduled after hours through PL.*.",
@@ -20686,7 +21284,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Denison, IA. Hours: M 9-4 T 9-4  Th 9-4   We are available by prior appointment any days.  The above times are scheduled for walk-ins..",
@@ -20719,7 +21318,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Des Moines, IA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-7  Additionally open 2nd & 4th Saturdays from 9:00 AM-12:30 PM.",
@@ -20752,7 +21352,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Des Moines, IA. Hours: M 9-5 T 9-5  Th 12-5.",
@@ -20781,7 +21382,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Des Moines, IA. Hours: M 10-2  W 10-2    Follow signs to the main office through the \"Office Entrance\" on the east side of the building.",
@@ -20844,7 +21446,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Des Moines, IA. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30 F 8:30-4:30  n/a.",
@@ -20905,7 +21508,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dubuque, IA. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   Heartbeat After Hours Answering Line*Appointments scheduled after hours through PL.*.",
@@ -20914,6 +21518,41 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "3365 Hillcrest Road, Dubuque, IA 52002"
+  },
+  {
+    "id": "ia-mary-s-inn-maternity-home-59596",
+    "name": "Mary's Inn Maternity Home",
+    "type": "Maternity home",
+    "city": "Dubuque",
+    "state": "IA",
+    "zip": "52001",
+    "phone": "563-552-6288",
+    "website": "",
+    "email": "",
+    "services": [
+      "pregnancy tests",
+      "parenting classes",
+      "baby supplies",
+      "STI testing",
+      "adoption information",
+      "housing support",
+      "community referrals"
+    ],
+    "needs": [
+      "adoption",
+      "expecting",
+      "housing",
+      "new-mom",
+      "supplies",
+      "parenting"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Maternity home in Dubuque, IA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  We have staff 24/7. Office hours are M-F, 9a-5p..",
+    "lat": 42.529238,
+    "lng": -90.696285,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": ", Dubuque, IA 52001 United States"
   },
   {
     "id": "ia-alternatives-pregnancy-center-117098",
@@ -20937,7 +21576,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Eldora, IA. Hours: Th 10-2   Thursday hours are every other Thursday.",
@@ -21085,7 +21725,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Iowa Falls, IA. Hours: T 9-3  Th 9-3   Open by appointment on Monday, Wednesday and Friday.",
@@ -21147,7 +21788,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Le Mars, IA. Hours: T 10-4     Nurses are available for telehealth consultations 24/7 and additional appts. can be requested.*Appointments scheduled after hours through NXL.*.",
@@ -21178,7 +21820,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mason City, IA. Hours: M 12-5 T 12-5  Th 9-2 F 9-2  Our website is covered by Infinate Worth.  We are also open the first Tuesday of each month until 8:00pm.",
@@ -21211,7 +21854,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mount Pleasant, IA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  We have a  24/7 hotline number 319-931-5759.",
@@ -21302,7 +21946,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Orange City, IA. Hours: M 8:30-3:30 T 8:30-3:30  Th 8:30-3:30   24 hour phone calls also can call and set up appointments for after hours if needed.",
@@ -21336,7 +21981,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pella, IA. Hours: M 11-5 T 1-4:30 W 1-4:30 Th 11-5   We are trialing expanded hours with adding Tuesday/ Wednesday afternoons.  We do have flexibility and offer convenient scheduling for medical services",
@@ -21366,7 +22012,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Red Oak, IA. Hours: M 1-4 T 4-7     24 hour calls taken.",
@@ -21399,7 +22046,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Shenandoah, IA. Hours: M 3-6 T 11-2     *Or by appointment..",
@@ -21432,7 +22080,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sioux City, IA. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30 F 8:30-1:30  Our Le Mars location is opened Tuesdays 10:00 p.m. - 4:00 p.m.*Appointments scheduled after hours through NXL.*.",
@@ -21494,7 +22143,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Storm Lake, IA. Hours: M 10-1 T 10-1 W 10-1 Th 10-1.",
@@ -21524,7 +22174,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Story City, IA. Hours: M 10-2.",
@@ -21557,7 +22208,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Stuart, IA. Hours: M 10-2 T 1-7 W 9-12 Th 1-7   Appointments available outside listed hours..",
@@ -21590,7 +22242,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waterloo, IA. Hours: M 9-5 T 9-6 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -21624,7 +22277,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waverly, IA. Hours: F 2-5  *Appointments scheduled after hours through PL.*.",
@@ -21682,7 +22336,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Caldwell, ID. Hours: T 10-1  Th 1-4   *Appointments scheduled after hours through PL.*.",
@@ -21714,7 +22369,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Cascade, ID. Hours: T 00-4  Th 11-4   Available for appointments throughout the week..",
@@ -21776,7 +22432,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grangeville, ID. Hours: M 1-5  W 1-4  F 1-4.",
@@ -21809,7 +22466,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hayden, ID. Hours: M 9-4 T 9-7 W 11-4 Th 1-7   We work with The Life Advancement Group and have 24-hour scheduling.*Appointments scheduled after hours through PL.*.",
@@ -21864,7 +22522,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Kellogg, ID. Hours: M 11-3:30 T 11-5:30 W 9-3 Th 11-5:30 F 9-3  wE ARE AVAILABLE AFTER HOURS BY APPOINTMENT.",
@@ -21899,7 +22558,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lewiston, ID. Hours: M 10-4 T 10-4 W 9:30-6 Th 10-4   Closed Wednesday afternoons from 12:30 - 2PM for Staff Meetings*Appointments scheduled after hours through PL.*.",
@@ -21933,7 +22593,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lewiston, ID. Hours: T 9-5 W 8-7 Th 9-5 F 8-5  *Appointments scheduled after hours through PL.*.",
@@ -21989,7 +22650,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lewiston, ID.",
@@ -22085,7 +22747,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Moscow, ID. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -22181,7 +22844,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Pocatello, ID. Hours: M 2-7  W 12-5 Th 12-5.",
@@ -22214,7 +22878,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sandpoint, ID. Hours: M 12-4 T 12-4 W 10-2 Th 10-2.",
@@ -22246,7 +22911,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Twin Falls, ID. Hours: M 10-5 T 11-5 W 10-5 Th 10-5 F 10-5  Monday and Tuesday classes 6:00 - 7:30 pm.",
@@ -22279,7 +22945,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Aurora, IL. Hours: M 8-4 T 8-4 W 9-6 Th 8-6 F 8-3 Sat 8-12 24 hour hotline support*Appointments scheduled after hours through PL.*.",
@@ -22341,7 +23008,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bloomington, IL. Hours: M 9-6 T 9-7 W 9-4 Th 9-4   (*STI testing & ultrasound appointments are limited. Please call the center.)*Appointments scheduled after hours through PL.*.",
@@ -22372,7 +23040,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Bradley, IL. Hours: M 10-1 T 10-1  Th 10-1   Special appointments can be made during the times when we are closed..",
@@ -22405,7 +23074,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Canton, IL. Hours: M 11-7 T 1-6 W 9-5 Th 9-5.",
@@ -22439,7 +23109,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Carbondale, IL. Hours: M 8-4 T 8-4 W 8-4  F 8-4  *Appointments scheduled after hours through PL.*.",
@@ -22467,7 +23138,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Carbondale, IL. Hours: M 9-3 T 9-3 W 9-3 Th 9-3 F 9-3  After hours by appointment only..",
@@ -22501,7 +23173,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Maternity home in Carmi, IL. Hours: M 8-4:30 T 8-4:30 W 8-4:30 Th 8-4:30 F 8-11:30.",
@@ -22534,7 +23207,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Carmi, IL. Hours: T 10-5  Th 10-5   24 hour availability by phone.",
@@ -22569,7 +23243,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Casey, IL. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   Other times available by appointment..",
@@ -22628,7 +23303,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Champaign, IL. Hours: M 9:30-1 T 9:30-5:30 W 9:30-4 Th 9:30-4   Fri. by appt. only*Appointments scheduled after hours through PL.*.",
@@ -22720,7 +23396,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Charleston, IL. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   Other appointment times MAY be available as well..",
@@ -22754,7 +23431,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chicago, IL. Hours: M 8-4 T 8-4 W 8-4 Th 8-4 F 8-4 Sat 8-1 24 hour call/text line*Appointments scheduled after hours through PL.*.",
@@ -22838,7 +23516,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chicago, IL. Hours: W 9-5 Th 9-5.",
@@ -22901,7 +23580,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Crystal Lake, IL. Hours: M 10-7 T 10-5 W 10-5 Th 10-5   Spanish available on Monday evenings by appointment.",
@@ -22935,7 +23615,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Danville, IL. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-8.",
@@ -22996,7 +23677,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Decatur, IL. Hours: M 9-7:30 T 9-3 W 9-3 Th 9-3 F 9-3  24 hour helpline, 2 times each month we are open on Tuesdays, 5:30pm - 7:30pm, with a medical team who meets with clients..",
@@ -23029,7 +23711,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in DeKalb, IL. Hours: M 5-8 T 10-2  Th 10-2 F 10-2.",
@@ -23122,7 +23805,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Maternity home in Effingham, IL. Hours: M 7-7 T 7-7 W 7-7 Th 7-7 F 7-7 Sat 7-7 Sun 7-7we are a maternity home, so we offer services 24 hrs. 7 days per week.",
@@ -23156,7 +23840,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Effingham, IL. Hours: M 9-5 T 9-8 W 9-5 Th 9-5   After Hours available by appointment.",
@@ -23216,7 +23901,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Elgin, IL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  We have nurses that speak eastern European languages in addition to those listed above. Our administrative office is open Monday, Tuesday, Wednesday and ",
@@ -23272,7 +23958,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Evergreen Park, IL. Hours: M 9-8 T 9-5 W 9-5 Th 9-8   24-hour patient textline*Appointments scheduled after hours through PL.*.",
@@ -23333,7 +24020,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fairfield, IL. Hours: T 1-5 W 10-5 Th 10-5   24 hour hotline starting at 5:00PM on Thurs to 1:00PM on Tues*Appointments scheduled after hours through PL.*.",
@@ -23367,7 +24055,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fairview Heights, IL. Hours: T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -23400,7 +24089,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Flora, IL. Hours: T 8-12  Th 8-12   Additional availability by appointment.",
@@ -23430,7 +24120,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Flossmoor, IL. Hours: M 8-4 T 8-4 W 8-4 Th 8-4 F 8-4  *Appointments scheduled after hours through PL.*.",
@@ -23487,7 +24178,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Galesburg, IL. Hours: M 10-4 T 12-4 W 12-4 Th 12-4.",
@@ -23520,7 +24212,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Godfrey, IL. Hours: M 9-5 T 9-5  Th 9-5 F 9-3  Mon and Tues evening hours if nursing/US staffing available. Mobile unit hours 7:00-noon on Wed and Fri.*Appointments scheduled after hours through PL.*.",
@@ -23553,7 +24246,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Granite City, IL. Hours: M 9-5 T 9-5 W 9-5 Th 9-6.",
@@ -23585,7 +24279,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grayslake, IL. Hours: M 10-6 T 10-5 W 12-7 Th 10-7   24/7 Nurse Text through Infinite Worth*Appointments scheduled after hours through PL.*.",
@@ -23618,7 +24313,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Highland, IL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -23652,7 +24348,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hillsboro, IL. Hours: T 9-5  Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -23686,7 +24383,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Jacksonville, IL. Hours: T 10-5 W 10-3 Th 10-5   Monday: by appointment and additional appointments available upon request*Appointments scheduled after hours through PL.*.",
@@ -23720,7 +24418,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Johnsburg, IL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-12  Pregnancy testing, ultrasounds, STD testing and treatment available at our medical facility, Focus Women's Center. Open M 1:30-6:30, T & Th 9-2, W ",
@@ -23782,7 +24481,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Joliet, IL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  *Appointments scheduled after hours through PL.*.",
@@ -23816,7 +24516,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kankakee, IL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Clients can schedule appointments online..",
@@ -23847,7 +24548,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lansing, IL. Hours: M 10-4 T 10-4     *Appointments scheduled after hours through PL.*.",
@@ -23881,7 +24583,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lincoln, IL. Hours: T 9-1  Th 9-4   Tuesday: 9am-1pm (By Appointment).",
@@ -23965,7 +24668,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Marion, IL. Hours: T 9-3 W 9-3 Th 9-3   Monday & Friday by appointment only. Medical services scheduled at the Carbondale office..",
@@ -23998,7 +24702,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Maryville, IL. Hours: M 9-2 T 9-2  Th 9-2   We have Life Lead during our off hours. We also utilize Option Line. We are able to schedule clients by appointment on our closed days as well..",
@@ -24032,7 +24737,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mattoon, IL. Hours: M 9-4 T 11-6 W 9-4 Th 9-4   Other times available by appointment..",
@@ -24089,7 +24795,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mendota, IL. Hours: M 1-6 T 1-5 W 1-5 Th 10-2   *Appointments scheduled after hours through PL.*.",
@@ -24121,7 +24828,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Metropolis, IL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -24154,7 +24862,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Moline, IL. Hours: M 9-8 T 9-5 W 9-5 Th 9-5 F 9-5 Sat 10-2 *Appointments scheduled after hours through PL.*.",
@@ -24217,7 +24926,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Morris, IL. Hours: T 10-4 W 10-4 Th 10-4   Monday: By Appointment.",
@@ -24251,7 +24961,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mount Carmel, IL. Hours: T 10-5 W 10-5 Th 10-5   Closed for lunch 12-1.",
@@ -24312,7 +25023,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mt. Vernon, IL. Hours: M 8-5 T 8-5 W 8-5 Th 8-5 F 8-11:30  Lunch 12-1.",
@@ -24345,7 +25057,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Newton, IL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -24377,7 +25090,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in North Aurora, IL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -24409,7 +25123,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Oak Park, IL. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30 F 8:30-4:30  *Appointments scheduled after hours through PL.*.",
@@ -24443,7 +25158,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Oblong, IL. Hours: T 10-4 W 9-4    Available by appt., as needed. Group services and classes run outside center hours. Visit our Facebook page for updates!*Appointments scheduled after hours through NXL",
@@ -24509,7 +25225,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Pana, IL. Hours: T 9-4  Th 9-4   Closed noon-1p for lunch*Appointments scheduled after hours through PL.*.",
@@ -24543,7 +25260,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Paris, IL. Hours: M 11-4:30 T 11-4:30 W 11-4:30 Th 11-4:30   Other times available by appointment..",
@@ -24576,7 +25294,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pekin, IL. Hours: T 9-6 W 9-4 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -24642,7 +25361,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Peoria, IL. Hours: M 9-4 T 9-4 W 9-4 Th 9-7   Emails received through our website/Let's Talk are responded to during & after business hours.*Appointments scheduled after hours through PL.*.",
@@ -24676,7 +25396,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pontiac, IL. Hours: M 10-6 T 9-4  Th 9-4.",
@@ -24737,7 +25458,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Quincy, IL. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30 F 9-4:30.",
@@ -24771,7 +25493,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Red Bud, IL. Hours: M 9-3 T 9-3 W 9-3    24/7 Hotline and after-hours appointment available by request..",
@@ -24835,7 +25558,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rockford, IL.",
@@ -24899,7 +25623,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rushville, IL. Hours: M 9-2:30  W 9-2:30  F 9-2:30  *Appointments scheduled after hours through PL.*.",
@@ -24932,7 +25657,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Salem, IL. Hours: T 9-4 W 9-4 Th 9-5 F 9-5  *Appointments scheduled after hours through PL.*.",
@@ -24965,7 +25691,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Schaumburg, IL. Hours: M 9-5 T 9-5 W 9-5 Th 11-7 F 9-5.",
@@ -24999,7 +25726,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shelbyville, IL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -25058,7 +25786,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in South Holland, IL. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -25092,7 +25821,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Sparta, IL. Hours: M 1-5    F 9-1.",
@@ -25153,7 +25883,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Taylorville, IL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  Closed 12p - 1p for lunch.  We are open M, T, W, F in Taylorivlle and T, Th in Pana (our satellite center).  Thus, we are open 5 days per week.*Ap",
@@ -25187,7 +25918,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tinley Park, IL. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -25219,7 +25951,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Vandalia, IL. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -25252,7 +25985,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waterloo, IL. Hours: M 9-3 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30 F 8:30-2  24/7 Hotline and after hours appointments available by request.  Monday, Tuesday, and Thursday hours also available at our Satell",
@@ -25286,7 +26020,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waukegan, IL. Hours: T 8-4 W 8-2:30 Th 8:30-2:30 F 8-4  *Appointments scheduled after hours through PL.*.",
@@ -25349,7 +26084,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wheeling, IL. Hours: M 8-4 T 8-4 W 8-4 Th 8-4 F 8-4  *Appointments scheduled after hours through PL.*.",
@@ -25382,7 +26118,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Zion, IL. Hours: W 9-3  F 9-3  *Appointments scheduled after hours through PL.*.",
@@ -25415,7 +26152,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Zion, IL. Hours: M 10-4 T 10-5 W 10-4 Th 10-4.",
@@ -25448,7 +26186,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Anderson, IN. Hours: M 12-5 T 12-7 W 12-5 Th 12-7   *Appointments scheduled after hours through PL.*.",
@@ -25481,7 +26220,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Angola, IN. Hours: T 12-4 W 10-2 Th 10-2   After hours transfer to Option Lines.",
@@ -25514,7 +26254,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in AUBURN, IN. Hours: T 12-5 W 12-5 Th 10-5 F 9-4  24/7 texting line.",
@@ -25547,7 +26288,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bedford, IN. Hours: M 10-5 T 10-5 W 10-5 Th 10-7 F 10-2  We are open the first Saturday of each month 10-2.  We use Option Line after hours and clients can text our office number and chat with a nurse 24",
@@ -25634,7 +26376,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Berne, IN. Hours: T 10-6  Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -25666,7 +26409,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bluffton, IN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -25700,7 +26444,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brazil, IN.",
@@ -25730,7 +26475,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Brookville, IN. Hours: T 10-3 W 10-3  F 12-3  Available at other times upon request.",
@@ -25792,7 +26538,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Clinton, IN. Hours: Th 3-7.",
@@ -25826,7 +26573,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbia City, IN. Hours: W 9-6 Th 9-6   *Appointments scheduled after hours through NXL.*.",
@@ -25859,7 +26607,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbus, IN. Hours: M 8-8 T 10-4 W 10-4 Th 10-4   Visit our site to chat with us at any time. Client line 24/7 812-366-2949. Closed for lunch 12-12:30.",
@@ -25918,7 +26667,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Maternity home in Commiskey, IN. Hours: M 10-5 T 10-5 W 10:30-5 Th 10-5 F 10-5 Sat 10-5 Sun 1-5.",
@@ -25948,7 +26698,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Connersville, IN. Hours: M 12-3 T 12-4 W 12-5 Th 1-7.",
@@ -25980,7 +26731,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Corydon, IN. Hours: M 10-3 T 10-6  Th 10-6   *Appointments scheduled after hours through NXL.*.",
@@ -26168,7 +26920,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Evansville, IN. Hours: T 10-4:30 W 10-4:30 Th 10-4:30  Sat 10-12 Calls are answered 24/7.",
@@ -26202,7 +26955,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Wayne, IN. Hours: M 9-5 T 9-5:30 W 9-5 Th 9-8   The 2nd and 4th Thursday of the month, Hobson Rd location is open til 8pm (instead of 5pm).*Appointments scheduled after hours through NXL.*.",
@@ -26236,7 +26990,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Wayne, IN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   1st and 3rd Thursdays open until 8pm*Appointments scheduled after hours through NXL.*.",
@@ -26296,7 +27051,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Frankfort, IN. Hours: M 9-5   Th 12-5   *Appointments scheduled after hours through PL.*.",
@@ -26364,7 +27120,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greencastle, IN. Hours: M 10-4 T 10-4 W 10-4 Th 10-7.",
@@ -26397,7 +27154,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greenfield, IN. Hours: M 11-5 T 11-5  Th 11-5   Also available by appointment: 9:00-11:00 a.m. Mondays, Tuesday, Thursdays. Walk-ins available during regular business hours.*Appointments scheduled after ",
@@ -26431,7 +27189,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greensburg, IN. Hours: T 11-4:30   F 11-4:30  Visit our site to chat with us at any time. Client line 24/7 812-366-2949. Closed for lunch 12-12:30.",
@@ -26464,7 +27223,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greenwood, IN. Hours: T 11-4:30 W 11-4:30 Th 11-4:30   Visit our site to chat with us at any time. Client line 24/7 812-366-2949. Closed for lunch 12-12:30.",
@@ -26574,7 +27334,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Indianapolis, IN. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  *Appointments scheduled after hours through PL.*.",
@@ -26607,7 +27368,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Indianapolis, IN. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30 F 9-4:30  *Appointments scheduled after hours through PL.*.",
@@ -26640,7 +27402,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Indianapolis, IN. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30 F 9-4:30  *Appointments scheduled after hours through PL.*.",
@@ -26674,7 +27437,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Indianapolis, IN. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30 F 9-4:30  Spanish-speaking staff members available.*Appointments scheduled after hours through PL.*.",
@@ -26707,7 +27471,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Kendallville, IN. Hours: M 10-7 T 10-4 W 10-4 Th 10-4.",
@@ -26741,7 +27506,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Knox, IN. Hours: T 1-6  Th 1-6 F 9-1  You're welcome to message us on Facebook Messenger.",
@@ -26803,7 +27569,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kokomo, IN. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -26837,7 +27604,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lafayette, IN. Hours: M 8-4 T 8-4 W 8-4 Th 8-4 F 8-4  24 hour hotline, after hours answering service.",
@@ -26870,7 +27638,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in LaGrange, IN. Hours: T 10-2 W 12-4 Th 10-2   24 hr answering.",
@@ -26904,7 +27673,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lawrenceburg, IN. Hours: M 3-7 T 11-5 W 11-5  F 11-5  Ultrasounds are on Monday only. We use a language interpreting service*Appointments scheduled after hours through PL.*.",
@@ -26936,7 +27706,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ligonier, IN. Hours: W 11-4    Every third Wednesday  2 PM-6 PM.",
@@ -26969,7 +27740,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Linton, IN. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   We schedule appts. outside our open hours if it works best for the client, staff, and/or mentor.*Appointments scheduled after hours through PL.*.",
@@ -27031,7 +27803,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Madison, IN. Hours: M 12-6 T 9-3  Th 12-6.",
@@ -27064,7 +27837,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marengo, IN. Hours: Th 12-6   Only open 4th Thursday of the month.*Appointments scheduled after hours through NXL.*.",
@@ -27098,7 +27872,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marion, IN. Hours: M 10-7  W 10-2 Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -27131,7 +27906,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mooresville, IN. Hours: M 11-4:30  W 11-4:30 Th 11-4:30   Visit our site to chat with us at any time. Client line 24/7 812-366-2949. Closed for lunch 12-12:30.",
@@ -27196,7 +27972,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Muncie, IN. Hours: M 12-5 T 12-7 W 12-5 Th 12-7   24-hour careline*Appointments scheduled after hours through PL.*.",
@@ -27229,7 +28006,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Nashville, IN. Hours: T 9-2:30 W 9-2:30  F 9-2:30  Visit our website to chat with us at any time. 24/7 line: 812-366-2949. Closed for lunch (12-12:30 pm).",
@@ -27262,7 +28040,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in New Albany, IN. Hours: M 10-3 T 10-8 W 10-3 Th 10-6   *Appointments scheduled after hours through NXL.*.",
@@ -27327,7 +28106,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Noblesville, IN. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30 F 9-4:30  *Appointments scheduled after hours through PL.*.",
@@ -27360,7 +28140,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in North Vernon, IN. Hours: M 11-4:30   Th 11-4:30   Visit our site to chat with us at any time. Client line 24/7 812-366-2949. Closed for lunch 12-12:30.",
@@ -27442,7 +28223,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Princeton, IN. Hours: T 10-4  Th 10-4.",
@@ -27559,7 +28341,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Rockville, IN. Hours: M 10-5  W 10-5 Th 10-1:30.",
@@ -27592,7 +28375,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Salem, IN. Hours: T 10-3  Th 10-8   *Appointments scheduled after hours through NXL.*.",
@@ -27625,7 +28409,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Seymour, IN. Hours: T 11-4:30 W 11-4:30  F 11-2  Visit our site to chat with us at any time. Client line 24/7 812-366-2949. Closed for lunch 12-12:30.",
@@ -27658,7 +28443,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shelbyville, IN. Hours: T 11-4:30  Th 11-4:30   Visit our site to chat with us at any time. Client line 24/7 812-366-2949. Closed for lunch 12-12:30.",
@@ -27692,7 +28478,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Spencer, IN. Hours: M 12-4   Th 12-4   Additionally open by appoinment only Tuesday.",
@@ -27717,7 +28504,8 @@ window.HEARTH_CENTERS = [
     ],
     "needs": [
       "expecting",
-      "new-mom"
+      "new-mom",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Sunman, IN. Hours: 1st and 3rd Wednesdays of each month.",
@@ -27750,7 +28538,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Terre Haute, IN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -27867,7 +28656,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Vevay, IN. Hours: T 10-3 W 10-3 Th 12-8   *Appointments scheduled after hours through PL.*.",
@@ -27895,7 +28685,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Vincennes, IN. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   *Appointments scheduled after hours through PL.*.",
@@ -27958,7 +28749,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Warsaw, IN. Hours: M 9-7 T 9-5 W 9-5 Th 9-5 F 9-12  Option Line forward during closed hours.",
@@ -27992,7 +28784,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Washington, IN. Hours: M 9-6 T 9-4 W 9-6 Th 9-4   Closed daily for lunch (12-1) *Appointments scheduled after hours through NXL.*.",
@@ -28026,7 +28819,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Winchester, IN. Hours: T 2-6  Th 2-5.",
@@ -28060,7 +28854,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Arkansas City, KS. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   Friday by appointment only.",
@@ -28093,7 +28888,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Augusta, KS. Hours: M 10-4.",
@@ -28125,7 +28921,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Beloit, KS. Hours: T 10-5 W 10-5 Th 10-5 F 10-5  Closed for lunch 12-1.  After hours text (785) 975-7472.",
@@ -28187,7 +28984,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Concordia, KS. Hours: T 10-5  Th 10-5   Closed from 12pm-1pm.",
@@ -28221,7 +29019,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Derby, KS. Hours: M 10-7 T 10-7 W 10-5 Th 10-5 F 10-1.",
@@ -28255,7 +29054,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dodge City, KS. Hours: M 9-3 T 9-3 W 9-3 Th 9-3 F 9-3.",
@@ -28288,7 +29088,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in El Dorado, KS. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   24 hour nurse hot line. Online Scheduling.",
@@ -28320,7 +29121,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Garden City, KS. Hours: M 10-5 T 10-5 W 10-5 Th 10-5.",
@@ -28354,7 +29156,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Goodland, KS. Hours: M 1-5 T 1-5 W 1-5 Th 1-5 F 1-5 Sat 1-5 24 hour answered phone for emergent needs outside of operating hours-785-821-2737.",
@@ -28450,7 +29253,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Hoxie, KS. Hours: W 11:30-1    additional times available by appointment. Call at anytime..",
@@ -28511,7 +29315,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hutchinson, KS. Hours: M 9-8 T 9-5 W 9-5 Th 9-5   Option line partnership for after hours..",
@@ -28539,7 +29344,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "counseling",
-      "talk"
+      "talk",
+      "job"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hutchinson, KS. Hours: currently closed for the Summer Break.  We will resume services at Hutchinson Community College closer to the Fall Semester.  If you need immediate assistance, please contact us at",
@@ -28567,7 +29373,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Iola, KS. Hours: M 9-12 T 3-6 W 9-12    Ultrasounds are offered Tuesday 9-12; Wednesday 1-4, and Thursday 6-8.",
@@ -28600,7 +29407,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Junction City, KS. Hours: M 10-4:30 T 10-4:30 W 10-4:30 Th 10-4:30.",
@@ -28666,7 +29474,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kansas City, KS. Hours: M 9-5 T 9-5 W 9-5 Th 10-7 F 9-5  APR available  24/7 (on-call service);   Mobile Unit some Saturdays..",
@@ -28723,7 +29532,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lansing, KS. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   available for APR all days*Appointments scheduled after hours through PL.*.",
@@ -28756,7 +29566,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lawrence, KS. Hours: M 9-5 T 9-5 W 9-5 Th 11-7   Option Line and HopeSync.",
@@ -28842,7 +29653,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Liberal, KS. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  Additionally open Sat & Sun by appointment.",
@@ -28876,7 +29688,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Newton, KS. Hours: M 9:30-7 T 9:30-7 W 9:30-5 Th 1-7   *Appointments scheduled after hours through PL.*.",
@@ -28911,7 +29724,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Olathe, KS. Hours: M 9-5 T 10-6 W 9-5 Th 10-6   Clients can schedule an appt. via our website. We have ultrasound services 2 days/week..",
@@ -28943,7 +29757,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Osborne, KS. Hours: T 10-5  Th 10-5   Closed from 12pm-1pm.",
@@ -28976,7 +29791,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ottawa, KS. Hours: M 10-7 T 10-4 W 10-7 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -29009,7 +29825,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Overland Park, KS. Hours: M 8:30-4:30 T 8:30-5:30 W 8:30-4:30 Th 8:30-4:30 F 8:30-4:30 Sat 8:30-11:30 Hotline,.",
@@ -29042,7 +29859,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pittsburg, KS. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  24 hour nurse chat through HopeSync*Appointments scheduled after hours through PL.*.",
@@ -29104,7 +29922,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Salina, KS. Hours: M 10-4:30 T 10-4:30 W 10-4:30 Th 10-4:30 F 10-2  After hours availability by appointment.",
@@ -29138,7 +29957,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shawnee Mission, KS. Hours: T 9-2 W 9-2    Our entrance is behind the building in the north parking lot..",
@@ -29169,7 +29989,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Smith Center, KS. Hours: T 10-5 W 10-5 Th 10-5.",
@@ -29264,7 +30085,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Topeka, KS. Hours: M 9-3:30 T 9-3:30 W 9-3:30 Th 9-3:30 F 9-3:30  Closed from noon-1p M-Fri.",
@@ -29291,7 +30113,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Topeka, KS. Hours: T 8-2 W 9-6 Th 1-6.",
@@ -29356,7 +30179,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wichita, KS. Hours: M 10-7 T 10-7 W 10-5 Th 10-5 F 10-1  Texting with nurses available 24/7 on our website (embracewichita.org)*Appointments scheduled after hours through PL.*.",
@@ -29390,7 +30214,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ashland, KY. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30.",
@@ -29423,7 +30248,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Benton, KY. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   We will take after hour appointments in advance only.  Our second location is open Tuesday-Thursday, 9:00-4:00.  That address is 260 Commerce St, Eddyville, ",
@@ -29485,7 +30311,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bowling Green, KY. Hours: M 9-4 T 9-4 W 9-4 Th 9-7   24 hotline.",
@@ -29519,7 +30346,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Burkesville, KY. Hours: T 10-2 W 12-5 Th 2-5.",
@@ -29551,7 +30379,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Carrollton, KY. Hours: Th 1:30-4:30 F 8:30-12:30  Phone line available 24 hours/day..",
@@ -29667,7 +30496,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Covington, KY. Hours: M 10-5 T 11-7  Th 12-8   *Appointments scheduled after hours through PL.*.",
@@ -29700,7 +30530,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Crestview Hills, KY. Hours: M 10-7 T 10-7 W 10-5 Th 10-8   *Appointments scheduled after hours through PL.*.",
@@ -29733,7 +30564,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Danville, KY. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -29846,7 +30678,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Falmouth, KY. Hours: T 10-3 W 10-3 Th 12-8   *Appointments scheduled after hours through PL.*.",
@@ -29879,7 +30712,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Florence, KY. Hours: M 10-7 T 10-5 W 10-5 Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -29937,7 +30771,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Glasgow, KY. Hours: M 10-4:30 T 10-4:30 W 10-4:30    *Appointments scheduled after hours through PL.*.",
@@ -29970,7 +30805,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greenville, KY. Hours: T 9-4 W 9-4 Th 9-4 F 9-4  We do not close for lunch.  We will see clients during other times by appointment only.  Call 270-377-0045 or 270-543-3712 to make that appointment..",
@@ -30002,7 +30838,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Henderson, KY. Hours: M 8:30-4 T 8:30-4 W 8:30-4 Th 8:30-4   Clients can schedule pregnancy test appts. via our website form..",
@@ -30029,7 +30866,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Hickman, KY. Hours: T 9-2.",
@@ -30061,7 +30899,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hopkinsville, KY. Hours: T 9-4 W 9-4 Th 9-4   Additionally available through the Mobile Fri 9am-2pm*Appointments scheduled after hours through PL.*.",
@@ -30092,7 +30931,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in La Grange, KY. Hours: W 4-7   Sat 9-12.",
@@ -30125,7 +30965,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in LaGrange, KY. Hours: T 10-6 W 9-5 Th 10-6   24 hour nurse chat, 24 hour answering service (Options Line), We will meet women in crisis outside of our normal operating hours if necessary..",
@@ -30158,7 +30999,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lexington, KY. Hours: M 9-8 T 9-8 W 9-5 Th 9-5 F 9-3  *Appointments scheduled after hours through PL.*.",
@@ -30213,7 +31055,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in London, KY. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30.",
@@ -30246,7 +31089,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Louisville, KY. Hours: M 9-4 T 8-4 W 9-4 Th 8-7 F 8-3  Closed for lunch 12-1PM*Appointments scheduled after hours through PL.*.",
@@ -30303,7 +31147,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Maternity home in Louisville, KY. Hours: M 7-10 T 7-10 W 7-10 Th 7-10 F 7-10 Sat 7-10 Sun 7-10We are staffed 24/7 and phone is answered 24/7..",
@@ -30369,7 +31214,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Louisville, KY. Hours: M 9-4 T 9-4 W 1-4 Th 9-8 F 10-2 Sat 9-12:30 On call after hours for APR.  On call for appointment requests and scheduling.*Appointments scheduled after hours through PL.*.",
@@ -30402,7 +31248,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Madisonville, KY. Hours: M 9-4 T 9-6 W 9-4 Th 9-4.",
@@ -30435,7 +31282,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mayfield, KY. Hours: M 9-5 T 9-6 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -30470,7 +31318,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Monticello, KY. Hours: T 10-4 W 10-4 Th 10-4.",
@@ -30529,7 +31378,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Morehead, KY. Hours: T 10-4  Th 10-4 F 10-2.",
@@ -30557,7 +31407,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Munfordville, KY. Hours: T 10-4 W 10-4.",
@@ -30591,7 +31442,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Murray, KY. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -30652,7 +31504,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Owensboro, KY. Hours: M 10-4:30 T 10-4:30 W 10-4:30 Th 10-4:30.",
@@ -30686,7 +31539,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Owenton, KY. Hours: T 10-4  Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -30720,7 +31574,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Paducah, KY. Hours: M 9-4 T 9-6 W 9-4 Th 9-4   After hours staff manned phone line..",
@@ -30754,7 +31609,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Pikeville, KY. Hours: T 10-4 W 10-8 Th 10-4 F 10-4.",
@@ -30786,7 +31642,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in PO Box 592., KY. Hours: T 10-4  Th 10-4   10:00 AM-4:00 PM are the offices hours. We are available by phone or private message Monday-Friday and in the case of an emergency we are available on the weeke",
@@ -30818,7 +31675,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Richmond, KY. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   Closed for lunch 12-1.  24-hour hotline.",
@@ -30886,7 +31744,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shelbyville, KY. Hours: T 10-5 W 10-5 Th 10:30-5   *Appointments scheduled after hours through PL.*.",
@@ -30920,7 +31779,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shepherdsville, KY. Hours: T 10-5 W 10-5 Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -30951,7 +31811,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Somerset, KY. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -30985,7 +31846,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Springfield, KY. Hours: T 11-5 W 11-5 Th 11-5 F 11-5  *Appointments scheduled after hours through PL.*.",
@@ -31019,7 +31881,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Stanford, KY. Hours: T 9-4 W 9-12.",
@@ -31052,7 +31915,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Williamstown, KY. Hours: M 3-7  W 10-5 Th 3-7   *Appointments scheduled after hours through PL.*.",
@@ -31085,7 +31949,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Winchester, KY. Hours: M 10-4 T 10-6 W 10-4 Th 10-4.",
@@ -31117,7 +31982,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Alexandria, LA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   satellite centers open hours vary; Respond for APR but do not call this \"on call\".",
@@ -31148,7 +32014,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Amite, LA. Hours: T 8:30-2:30 W 8:30-2:30 Th 8:30-2:30.",
@@ -31182,7 +32049,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Baton Rouge, LA. Hours: M 9:30-3:30 T 9:30-3:30 W 9:30-3:30 Th 9:30-3:30 F 9:30-12.",
@@ -31246,7 +32114,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bogalusa, LA. Hours: M 10-3:30 T 10-3:30 W 10-3:30 Th 10-3:30.",
@@ -31279,7 +32148,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Covington, LA. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5.",
@@ -31346,7 +32216,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in DeRidder, LA. Hours: T 8:30-3:30 W 8:30-3:30    TW 8:30a-3:30p.",
@@ -31377,7 +32248,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Franklin, LA. Hours: M 8:30-4 T 8:30-4 W 8:30-4 Th 8:30-4 F 8:30-12  Closed from 12pm-1pm Monday-Thursday.",
@@ -31479,7 +32351,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Houma, LA. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   After hours appointments available upon request..",
@@ -31509,7 +32382,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jennings, LA. Hours: W 10-2.",
@@ -31541,7 +32415,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lafayette, LA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-12  Closed each day from 12pm-1pm*Appointments scheduled after hours through PL.*.",
@@ -31574,7 +32449,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lake Charles, LA. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   Closed for lunch 12:30-1 pm. 24/7 Nurse Chat available on our website to schedule appointments and answer questions.*Appointments scheduled after hours",
@@ -31637,7 +32513,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Leesville, LA. Hours: T 11:30-1:30     Open only on scheduled Tuesdays, as posted each month. Additional days and times by appointment only..",
@@ -31671,7 +32548,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mamou, LA. Hours: T 9-4  Th 9-4.",
@@ -31735,7 +32613,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Minden, LA. Hours: M 9-4:30 T 9-4:30  Th 9-4:30 F 9-4:30  closed 12-1 for lunch&#10;We have a texting number available 24 hours a day for our clients and patients..",
@@ -31767,7 +32646,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Monroe, LA. Hours: M 10-2 T 9-5 W 9-5 Th 9-5   closed for lunch from 12-1*Appointments scheduled after hours through PL.*.",
@@ -31801,7 +32681,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Natchitoches, LA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-12  closed for lunch 12pm-1pm. Closed all federal holidays.",
@@ -31835,7 +32716,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in New Iberia, LA. Hours: M 8:30-4 T 8:30-4 W 8:30-4 Th 8:30-4 F 8:30-12  24 Hour Hotline. Closed for lunch, 12pm-1pm*Appointments scheduled after hours through NXL.*.",
@@ -31902,7 +32784,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Opelousas, LA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-12  24 hour hotline.*Appointments scheduled after hours through NXL.*.",
@@ -31936,7 +32819,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ruston, LA. Hours: M 9-4 T 9-4:30 W 9-4 Th 9-4   24 hour text line - 318-202-2021&#10;Lunch 12-1*Appointments scheduled after hours through PL.*.",
@@ -31970,7 +32854,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shreveport, LA. Hours: M 9:30-4:30 T 9:30-7:30 W 9:30-4:30 Th 9:30-4:30.",
@@ -32030,7 +32915,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shreveport, LA. Hours: T 9-3 W 9-4  F 9-3  24 hour hot line.",
@@ -32063,7 +32949,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Slidell, LA. Hours: M 10-2 T 10-2 W 10-2  F 10-2  24 Hour Emergency and After Hours HelpLine available by Text - 504-233-2832. Return Text or Call will be made by one of our trained staff..",
@@ -32097,7 +32984,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Thibodaux, LA. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30 F 8:30-4:30.",
@@ -32128,7 +33016,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Vidalia, LA. Hours: M 9-5  W 9-5.",
@@ -32161,7 +33050,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Attleboro, MA. Hours: M 9-3  W 9-3 Th 9-3  Sat 7-11.",
@@ -32194,7 +33084,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Boston, MA. Hours: M 10-6 T 10-6  Th 10-6 F 10-6  Appointments are preferred. Open the third Saturday of the month from 10am-2pm.",
@@ -32259,7 +33150,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clinton, MA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through NXL.*.",
@@ -32353,7 +33245,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fitchburg, MA. Hours: M 10-4 T 10-4  Th 10-4.",
@@ -32447,7 +33340,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Haverhill, MA. Hours: W 9-4  F 9-2  Open 2nd Saturday of each month.",
@@ -32511,7 +33405,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lawrence, MA. Hours: M 8-2:30 T 8-2:30 W 8-2:30 Th 8-2:30   Fri – By Appointment Only, Sat – By Appointment Only - 2nd Sat of the month only.",
@@ -32569,7 +33464,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lowell, MA. Hours: W 9-4  F 9-2  2nd Sat of the month by appt. only.",
@@ -32602,7 +33498,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marlborough, MA. Hours: M 8-4  W 8-4  F 8-4  *Appointments scheduled after hours through NXL.*.",
@@ -32714,7 +33611,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pittsfield, MA. Hours: T 12-4 W 12-4 Th 12-4 F 12-4  24 Hour Text or Call Helpline.",
@@ -32742,7 +33640,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Quincy, MA. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30 F 9-5.",
@@ -32825,7 +33724,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Springfield, MA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4.",
@@ -32972,7 +33872,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Aberdeen, MD. Hours: M 9-5 T 9-4 W 9-4 Th 9-5 F 9-1.",
@@ -33006,7 +33907,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Annapolis, MD. Hours: M 9-5 T 9-9 W 9-9 Th 9-9 F 9-5  Sat hours vary.",
@@ -33038,7 +33940,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Baltimore, MD. Hours: M 9-3 T 9-3 W 9-3 Th 9-3 F 9-3  APR 24/7 Calls answered 9-3pm text available Spanish speakers.",
@@ -33071,7 +33974,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bowie, MD. Hours: M 9-5 T 9-9 W 9-9 Th 9-9 F 9-5  Sat hours vary.",
@@ -33132,7 +34036,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbia, MD. Hours: M 10-2 T 10-2 W 10-2 Th 10-7 F 10-2 Sat 10-2.",
@@ -33169,6 +34074,33 @@ window.HEARTH_CENTERS = [
     "address": "2137 Defense Highway Ste. 10B, Crofton, MD 21114"
   },
   {
+    "id": "md-gabriel-network-maternity-home-99603",
+    "name": "Gabriel Network Maternity Home",
+    "type": "Maternity home",
+    "city": "Crofton",
+    "state": "MD",
+    "zip": "21114",
+    "phone": "800-264-3565",
+    "website": "",
+    "email": "",
+    "services": [
+      "baby supplies",
+      "housing support"
+    ],
+    "needs": [
+      "housing",
+      "new-mom",
+      "supplies"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Maternity home in Crofton, MD. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
+    "lat": 38.991479,
+    "lng": -76.696606,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "2137 Defense Hwy, Crofton, MD 21114"
+  },
+  {
     "id": "md-baywater-women-s-clinic-21844",
     "name": "Baywater Women's Clinic",
     "type": "Pregnancy medical center",
@@ -33191,7 +34123,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Easton, MD. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   Appts. preferred but not required. Additionally available by appt. only Evenings, Fri & Sat.",
@@ -33256,7 +34189,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Elkton, MD. Hours: M 10-4 T 10-6 W 10-4 Th 10-6 F 10-4  If offer HopeSync as well during our unopen hours..",
@@ -33265,6 +34199,36 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "126 E. High Street, Elkton, MD 21921"
+  },
+  {
+    "id": "md-mary-s-home-maryland-73297",
+    "name": "Mary's Home Maryland",
+    "type": "Maternity home",
+    "city": "Ellicott City",
+    "state": "MD",
+    "zip": "21043",
+    "phone": "443-574-7746",
+    "website": "",
+    "email": "",
+    "services": [
+      "parenting classes",
+      "baby supplies",
+      "housing support",
+      "community referrals"
+    ],
+    "needs": [
+      "housing",
+      "new-mom",
+      "supplies",
+      "parenting"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Maternity home in Ellicott City, MD. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  These are our office hours, but we are a maternity home. So we are open for our clients 24/7. If they have a need outside of office hours, we take care of ",
+    "lat": 39.269682,
+    "lng": -76.798635,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "3675 Park Ave, Ellicott City, MD 21043 United States"
   },
   {
     "id": "md-birthright-of-frederick-f3bc2f6a",
@@ -33317,7 +34281,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Frederick, MD. Hours: M 10-3 T 10-5 W 10-3 Th 10-5 F 10-2  Offers gonorrhea and chlamydia urine testing with every pregnancy test appointment.*Appointments scheduled after hours through PL.*.",
@@ -33347,7 +34312,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gaithersburg, MD. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5 Sat 9-1 Phones go to Option Line after hours*Appointments scheduled after hours through PL.*.",
@@ -33379,7 +34345,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Glen Burnie, MD. Hours: M 10:30-4 T 5-8 W 10:30-4 Th 5-8 F 10:30-4  Open 1 Saturday per month (varies month to month) 9:30-11:30 am, appts. required. Spanish clients can text the center for assistance.*A",
@@ -33413,7 +34380,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Grantsville, MD. Hours: T 10-4.",
@@ -33472,7 +34440,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Laurel, MD. Hours: M 10-4  W 10-7 Th 10-4   Additionally open Wed from 5pm-7pm & 2nd & 4th Saturdays from 10:00 AM-12:00 PM.",
@@ -33505,7 +34474,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lexington Park, MD. Hours: M 9-3 T 9-5 W 9-5 Th 9-3 F 9-2.",
@@ -33563,7 +34533,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Oakland, MD. Hours: T 10-4  Th 10-4 F 10-4.",
@@ -33624,7 +34595,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Prince Frederick, MD. Hours: M 9-8 T 9-5 W 1-5 Th 9-1.",
@@ -33658,7 +34630,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Reisterstown, MD. Hours: M 9-12 T 10:30-1:30  Th 9-12 F 9:30-12:30  Addtionally open Mon, Tue, & Thu from 6:00 PM-7:00 PM.",
@@ -33691,7 +34664,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rockville, MD. Hours: M 9-5 T 9-5 W 9-5 Th 9-8 F 9-5  24/7 helpline.",
@@ -33724,7 +34698,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Salisbury, MD. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -33786,7 +34761,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Severna Park, MD. Hours: M 9-5 T 9-9 W 9-9 Th 9-9 F 9-5  Sat hours  vary.",
@@ -33817,7 +34793,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Silver Spring, MD. Hours: M 10-3 T 10-3 W 10-3 Th 10-3 F 10-3  On Fridays we are only able to serve clients who are looking to parent their baby.*Appointments scheduled after hours through PL.*.",
@@ -33902,7 +34879,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Towson, MD. Hours: M 9-4  W 9-4 Th 9-4 F 9-4  24 hour hotline, After hours text available through website..",
@@ -33935,7 +34913,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waldorf, MD. Hours: M 9:30-4 T 9:30-4 W 9:30-4 Th 9:30-4 F 9:30-4  Open every 1st and 3rd Saturdays.",
@@ -33996,7 +34975,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bangor, ME. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-2  *Appointments scheduled after hours through NXL.*.",
@@ -34031,7 +35011,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brunswick, ME. Hours: M 9-1 T 10-3 W 9-1 Th 10-3   24-hour hotline.",
@@ -34065,7 +35046,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Fort Kent, ME. Hours: T 3-7  Th 12:30-4:30.",
@@ -34099,7 +35081,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Houlton, ME. Hours: W 12-4 Th 12-4.",
@@ -34133,7 +35116,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Portland, ME. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Live texting available*Appointments scheduled after hours through PL.*.",
@@ -34166,7 +35150,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Presque Isle, ME. Hours: T 3-6 W 10-4 Th 10-4.",
@@ -34199,7 +35184,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rockport, ME. Hours: M 12:30-5 T 10-3 W 12:30-5 Th 12:30-5   Additionally open by appoinment only Fri & Sat*Appointments scheduled after hours through PL.*.",
@@ -34232,7 +35218,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sanford, ME. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   *Appointments scheduled after hours through NXL.*.",
@@ -34265,7 +35252,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waterville, ME. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -34298,7 +35286,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Adrian, MI. Hours: *Appointments scheduled after hours through PL.*.",
@@ -34332,7 +35321,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Allegan, MI. Hours: M 10-6 T 10-4  Th 10-6   We have a hotline that is answered from 8am to 8pm daily.",
@@ -34366,7 +35356,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Allendale, MI. Hours: M 10-4   Th 10-4   Our hotline is answered 8am-8 pm daily: 616-546-0610.",
@@ -34400,7 +35391,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Alpena, MI. Hours: T 10-4  Th 10-4   Additionally open by appoinment only Mon, Wed, & Fri..",
@@ -34492,7 +35484,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Bad Axe, MI. Hours: W 10-5 Th 10-5.",
@@ -34559,7 +35552,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bay City, MI. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -34591,7 +35585,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Berkley, MI. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -34625,7 +35620,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Big Rapids, MI. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -34658,7 +35654,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brighton, MI. Hours: M 10-3 T 10-7 W 10-10 Th 10-4  Sat 10-2 *We are open the 2nd and 4th Saturdays*Appointments scheduled after hours through PL.*.",
@@ -34693,7 +35690,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Burton, MI. Hours: T 9-2 W 9-2 Th 9-2.",
@@ -34726,7 +35724,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cadillac, MI. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -34760,7 +35759,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Caro, MI. Hours: M 10-5 T 10-5 W 10-2 Th 10-2.",
@@ -34858,7 +35858,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Clare, MI. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5  *Appointments scheduled after hours through NXL.*.",
@@ -34891,7 +35892,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clinton Township, MI. Hours: M 9-4 T 9-7:30 W 9-4 Th 9-7:30 F 9-4  24-hour texting (313-666-7544), after hours calls forwarded to Option Line, open until 6 pm every other Monday*Appointments scheduled af",
@@ -34924,7 +35926,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Coldwater, MI. Hours: M 10-1 T 10-1 W 10-1 Th 10-1  Sat 10-12 Monday and Thursday Evenings:  6:00-8:00 pm&#10;Tuesday Evenings (men only): 6:00-8:00 pm*Appointments scheduled after hours through PL.*.",
@@ -34958,7 +35961,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dearborn Heights, MI. Hours: T 9-3  Th 9-3 F 9-3  We offer ultrasound visits later in the evenings 2 days a month from 5-7pm. We are willing to come in to meet a client if they are unable to come to the ",
@@ -34992,7 +35996,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Detroit, MI. Hours: M 10-4 T 4-8  Th 10-4  Sat 10-2 Offering Lyft transportation to clients who qualify..",
@@ -35060,7 +36065,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in East Tawas, MI. Hours: W 10-4 Th 10-7   Services for domestic violence victims, miscarriage support, sexual abuse, and more*Appointments scheduled after hours through PL.*.",
@@ -35092,7 +36098,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Eastpointe, MI. Hours: M 10-2 T 10-2 W 10-2 Th 10-2 F 10-2 Sat 10-2 After hours phone/text service 313-919-8124.",
@@ -35125,7 +36132,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Escanaba, MI. Hours: M 9:30-4  W 9:30-4 Th 9:30-4 F 10-1  Texting available on Tuesday, Saturday and Sunday or after hours.*Appointments scheduled after hours through PL.*.",
@@ -35159,7 +36167,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Farmington Hills, MI. Hours: M 8-4 T 9-8 W 8-4 Th 10-8 F 10-4 Sat 8-1 We are open 2-3 Saturdays/month based on holidays and ministry events.*Appointments scheduled after hours through PL.*.",
@@ -35192,7 +36201,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Flint, MI. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5.",
@@ -35226,7 +36236,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Flint, MI. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  M-Th 9a-4p; Hotline: M-W 24 hours.",
@@ -35285,7 +36296,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fremont, MI. Hours: M 9-8 T 9-4 W 9-4 Th 9-4   able to make appointments through facebook and our website, option line and Hope Sync chat.*Appointments scheduled after hours through PL.*.",
@@ -35318,7 +36330,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gaylord, MI. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   We perform ultrasound daily.",
@@ -35352,7 +36365,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grand Haven, MI. Hours: M 10-4 T 10-5   F 9-2  We have a hotline that is answered from 8am to 8pm daily*Appointments scheduled after hours through PL.*.",
@@ -35382,7 +36396,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grand Rapids, MI. Hours: M 9-5 T 9-8 W 9-5 Th 9-5 F 10-1.",
@@ -35407,7 +36422,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Grand Rapids, MI. Hours: M 12-8 T 12-8 W 9-3.",
@@ -35441,7 +36457,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grand Rapids, MI. Hours: M 9:30-3:30 T 9:30-3:30 W 9:30-3:30 Th 9:30-3:30 F 9:30-3:30  We monitor our text and phone messages all hours. And will provide a response asap.*Appointments scheduled after hou",
@@ -35474,7 +36491,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grand Rapids, MI. Hours: M 7:30-5 T 7:30-5 W 7:30-7 Th 7:30-7 F 7:30-1  Scheduling line open 8:00 AM - 8:00 PM, Mon-Sat. For non-medical related calls:  616-261-0014.",
@@ -35505,7 +36523,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greenville, MI. Hours: M 8-3 T 8-7 W 8-2:30 Th 8-2.",
@@ -35537,7 +36556,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gwinn, MI. Hours: M 11-4 T 10-4 W 10-4 Th 11-4 F 10-4  *Appointments scheduled after hours through PL.*.",
@@ -35570,7 +36590,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hancock, MI. Hours: M 12-5  W 12-5 Th 12-5 F 12-5  24 hour hotline with option line 1 800 712 4357*Appointments scheduled after hours through PL.*.",
@@ -35604,7 +36625,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hillsdale, MI. Hours: M 10-4 T 10-6 W 10-4 Th 10-6   Available by appointment on Friday.",
@@ -35637,7 +36659,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Holland, MI. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   We have a hotline that is answered from 8am to 8pm daily.*Appointments scheduled after hours through PL.*.",
@@ -35688,7 +36711,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ionia, MI. Hours: T 10-2 W 12-6 Th 10-2   24 hour texting/calling available.",
@@ -35722,7 +36746,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Iron Mountain, MI. Hours: T 11-5  Th 11-5   other days by appointment for special circumstances.",
@@ -35755,7 +36780,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ironwood, MI. Hours: T 10-3 W 10-3 Th 10-3 F 10-3  *Appointments scheduled after hours through PL.*.",
@@ -35788,7 +36814,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ishpeming, MI. Hours: M 12-3 T 1-4  Th 12-3.",
@@ -35849,7 +36876,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jackson, MI. Hours: M 10-7  W 10-4 Th 10-4 F 10-4  *Appointments scheduled after hours through PL.*.",
@@ -35882,7 +36910,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kalamazoo, MI. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  The Battle Creek location closes at 1pm on Fridays..",
@@ -35941,7 +36970,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lake Odessa, MI. Hours: T 9:30-12 W 1-7 Th 4:30-7   *Appointments scheduled after hours through NXL.*.",
@@ -35972,7 +37002,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lansing, MI. Hours: T 10-4 W 10-4 Th 12-6 F 10-4.",
@@ -36005,7 +37036,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lansing, MI. Hours: M 9-4 T 9-4 W 9-6 Th 9-4   SPWC will receive and return emails and calls from potential clients throughout the weekend on our text line (517-618-1753) or through our website \"Contact ",
@@ -36039,7 +37071,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lapeer, MI. Hours: M 10-3 T 10-3 W 9-5 Th 9-5   24 hour service.",
@@ -36099,7 +37132,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lowell, MI. Hours: M 10-4 T 10-7 W 10-4 Th 10-7   *Appointments scheduled after hours through NXL.*.",
@@ -36128,7 +37162,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ludington, MI. Hours: T 10-4 W 10-4 Th 10-4.",
@@ -36161,7 +37196,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Manistee, MI. Hours: T 10-6  Th 10-4:30   Our voicemail includes our cell phone number to call in case someone needs us when we are not open..",
@@ -36194,7 +37230,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marquette, MI. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  We offer the 24 hour Option line service.*Appointments scheduled after hours through PL.*.",
@@ -36228,7 +37265,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Midland, MI. Hours: M 8:30-4 T 8:30-4 W 8:30-4 Th 8:30-4   24 Hour textline*Appointments scheduled after hours through PL.*.",
@@ -36256,7 +37294,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mio, MI. Hours: T 10-5  Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -36288,7 +37327,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Monroe, MI. Hours: M 10-3 T 10-3 W 10-3 Th 1-6   We offer free & confidential ultrasounds by appointment on Tuesdays! Thursday Winter Hours are 12pm to 5pm.",
@@ -36321,7 +37361,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Monroe, MI. Hours: M 10-3 T 10-3 W 10-2 Th 7-8:30 F 10-3  Additionally open Mon from 7pm-8:30pm.",
@@ -36354,7 +37395,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mt Pleasant, MI. Hours: M 8-4 T 8-4 W 8-4 Th 8-4   We will cover APR treatment for clients based on a needs assessment..",
@@ -36387,7 +37429,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Muskegon, MI. Hours: T 10-4 W 10-4 Th 10-4   Life Advancement - Texting- 24/7.",
@@ -36474,7 +37517,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Niles, MI. Hours: M 9-7 T 9-3 W 9-3 Th 9-7 F 9-1  Walk-ins for pregnancy testing welcome*Appointments scheduled after hours through PL.*.",
@@ -36508,7 +37552,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Owosso, MI. Hours: M 2-7 T 2-7 W 10-3 Th 12-5.",
@@ -36572,7 +37617,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Petoskey, MI. Hours: M 10-4 T 10-4 W 10-5 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -36660,7 +37706,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Saginaw, MI. Hours: T 9-4 W 9-4 Th 9-4   &#10;*Appointments scheduled after hours through PL.*.",
@@ -36694,7 +37741,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sault Ste. Marie, MI. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -36751,7 +37799,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Southfield, MI. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5.",
@@ -36813,7 +37862,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Helpline in Sturgis, MI. Hours: M 10-4 T 12-6  Th 12-6   Ultrasounds are by appointment. After hours number: 800-579-6626*Appointments scheduled after hours through PL.*.",
@@ -36847,7 +37897,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Taylor, MI. Hours: W 10-12    Mon, Tue, & Thu open by appointment only. Additionally open Wed from 6pm-8pm and by appointment.",
@@ -36876,7 +37927,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Helpline in Three River, MI. Hours: M 10-2 T 1-5  Th 1-7  Sat 9-12 *Appointments scheduled after hours through PL.*.",
@@ -36962,7 +38014,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Branch, MI. Hours: M 10:30-6   Th 10:30-4:30   *Appointments scheduled after hours through PL.*.",
@@ -36988,7 +38041,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Wyoming, MI. Hours: M 8:30-6 T 8:30-6 W 8:30-4:30 Th 8:30-4:30   Scheduling line open 8:00 AM - 8:00 PM, Mon-Sat.",
@@ -37051,7 +38105,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Apple Valley, MN. Hours: M 9-5 T 9-7 W 9-5 Th 9-5 F 9-4.",
@@ -37147,7 +38202,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Brainerd, MN. Hours: M 9-5 T 9-7 W 9-5 Th 9-5 F 9-1  *Appointments scheduled after hours through PL.*.",
@@ -37177,7 +38233,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Burnsville, MN. Hours: M 9-5 T 8:30-4:30 W 9-5 Th 9-5 F 9-5  Tuesday: Closed to clients.",
@@ -37210,7 +38267,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cambridge, MN. Hours: M 12-4 T 10-5 W 10-5 Th 12-4   24/7 Live Nurse Chat through website. Available by appointment only on Friday. Telehealth/Virtual M-F 10-5 with RN available.",
@@ -37273,7 +38331,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Crystal, MN. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30.",
@@ -37306,7 +38365,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Deer River, MN. Hours: M 10-4   Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -37339,7 +38399,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Detroit Lakes, MN. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -37373,7 +38434,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in East Bethel, MN. Hours: M 12-4  W 10-5    M-F: Online and Remote Services 9 a.m. - 5 p.m..",
@@ -37407,7 +38469,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Eden Prairie, MN. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  Saturday by appointment only.",
@@ -37439,7 +38502,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Elk River, MN. Hours: M 10-5 T 10-5 W 10-7.",
@@ -37468,7 +38532,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Fairmont, MN. Hours: M 10-5 T 10-5  Th 10-5 F 10-5  Evenings and weekends by appointment.",
@@ -37502,7 +38567,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Faribault, MN. Hours: M 9-4:30  W 9-4:30 Th 9-4:30 F 9-2.",
@@ -37536,7 +38602,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fergus Falls, MN. Hours: M 10-4 T 10-4 W 10-4 Th 10-7.",
@@ -37569,7 +38636,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Forest Lake, MN. Hours: M 11-5 T 11-5 W 11-5 Th 11-5 F 11-5  Additional availability by appointment*Appointments scheduled after hours through PL.*.",
@@ -37627,7 +38695,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grand Rapids, MN. Hours: T 11-7 W 11-5 Th 11-5.",
@@ -37661,7 +38730,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hastings, MN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   Also available Friday by appointment. Appointments are necessary for ultrasounds but we welcome walk-ins and appointments for pregnancy tests..",
@@ -37755,7 +38825,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in International Falls, MN. Hours: T 11-4 W 11-4 Th 11-4.",
@@ -37788,7 +38859,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Little Canada, MN. Hours: M 9-5 T 10-3 W 10-3 Th 9-5   Additionally available Mon-Thurs evening and Friday & Saturday by appointment only.",
@@ -37821,7 +38893,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Long Prairie, MN. Hours: M 12-4 T 12-4 W 12-4 Th 12-4   or by appointment.",
@@ -37882,7 +38955,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mankato, MN. Hours: M 10-4 T 1-7 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -37947,7 +39021,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marshall, MN. Hours: M 10-4  W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -37980,7 +39055,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Milaca, MN. Hours: M 10-2:30 T 10-2:30 W 10-2:30 Th 10-2:30   *Appointments scheduled after hours through PL.*.",
@@ -38009,7 +39085,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Minneapolis, MN. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30 F 8:30-4:30.",
@@ -38040,7 +39117,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Minneapolis, MN. Hours: M 9-8 T 9-8 W 9-4 Th 9-4 F 9-2  Last appointment of each day is scheduled 1.5 hours before closing.*Appointments scheduled after hours through PL.*.",
@@ -38073,7 +39151,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Minneapolis, MN. Hours: M 8:30-4 T 8:30-4 W 8:30-4 Th 8:30-4 F 8:30-4.",
@@ -38103,7 +39182,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Minneapolis, MN. Hours: T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -38165,7 +39245,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mora, MN. Hours: M 11-4 T 11-4 W 11-4.",
@@ -38198,7 +39279,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Morris, MN. Hours: M 10-5 T 10-5 W 12-5 Th 10-5 F 10-5  *Appointments scheduled after hours through PL.*.",
@@ -38232,7 +39314,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in New Ulm, MN. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Fri & Sat Appt only*Appointments scheduled after hours through PL.*.",
@@ -38265,7 +39348,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ortonville, MN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -38299,7 +39383,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Park Rapids, MN. Hours: M 10:30-4 T 10:30-4 W 10:30-4 Th 10:30-4   Additionally open Fri by appointment only.",
@@ -38332,7 +39417,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Pine City, MN. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -38365,7 +39451,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Princeton, MN. Hours: M 10-2:30 T 10-2:30 W 10-2:30 Th 10-2:30   *Appointments scheduled after hours through PL.*.",
@@ -38433,7 +39520,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Red Wing, MN. Hours: T 9-7 W 9-5 Th 9-7.",
@@ -38466,7 +39554,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Redwood Falls, MN. Hours: T 10-4 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -38499,7 +39588,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Richfield, MN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -38560,7 +39650,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rochester, MN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -38593,7 +39684,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Roseau, MN. Hours: M 11-5  W 11-5  F 11-5.",
@@ -38626,7 +39718,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Saint Cloud, MN. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5  24 hour abortion pill reversal. &#10;Prenatal care..",
@@ -38660,7 +39753,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Saint Michael, MN. Hours: M 10-4 T 10-2 W 10-4 Th 10-2   Wednesday 4p-7p (by appt only)*Appointments scheduled after hours through PL.*.",
@@ -38693,7 +39787,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Saint Paul, MN. Hours: M 8-4:30 T 8-4:30 W 8-4:30 Th 8-4:30 F 8-4:30.",
@@ -38726,7 +39821,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Saint Paul, MN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -38758,7 +39854,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Saint Paul, MN. Hours: T 9-5 W 12-5 Th 9-4.",
@@ -38789,7 +39886,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sandstone, MN. Hours: T 12-5     Additionally available by appointment only.",
@@ -38823,7 +39921,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sauk Centre, MN. Hours: M 1-4:30 T 1-4:30 W 1-4:30 Th 1-4:30 F 1-4:30.",
@@ -38884,7 +39983,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Staples, MN. Hours: M 11-4 T 11-4 W 11-4 Th 11-4   *Appointments scheduled after hours through PL.*.",
@@ -38944,7 +40044,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Superior, MN. Hours: M 9-3 T 9-3 W 9-3 Th 9-3.",
@@ -38977,7 +40078,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Thief River Falls, MN. Hours: M 8-4 T 8-4 W 8-4 Th 8-4   Walk ins welcome&#10;24-hour hotline &#10;appointments available outside business hours upon request.",
@@ -39044,7 +40146,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Wadena, MN. Hours: M 11-4 T 11-4 W 11-4 Th 11-4.",
@@ -39078,7 +40181,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Waite Park, MN. Hours: M 8:30-4 T 8:30-4 W 8:30-4 Th 8:30-4 F 8:30-4  Additionally available by appointment only after 4pm*Appointments scheduled after hours through PL.*.",
@@ -39142,7 +40246,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Walker, MN. Hours: M 11-4 T 11-4 W 11-4 Th 11-4   Additionally open by appoinment only Fri.",
@@ -39174,7 +40279,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Saint Paul, MN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  *Appointments scheduled after hours through NXL.*.",
@@ -39207,7 +40313,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Willmar, MN. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-3  *Appointments scheduled after hours through PL.*.",
@@ -39268,7 +40375,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Woodbury, MN. Hours: T 9-7 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -39301,7 +40409,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Worthington, MN. Hours: T 10-6 W 10-4 Th 10-4   Mon & Fri by appointment. Closed each day from 12pm-12:30pm.",
@@ -39332,7 +40441,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Aurora, MO. Hours: M 9-2 T 9-2 W 1-6 Th 9-6   24 hour text line. After hours by appointment.*Appointments scheduled after hours through PL.*.",
@@ -39366,7 +40476,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Barnhart, MO. Hours: M 2-7  W 10-2 Th 2-7  Sat 9-12.",
@@ -39395,7 +40506,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Belton, MO. Hours: M 7-10 T 7-10 W 7-10 Th 7-10 F 7-10 Sat 7-10 Sun 7-10We are a residential facility- we are not \"Open\" or \"Closed\"..",
@@ -39428,7 +40540,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bethany, MO. Hours: T 11-6 W 9-3    Limited STI testing and treatment*Appointments scheduled after hours through PL.*.",
@@ -39460,7 +40573,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bolivar, MO. Hours: M 10-4 T 12-7 W 10-4 Th 12-7   Mobile Unit every Wednesday 10-4 in surrounding counties April-October.",
@@ -39519,7 +40633,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bowling Green, MO. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  Option Line, Infinite Worth Nurse Chat*Appointments scheduled after hours through PL.*.",
@@ -39552,7 +40667,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Branson, MO. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  *Appointments scheduled after hours through PL.*.",
@@ -39585,7 +40701,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Branson West, MO. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Extended hours by appointment..",
@@ -39619,7 +40736,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bridgeton, MO. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -39653,7 +40771,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Camdenton, MO. Hours: T 9-4 W 9-4 Th 9-4   Hotline after hours: Option Line..",
@@ -39682,7 +40801,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cameron, MO. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   Please contact us for additional appointment times.",
@@ -39740,7 +40860,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cape Girardeau, MO. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   24 hour text line 1 (573) 381-0887, Appointments can also be made outside of regular business hours as needed..",
@@ -39891,7 +41012,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbia, MO. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  Option Line, HopeSync, hopefully adding InfiniteWorth in January 2026.",
@@ -39925,7 +41047,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Columbia, MO. Hours: M 8-5 T 8-5 W 8-5 Th 8-5 F 8-12  Additional hours available by appointment.",
@@ -39958,7 +41081,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cuba, MO. Hours: M 10-4 T 10-5 W 10-5 Th 10-4   Closed for lunch 12-1*Appointments scheduled after hours through PL.*.",
@@ -40018,7 +41142,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in El Dorado Springs, MO. Hours: M 9-4 T 10-5     Phones are answered 24/7.",
@@ -40052,7 +41177,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Farmington, MO. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   *Appointments scheduled after hours through PL.*.",
@@ -40086,7 +41212,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Forsyth, MO. Hours: M 9-5  W 9-5    May need to use Powersite, MO to get correct directions when using Google maps.*Appointments scheduled after hours through PL.*.",
@@ -40120,7 +41247,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gainesville, MO. Hours: M 9-4   Th 9-4.",
@@ -40153,7 +41281,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hannibal, MO. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4.",
@@ -40273,7 +41402,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in High Ridge, MO. Hours: M 9-5 T 9-5 W 9-5 Th 9-4 F 9-5  After hours text line 636.575.6581.",
@@ -40328,7 +41458,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Houston, MO. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   24 hour nurse chat and scheduling on website.",
@@ -40362,7 +41493,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Independence, MO. Hours: M 9-4 T 9-4 W 10-3 Th 9-3.",
@@ -40391,7 +41523,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ironton, MO. Hours: T 11-6 W 8-3 Th 8-3.",
@@ -40478,7 +41611,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jefferson City, MO. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -40512,7 +41646,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Jefferson City, MO. Hours: M 8-5 T 8-5 W 8-5 Th 8-5 F 8-12  Additional hours available by appointment.",
@@ -40545,7 +41680,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Joplin, MO. Hours: M 9-6 T 9-6 W 9-5 Th 9-6 F 9-5  Option Line maintains the clinic phone line outside of available clinic hours.*Appointments scheduled after hours through PL.*.",
@@ -40639,7 +41775,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kansas City, MO. Hours: M 10-4:30 T 10-4:30 W 10-5:30 Th 10-4:30   *Appointments scheduled after hours through PL.*.",
@@ -40672,7 +41809,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kansas City, MO. Hours: T 9-4 W 10-4 Th 9-4 F 9-2  *Appointments scheduled after hours through PL.*.",
@@ -40705,7 +41843,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kansas City, MO. Hours: M 10-6  W 10-3 Th 10-5 F 9-2.",
@@ -40762,7 +41901,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kirksville, MO. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   24 hour text line*Appointments scheduled after hours through PL.*.",
@@ -40795,7 +41935,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lamar, MO. Hours: T 9-4 W 9-3    Available Monday by Appointment Only.",
@@ -40856,7 +41997,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lebanon, MO. Hours: M 9-6 T 9-5 W 9-5 Th 9-6 F 9-1.",
@@ -40889,7 +42031,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lee's Summit, MO. Hours: M 10-6 T 10-4 W 10-3 Th 9-3   *Appointments scheduled after hours through PL.*.",
@@ -40942,7 +42085,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Liberty, MO. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -40976,7 +42120,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Macon, MO. Hours: M 10-4 T 10-4 W 10-4    Evening and Afterschool Hours available by appointment.",
@@ -41010,7 +42155,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marshfield, MO. Hours: M 10-5 T 10-5  Th 10-5   24 hour after hours call.",
@@ -41131,7 +42277,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Neosho, MO. Hours: M 9-5 T 9-1  Th 9-1 F 1-5  24-hour texting number 417-456-9437*Appointments scheduled after hours through PL.*.",
@@ -41193,7 +42340,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Perryville, MO. Hours: M 10-7 T 10-4 W 10-4 Th 10-4.",
@@ -41226,7 +42374,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Republic, MO. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   We accept walk-ins!.",
@@ -41258,7 +42407,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Richmond, MO. Hours: M 10-4 T 10-4 W 10-4 Th 12-6 F 10-4.",
@@ -41320,7 +42470,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rolla, MO. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -41381,7 +42532,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Saint Louis, MO. Hours: M 7-10 T 7-10 W 7-10 Th 7-10 F 7-10 Sat 7-10 Sun 7-10Open 24/7.",
@@ -41439,7 +42591,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Saint Louis, MO. Hours: M 1-7 T 9-3 W 9-7 Th 9-3  Sat 9-1 Translator services are available upon request.*Appointments scheduled after hours through PL.*.",
@@ -41496,7 +42649,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Salem, MO. Hours: M 8-6 T 8-4 W 8-5 Th 8-5.",
@@ -41530,7 +42684,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Shelbina, MO. Hours: M 10-6      Text 660-395-8099 to schedule an appt. outside of business hours.",
@@ -41560,7 +42715,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sikeston, MO. Hours: T 10-4 W 10-4 Th 10-4   Aspire is available for clients if they cannot come during open hours. Aspire will make an appointment with client after hours if needed..",
@@ -41593,7 +42749,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Springfield, MO. Hours: M 9-5 T 12-7 W 9-5 Th 9-5   Language line available for non-English speakers.",
@@ -41626,7 +42783,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in St Joseph, MO. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-12  24 Hour Nurse Chat.",
@@ -41769,7 +42927,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in St. Louis, MO. Hours: M 10-3 T 10-3 W 10-3 Th 10-3 F 10-3  24 hour hotline; Resource Shop by Appointment.",
@@ -41836,7 +42995,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ste Genevieve, MO. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Evening Appointments Available Upon Request*Appointments scheduled after hours through PL.*.",
@@ -41866,7 +43026,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Troy, MO. Hours: M 9-3 T 9-5 W 9-3 Th 9-5.",
@@ -41897,7 +43058,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Versailles, MO. Hours: W 10-5.",
@@ -41931,7 +43093,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in WARRENSBURG, MO. Hours: M 12-4 T 12-4 W 12-4 Th 12-4   Additionally open by appointment only Saturday from 10:00 AM-12:00 PM*Appointments scheduled after hours through PL.*.",
@@ -41963,7 +43126,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Warrenton, MO. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30   Fridays are by appointment only..",
@@ -41997,7 +43161,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waynesville, MO. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   The staff will see clients on Fridays by appointment only.&#10;Our text line is available 24 hours a day, 7 days a week: 341 656-8057*Appointments s",
@@ -42085,7 +43250,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Plains, MO. Hours: M 8-4 T 8-4 W 8-4 Th 8-4   After hour appointments available.&#10;1st Thursday of every month PRC Pop-Up at the Mountain View Community Center (Mountain View, MO) from 1pm-4pm&#10",
@@ -42119,7 +43285,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cleveland, MS. Hours: M 9:30-5 T 9:30-5 W 9:30-5    *Appointments scheduled after hours through PL.*.",
@@ -42152,7 +43319,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbus, MS. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -42186,7 +43354,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Corinth, MS. Hours: M 10-4:30 T 10-4:30 W 10-4:30 Th 10-4:30 F 9-1:30  Text line 662.872.0810.",
@@ -42219,7 +43388,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Forest, MS. Hours: M 9-5 T 9-7 W 9-5 Th 12-5 F 9-5  *Appointments scheduled after hours through PL.*.",
@@ -42254,7 +43424,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gautier, MS. Hours: M 9-4 T 9-4 W 9-3 Th 8-12.",
@@ -42322,7 +43493,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gulfport, MS. Hours: M 9:30-5 T 9:30-5 W 9:30-1:30 Th 9:30-5   *Appointments scheduled after hours through PL.*.",
@@ -42356,7 +43528,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hattiesburg, MS. Hours: M 9-4:30 T 9-4:30 W 10-4:30 Th 9-4:30   Schedule appointment requests online.*Appointments scheduled after hours through PL.*.",
@@ -42454,7 +43627,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jackson, MS. Hours: M 8-4 T 8-4 W 8-4 Th 8-7 F 8-12.",
@@ -42487,7 +43661,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Laurel, MS. Hours: M 8:30-3:30 T 10-5 W 8:30-3:30 Th 8:30-3:30   24 hour text/option lines*Appointments scheduled after hours through PL.*.",
@@ -42521,7 +43696,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lucedale, MS. Hours: M 9-4  W 9-3.",
@@ -42552,7 +43728,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Magee, MS. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -42586,7 +43763,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mendenhall, MS. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -42618,7 +43796,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Meridian, MS. Hours: T 9-5 W 9-5 Th 9-5 F 9-5  Open by-appointment on Mondays.*Appointments scheduled after hours through NXL.*.",
@@ -42685,7 +43864,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in New Albany, MS. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Friday, by appointment only..",
@@ -42716,7 +43896,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Oxford, MS. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -42749,7 +43930,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Philadelphia, MS. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   We use option line for our after-hours calls.*Appointments scheduled after hours through NXL.*.",
@@ -42782,7 +43964,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Picayune, MS. Hours: W 9-5 Th 9-5 F 9-5.",
@@ -42813,7 +43996,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pontotoc, MS. Hours: M 10-6 T 10-6  Th 10-6.",
@@ -42875,7 +44059,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ripley, MS. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -42908,7 +44093,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Silver Creek, MS. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -42941,7 +44127,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Southaven, MS. Hours: T 11-7  Th 11-7 F 11-7  Monday by appt. only.",
@@ -42973,7 +44160,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Starkville, MS. Hours: M 10-5 T 9-5 W 10-2 Th 9-5 F 10-2  *Appointments scheduled after hours through PL.*.",
@@ -43030,7 +44218,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tupelo, MS. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   24-hour hotline.",
@@ -43063,7 +44252,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Vicksburg, MS. Hours: M 8:30-4 T 8:30-4 W 8:30-4 Th 8:30-4   24 hour hotline 1-800-712-help.",
@@ -43096,7 +44286,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Billings, MT. Hours: M 9-5 T 9-5 W 8-5 Th 9-5 F 9-5.",
@@ -43129,7 +44320,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bozeman, MT. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   (406) 579-7706 (After hours & text)  Hotline.",
@@ -43159,7 +44351,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Butte, MT. Hours: M 11-4 T 11-4 W 11-4 Th 11-4   *Appointments scheduled after hours through PL.*.",
@@ -43193,7 +44386,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Dillon, MT. Hours: M 11-3  W 11-3.",
@@ -43226,7 +44420,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Great Falls, MT. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 11-4.",
@@ -43257,7 +44452,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Havre, MT. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -43290,7 +44486,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Helena, MT. Hours: M 11-4 T 11-4 W 11-4 Th 11-4 F 8:30-12:30  *Appointments scheduled after hours through PL.*.",
@@ -43349,7 +44546,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Libby, MT. Hours: M 10-4 T 10-4 W 10-1    We respond to our Facebook and email messages quickly..",
@@ -43382,7 +44580,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Miles City, MT. Hours: M 11-5 T 11-5 W 11-5    Launching with Infinite Worth Nursing 14/7 Text Line soon after 2/18/2025.  Launching Men's Mentorship 3/2025..",
@@ -43415,7 +44614,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Missoula, MT. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Baby supplies are only offered to current clients at this time.*Appointments scheduled after hours through PL.*.",
@@ -43442,7 +44642,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Seeley Lake, MT. Hours: M 9-5  W 9-2 Th 9-5   Tuesday is by appointment only.  (9 a.m. - 5 p.m.).",
@@ -43474,7 +44675,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sidney, MT. Hours: M 9-00 T 9-5 W 9-5 Th 11-3   24 hour hotline.",
@@ -43507,7 +44709,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Albemarle, NC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   Closed each day from 1pm-2pm.",
@@ -43540,7 +44743,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Alliance, NC. Hours: T 10-2 W 12-4 Th 10-2   Also open 1st Sat of the month 9a-12pm & every 3rd Wed 12p-7p and by appointment..",
@@ -43569,7 +44773,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Andrews, NC. Hours: T 1-4   F 10:30-1:30  On Call.",
@@ -43603,7 +44808,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Asheboro, NC. Hours: T 9-5 W 9-5 Th 9-5 F 9-5  nurses available 24/7 through Hope Sync/Infinite Worth via text. Spanish available only on Friday*Appointments scheduled after hours through PL.*.",
@@ -43633,7 +44839,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Asheville, NC. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -43667,7 +44874,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Belmont, NC. Hours: M 1-5 T 9:30-12:30  Th 9:30-12:30.",
@@ -43700,7 +44908,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Boone, NC. Hours: M 9-3 T 9-3 W 9-3 Th 9-3.",
@@ -43734,7 +44943,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brevard, NC. Hours: M 10:30-4:30 T 10:30-4:30 W 10:30-4:30 Th 10:30-4:30   After Hours Option Line.",
@@ -43764,7 +44974,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Bryson City, NC. Hours: T 10-4  Th 10-4   Also available as needed. Please call for additional availability outside normal hours..",
@@ -43799,7 +45010,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Bryson City, NC. Hours: M 9-6 T 9-6 W 9-6 Th 9-6 F 9-6 Sat 9-6 Sun 9-6Availability Hours: Monday through Sunday from 9 am to 6 pm call for services. Monday through Saturday from 9 am to 6 call for an ap",
@@ -43808,6 +45020,42 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "1275 Fontana Rd, Bryson City, NC 28713"
+  },
+  {
+    "id": "nc-arms-of-grace-pregnancy-resource-center-103277",
+    "name": "Arms of Grace Pregnancy Resource Center",
+    "type": "Pregnancy resource center",
+    "city": "Burlington",
+    "state": "NC",
+    "zip": "27215",
+    "phone": "336-736-2685",
+    "website": "https://thearmsofgrace.org",
+    "email": "",
+    "services": [
+      "ultrasound",
+      "pregnancy tests",
+      "parenting classes",
+      "baby supplies",
+      "STI testing",
+      "adoption information",
+      "abortion recovery support",
+      "mentoring"
+    ],
+    "needs": [
+      "adoption",
+      "expecting",
+      "new-mom",
+      "supplies",
+      "talk",
+      "parenting"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Burlington, NC. Hours: M 11-5 T 11-5 W 11-5 Th 11-5   *Appointments scheduled after hours through NXL.*.",
+    "lat": 36.084897,
+    "lng": -79.458896,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "137 O'Neal St., Burlington, NC 27215 United States"
   },
   {
     "id": "nc-m-y-life-center-19894",
@@ -43862,7 +45110,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Carthage, NC. Hours: M 10-2 T 9-3 W 9-3 Th 9-3   24 hour access via hotline; appts available during off hours when needed.*Appointments scheduled after hours through PL.*.",
@@ -43891,7 +45140,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chapel Hill, NC. Hours: M 9-4 T 9-4 W 9-4 Th 12-8 F 9-1  *Appointments scheduled after hours through PL.*.",
@@ -44010,7 +45260,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Charlotte, NC. Hours: M 9-6 T 10-7 W 9-4 Th 9-4 F 9-3  We are are closed for lunch on Mon, Wed, Thurs, and Fri for 1 hour if possible. Tues is closed 30 minutes for lunch.",
@@ -44109,7 +45360,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clayton, NC. Hours: M 10-6 T 10-6 W 10-5 Th 12-7   *Appointments scheduled after hours through PL.*.",
@@ -44143,7 +45395,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clinton, NC. Hours: M 10-4 T 10-4  Th 10-4   Option Line 24/7.",
@@ -44206,7 +45459,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Concord, NC. Hours: M 9:30-8 T 9:30-4 W 9:30-4 Th 9:30-8   24 hour nurse hotline.  24 hour APR calls.*Appointments scheduled after hours through PL.*.",
@@ -44291,7 +45545,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Denver, NC. Hours: M 9-3 T 9-5 W 9-5 Th 9-1   Weekend texting for medical questions or scheduling.  After hour appointments made as needed..",
@@ -44353,7 +45608,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Eden, NC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -44386,7 +45642,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Elizabeth City, NC. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   Please Call or Text after hours 1.800.712.4357.",
@@ -44418,7 +45675,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Elizabethtown, NC. Hours: T 10-4 W 10-4 Th 5-8   *Appointments scheduled after hours through PL.*.",
@@ -44453,7 +45711,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Elkin, NC. Hours: M 9-4 T 9-4 W 9-4 Th 12-6   Our office phone for clients is rolled to Optionline after hours and days closed..",
@@ -44547,7 +45806,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Franklin, NC. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   24/7 Option Line.",
@@ -44580,7 +45840,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fuquay Varina, NC. Hours: M 9-3 T 9-3 W 9-3 Th 9-3 F 9-3 Sat 8-12 Saturday hours are by appointment and for Raleigh and Fayetteville locations only.*Appointments scheduled after hours through PL.*.",
@@ -44649,7 +45910,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Goldsboro, NC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   24 Hour Hotline for HT & sex trafficked survivors 919.988.9262. Text \"Helpline\" to 919.230.4698*Appointments scheduled after hours through PL.*.",
@@ -44680,7 +45942,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Granite Falls, NC. Hours: M 9-7 T 9-7 W 9-4 Th 9-4.",
@@ -44711,7 +45974,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greensboro, NC. Hours: M 11-5 T 9-8 W 9-5 Th 9-8 F 10-3  Telemedicine Appointments 336-274-4881.",
@@ -44777,7 +46041,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greenville, NC. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-12  *Appointments scheduled after hours through PL.*.",
@@ -44811,7 +46076,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Hampstead, NC. Hours: M 10-4 T 10-4  Th 10-4 F 8-12  *Appointments scheduled after hours through NXL.*.",
@@ -44844,7 +46110,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Havelock, NC. Hours: T 10-4 W 10-4 Th 10-4  Sat 10-12 Any inquiry indicating 'abortion considering' is immediately contacted and spoken with regardless of Center hours as are 'case by case' situations..",
@@ -44936,7 +46203,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hickory, NC. Hours: M 9-5 T 9-4 W 9-4 Th 9-5   *Pregnancy Care Classes Monday evenings from 5:30 pm - 7:00 pm. * We also offer trauma-informed Clinical Mental Health Counseling/Psychotherapy in person an",
@@ -44995,7 +46263,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Huntersville, NC. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -45048,7 +46317,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Indian Trail, NC. Hours: M 10-2 T 10-8 W 10-2 Th 10-8.",
@@ -45079,7 +46349,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jacksonville, NC. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   We have option line available.*Appointments scheduled after hours through PL.*.",
@@ -45113,7 +46384,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Jefferson, NC. Hours: T 11-5 W 11-5 Th 11-5   Walk ins welcome..",
@@ -45171,7 +46443,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in King, NC. Hours: M 10-2 T 10-2 W 10-2 Th 5-7 F 10-2 Sat 10-12 We are open the 2nd & 4th Saturday of each month from 10:00 - 12:00..",
@@ -45206,7 +46479,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kinston, NC. Hours: M 10-2 T 9-5 W 11-7    *Appointments scheduled after hours through PL.*.",
@@ -45239,7 +46513,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Knightdale, NC. Hours: M 9:30-2:30 T 1-6 W 11-5    Other times by appt. only.",
@@ -45273,7 +46548,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Laurinburg, NC. Hours: M 9:30-4 T 9:30-4 W 9:30-4.",
@@ -45307,7 +46583,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lenoir, NC. Hours: T 9-7 W 9-4 Th 9-4.",
@@ -45337,7 +46614,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lexington, NC. Hours: M 9:30-3:30 T 9:30-3:30 W 9:30-3:30 Th 9:30-3:30   24 nurse hotline, 24 hour nurse text/chatline*Appointments scheduled after hours through PL.*.",
@@ -45370,7 +46648,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marion, NC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -45403,7 +46682,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mars Hill, NC. Hours: M 1:30-5:30 T 1:30-5:30  Th 10-4   Other times available by appointment..",
@@ -45436,7 +46716,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mocksville, NC. Hours: T 10-4 W 10-4 Th 10-4   Can text after-hours*Appointments scheduled after hours through PL.*.",
@@ -45471,7 +46752,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Monroe, NC. Hours: M 10-2 T 10:30-8 W 10-2 Th 9-8.",
@@ -45505,7 +46787,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mooresville, NC. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   24 Hotline.",
@@ -45565,7 +46848,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Morehead City, NC. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30 F 12:30-4:30.",
@@ -45598,7 +46882,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Morganton, NC. Hours: M 8-5:30 T 8-5:30 W 8-3:30 Th 8-3:30   24 hour Life lead availability*Appointments scheduled after hours through PL.*.",
@@ -45632,7 +46917,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mount Airy, NC. Hours: M 10-5  W 10-5  F 10-5.",
@@ -45665,7 +46951,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Murphy, NC. Hours: T 10-3  Th 10-3 F 10-3.",
@@ -45698,7 +46985,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Nags Head, NC. Hours: T 10-2 W 10-2 Th 10-2   Fri by appointment only*Appointments scheduled after hours through PL.*.",
@@ -45731,7 +47019,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in New Bern, NC. Hours: M 9-6 T 9-5 W 9-5    *Appointments scheduled after hours through PL.*.",
@@ -45796,7 +47085,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in North Wilkesboro, NC. Hours: M 10-3 T 10-6 W 10-3 Th 10-6   Options Hotline&#10;HopeSync 24/7 Nurse Chat on Website.",
@@ -45856,7 +47146,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Raeford, NC. Hours: M 4-8 T 11-3     Receive calls, texts daily 8am - 5pm; weekends as available.*Appointments scheduled after hours through PL.*.",
@@ -46012,7 +47303,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Raleigh, NC. Hours: M 9-3 T 9-3 W 9-3 Th 9-3 F 9-3 Sat 8-12 *Appointments scheduled after hours through PL.*.",
@@ -46045,7 +47337,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Roanoke Rapids, NC. Hours: M 10-3 T 12-8 W 10-3    *Appointments scheduled after hours through PL.*.",
@@ -46079,7 +47372,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Robbinsville, NC. Hours: Available as needed. Please call for appointments.",
@@ -46108,7 +47402,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Rockingham, NC. Hours: T 10-5 W 10-3 Th 10-5.",
@@ -46165,7 +47460,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rocky Mount, NC. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-8   7 Days a week Tele-Care &#10;Thursday 5:30-8:00 - By Appointment Only*Appointments scheduled after hours through PL.*.",
@@ -46198,7 +47494,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Roxboro, NC. Hours: M 10-4 T 10-4  Th 2-6   MT 10a-4p; Th 2p-6p (6p-8p by appt only).",
@@ -46232,7 +47529,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Salisbury, NC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -46265,7 +47563,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sanford, NC. Hours: M 10-3 T 10-3 W 10-3 Th 10-3.",
@@ -46300,7 +47599,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Shallotte, NC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -46367,7 +47667,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Siler City, NC. Hours: T 9-3     Also available by appointment during the week..",
@@ -46401,7 +47702,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Smithfield, NC. Hours: M 10-5 T 10-5 W 10-2 Th 10-5.",
@@ -46435,7 +47737,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Sparta, NC. Hours: T 11-5 W 11-5 Th 11-5.",
@@ -46470,7 +47773,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Statesville, NC. Hours: M 9:30-5 T 9:30-5 W 9:30-5 Th 9:30-5.",
@@ -46504,7 +47808,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sylva, NC. Hours: M 10-4 T 10-6 W 10-4 Th 10-6.",
@@ -46537,7 +47842,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Taylorsville, NC. Hours: M 11-4 T 10-6 W 10-6 Th 10-6   Mondays are by appointment only.",
@@ -46590,7 +47896,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Thomasville, NC. Hours: T 10-4 W 10-3:30 Th 10-4   Center will open by appointments on days that the center is usually closed if needed..",
@@ -46623,7 +47930,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Troy, NC. Hours: T 9-2 W 9-2 Th 9-2   Open by appoinment only Monday-Friday.",
@@ -46657,7 +47965,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wadesboro, NC. Hours: M 10-4 T 10-4 W 10-4 Th 3-7   24-hour phone line for text or call 704-389-0659.",
@@ -46691,7 +48000,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Washington, NC. Hours: T 9-4 W 9-5 Th 9-5   We offer same-day appointments and accept walk-ins whenever available. If you think you may be pregnant and need immediate assistance reach our 24/7 Text Nurse",
@@ -46746,7 +48056,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waynesville, NC. Hours: T 9-4 W 9-4    Patients can schedule appointments via the website*Appointments scheduled after hours through PL.*.",
@@ -46780,7 +48091,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Waynesville, NC. Hours: Th 10-1 F 10-1.",
@@ -46812,7 +48124,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Whiteville, NC. Hours: M 12-5 T 12-5  Th 12-5.",
@@ -46846,7 +48159,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Whittier, NC. Hours: Available as needed. Please call for appointments.",
@@ -46880,7 +48194,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wilmington, NC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -46913,7 +48228,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wilson, NC. Hours: M 10-3 T 10-3 W 10-3 Th 1-7   *Appointments scheduled after hours through PL.*.",
@@ -46975,7 +48291,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Winston-Salem, NC. Hours: M 9-2 T 9-5 W 9-5 Th 9-8 F 9-2  closed from 12:30-2 on Thursdays for staff meeting.",
@@ -47006,7 +48323,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Winston-Salem, NC. Hours: M 9-5 T 9-8 W 9-4 Th 9-5.",
@@ -47039,7 +48357,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Yadkinville, NC. Hours: T 9-2:30 W 9-2:30 Th 9-2:30   Can be reached after hours call or text 336-258-0253*Appointments scheduled after hours through PL.*.",
@@ -47071,7 +48390,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bottineau, ND. Hours: T 10-4:30 W 10-4:30    Available for other appointment times as needed*Appointments scheduled after hours through PL.*.",
@@ -47104,7 +48424,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grand Forks, ND. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  *Appointments scheduled after hours through PL.*.",
@@ -47137,7 +48458,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Minot, ND. Hours: T 10-7 W 8:30-4:30 Th 8:30-4:30   After-hours phone service!*Appointments scheduled after hours through PL.*.",
@@ -47224,7 +48546,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tioga, ND. Hours: M 10-4:30   Th 10-4:30   *Appointments scheduled after hours through PL.*.",
@@ -47253,7 +48576,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Beatrice, NE. Hours: T 10-4 W 10-4 Th 10-10   *Appointments scheduled after hours through PL.*.",
@@ -47312,7 +48636,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fremont, NE. Hours: T 10-5 W 10-5 Th 10-5   Our Spanish speaking advocate is in the office on Tuesdays 10-2.*Appointments scheduled after hours through PL.*.",
@@ -47339,7 +48664,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gering, NE. Hours: M 11-5 T 11-5 W 1-6.",
@@ -47371,7 +48697,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hastings, NE. Hours: M 9-5:30 T 9-4 W 9-5 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -47433,7 +48760,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lincoln, NE. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-1.",
@@ -47466,7 +48794,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in McCook, NE. Hours: T 1-4  Th 1-4.",
@@ -47499,7 +48828,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in North Platte, NE. Hours: M 11-7:30 T 11-5 W 11-5 Th 11-5 F 11-5  24 hour hotliine.",
@@ -47532,7 +48862,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in O'Neill, NE. Hours: M 9-12 T 1-5 W 9-12 Th 1-5.",
@@ -47564,7 +48895,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ogallala, NE. Hours: M 1-6 T 1-6 W 1-6 Th 1-6   Friday is by appt only. Phone is answered by staff M-F mornings and evenings in addition to open hours, to assist clients, donors, and community partners.",
@@ -47596,7 +48928,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Omaha, NE. Hours: M 3-8  W 3-8   Sat 10-3.",
@@ -47629,7 +48962,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Omaha, NE. Hours: M 9-8 T 3-8 W 9-8 Th 3-8 F 10-3 Sat 10-2.",
@@ -47689,7 +49023,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Claremont, NH. Hours: M 8-6 T 10-4 W 10-4 Th 10-6.",
@@ -47723,7 +49058,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Concord, NH. Hours: T 10-5 W 12-7 Th 8-2   24 hour nurse chat via website. Monday, Friday, Saturday are by appointment only..",
@@ -47784,7 +49120,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Keene, NH. Hours: M 12-4 T 12-4 W 12-4 Th 12-6.",
@@ -47817,7 +49154,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Laconia, NH. Hours: M 9:30-4:30 T 9:30-4:30 W 9:30-4:30 Th 9:30-4:30.",
@@ -47850,7 +49188,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Littleton, NH. Hours: M 9-4 T 9-4 W 9-4.",
@@ -47914,7 +49253,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Manchester, NH. Hours: T 8-8 W 8-3 Th 10-3.",
@@ -47948,7 +49288,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Nashua, NH. Hours: T 8-8 W 10-3 Th 8-4.",
@@ -47982,7 +49323,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Plymouth, NH. Hours: T 3-7 W 11-4 Th 11-4 F 11-4.",
@@ -48014,7 +49356,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rochester, NH. Hours: M 12-7  W 9-5 Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -48043,7 +49386,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Lebanon, NH. Hours: M 8-6 T 10-4 W 10-7 Th 10-6   APR available 24/7/365.",
@@ -48110,7 +49454,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cherry Hill, NJ. Hours: M 9-5 T 9-5 W 9-5 Th 9-8:30 F 9-5 Sat 9-1.",
@@ -48283,7 +49628,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Flemington, NJ. Hours: T 10-3 W 10-3 Th 10-3 F 10-3  We do have a 24 hour hotline.",
@@ -48345,7 +49691,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Freehold, NJ. Hours: M 12-7  W 10-5  F 9-1.",
@@ -48376,7 +49723,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Galloway, NJ. Hours: M 12-8 T 12-8 W 12-8 Th 12-8 F 12-8 Sat 9-5 24 hour Text/Call line=609-626-0421.",
@@ -48409,7 +49757,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hackensack, NJ. Hours: T 8:30-4:30 W 8:30-4:30 Th 12-8 F 8:30-2 Sat 9-12 *Appointments scheduled after hours through PL.*.",
@@ -48442,7 +49791,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hackettstown, NJ. Hours: M 1-7  W 9-3  F 9-3.",
@@ -48476,7 +49826,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hawthorne, NJ. Hours: M 9-8 T 9-5 W 9-5 Th 9-8 F 9-4 Sat 9-12 We do schedule appointments but also accept walk-ins.*Appointments scheduled after hours through PL.*.",
@@ -48509,7 +49860,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jersey City, NJ. Hours: M 9-6 T 9-1 W 9-4  F 11-3  *Appointments scheduled after hours through PL.*.",
@@ -48593,7 +49945,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Montclair, NJ. Hours: T 10-8 W 9-5 Th 10-3 F 10-3  *Appointments scheduled after hours through PL.*.",
@@ -48626,7 +49979,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Morristown, NJ. Hours: M 8-4  W 8-4 Th 7-6 F 9-3  *Appointments scheduled after hours through PL.*.",
@@ -48659,7 +50013,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in New Brunswick, NJ. Hours: M 10-2 T 10-2  Th 9-3   Ultrasound services only on Thursdays.*Appointments scheduled after hours through PL.*.",
@@ -48692,7 +50047,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Newark, NJ. Hours: M 9-6 T 9-6 W 9-5 Th 9-5 F 11-3  *Appointments scheduled after hours through PL.*.",
@@ -48725,7 +50081,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Newton, NJ. Hours: M 8:30-4:30 T 8:30-5:30 W 9-3 Th 8:30-5:30   No Appointments available on Wednesday. Office Hours Only..",
@@ -48758,7 +50115,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ocean City, NJ. Hours: T 9-5 W 9-5 Th 9-5.",
@@ -48823,7 +50181,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Paterson, NJ. Hours: M 9-4 T 9-5  Th 9-5 F 9-12 Sat 9-12.",
@@ -48857,7 +50216,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Phillipsburg, NJ. Hours: W 9-5 Th 9-5  Sat 9-5.",
@@ -48888,7 +50248,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Phillipsburg, NJ. Hours: T 12-7 W 10-4 Th 10-4 F 10-4 Sat 10-12 908-454-2066.",
@@ -48918,7 +50279,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Phillipsburg, NJ. Hours: M 10-4 T 10-7 W 10-4 Th 4-00 F 10-4  Service hrs for ongoing help - Tuesday, Wednesday, Thursday and Friday 10am to 4pm and the 2nd and 4th Saturdays 10 to nooon.",
@@ -48982,7 +50344,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Raritan, NJ. Hours: M 11-2 T 10-12:30 W 11-2 Th 10-12   Also open 4pm-5:30 on Thursdays.",
@@ -49044,7 +50407,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Riverside, NJ. Hours: M 7-10 T 7-10 W 7-10 Th 7-10 F 7-10 Sat 7-10 Sun 7-1024/7.",
@@ -49105,7 +50469,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Salem, NJ. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -49139,7 +50504,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shrewsbury, NJ. Hours: T 10-5  Th 10-7   24 hour hotline*Appointments scheduled after hours through PL.*.",
@@ -49201,7 +50567,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Toms River, NJ. Hours: M 10-2 T 10-6 W 10-4 Th 11-7.",
@@ -49234,7 +50601,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Trenton, NJ. Hours: T 9-5 W 9-5 Th 9-5.",
@@ -49291,7 +50659,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Turnersville, NJ. Hours: T 8:30-8  Th 9-6  Sat 10-3 Saturday hours are every other Saturday. Closed from 12-1 each day for lunch. Listed above is medical hours. Office hours differ*Appointments scheduled",
@@ -49322,7 +50691,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Warren, NJ. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  24 hour help line,*Appointments scheduled after hours through PL.*.",
@@ -49356,7 +50726,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Washington, NJ. Hours: Mon-Wed-By Appointment&#10;.",
@@ -49495,7 +50866,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Albuquerque, NM. Hours: M 9-2  W 9-2.",
@@ -49528,7 +50900,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Albuquerque, NM. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -49561,7 +50934,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Albuquerque, NM. Hours: T 9-4 W 9-4 Th 9-4 F 9-4  24-hour nurse hotline, and multiple clinics*Appointments scheduled after hours through PL.*.",
@@ -49594,7 +50968,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clovis, NM. Hours: M 9-2 T 12-8 W 9-2 Th 9-2.",
@@ -49628,7 +51003,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Edgewood, NM. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -49689,7 +51065,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Farmington, NM. Hours: M 11-5 T 11-5 W 11-5 Th 11-5   24 hour helpline 505-609-5444.",
@@ -49722,7 +51099,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hobbs, NM. Hours: M 10-2 T 10-2 W 10-2 Th 1-5.",
@@ -49818,7 +51196,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Las Cruces, NM. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   *Appointments scheduled after hours through PL.*.",
@@ -49851,7 +51230,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Los Alamos, NM. Hours: M 10-5 T 10-2 W 10-5.",
@@ -49915,7 +51295,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rio Rancho, NM. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -49946,7 +51327,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rio Rancho, NM. Hours: M 12-4 T 9-4 W 12-4  F 1-4  One Saturday/month 10am-1pm.",
@@ -49979,7 +51361,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ruidoso, NM. Hours: M 10-2 T 10-2 W 10-2 Th 10-2 F 1-5  Additionally open by appoinment only Sat.",
@@ -50011,7 +51394,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Santa Fe, NM. Hours: M 00-10 T 10-10 W 10-10 Th 10-10   Appoinments available for Abortion Pill Reversal Patients upon reqest..",
@@ -50044,7 +51428,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Taos, NM. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   Closed from 1pm-2pm. When possible, appointments can be made at other times..",
@@ -50077,7 +51462,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Truth or Consequences, NM. Hours: T 11-5 W 11-5 Th 11-5   24 hour hotline 575-308-3618*Appointments scheduled after hours through PL.*.",
@@ -50110,7 +51496,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Carson City, NV. Hours: M 10-4 T 11-6 W 10-4 Th 10-4 F 10-4.",
@@ -50145,7 +51532,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Fallon, NV. Hours: T 12-5 W 12-5 Th 12-5.",
@@ -50204,7 +51592,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Las Vegas, NV. Hours: M 12:30-4:30 T 12:30-4:30 W 12:30-4:30 Th 12:30-4:30 F 12:30-4:30.",
@@ -50269,7 +51658,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Las Vegas, NV. Hours: T 10-6 W 10-6 Th 10-6 F 10-6 Sat 9-5 Mondays we are closed to clients but the business office and admin are in 9-5pm.",
@@ -50323,7 +51713,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pahrump, NV. Hours: M 12-4 T 12-4 W 10-4 Th 12-4   Located across from the Calvada Eye. Other hrs by appt..",
@@ -50356,7 +51747,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Reno, NV. Hours: M 10-4 T 11-7 W 10-4 Th 10-4 F 10-4  We are willing to schedule outside of our center hours as needed..",
@@ -50389,7 +51781,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Albany, NY. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -50423,7 +51816,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Albion, NY. Hours: T 9-4 W 9-4 Th 9-4   With use of Life Lead, we access calls or written inquiries from 7 a.m. to 11 p.m. seven days a week. Our staff are flexible and accommodate working parents by com",
@@ -50456,7 +51850,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Auburn, NY. Hours: M 10-4 T 10-4  Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -50484,7 +51879,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Batavia, NY. Hours: M 10-5 T 10-1 W 10-1 Th 5-8.",
@@ -50517,7 +51913,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bath, NY. Hours: M 9-2:30 T 9-7  Th 9-7   *Appointments scheduled after hours through PL.*.",
@@ -50550,7 +51947,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Binghamton, NY. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   We offer group parenting classes and post abortion healing on Tuesday evenings from 7pm - 8:30pm in cooperation with a Christian addiction recovery p",
@@ -50578,7 +51976,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Boonville, NY. Hours: M 10-4:30      T-F by appointment , 24/7 Hotline: 315-738-9435*Appointments scheduled after hours through NXL.*.",
@@ -50611,7 +52010,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brewster, NY. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  *Appointments scheduled after hours through PL.*.",
@@ -50676,7 +52076,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Bronx, NY. Hours: M 7-10 T 7-10 W 7-10 Th 7-10 F 7-10 Sat 7-10 Sun 7-1024/7.",
@@ -50787,7 +52188,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Camden, NY. Hours: Th 10-4:30   MTW by appt. only. 24/7 Hotline: 315-738-9435*Appointments scheduled after hours through NXL.*.",
@@ -50820,7 +52222,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Canandaigua, NY. Hours: M 9-5 T 9-5 W 10-12 Th 9-5 F 10-12  Mon, Tue, & Thu hours are by appointment only. Additional hours available Wed & Fri by appointment..",
@@ -50854,7 +52257,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Cheektowaga, NY. Hours: W 8:30-12    Please call for an appointment.",
@@ -50882,7 +52286,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cohoes, NY. Hours: M 8:30-1:30 T 8:30-1:30  Th 8:30-1:30 F 8:30-1:30  W by appt. only.",
@@ -50946,7 +52351,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Corning, NY. Hours: M 9-5  W 9-5  F 9-2  Or by appointment. Closed MW 1p-2p for lunch.",
@@ -50979,7 +52385,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cortland, NY. Hours: M 10-5 T 10-5 W 10-5 Th 10-5.",
@@ -51012,7 +52419,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Deer Park, NY. Hours: M 10-6 T 10-4 W 10-4 Th 10-4 F 10-1.",
@@ -51046,7 +52454,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in East Meadow, NY. Hours: M 8-5 T 8-5 W 8-5 Th 8-5 F 8-5 Sat 9-2.",
@@ -51104,7 +52513,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Elmira, NY. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -51166,7 +52576,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Fredonia, NY. Hours: T 10-3    Sat 10-12 Please call for an appointment.",
@@ -51198,7 +52609,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Geneva, NY. Hours: M 10-4  W 10-4  F 10-4  *Appointments scheduled after hours through PL.*.",
@@ -51232,7 +52644,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Glens Falls, NY. Hours: M 1-6  W 1-4 Th 10-2   *Appointments scheduled after hours through PL.*.",
@@ -51266,7 +52679,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Gloersville, NY. Hours: M 10-1 T 10-1 W 3-6 Th 10-1   We have a text line that is accessible 24/7 for immediate needs; we operate a Facebook page that allows current and potential clients to contact us.",
@@ -51355,7 +52769,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Harrison, NY. Hours: 24/7.",
@@ -51423,7 +52838,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Holley, NY.",
@@ -51495,6 +52911,34 @@ window.HEARTH_CENTERS = [
     "address": "199 Fairview Ave, Hudson, NY 12534"
   },
   {
+    "id": "ny-new-life-maternity-92823",
+    "name": "New Life Maternity",
+    "type": "Pregnancy resource center",
+    "city": "Hudson",
+    "state": "NY",
+    "zip": "12534",
+    "phone": "518-860-2214",
+    "website": "",
+    "email": "",
+    "services": [
+      "baby supplies",
+      "housing support"
+    ],
+    "needs": [
+      "expecting",
+      "housing",
+      "new-mom",
+      "supplies"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Hudson, NY. Hours: M 7-7 T 7-7 W 7-7 Th 7-7 F 7-7 Sat 7-7 Sun 7-724/7.",
+    "lat": 42.252865,
+    "lng": -73.790959,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": ", Hudson, NY 12534 United States"
+  },
+  {
     "id": "ny-willow-network-19705",
     "name": "Willow Network",
     "type": "Pregnancy medical center",
@@ -51515,7 +52959,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ilion, NY. Hours: M 10-4:30 T 10-4:30  Th 10-4:30   24/7 Hotline (315) 738-9435*Appointments scheduled after hours through NXL.*.",
@@ -51549,7 +52994,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Islandia, NY. Hours: T 10-4 W 10-4 Th 10-4 F 10-4  24 hour hotline.",
@@ -51610,7 +53056,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ithaca, NY. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5  Texting number after hours: (607)703-3443.",
@@ -51641,7 +53088,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jamaica, NY. Hours: T 10-4 W 10-4 Th 10-4 F 10-4 Sat 10-2 Closed for Lunch 1 pm-2 pm.",
@@ -51738,7 +53186,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lackawanna, NY. Hours: Th 9:30-3   Please call for an appointment.",
@@ -51800,7 +53249,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lockport, NY. Hours: T 10-7 W 10-5 Th 10-5   Services available in Spanish by appointment.",
@@ -51833,7 +53283,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lowville, NY. Hours: M 10-3 T 10-3 W 10-3.",
@@ -51923,7 +53374,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Middletown, NY. Hours: By Appointment only: Monday 10:00-4:00 & Wednesday 10:00-4:00. Evening appointments can be provided upon request.*Appointments scheduled after hours through PL.*.",
@@ -51956,7 +53408,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mt. Morris, NY. Hours: T 10-6     or by appointment*Appointments scheduled after hours through PL.*.",
@@ -52140,7 +53593,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Newark, NY. Hours: M 9-4 T 9-4 W 9-4  F 10-4  Appointments Available After Hours.",
@@ -52174,7 +53628,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Niagara Falls, NY. Hours: W 1-4    Please call for an appointment.",
@@ -52207,7 +53662,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Niagara Falls, NY. Hours: T 11-4  Th 11-4   24 hour line - 716-940-7618.",
@@ -52273,7 +53729,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Oneida, NY. Hours: T 10-4 W 10-4:30 Th 10-4:30   24/7 Hotline: 315-738-9435*Appointments scheduled after hours through NXL.*.",
@@ -52306,7 +53763,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Oswego, NY. Hours: M 11-4 T 11-4 W 11-4 Th 11-4.",
@@ -52365,7 +53823,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Penn Yan, NY. Hours: T 12-7 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -52400,7 +53859,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Perry, NY. Hours: By appointments.",
@@ -52490,7 +53950,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Poughkeepsie, NY. Hours: M 9-4 T 9-4 W 10-4 Th 10-4   Wednesdays 4-5:30pm by appointment only. There are no Spanish-speaking staff members..",
@@ -52520,7 +53981,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Riverhead, NY. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  *Appointments scheduled after hours through PL.*.",
@@ -52586,7 +54048,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rochester, NY. Hours: M 12-5 T 12-5 W 10:30-3:30 Th 12-5   Ultrasounds available by appointment M, T, and TH from 9-2*Appointments scheduled after hours through PL.*.",
@@ -52652,7 +54115,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rome, NY. Hours: M 10-4:30 T 10-4:30 W 10-4:30 Th 10-4:30   24/7 Hotline: 315-738-9435*Appointments scheduled after hours through NXL.*.",
@@ -52684,7 +54148,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Schenectady, NY. Hours: M 1-5:30 T 10:30-4:30 W 10-4:30 Th 10-4:30   F by appt. only.",
@@ -52717,7 +54182,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Smithtown, NY. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4.",
@@ -52750,7 +54216,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Spring Valley, NY. Hours: M 10-3  W 10-5:30  F 10-5:30  Servicios en español, Thursday by appointment only.",
@@ -52785,7 +54252,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Spring Valley, NY. Hours: M 7-10 T 7-10 W 7-10 Th 7-10 F 7-10 Sat 7-10 Sun 7-1024/7.",
@@ -52819,7 +54287,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Staten Island, NY. Hours: M 7-10 T 7-10 W 7-10 Th 7-10 F 7-10 Sat 7-10 Sun 7-1024/7.",
@@ -52853,7 +54322,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Syracuse, NY. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-7 F 9-4:30  We are part of Option Line.  We also have after-hours texting available through our Google landing page.*Appointments scheduled after hour",
@@ -52886,7 +54356,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ticonderoga, NY. Hours: M 10-4 T 10-4  Th 10-4   Varied Other Hours (contact us to schedule).",
@@ -52919,7 +54390,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tonawanda, NY. Hours: T 9-4 W 9-4 Th 9-4.",
@@ -52947,7 +54419,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Utica, NY. Hours: M 10-4:30 T 10-4:30 W 10-4:30 Th 10-4:30   24/7 Hotline: 315-738-9435*Appointments scheduled after hours through NXL.*.",
@@ -53037,7 +54510,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Watertown, NY. Hours: T 9-5 W 9-5  F 9-5.",
@@ -53071,7 +54545,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Webster, NY. Hours: T 9-12 W 11-4 Th 9-12   Only open the 2nd & 4th Tues. of the month. Ultrasounds by appt. Wed. 9am-noon*Appointments scheduled after hours through NXL.*.",
@@ -53106,7 +54581,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Yorkshire, NY. Hours: M 10-3 T 10-3 W 10-3 Th 10-3 F 10-3  24 hour hotline&#10;after hour appts available.",
@@ -53166,7 +54642,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Akron, OH. Hours: M 9-3 T 2-8 W 9-3 Th 2-5:30 F 9-3  2nd and 4th Saturday 9:30a-1:30p.",
@@ -53255,7 +54732,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Akron, OH. Hours: M 9-4 T 9-4 W 9-4 Th 9-6 F 9-1  *Appointments scheduled after hours through PL.*.",
@@ -53286,7 +54764,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Alliance, OH. Hours: M 9-4 T 11-5 W 9-4 Th 9-3   *Appointments scheduled after hours through PL.*.",
@@ -53350,7 +54829,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ashland, OH. Hours: M 10-6 T 10-6  Th 10-6   Wednesday - Open by appointment only.",
@@ -53408,7 +54888,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ashtabula, OH. Hours: M 3:30-8:30 T 10-2 W 10-2    Requests for appointments outside hours available as needed though the Scheduling line ~ 8am - 10pm daily. Call or Text..",
@@ -53441,7 +54922,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Athens, OH. Hours: M 9-4 T 11-7 W 9-4  F 9-4  Monday & Friday: closed for lunch from 12:00pm to 12:30pm.  Wednesday: closed for lunch from 11am to 12pm. Available 24/7 through chatline and phones*Appoint",
@@ -53475,7 +54957,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Barberton, OH. Hours: M 11-4 T 11-4 W 11-4 Th 11-4 F 11-4  *Appointments scheduled after hours through PL.*.",
@@ -53508,7 +54991,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Bellefontaine, OH. Hours: T 10-5 W 10-5 Th 10-5 F 10-1  *Appointments scheduled after hours through PL.*.",
@@ -53574,7 +55058,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bowling Green, OH. Hours: M 9:30-4:30 T 9:30-4:30 W 9:30-4:30 Th 9:30-4:30   *Appointments scheduled after hours through PL.*.",
@@ -53636,7 +55121,10 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "diapers",
+      "formula",
+      "food"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Brunswick, OH. Hours: M 10-5 T 11-5  Th 11-5   Food Pantry & Material Goods: Appts only available on Tues & Thurs. Walk-ins can be accommodated as schedule allows. Diapers, Wipes, Formula: Come by Mon, ",
@@ -53669,7 +55157,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bryan, OH. Hours: T 9-1 W 9:30-6  F 9:30-5  STI Clinic - Tues 9am-1pm and Wed 4pm-6pm; by appt. only.*Appointments scheduled after hours through PL.*.",
@@ -53703,7 +55192,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bucyrus, OH. Hours: M 5-7.",
@@ -53737,7 +55227,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cambridge, OH. Hours: M 10-3 T 10-5 W 10-3 Th 11-11.",
@@ -53829,7 +55320,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Canton, OH. Hours: M 9-5 T 2-8:30 W 9-5 Th 2-6 F 9-5  We are open at our Akron State Rd. location 2 Saturdays a month. From 8:00 a.m. to noon..",
@@ -53860,7 +55352,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chillicothe, OH. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -53894,7 +55387,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cincinnati, OH. Hours: M 10-4 T 10-4 W 6-8 Th 10-4 F 10-4  The Center is OPEN Monday evenings from 6pm to 8pm.",
@@ -53947,7 +55441,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cincinnati, OH. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30   *Appointments scheduled after hours through PL.*.",
@@ -53976,7 +55471,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cincinnati, OH. Hours: W 9-4:30 Th 9-4:30   *Appointments scheduled after hours through PL.*.",
@@ -54035,7 +55531,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cincinnati, OH. Hours: M 9:30-5 T 9:30-8:30 W 9:30-8:30 Th 9:30-8:30 F 9:30-1:30 Sat 9:30-1:30 Closed T, W, 5:00-6:30pm. Closed TH 1:30-6:30pm. Open Saturdays:  Second and Fourth Saturday of the month.",
@@ -54098,7 +55595,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cincinnati, OH. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-4  *Appointments scheduled after hours through PL.*.",
@@ -54132,7 +55630,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cincinnati, OH. Hours: M 10-4  W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -54190,7 +55689,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Circleville, OH. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   MTWTh 10a-4p.",
@@ -54281,7 +55781,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cleveland, OH. Hours: M 9-1 T 1-5 W 2-5 Th 10-2  Sat 10-2 *Appointments scheduled after hours through PL.*.",
@@ -54315,7 +55816,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Coalgrove, OH. Hours: T 10-4 W 10-4 Th 10-4.",
@@ -54398,7 +55900,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbus, OH. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-4  *Appointments scheduled after hours through PL.*.",
@@ -54429,7 +55932,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbus, OH. Hours: M 9-8 T 9-5 W 9-5 Th 9-5 F 9-4 Sat 9-1 *Appointments scheduled after hours through PL.*.",
@@ -54460,7 +55964,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbus, OH. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-4  *Appointments scheduled after hours through PL.*.",
@@ -54493,7 +55998,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbus, OH. Hours: T 9:30-4 W 9-2 Th 9:30-4   We are only open 1st and 3rd Wednesdays. Our ultrasounds are available on the Wednesdays and some Tuesdays and some Thursdays.  Also, we do take walk-ins i",
@@ -54526,7 +56032,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbus, OH. Hours: M 9-5 T 9-5 W 9-5 Th 11-6 F 9-5  We are open every other Saturday from 9am-12pm.*Appointments scheduled after hours through PL.*.",
@@ -54560,7 +56067,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Coshocton, OH. Hours: T 5-7   F 10-12  24 hour helpline; on call for emergencies.",
@@ -54618,7 +56126,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dayton, OH. Hours: T 11-5  Th 12-6 F 11-4  *Appointments scheduled after hours through PL.*.",
@@ -54684,7 +56193,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dayton, OH. Hours: M 10-5  W 10-5 Th 10-5   Boutique open Mon. 12-2pm and Th. 3-5pm.*Appointments scheduled after hours through PL.*.",
@@ -54717,7 +56227,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dayton, OH. Hours: T 10-4 W 10-4  F 10-4  *Appointments scheduled after hours through PL.*.",
@@ -54751,7 +56262,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Defiance, OH. Hours: T 9:30-5:30  Th 9:30-5:30   *Appointments scheduled after hours through PL.*.",
@@ -54784,7 +56296,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Delaware, OH. Hours: M 10-4 T 10-8 W 10-4 Th 10-8.",
@@ -54819,7 +56332,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in East Liverpool, OH. Hours: M 8-9 T 8-9 W 8-9 Th 8-9 F 8-9 Sat 9-9.",
@@ -54849,7 +56363,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "adoption",
       "expecting",
-      "new-mom"
+      "new-mom",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in East Liverpool, OH.",
@@ -54939,7 +56454,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Elyria, OH. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 10-2 Sat 9-2 Friday hours in our Elyria Clinic only&#10;Saturday hours in our Cleveland Clinic only.",
@@ -54999,7 +56515,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Findlay, OH. Hours: M 10-5 T 10-4 W 10-5 Th 10-4   Clients can schedule appointments online..",
@@ -55033,7 +56550,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Fostoria, OH. Hours: T 10-2  Th 10-2.",
@@ -55067,7 +56585,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fremont, OH. Hours: T 10-3  Th 10-3   *Appointments scheduled after hours through PL.*.",
@@ -55150,7 +56669,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Georgetown, OH. Hours: M 10-4 T 10-8 W 2-6 Th 10-4.",
@@ -55212,7 +56732,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hamilton, OH. Hours: M 10-4 T 10-6 W 10-2 Th 10-6 F 10-2 Sat 10-2 Open 2nd Saturday of each month - 10am - 2pm.",
@@ -55246,7 +56767,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Harrison, OH. Hours: M 10-6  W 10-6 Th 10-6  Sat 10-12 24 hour call line&#10;Closed for lunch from 12-1&#10;Open 2nd and 4th Saturday of each month*Appointments scheduled after hours through PL.*.",
@@ -55280,7 +56802,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Hillsboro, OH. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Clients can contact an employee 24/7 through social media private message and through a Center cell phone..",
@@ -55313,7 +56836,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Huber Heights, OH. Hours: M 10-5 T 10-5  Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -55346,7 +56870,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Jackson, OH. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -55380,7 +56905,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Kenton, OH. Hours: M 3-6 T 3-6 W 3-6 Th 3-6   24-hour hotline Hours above are for Sept. - May, June -Aug is Monday- Thursday - 1-6 pm.  Appt. are available outside of reg. hours..",
@@ -55413,7 +56939,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kettering, OH. Hours: M 9-6 T 9-4 W 9-4 Th 9-4 F 9-4  24/7 hotline 937-298-2822. 27/4 nurse chat on our website*Appointments scheduled after hours through PL.*.",
@@ -55446,7 +56973,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kettering, OH. Hours: M 8-3 T 8-3 W 8-3 Th 8-3 F 8-3.",
@@ -55505,7 +57033,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lancaster, OH. Hours: M 9-5 T 9-5  Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -55538,7 +57067,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lebanon, OH. Hours: M 1-7 T 10-4  Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -55572,7 +57102,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lima, OH. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-12  Medical visits available one rotating evening each week by appointment only, no walk-in evening hours. 24/7 hotline via main phone number then dial 1.*Ap",
@@ -55603,7 +57134,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in London, OH. Hours: M 12-6  W 12-6    Emergency Services provided outside hours by appointment.",
@@ -55635,7 +57167,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Loveland, OH. Hours: M 9-4:30 T 9-4:30.",
@@ -55669,7 +57202,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mansfield, OH. Hours: M 10-4 T 12-6 W 10-4 Th 12-6 F 10-4 Sat 10-1 Friday hours are on the 1st and 3rd Friday of each month. Saturday hours are on the 2nd and 4th Saturday of each month.*Appointments sch",
@@ -55728,7 +57262,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marion, OH. Hours: M 10-2 T 10-7 W 10-5 Th 10-2.",
@@ -55761,7 +57296,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marysville, OH. Hours: M 1-5 T 1-5 W 1-5 Th 1-5 F 1-5.",
@@ -55794,7 +57330,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Medina, OH. Hours: M 9-1 T 10-6 W 10-5 Th 10-6   Text- 330-708-7549   24/7- 800-712-4357   Emergency Number- 330-441-5049 &#10;  help@oasisofmedina.com.",
@@ -55854,7 +57391,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mentor, OH.",
@@ -55942,7 +57480,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mount Vernon, OH. Hours: M 1-7 T 1-7 W 1-5 Th 10-2   24 hour hotline*Appointments scheduled after hours through PL.*.",
@@ -56002,7 +57541,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mt Gilead, OH. Hours: T 1-8  Th 1-3   Our office hours are Tuesday 1-3 pm & 6-8 pm and Thursday 1-3 pm.",
@@ -56035,7 +57575,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Napoleon, OH. Hours: M 9:30-5:30  W 9:30-5:30    *Appointments scheduled after hours through PL.*.",
@@ -56068,7 +57609,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Nelsonville, OH. Hours: Th 2-6   Available 24/7 through chatline and phones*Appointments scheduled after hours through PL.*.",
@@ -56156,7 +57698,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Newark, OH. Hours: M 10-7 T 10-4 W 10-4 Th 10-4  Sat 10-1 We use Option Line after hours..",
@@ -56217,7 +57760,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Norwalk, OH. Hours: M 10-6  W 10-4  F 10-6.",
@@ -56251,7 +57795,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Orrville, OH. Hours: W 10-6.",
@@ -56284,7 +57829,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ottawa, OH. Hours: T 1-5     Walk-in pregnancy tests available. Appointment required for Verification of Pregnancy form. No ultrasound at this location, see Heartbeat of Lima 421 S. Cable Rd Lima Ohio l",
@@ -56398,7 +57944,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Paulding, OH. Hours: T 10-5  Th 11-6   OR by special appointment*Appointments scheduled after hours through PL.*.",
@@ -56431,7 +57978,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pomeroy, OH. Hours: W 1-7    Available 24/7 through chatline and phones*Appointments scheduled after hours through PL.*.",
@@ -56463,7 +58011,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Port Clinton, OH. Hours: M 10-4 T 10-1  Th 10-1   option line*Appointments scheduled after hours through PL.*.",
@@ -56525,7 +58074,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Richwood, OH. Hours: T 1:30-6 W 1:30-6.",
@@ -56556,7 +58106,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in SANDUSKY, OH. Hours: T 10:30-2 W 10:30-2  F 10:30-2  Messages are checked on days closed.  Flexible appointments available..",
@@ -56589,7 +58140,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sidney, OH. Hours: M 12-6 T 9-4 W 9-4  F 9-1  Boutique open Mon. 4-5pm, Tues. 11am-12pm.*Appointments scheduled after hours through PL.*.",
@@ -56672,7 +58224,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Springfield, OH. Hours: M 10-2 T 10-2 W 10-2 Th 10-8 F 10-2  Thursday Open 10am-2pm and 5pm-8pm*Appointments scheduled after hours through PL.*.",
@@ -56706,7 +58259,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Steubenville, OH. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  Minors must be accompanied by an adult for all medical-related appointments.*Appointments scheduled after hours through PL.*.",
@@ -56760,7 +58314,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tiffin, OH. Hours: M 10-2  W 10-2.",
@@ -56793,7 +58348,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Toledo, OH. Hours: M 9:30-7 T 9:30-5 W 9:30-5 Th 9:30-5 F 10-5  24/7 text line available*Appointments scheduled after hours through PL.*.",
@@ -56824,7 +58380,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Toledo, OH. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30 F 8:30-4:30  Fridays by appt. only. Schedule appointments online..",
@@ -56857,7 +58414,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Toledo, OH. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30 F 8:30-4:30  Evening appt. only if necessary. For material assistance, call 419-241-9131.",
@@ -56884,7 +58442,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Upper Sandusky, OH. Hours: T 12-5     Other hrs by appt..",
@@ -56917,7 +58476,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Urbana, OH. Hours: M 10-6 T 10-6 W 1-5 Th 10-6   Closed for lunch on Mondays, Tuesdays & Thursdays from 12:30-2:00pm.",
@@ -56950,7 +58510,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Van Wert, OH. Hours: M 10-4 T 10-7 W 10-4 Th 10-4   Our answering machine and door signage reference a 24-hour hotline through A Hope Center in Fort Wayne, IN for any pregnancy decision emergencies..",
@@ -57010,7 +58571,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wapakoneta, OH. Hours: T 10-2 W 10-2 Th 10-2.",
@@ -57042,7 +58604,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Warren, OH. Hours: M 8-6 T 8-6 W 8-6 Th 8-6   Fridays are by appointment only..",
@@ -57075,7 +58638,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Washington Court House, OH. Hours: M 10-7 T 10-3 W 10-5 Th 10-3 F 10-3  Walk-ins are welcome.  &#10;Appointments are recommended.",
@@ -57110,7 +58674,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wauseon, OH. Hours: T 9:30-5:30  Th 9:30-5:30   *Appointments scheduled after hours through PL.*.",
@@ -57143,7 +58708,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Waverly, OH. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -57177,7 +58743,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in West Union, OH. Hours: M 11-2   Th 4-7.",
@@ -57233,7 +58800,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Willard, OH. Hours: T 12-6  Th 10-4.",
@@ -57266,7 +58834,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wilmington, OH. Hours: M 10-4 T 10-7 W 10-4 Th 10-4.",
@@ -57299,7 +58868,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wooster, OH. Hours: M 9-4 T 9-7  Th 9-4 F 9-4  *Appointments scheduled after hours through NXL.*.",
@@ -57332,7 +58902,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Xenia, OH. Hours: M 9-3 T 11-7  Th 11-6   *Appointments scheduled after hours through PL.*.",
@@ -57396,7 +58967,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Zanesville, OH. Hours: M 10-7   Th 10-7   Request an appointment online..",
@@ -57430,7 +59002,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ada, OK. Hours: M 9:30-4:30 T 9:30-4:30 W 9:30-4:30 Th 9:30-4:30   *Appointments scheduled after hours through PL.*.",
@@ -57463,7 +59036,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Altus, OK. Hours: M 9:30-5 T 9:30-5 W 9:30-5    We answer the phone after hours*Appointments scheduled after hours through PL.*.",
@@ -57494,7 +59068,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Alva, OK. Hours: M 9-5 T 9-5 W 9-5 Th 9-6 F 9-4  *Appointments scheduled after hours through NXL.*.",
@@ -57527,7 +59102,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Anadarko, OK. Hours: M 12-5 T 2-5:30  Th 12-5.",
@@ -57559,7 +59135,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ardmore, OK. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  *Appointments scheduled after hours through NXL.*.",
@@ -57620,7 +59197,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bartlesville, OK. Hours: M 10-3 T 10-3 W 10-3 Th 10-3   Our mobile unit operates 2/3 times/month on Fridays.*Appointments scheduled after hours through PL.*.",
@@ -57706,7 +59284,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chickasha, OK. Hours: M 9-5 T 9-5  Th 9-5   24-hour hotline*Appointments scheduled after hours through PL.*.",
@@ -57739,7 +59318,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Claremore, OK. Hours: M 1-6 T 9-1 W 9-1 Th 9-1   Monday Mornings and Fridays Open by appointment only.",
@@ -57771,7 +59351,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Duncan, OK. Hours: M 8:30-5 T 8:30-5  Th 8:30-5   after hours by appointment only.",
@@ -57805,7 +59386,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Durant, OK. Hours: M 11-7 T 11-4 W 11-4 Th 11-4   24 hour hotline with Optionline*Appointments scheduled after hours through PL.*.",
@@ -57837,7 +59419,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Edmond, OK. Hours: M 9-8 T 9-5 W 9-5 Th 9-5 F 9-5  Lunch from noon-12:30*Appointments scheduled after hours through NXL.*.",
@@ -57933,7 +59516,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Honobia, OK. Hours: T 9-5 W 9-5 Th 9-5 F 9-5  Closed for lunch 1-2.",
@@ -57967,7 +59551,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Jay, OK. Hours: T 11-4 W 11-4 Th 11-4.",
@@ -58000,7 +59585,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lawton, OK. Hours: M 9-5 T 9-5:30 W 9-5 Th 9-5   24 hour hotline.",
@@ -58033,7 +59619,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in McAlester, OK. Hours: M 10-4 T 10-4 W 10-4    ThF by appointment calls forwarded to cell when not in office.",
@@ -58060,7 +59647,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Muskogee, OK. Hours: M 10-2   Th 10-2.",
@@ -58148,7 +59736,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Oklahoma City, OK. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5 Sat 9-1 Accept APR calls anytime.*Appointments scheduled after hours through NXL.*.",
@@ -58180,7 +59769,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Oklahoma City, OK. Hours: M 9-5 T 9-5 W 9-5 Th 9-8 F 9-5  *Appointments scheduled after hours through NXL.*.",
@@ -58234,7 +59824,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Okmulgee, OK. Hours: By appt only.",
@@ -58268,7 +59859,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Owasso, OK. Hours: M 12-5 T 12-5 W 12-5 Th 12-5.",
@@ -58302,7 +59894,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ponca City, OK. Hours: M 1-3 T 10-3 W 10-3 Th 10-3 F 10-12  We are closed for lunch from 12pm to 1pm.",
@@ -58335,7 +59928,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pryor, OK. Hours: T 9-4 W 9-4 Th 12-7  Sat 10-1 Additionally open by appointment only Thu from 5pm-7pm. Friday hours are by appointment only*Appointments scheduled after hours through PL.*.",
@@ -58367,7 +59961,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sapulpa, OK. Hours: M 8-4:30 T 8-4:30 W 8-4:30 Th 8-4:30   Closed for lunch 12-1 (Mon-Thurs.)*Appointments scheduled after hours through NXL.*.",
@@ -58400,7 +59995,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shawnee, OK. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  *Appointments scheduled after hours through NXL.*.",
@@ -58433,7 +60029,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Stigler, OK. Hours: M 9-1   Th 1-5   Or by appointment.",
@@ -58495,7 +60092,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Stillwater, OK. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   We do schedule Friday appointments as needed..",
@@ -58556,7 +60154,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Tulsa, OK. Hours: M 8-9:30 T 8-9:30 W 8-9:30 Th 8-9:30 F 8-9:30 Sat 8-9:30 Sun 8-9:30.",
@@ -58590,7 +60189,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Tulsa, OK. Hours: M 10-6 T 4-8 W 10-6 Th 10-6 F 10-6 Sat 10-6 Call for dates/ times for various support groups. Mobile Ultrasound Clinic every Tues 5:30-7:30pm.*Appointments scheduled after hours throug",
@@ -58679,7 +60279,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tulsa, OK. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  *Appointments scheduled after hours through NXL.*.",
@@ -58738,7 +60339,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tulsa, OK. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  Closed some holidays.*Appointments scheduled after hours through PL.*.",
@@ -58858,7 +60460,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Woodward, OK. Hours: T 12-4 W 12-4 Th 12-4 F 12-4  Appointments available for outside hours.",
@@ -58918,7 +60521,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Astoria, OR. Hours: T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -58952,7 +60556,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Baker City, OR. Hours: T 10-4 W 10-4 Th 10-4   Closed for lunch noon - 1:00 Tuesdays, Wednesdays and Thursdays.",
@@ -59042,7 +60647,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bend, OR. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -59072,7 +60678,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Brookings, OR. Hours: W 11-3    Tuesday Noon - 3pm&#10;Wednesday Noon - 3pm.",
@@ -59106,7 +60713,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in CANBY, OR. Hours: T 10-5 W 10-5 Th 10-5 F 10-5  *Appointments scheduled after hours through PL.*.",
@@ -59140,7 +60748,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Coos Bay, OR. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -59170,7 +60779,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Corvallis, OR. Hours: W 10:30-3:30 Th 10:30-3:30   Offering services in Benton & Polk County. Call 541-924-0160 or text 541-231-0912 to request an appointment in Philomath, Corvallis, Monmouth or Indepen",
@@ -59204,7 +60814,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Crescent City, OR. Hours: T 10-4 W 10-4 Th 10-4.",
@@ -59239,7 +60850,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Eugene, OR. Hours: M 10-5 T 10-5 W 10-6 Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -59272,7 +60884,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Florence, OR. Hours: T 10-4  Th 10-4   Additionally open by appointment only Tue & Thu from 4pm-7pm.  Wed 10:30 AM-12:00 PM Playgroup*Appointments scheduled after hours through PL.*.",
@@ -59337,7 +60950,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hermiston, OR. Hours: M 12-5 T 9-2 W 12-5 Th 9-2.",
@@ -59398,7 +61012,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hood River, OR. Hours: T 9-5 W 9-5 Th 9-5   Lunch is from noon to 1pm*Appointments scheduled after hours through NXL.*.",
@@ -59431,7 +61046,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Klamath Falls, OR. Hours: M 12-5 T 12-5 W 12-5 Th 12-5   *Appointments scheduled after hours through PL.*.",
@@ -59465,7 +61081,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in La Grande, OR. Hours: T 11-3 W 11-3 Th 11-3.",
@@ -59498,7 +61115,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lafayette, OR. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-2 Sat 10-2.",
@@ -59531,7 +61149,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lebanon, OR. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   We offer low-cost pregnancy testing..",
@@ -59564,7 +61183,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Madras, OR. Hours: M 9-5 T 12-5 W 9-5 Th 9-1   We have options consultants available to speak with you 24/7.",
@@ -59597,7 +61217,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Medford, OR. Hours: M 10-4 T 10-7 W 10-7 Th 10-4   weekend and holiday hotline with OptionLine*Appointments scheduled after hours through NXL.*.",
@@ -59630,7 +61251,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ontario, OR. Hours: M 10-5 T 11-5 W 2-5 Th 10-5 F 10-2  *Appointments scheduled after hours through PL.*.",
@@ -59658,7 +61280,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Oregon City, OR. Hours: M 10-3 T 9-4 W 9-4 Th 9-4   We offer low-cost pregnancy testing..",
@@ -59692,7 +61315,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pendleton, OR. Hours: M 10-4 T 10-4 W 10-1 Th 10-4.",
@@ -59754,7 +61378,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Maternity home in Portland, OR. Hours: M 9-9 T 9-9 W 9-9 Th 9-9 F 9-9 Sat 9-9 Sun 9-9We provide 24 hour care.",
@@ -59786,7 +61411,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Prineville, OR. Hours: M 9-5 T 12-5 W 10-2 Th 9-5   Friday-Sunday call 541-728-3037 for assistance*Appointments scheduled after hours through PL.*.",
@@ -59819,7 +61445,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rainier, OR. Hours: M 00-1 T 5-1 W 5-1 Th 5-00.",
@@ -59851,7 +61478,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Redmond, OR. Hours: M 9-5 T 12-5 W 9-5 Th 9-1   Friday-Sunday call 541-728-3037 for assistance.",
@@ -59885,7 +61513,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Roseburg, OR. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   24 hour hotline available and evening classes on Thursdays.",
@@ -59946,7 +61575,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Salem, OR. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -59979,7 +61609,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in The Dalles, OR. Hours: T 10-5 W 10-5 Th 10-5   *Appointments scheduled after hours through NXL.*.",
@@ -60039,7 +61670,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Allentown, PA. Hours: M 9-4 T 11-7:30 W 9-4 Th 9-4 F 9-3  *Appointments scheduled after hours through PL.*.",
@@ -60098,7 +61730,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Altoona, PA. Hours: T 10-4 W 10-4 Th 10-4 F 10-4  Medical Hours-Wednesdays 9am-3pm.",
@@ -60132,7 +61765,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Athens, PA. Hours: M 9-7  W 10-4    On Mondays we are open 9-am-Noon and 4-7 pm.",
@@ -60165,7 +61799,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bloomsburg, PA. Hours: M 12:30-6:30 T 12:30-6:30 W 9:30-3:30 Th 9:30-3:30   24 hours TextFree. Online appointment.",
@@ -60199,7 +61834,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Butler, PA. Hours: M 9-3 T 9-7  Th 9-3.",
@@ -60225,7 +61861,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Butler, PA. Hours: This is a New Beginnings Express location. Please arrange an appointment by texting 724.951.2068.",
@@ -60259,7 +61896,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Camp Hill, PA. Hours: M 9-5 T 9-6 W 9-5 Th 9-5 F 9-3.",
@@ -60292,7 +61930,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Canton, PA. Hours: W 10-4 Th 12-5   Clients can also call 570-721-2936 Monday-Friday (8am-5 pm).",
@@ -60325,7 +61964,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chambersburg, PA. Hours: T 9-8  Th 9-4 F 9-12:30.",
@@ -60359,7 +61999,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Clarion, PA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   Walk-ins welcome Monday-Thursday 9-4.  Appointments needed outside of regular business hours are available by appointment.*Appointments scheduled after hou",
@@ -60420,7 +62061,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Coatesville, PA. Hours: M 9-7 T 9-2 W 9-2 Th 9-7 F 9-2  Appointments can be scheduled through our website..",
@@ -60454,7 +62096,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Collegeville, PA. Hours: T 10-12:30 W 6:30-8 Th 10-12   Other Counseling Times Available by Appointment.",
@@ -60487,7 +62130,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbia, PA. Hours: M 9-8 T 10-4 W 10-1 Th 10-8.",
@@ -60517,7 +62161,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Connellsville, PA. Hours: T 9-4:30 W 9-5 Th 9-4:30 F 9-1  After-hours may be available by appointment.",
@@ -60552,7 +62197,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Corry, PA. Hours: M 10-4 T 10-4 W 10-4.",
@@ -60585,7 +62231,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Drexel Hill, PA. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30 F 9-4:30  Our nurse manager is available 24 hours per day to respond to the Abortion Pill Reversal Hotline..",
@@ -60618,7 +62265,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ephrata, PA. Hours: M 9-4 T 9-8  Th 9-8.",
@@ -60674,7 +62322,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Erie, PA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4.",
@@ -60708,7 +62357,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Erie, PA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 11-4.",
@@ -60717,6 +62367,31 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "4408 Peach St  Suite 302, Erie, PA 16509"
+  },
+  {
+    "id": "pa-women-s-care-center-education-division-104030",
+    "name": "Women's Care Center Education Division",
+    "type": "Pregnancy resource center",
+    "city": "Erie",
+    "state": "PA",
+    "zip": "16509",
+    "phone": "814-456-5244",
+    "website": "",
+    "email": "",
+    "services": [
+      "community referrals",
+      "sexual health education"
+    ],
+    "needs": [
+      "expecting"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Erie, PA.",
+    "lat": 42.088499,
+    "lng": -80.086775,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "4408 Peach Street, Suite 101, Erie, PA 16509"
   },
   {
     "id": "pa-care-net-pregnancy-center-of-nepa-113796",
@@ -60742,7 +62417,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Forest City, PA. Hours: W 12-5    Wednesdays only 12 - 5.",
@@ -60803,7 +62479,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Franklin, PA. Hours: M 8-4 T 8-4 W 8-4 Th 8-4   24-hour Option Line.",
@@ -60836,7 +62513,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gap, PA. Hours: M 10-6 T 10-6 W 10-6 Th 10-6   Monday evenings available by appt.",
@@ -60867,7 +62545,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gettysburg, PA. Hours: M 9-1 T 9-1 W 9-1 Th 9-1.",
@@ -60900,7 +62579,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greensburg, PA. Hours: T 9-3  Th 9-6 F 9-3.",
@@ -60934,7 +62614,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Hamburg, PA. Hours: M 10-4  W 10-4  F 10-4.",
@@ -60965,7 +62646,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hanover, PA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -60997,7 +62679,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Harrisburg, PA. Hours: M 9-5 T 9-5 W 9-6:30 Th 9-5 F 9-5  *Appointments scheduled after hours through PL.*.",
@@ -61051,7 +62734,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Honesdale, PA. Hours: T 10-3  Th 10-3   More times available by appointment.",
@@ -61084,7 +62768,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Huntingdon, PA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  Medical Clinic on Thursdays 9am-3pm*Appointments scheduled after hours through PL.*.",
@@ -61116,7 +62801,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Indiana, PA. Hours: T 9-4 W 9-4 Th 9-4.",
@@ -61149,7 +62835,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Indiana, PA. Hours: T 9-5 W 9-3 Th 9-3.",
@@ -61181,7 +62868,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jeffersonville, PA. Hours: M 7-9 T 7-9 W 7-9 Th 7-9 F 7-8 Sat 7-9 Sun 00-7see website for open hours at all 5 centers.  Our crisis cell is held 24/7 by a registered nurse.  4845715540.",
@@ -61215,7 +62903,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Jersey Shore, PA. Hours: T 9-4  Th 9-4   We are currently appointment only however we do have a 24 hour hotline..",
@@ -61277,7 +62966,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kennett Square, PA. Hours: Services by appointment only. Call to schedule or book online..",
@@ -61311,7 +63001,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Kingston, PA. Hours: T 12-8 W 10-4 Th 10-4   24-hour text line.",
@@ -61345,7 +63036,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kittanning, PA. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   The above hours are for our executive offices.  We have 4 location with different hours that answer our clinic line. &#10;Kittanning M 12-6 T 9-7 Wed 9-3",
@@ -61380,7 +63072,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kutztown, PA. Hours: M 11-5 T 11-5  Th 11-5   Additional hours by appointment only. Online chat and texting services monitored from 8 a.m. to 9 p.m. daily.",
@@ -61413,7 +63106,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lancaster, PA. Hours: M 9-4 T 9-7 W 9-4 Th 9-8   24/7 Infinity Nurses.",
@@ -61446,7 +63140,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lancaster, PA. Hours: T 9-8  Th 9-5 F 9-4.",
@@ -61479,7 +63174,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lansdale, PA. Hours: M 9-5 T 9-8 W 9-5 Th 9-5 F 9-5  Closed Mon from 5pm-6pm.",
@@ -61512,7 +63208,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Latrobe, PA. Hours: M 9-5  W 9-5 Th 9-5 F 9-5.",
@@ -61546,7 +63243,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lebanon, PA. Hours: M 8-4 T 8-4 W 8-4 Th 8-4 F 8-4.",
@@ -61579,7 +63277,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lebanon, PA. Hours: M 9-4 T 9-8:30 W 9-4 Th 9-8:30   Closed Tuesday & Thursdays from 4:00 pm - 6:30 pm. Wednesdays - by appointment only.",
@@ -61640,7 +63339,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lehighton, PA. Hours: M 10-5   Th 10-5 F 12-3  Friday by appt. only.  Spanish interpreter by appt. only..",
@@ -61673,7 +63373,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lewisburg, PA. Hours: M 10-3 T 10-3 W 10-6 Th 4-7 F 10-2  Additionally open by appoinment only Thursday*Appointments scheduled after hours through PL.*.",
@@ -61706,7 +63407,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lewistown, PA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4  Medical Hours-Wednesdays 9am-3pm*Appointments scheduled after hours through PL.*.",
@@ -61739,7 +63441,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lock Haven, PA. Hours: M 9-3 T 9-3 W 9-3 Th 9-3 F 9-12  Please call 814.234.7341 or email help@scprc.com to schedule an appointment time..",
@@ -61796,7 +63499,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lower Burrell, PA. Hours: M 12-4 T 12-8 W 12-4 Th 12-8   Walk-ins welcome.",
@@ -61830,7 +63534,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mansfield, PA. Hours: T 10-2 W 1-7 Th 3-7   24 hour hotline.",
@@ -61864,7 +63569,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Meadville, PA. Hours: M 9-6  W 9-4 Th 9-4   Additionally open by appoinment only Tue, Fri, & Sat.",
@@ -61890,7 +63596,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mercer, PA. Hours: This is our latest addition to New Beginnings locations! Please arrange an appointment by texting 724.951.2068..",
@@ -61955,7 +63662,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mifflintown, PA. Hours: W 10-4 Th 10-4 F 10-4  Medical Hours-Tuesdays from 9am-3pm*Appointments scheduled after hours through PL.*.",
@@ -62019,7 +63727,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Millersburg, PA. Hours: T 1-8 W 9:30-4 Th 1-8   T, Th closed from 5:00 PM- 6:00 PM.   M, F open for phone calls only.",
@@ -62052,7 +63761,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Monaca, PA. Hours: M 11-5 T 11-5 W 11-7 Th 11-5   *Appointments scheduled after hours through PL.*.",
@@ -62085,7 +63795,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Monongahela, PA. Hours: T 9-4 W 9-4 Th 9-4.",
@@ -62117,7 +63828,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Monroeville, PA. Hours: M 9-6  W 9-4 Th 9-5   *Appointments scheduled after hours through NXL.*.",
@@ -62151,7 +63863,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Montrose, PA. Hours: T 10-3 W 10-3 Th 2-6 F 10-2.",
@@ -62185,7 +63898,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Moon Twp., PA. Hours: M 9-5 T 9-5 W 9-5 Th 9-8 F 9-2  *Appointments scheduled after hours through PL.*.",
@@ -62218,7 +63932,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mount Union, PA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -62248,7 +63963,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Nesquehoning, PA. Hours: M 12-5 T 12-5 W 12-5 Th 12-5 F 10-4  Fridays by appointment.&#10;Thrift Store- Tuesday & Wednesday & Friday 10am-4pm.",
@@ -62346,7 +64062,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Norristown, PA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -62408,7 +64125,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Perkasie, PA. Hours: T 10-5 W 10-5 Th 10-5.",
@@ -62443,7 +64161,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Pheonixville, PA. Hours: T 10-12 W 3-5    Other Counseling Times Available by Appointment.",
@@ -62530,7 +64249,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Philadelphia, PA. Hours: M 11-3 T 11-3 W 11-3 Th 9-3 F 9-3  *Appointments scheduled after hours through PL.*.",
@@ -62563,7 +64283,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Philadelphia, PA. Hours: M 9-3  W 9-3  F 9-3  Street Parking (Frankford Avenue or Decatur Street) it’s closer to Center. Lunch break from 12pm-12:30pm*Appointments scheduled after hours through PL.*.",
@@ -62625,7 +64346,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Philadelphia, PA. Hours: M 9-4  W 9-4  F 9-4  Tuesdays and Thursdays by appointment only.",
@@ -62777,7 +64499,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pittsburgh, PA. Hours: T 9-5 W 9-5  F 9-5  Additionally open by appoinment only Sat*Appointments scheduled after hours through PL.*.",
@@ -62809,7 +64532,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Pittsburgh, PA. Hours: T 9:30-3  Th 9:30-3  Sat 9:30-3.",
@@ -62864,7 +64588,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pittsburgh, PA. Hours: T 10-6 W 10-6  F 9-1  *Appointments scheduled after hours through NXL.*.",
@@ -62896,7 +64621,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pittsburgh, PA. Hours: M 10-5 T 10-2 W 10-6 Th 10-5    *Appointments scheduled after hours through NXL.*.",
@@ -62957,7 +64683,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pottstown, PA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 10-1  Appointment preferred. Evenings available by Appointment.",
@@ -62989,7 +64716,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Punxsutawney, PA. Hours: T 9-3 W 11-5 Th 9-3   Appointments accepted on Monday and Friday.",
@@ -63022,7 +64750,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Quakertown, PA. Hours: T 10-8 W 10-4 Th 10-7   Additionally open Mon from 6pm-9pm by appointment only.",
@@ -63049,7 +64778,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "adoption",
       "expecting",
-      "new-mom"
+      "new-mom",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Reading, PA. Hours: M 2-7 T 2-7 W 1-5 Th 2-7.",
@@ -63081,7 +64811,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Reading, PA. Hours: M 10-4 T 10-4  Th 10-6 F 10-2.",
@@ -63111,7 +64842,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Sandy Lake, PA. Hours: Th 12-4   Please arrange an appointment by texting 724.951.2068.",
@@ -63172,7 +64904,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Schuylkill Haven, PA. Hours: M 12-7 T 9-4:30 W 9-4:30 Th 9-4:30   Additionally open By Appointment Thur from 4:30 PM-7:00 PM and By Appointment Fri.",
@@ -63231,7 +64964,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Scranton, PA. Hours: M 10-3 T 10-3 W 10-3 Th 10-3   24 hour hotline*Appointments scheduled after hours through PL.*.",
@@ -63296,7 +65030,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shamokin, PA. Hours: M 10-7 T 10-3 W 10-3 Th 10-3   Monday we are closed from 3pm-4pm*Appointments scheduled after hours through PL.*.",
@@ -63330,7 +65065,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shippensburg, PA. Hours: M 10-2 T 9-4  Th 1-8.",
@@ -63424,7 +65160,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in State College, PA. Hours: M 9-3 T 9-3 W 9-3 Th 9-3 F 9-12  Additionally open Thu from 5pm-7pm.",
@@ -63457,7 +65194,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Stroudsburg, PA. Hours: M 9-6 T 9-6  Th 9-5   Wed Ultrasound by Appointment Only.",
@@ -63519,7 +65257,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Towanda, PA. Hours: T 10-6  Th 10-4   Clients can also call 570-721-2936 Monday-Friday (8am-5 pm).",
@@ -63584,7 +65323,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tyrone, PA. Hours: T 9-4 W 9-4 Th 9-4   Additionally open by appoinment only Thursday.",
@@ -63616,7 +65356,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Uniontown, PA. Hours: Th 9:30-4   Other days by appointment.",
@@ -63650,7 +65391,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Warminster, PA. Hours: M 4-6:30 T 4-6:30 W 1-3:30 Th 4-6:30 F 9:30-12  Other Counseling Times Available by Appointment.",
@@ -63684,7 +65426,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Warren, PA. Hours: M 10-6 T 9-6 W 12-8 Th 9-3.",
@@ -63718,7 +65461,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Wayne, PA. Hours: T 6-8:30 W 1-3:30    Tuesdays - Virtual only. Additional counseling appointments available by calling or texting  (484) 580-6436..",
@@ -63751,7 +65495,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Waynesboro, PA. Hours: M 10-2 T 9-3  Th 1-7.",
@@ -63785,7 +65530,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Waynesburg, PA. Hours: M 10-2 T 10-2 W 10-2 Th 10-2 F 10-3  24 hour hotline; Other hours by appointment.",
@@ -63846,7 +65592,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Chester, PA. Hours: Services by appointment only. Call ahead or book online..",
@@ -63879,7 +65626,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Hazleton, PA. Hours: T 11-6 W 10-4 Th 10-4.",
@@ -63913,7 +65661,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Reading, PA. Hours: M 12-7 T 10-4 W 12-7 Th 10-4 F 10-4  24-hour text line with Infinite Worth through website&#10;Ultrasounds may not be available on a particular day, but would be scheduled subseq",
@@ -63946,7 +65695,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Williamsport, PA. Hours: M 10-6 T 10-8 W 10-6 Th 10-8 F 10-2  *Appointments scheduled after hours through PL.*.",
@@ -63978,7 +65728,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in York, PA. Hours: M 9-6 T 9-6 W 9-4 Th 9-7 F 9-2.",
@@ -64105,7 +65856,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Providence, RI. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30 F 7:30-3:30  24 hour hotline*Appointments scheduled after hours through PL.*.",
@@ -64137,7 +65889,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Providence, RI. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4 Sat 8-12.",
@@ -64170,7 +65923,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Aiken, SC. Hours: M 9-8 T 9-5 W 9-4 Th 9-1   Schedule pregnancy test appointment requests online..",
@@ -64226,7 +65980,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Anderson, SC. Hours: T 9:30-4 W 9:30-4 Th 9:30-4   24/7 hotline and texting service available. Open on the first Saturday of the month from 10 AM to 12 PM.*Appointments scheduled after hours through PL.*",
@@ -64259,7 +66014,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Beaufort, SC. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   After-hours- 24-hour hotline-Optionline*Appointments scheduled after hours through PL.*.",
@@ -64411,7 +66167,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbia, SC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-2  Available Wed by appointment only & every other Fri 9am-2pm  & every other Sat 7am-1pm. Free ultrasounds!*Appointments scheduled after hours through P",
@@ -64472,7 +66229,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Conway, SC. Hours: T 10-5  Th 10-5 F 10-5.",
@@ -64529,7 +66287,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Easley, SC. Hours: M 10-5 T 10-5  Th 10-5.",
@@ -64562,7 +66321,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Florence, SC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -64596,7 +66356,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gaffney, SC. Hours: M 9-5 T 9-5  Th 9-5.",
@@ -64747,7 +66508,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greenwood, SC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -64837,7 +66599,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hilton Head Island, SC. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   A Spanish-speaking staff member is available..",
@@ -64870,7 +66633,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lancaster, SC. Hours: T 9-5 W 9-5.",
@@ -64904,7 +66668,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lexington, SC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -64937,7 +66702,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Little River, SC. Hours: Sat 10-1 by appointment only.",
@@ -65025,7 +66791,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Myrtle Beach, SC. Hours: M 10-5 T 10-5  Th 10-5   closed noon-1p for lunch*Appointments scheduled after hours through PL.*.",
@@ -65087,7 +66854,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in North Charleston, SC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   Friday: (phone consultations and appointments) 8a-3p.",
@@ -65119,7 +66887,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Orangeburg, SC. Hours: M 9-5  W 9-5 Th 9-5.",
@@ -65152,7 +66921,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Piedmont, SC. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30   *Appointments scheduled after hours through PL.*.",
@@ -65186,7 +66956,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ridgeland, SC. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   Open Tues by appt.",
@@ -65241,7 +67012,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rock Hill, SC. Hours: M 9-7 T 9-4 W 9-4 Th 9-4   24-Hour Nurse Chatline. Closed for Lunch 12-12:30.",
@@ -65298,7 +67070,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Spartanburg, SC. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-4  Closed for lunch each day from 12:30-1:30.",
@@ -65383,7 +67156,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Sumter, SC. Hours: T 9:30-1:30 W 9:30-1:30 Th 9:30-1:30   On Mondays and Fridays we see clients by appointment only..",
@@ -65417,7 +67191,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sumter, SC. Hours: M 9-3 T 9-3 W 9-4 Th 9-4.",
@@ -65451,7 +67226,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Union, SC. Hours: M 4:30-6:30 T 4:30-6:30  Th 4:30-6:30.",
@@ -65485,7 +67261,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in York, SC. Hours: M 10-3  W 10-3.",
@@ -65519,7 +67296,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brookings, SD. Hours: M 12-4 T 6-8  Th 6-8   Clients can schedule appts. online. Donors/ business inquiries, call 605-692-1612. STD tests for pregnant clients ONLY..",
@@ -65552,7 +67330,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Huron, SD. Hours: M 1-5 T 5-8 W 1-5 Th 5-8.",
@@ -65642,7 +67421,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rapid City, SD. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  Tuesdays we could be open later depending on client needs.  No later than 7.*Appointments scheduled after hours through PL.*.",
@@ -65676,7 +67456,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sioux Falls, SD. Hours: M 8:30-5:30 T 8:30-5:30 W 8:30-5:30 Th 8:30-5:30 F 8:30-5:30  We have a 24/7 hotline and 24/7 texting service available, and our mobile unit is also available for evening hours on",
@@ -65791,7 +67572,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Spearfish, SD. Hours: M 12-5 T 10-3 W 12-5 Th 10-3   Phones are monitored seven days a week, 8:00 am-9:00 pm.",
@@ -65824,7 +67606,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Watertown, SD. Hours: T 12-7     24 hour hotline. Walk-ins welcome!*Appointments scheduled after hours through PL.*.",
@@ -65857,7 +67640,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Yankton, SD. Hours: M 10-5  W 10-5  F 10-5  *Appointments scheduled after hours through NXL.*.",
@@ -65919,7 +67703,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Athens, TN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   24 hr. nurse chat via website, closed for lunch (12-1pm)*Appointments scheduled after hours through PL.*.",
@@ -66040,7 +67825,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Carthage, TN. Hours: M 10-6  W 10-4 Th 10-4 F 12-4  *Appointments scheduled after hours through PL.*.",
@@ -66073,7 +67859,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chattanooga, TN. Hours: M 9-4 T 9-7 W 10-4 Th 9-7 F 9-4 Sat 9-1 Schedule an appointment and chat with a nurse via our website...",
@@ -66107,7 +67894,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Chattanooga, TN. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -66140,7 +67928,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clarksville, TN. Hours: M 9-2 T 9-4 W 9-5 Th 9-4 F 9-2.",
@@ -66173,7 +67962,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Cleveland, TN. Hours: M 8:30-4 T 8:30-4 W 8:30-4 Th 8:30-4 F 8:30-4 Sat 11-3 Saturdays is thrift shop only..",
@@ -66207,7 +67997,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cleveland, TN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   Closed for lunch from 12 - 1*Appointments scheduled after hours through PL.*.",
@@ -66242,7 +68033,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Coalmont, TN. Hours: M 10-6 T 10-6  Th 10-6   *Appointments scheduled after hours through PL.*.",
@@ -66275,7 +68067,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Columbia, TN. Hours: T 9-4 W 9-4 Th 9-4   closed for lunch from 12:00 pm - 1:00 pm daily. Infinite Worth schedules appointments after hours..",
@@ -66309,7 +68102,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cookeville, TN. Hours: M 9-5  W 9-5 Th 11-7 F 9-5.",
@@ -66344,7 +68138,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Crossville, TN. Hours: M 10:30-4 T 10:30-4 W 10:30-4 Th 10:30-4   Help Line: 931-250-7022.",
@@ -66378,7 +68173,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dayton, TN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  24 hour nurse chat on our website*Appointments scheduled after hours through PL.*.",
@@ -66409,7 +68205,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dickson, TN. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30   24 hr online chat.",
@@ -66442,7 +68239,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dunlap, TN. Hours: M 12-5 T 12-5 W 12-5 Th 12-5 F 10-3  24-hour communication via texting, chats, and nurse communications via website*Appointments scheduled after hours through PL.*.",
@@ -66476,7 +68274,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fayetteville, TN. Hours: T 9-4 W 9-4 Th 9-7   *Appointments scheduled after hours through PL.*.",
@@ -66543,7 +68342,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Gallatin, TN. Hours: M 10-5 T 10-5  Th 10-5 F 10-5.",
@@ -66572,7 +68372,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Greeneville, TN. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5.",
@@ -66638,7 +68439,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Harriman, TN. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -66671,7 +68473,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hartsville, TN. Hours: M 10-5 T 10-8 W 10-5 Th 2-8.",
@@ -66705,7 +68508,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Helenwood, TN. Hours: M 9-4  W 9-4  F 9-4.",
@@ -66738,7 +68542,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jackson, TN. Hours: M 9-8 T 9-8 W 9-4 Th 9-8 F 9-1.",
@@ -66772,7 +68577,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jefferson City, TN. Hours: M 9-5 T 9-6 W 9-5 Th 9-5 F 9-5.",
@@ -66805,7 +68611,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Johnson City, TN. Hours: M 9:30-7 T 9-4:30 W 9-4:30 Th 9-4:30   Our staff is available by phone 24/7 - please call us when you need us!.",
@@ -66839,7 +68646,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Johnson City, TN. Hours: M 8:30-4:30  W 8:30-4:30  F 8:30-4:30  Wed. 10:00 - 2:00 for center services.  Clients are served virtually Mon. - Fri..",
@@ -66923,7 +68731,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Knoxville, TN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-1  Closed for lunch 12-1..",
@@ -66956,7 +68765,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Knoxville, TN. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  24 hour Nurse Helpline..",
@@ -66990,7 +68800,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in LaFollette, TN. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -67023,7 +68834,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lebanon, TN. Hours: T 9-5  Th 9-5.",
@@ -67057,7 +68869,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lewisburg, TN. Hours: T 9-8  Th 3-6   We have referrals on our site in case our families need emergency resources.",
@@ -67091,7 +68904,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Manchester, TN. Hours: M 10-6 T 10-6  Th 10-6   *Appointments scheduled after hours through PL.*.",
@@ -67157,7 +68971,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Maryville, TN. Hours: M 12-5 T 12-5 W 12-5 Th 12-5   nurse 24/7 hotline, hours Sevierville is 9 -2 and Maryville is 12-5*Appointments scheduled after hours through PL.*.",
@@ -67252,7 +69067,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Memphis, TN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  24 hour hotline.",
@@ -67429,7 +69245,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Murfreesboro, TN. Hours: M 9-1 T 9-8 W 9-5 Th 9-8 F 9-1.",
@@ -67438,6 +69255,39 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "726 S. Church Street, Murfreesboro, TN 37130"
+  },
+  {
+    "id": "tn-pregnancy-help-center-88836",
+    "name": "Pregnancy Help Center",
+    "type": "Pregnancy medical center",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37211",
+    "phone": "615-502-1625",
+    "website": "",
+    "email": "",
+    "services": [
+      "ultrasound",
+      "pregnancy tests",
+      "baby supplies",
+      "adoption information",
+      "pregnancy counseling"
+    ],
+    "needs": [
+      "adoption",
+      "counseling",
+      "expecting",
+      "new-mom",
+      "supplies",
+      "talk"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Nashville, TN. Hours: T 9-3:30 W 9-3:30  F 9-3:30  We are available to answer our phone line to schedule appointments Monday through Friday 8am-5pm. The hours of operation listed on Tuesday, Wednesday an",
+    "lat": 36.111194,
+    "lng": -86.739909,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "188 Thompson Lane, Nashville, TN 37211 United States"
   },
   {
     "id": "tn-pregnancy-help-center-newcomb-74745",
@@ -67463,7 +69313,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Newcomb, TN. Hours: T 9-4 W 9-4 Th 9-4.",
@@ -67497,7 +69348,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Newport, TN. Hours: M 12-6 T 10-4  Th 10-4 F 10-4  *Appointments scheduled after hours through PL.*.",
@@ -67531,7 +69383,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in North Trenton, TN. Hours: M 9-8 T 9-8 W 9-4 Th 9-8 F 9-1.",
@@ -67564,7 +69417,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Oak Ridge, TN. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   Option Line, HopeSync/Infinite Worth*Appointments scheduled after hours through PL.*.",
@@ -67597,7 +69451,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Old Hickory, TN. Hours: M 9-5 T 9-5 W 9-5 Th 12-7   Our second location is open Tuesdays and Thursdays 9am-5pm.",
@@ -67631,7 +69486,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Paris, TN. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  Medical Services available M-Th 9:00-5:00 and Fri 9:00-3:00.",
@@ -67659,7 +69515,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Rogersville, TN. Hours: M 11-4 T 11-4 W 11-4 Th 11-4 F 8-12.",
@@ -67720,7 +69577,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sevierville, TN. Hours: M 9-2 T 9-2 W 9-2 Th 9-2   *Appointments scheduled after hours through PL.*.",
@@ -67753,7 +69611,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Shelbyville, TN. Hours: M 8:30-5:30 T 9-5 W 9-5 Th 9-5 F 9-5  24 hour nurse chat through HopeSync.",
@@ -67786,7 +69645,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Spring City, TN. Hours: M 9-5      Monday, Thursday mornings.",
@@ -67819,7 +69679,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Spring Hill, TN. Hours: M 9-4 T 9-4 W 9-4    closed for lunch from 12:00 pm - 1:00 pm daily.",
@@ -67853,7 +69714,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Springfield, TN. Hours: M 10-4 T 10-6  Th 10-6 F 10-2  Closed daily for lunch from 12:00pm to 1:00pm.",
@@ -67886,7 +69748,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tiptonville, TN. Hours: T 10-5 W 10-5 Th 10-5.",
@@ -67920,7 +69783,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Winchester, TN. Hours: M 10-6 T 10-6  Th 10-6   *Appointments scheduled after hours through PL.*.",
@@ -67955,7 +69819,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Abilene, TX. Hours: M 9-5:30 T 10-4:30 W 10-4:30 Th 10-4:30.",
@@ -68012,7 +69877,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Allen, TX. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-9 F 9-4:30  *Appointments scheduled after hours through PL.*.",
@@ -68045,7 +69911,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Amarillo, TX. Hours: M 8:30-4 T 8:30-4 W 8:30-4 Th 8:30-4 F 8:30-4  Closed from 12-1pm daily for lunch.",
@@ -68078,7 +69945,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Amarillo, TX. Hours: M 10-3 T 10-6 W 10-3 Th 10-6 F 10-3.",
@@ -68111,7 +69979,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Amarillo, TX. Hours: M 12-6 T 12-6 W 4-6 Th 12-6 F 10-3.",
@@ -68142,7 +70011,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Amarillo, TX. Hours: M 10-3 T 10-6 W 10-3 Th 10-6 F 10-3.",
@@ -68176,7 +70046,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Amarillo, TX. Hours: M 8:30-4 T 8:30-4 W 8:30-4 Th 8:30-4 F 8:30-4  Lunch break 12p-1p daily.",
@@ -68231,7 +70102,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Andrews, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 8-3  *Appointments scheduled after hours through PL.*.",
@@ -68262,7 +70134,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Arlington, TX. Hours: M 9-8 T 9-8 W 9-8 Th 9-8 F 10-2  *Appointments scheduled after hours through PL.*.",
@@ -68292,7 +70165,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Arlington, TX. Hours: M 9-5 T 9-5 W 9-8 Th 9-8   *Appointments scheduled after hours through PL.*.",
@@ -68322,7 +70196,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Arlington, TX. Hours: M 9-8 T 9-8 W 9-5 Th 9-5.",
@@ -68356,7 +70231,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Athens, TX. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   *Appointments scheduled after hours through PL.*.",
@@ -68418,7 +70294,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Austin, TX. Hours: M 10-4 T 10-4 W 10-4 Th 10-3 F 10-3  Clients can email info@heartprc.org.*Appointments scheduled after hours through PL.*.",
@@ -68452,7 +70329,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Austin, TX. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -68530,7 +70408,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Austin, TX. Hours: M 9-6 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -68587,7 +70466,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bastrop, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  Closed for lunch 12-1pm.",
@@ -68620,7 +70500,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bay City, TX. Hours: M 9-2 T 9-2 W 9-2 Th 9-2.",
@@ -68682,7 +70563,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Beaumont, TX. Hours: M 9-7 T 9-4 W 9-4 Th 9-4 F 9-4  after hours access through texting service and chat service*Appointments scheduled after hours through PL.*.",
@@ -68715,7 +70597,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Big Spring, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 8-3  *Appointments scheduled after hours through PL.*.",
@@ -68748,7 +70631,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Boerne, TX. Hours: T 9-5 W 9-5 Th 9-1 F 9-1  24/7 Chat Line*Appointments scheduled after hours through PL.*.",
@@ -68781,7 +70665,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bonham, TX. Hours: T 9-5 W 9-5 Th 9-5   24 hour hotline available*Appointments scheduled after hours through PL.*.",
@@ -68815,7 +70700,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Borger, TX. Hours: M 12-6 T 12-6 W 12-4 Th 12-6.",
@@ -68849,7 +70735,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bovina, TX. Hours: M 2-7 T 9-2 W 9-2 Th 2-7.",
@@ -68912,7 +70799,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Brady, TX. Hours: By appt. only. Phones answered M-Th 10a-5p; Spanish speaker after 1p..",
@@ -68971,7 +70859,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Breckenridge, TX. Hours: M 10-5 T 10-8 W 10-5 Th 10-8   *Appointments scheduled after hours through NXL.*.",
@@ -69005,7 +70894,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brenham, TX. Hours: M 10:30-8 T 9:30-5 W 9:30-5 Th 9:30-8 F 1-5  *Appointments scheduled after hours through PL.*.",
@@ -69033,7 +70923,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Brownsville, TX. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -69067,7 +70958,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Brownwood, TX. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   Fridays the office is closed but we are available by appointment only..",
@@ -69100,7 +70992,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Bryan, TX. Hours: M 10-4  W 10-4 Th 10-4.",
@@ -69157,7 +71050,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Burleson, TX. Hours: M 9:30-5 T 9:30-5 W 9:30-5 Th 9:30-5 F 9:30-5  24 hour nurse chat*Appointments scheduled after hours through PL.*.",
@@ -69190,7 +71084,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Cactus, TX. Hours: T 9-5 W 9-5 Th 9-5.",
@@ -69223,7 +71118,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Canton, TX. Hours: M 9-5 T 9-6 W 9-5 Th 9-6.",
@@ -69282,7 +71178,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Carrizo Springs, TX. Hours: M 10-5 T 10-5 W 10:30-5    Option Line is available after hours.",
@@ -69369,7 +71266,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cedar Park, TX. Hours: M 12-8 T 12-8 W 12-8 Th 12-8  Sat 9-1.",
@@ -69403,7 +71301,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cisco, TX. Hours: M 9-5:30 T 9-8 W 9-5:30 Th 9-8   24-hour hotline and nurse chat available.*Appointments scheduled after hours through NXL.*.",
@@ -69437,7 +71336,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cleburne, TX. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 9-1  closed M-Th for lunch 12:00-1:00pm, closed Tues 1:00-2:00pm for staff meeting*Appointments scheduled after hours through PL.*.",
@@ -69470,7 +71370,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clute, TX. Hours: M 9-5 T 9-8 W 9-5 Th 9-5 F 9-4  24 hour hotline*Appointments scheduled after hours through PL.*.",
@@ -69527,7 +71428,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in College Station, TX. Hours: M 9-4 T 9-6 W 9-4 Th 9-4 F 9-4  24 hour on call staff member to answer phones and provide support and assistance.",
@@ -69561,7 +71463,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in College Station, TX. Hours: M 9-7 T 9-5 W 9-5 Th 9-5 F 9-3  Our satellite locations are open for limited hours within the hours listed above for our main location.*Appointments scheduled after hours thro",
@@ -69570,6 +71473,35 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "205 Brentwood Dr, College Station, TX 77840"
+  },
+  {
+    "id": "tx-mercy-house-19340",
+    "name": "Mercy House",
+    "type": "Pregnancy resource center",
+    "city": "Colleyville",
+    "state": "TX",
+    "zip": "76034",
+    "phone": "817-369-4628",
+    "website": "",
+    "email": "",
+    "services": [
+      "baby supplies",
+      "housing support",
+      "community referrals"
+    ],
+    "needs": [
+      "expecting",
+      "housing",
+      "new-mom",
+      "supplies"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Colleyville, TX. Hours: M 7-7 T 7-7 W 7-7 Th 7-7 F 7-7 Sat 7-7 Sun 7-7We are a 24-hour residential maternity home with 24-hour in-home staff..",
+    "lat": 32.886071,
+    "lng": -97.146707,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": ", Colleyville, TX 76034 United States"
   },
   {
     "id": "tx-hill-country-pregnancy-care-center-comfo-105100",
@@ -69595,7 +71527,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Comfort, TX. Hours: M 10-4   Th 10-4.",
@@ -69653,7 +71586,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Copperas Cove, TX. Hours: M 9-4 T 9-4 W 9-4 Th 9-12   *Appointments scheduled after hours through PL.*.",
@@ -69686,7 +71620,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Corpus Christi, TX. Hours: M 9-8 T 9-5 W 9-5 Th 9-8 F 11-5.",
@@ -69720,7 +71655,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Corsicana, TX. Hours: M 9-4 T 9-6 W 9-4 Th 9-12   Closed for lunch 12-1&#10;Online Nurse Chatline available 24/7.",
@@ -69751,7 +71687,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Daingerfield, TX. Hours: Tues-Fri: Appointment Only.",
@@ -69782,7 +71719,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Dalhart, TX. Hours: M 10-3 T 10-3 W 10-3 Th 10-3.",
@@ -69816,7 +71754,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dallas, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  *Appointments scheduled after hours through NXL.*.",
@@ -70025,7 +71964,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Dallas, TX. Hours: M 9-3 T 9-5 W 9-5 Th 9-5 F 9-5 Sat 9-5 Sun 7-7Our Maternity Home is open 24/7..",
@@ -70056,7 +71996,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Decatur, TX. Hours: M 9-5 T 10-8 W 9-5 Th 9-5   After Hours Phone: (940) 980-9200.",
@@ -70089,7 +72030,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Denton, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -70145,7 +72087,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Denton, TX. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Closed for lunch 12:30-1:00*Appointments scheduled after hours through PL.*.",
@@ -70178,7 +72121,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Dripping Springs, TX. Hours: M 10-3  W 10-3  F 10-3.",
@@ -70212,7 +72156,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Dumas, TX. Hours: M 8-5 T 8-5 W 8-5 Th 8-7   Closed daily for lunch (12-1 pm).",
@@ -70245,7 +72190,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in El Paso, TX. Hours: T 9-5 W 9-5 Th 9-5 F 9-5  Closed for lunch (12-1). Open by appointment on Saturdays..",
@@ -70306,7 +72252,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in El Paso, TX. Hours: M 4-8   Th 4-8   *Appointments scheduled after hours through PL.*.",
@@ -70340,7 +72287,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in El Paso, TX. Hours: M 10-2 T 10-2 W 10-2.",
@@ -70373,7 +72321,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in El Paso, TX. Hours: T 9-5 W 9-5 Th 9-5 F 9-5  Closed for Lunch from 12 PM - 1 PM..",
@@ -70496,7 +72445,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Euless, TX. Hours: M 10-5 T 10-5 W 10-7 Th 10-7   We are open the 2nd Saturday of every month. 11 to 5*Appointments scheduled after hours through PL.*.",
@@ -70529,7 +72479,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Flower Mound, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -70563,7 +72514,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Forney, TX. Hours: M 10-7 T 10-5  Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -70597,7 +72549,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Fort Worth, TX. Hours: T 9-3  Th 12-6   We receive and reply to texts 7 days a week..",
@@ -70631,7 +72584,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Worth, TX. Hours: M 10-5 T 10-8 W 10-5 Th 10-5 F 10-1.",
@@ -70664,7 +72618,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Worth, TX. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-1.",
@@ -70725,7 +72680,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Worth, TX. Hours: M 10:30-5:30 T 9:30-4:30 W 9:30-4:30 Th 10:30-6:30 F 9:30-1:30  Sat by appt. only. We have a Spanish-speaking staff member on Saturdays.*Appointments scheduled after hours through ",
@@ -70759,7 +72715,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Worth, TX. Hours: M 9-5 T 9-4 W 9-4 Th 9-4  Sat 9-12 We use Option Line for after-hours.*Appointments scheduled after hours through PL.*.",
@@ -70793,7 +72750,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fort Worth, TX. Hours: M 9-4 T 9-4 W 9-4:30 Th 9-4 F 9-4  We are available by texting all day - and answer as soon as possible..",
@@ -70858,7 +72816,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Fort Worth, TX. Hours: T 10-3 W 10-3 Th 10-3.",
@@ -70893,7 +72852,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fredericksburg, TX. Hours: M 10-3 T 10-3 W 10-3:30 Th 10-3   Fridays by Appt only.  24 hour hotline:  830-733-0397*Appointments scheduled after hours through PL.*.",
@@ -70927,7 +72887,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Friendswood, TX. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Additionally open Tue & Thu from 6:00 pm- 7:00 pm.",
@@ -71019,7 +72980,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gainesville, TX. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-4.",
@@ -71086,7 +73048,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Georgetown, TX. Hours: M 9-4 T 11-6 W 9-4 Th 11-6.",
@@ -71119,7 +73082,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gilmer, TX. Hours: T 10-5  Th 10-5.",
@@ -71153,7 +73117,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Goldthwaite, TX. Hours: By appt. only. Phones answered M-Th 10a-5p; Spanish speaker after 1p..",
@@ -71219,7 +73184,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Granbury, TX. Hours: M 10-3 T 10-3 W 10-3 Th 10-3   Option Line, 24hr texting, client can request appointments outside of our office hours*Appointments scheduled after hours through PL.*.",
@@ -71249,7 +73215,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grand Prairie, TX. Hours: M 9:30-3 T 9:30-3 W 9:30-3 Th 9:30-3   Closed for lunch 1pm-1:30pm.",
@@ -71311,7 +73278,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Greenville, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -71344,7 +73312,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Haskell, TX. Hours: T 10-4 W 10-4 Th 10-4.",
@@ -71377,7 +73346,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Haslet, TX. Hours: T 10-7 W 10-4 Th 10-7 F 10-4  *Appointments scheduled after hours through PL.*.",
@@ -71473,7 +73443,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Houston, TX. Hours: M 10-3 T 10-5 W 10-3 Th 10-4.",
@@ -71559,7 +73530,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Houston, TX. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30 F 9-4:30  We have four mobile units and a main office.  Our main office is open from 9am - 4:30pm.  Our Big Blue Bus is open from 8am - 3pm and ou",
@@ -71586,7 +73558,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Houston, TX. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 8-1.",
@@ -71619,7 +73592,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Houston, TX. Hours: M 10-5 T 10-8 W 10-5 Th 10-8   *Appointments scheduled after hours through PL.*.",
@@ -71653,7 +73627,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Houston, TX. Hours: M 10-5 T 10-8 W 10-5 Th 10-8.",
@@ -71687,7 +73662,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Houston, TX. Hours: M 8-3:30 T 8-3:30 W 8-3:30 Th 8-3:30 F 8-1 Sat 9-12 *Appointments scheduled after hours through NXL.*.",
@@ -71721,7 +73697,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Houston, TX. Hours: M 10-6 T 10-6 W 10-6 Th 10-6   *Appointments scheduled after hours through NXL.*.",
@@ -71833,7 +73810,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Houston, TX.",
@@ -71867,7 +73845,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Houston, TX. Hours: T 10-2 W 10-2 Th 10-2.",
@@ -72019,7 +73998,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Humble, TX. Hours: M 10-5 T 10-8 W 10-5 Th 10-8.",
@@ -72052,7 +74032,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Huntsville, TX. Hours: M 10-5 T 10-5 W 10-5 Th 10-5.",
@@ -72139,7 +74120,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jasper, TX. Hours: M 10-5 T 10-4 W 10-3 Th 10-4   Closed for lunch 12-1 on Mondays, Tuesdays and Thursdays.  Open through lunch on Wednesdays.*Appointments scheduled after hours through PL.*.",
@@ -72171,7 +74153,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Katy, TX. Hours: M 9-5 T 12-8 W 9-5 Th 9-5   24-hour chatline with Hope Sync*Appointments scheduled after hours through PL.*.",
@@ -72205,7 +74188,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Kaufman, TX. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   *Appointments scheduled after hours through PL.*.",
@@ -72270,7 +74254,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Kerrville, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -72303,7 +74288,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kerrville, TX. Hours: M 9:30-5 T 9:30-5 W 9:30-5 Th 9:30-5   We are open every 3rd Saturday of the month between 9:30 to 5 pm. We are open 24/7 for APR referrals.*Appointments scheduled after hours throu",
@@ -72360,7 +74346,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Killeen, TX. Hours: M 9-4 T 9-4 W 9-4 Th 9-12   *Appointments scheduled after hours through PL.*.",
@@ -72393,7 +74380,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kingsland, TX. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30.",
@@ -72427,7 +74415,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kingsville, TX. Hours: M 11-3  W 11-3  F 11-3  Mobile unit, locations/hours may vary, call for appointment. Serving Kleberg, Jim Wells, Jim Hogg, Brooks, and Nueces counties..",
@@ -72461,7 +74450,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kingsville, TX. Hours: M 11-3  W 11-3  F 11-3.",
@@ -72494,7 +74484,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lampasas, TX. Hours: M 10-3 T 10-4 W 10-4    *Appointments scheduled after hours through NXL.*.",
@@ -72559,7 +74550,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Laredo, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-7 F 9-5  *Appointments scheduled after hours through PL.*.",
@@ -72593,7 +74585,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in League City, TX. Hours: M 10-4 T 10-4 W 10-4 Th 10-5 F 10:30-4  *Appointments scheduled after hours through PL.*.",
@@ -72624,7 +74617,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in League City, TX. Hours: 24 hours.",
@@ -72654,7 +74648,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in League City, TX. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  We offer low-cost pregnancy testing..",
@@ -72718,7 +74713,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lindale, TX. Hours: M 10-4 T 10-4 W 10-4.",
@@ -72809,7 +74805,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Longview, TX. Hours: T 9-5 W 9-5 Th 9-5 F 9-3  *Appointments scheduled after hours through PL.*.",
@@ -72840,7 +74837,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lubbock, TX. Hours: M 8-5 T 8-5 W 8-5 Th 8-5   Closed for lunch 12-1 pm*Appointments scheduled after hours through PL.*.",
@@ -72898,7 +74896,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in LUBBOCK, TX. Hours: M 9-3 T 9-3 W 9-3 Th 9-3 F 9-12  We answer afterhours cell phone 24 hours a day.  806-317-4480.",
@@ -72932,7 +74931,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lufkin, TX. Hours: M 9-5 T 8-5 W 8-5 Th 8-5 F 8-12  Appointments highly encouraged. Closed daily for lunch (12-1).",
@@ -72966,7 +74966,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Manvel, TX. Hours: M 12-5 T 12-5     24 hour Hotline&#10;Walkins welcome&#10;Emergency appointment available upon request*Appointments scheduled after hours through NXL.*.",
@@ -73001,7 +75002,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Marble Falls, TX. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30.",
@@ -73068,7 +75070,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mason, TX. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5  Other times by appointment. 24 hour hotline..",
@@ -73102,7 +75105,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in McAllen, TX. Hours: M 9-4:30 T 9-4:30 W 9-4:30 Th 9-4:30 F 9-4:30.",
@@ -73136,7 +75140,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in McKinney, TX. Hours: M 9:30-8 T 9:30-8 W 9:30-4:30 Th 9:30-8 F 9:30-4:30.",
@@ -73226,7 +75231,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mesquite, TX. Hours: M 1-8  W 9-5  F 9-3.",
@@ -73258,7 +75264,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Midland, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-7 F 8-3  24Hour hot line and live chat service*Appointments scheduled after hours through PL.*.",
@@ -73293,7 +75300,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mineral Wells, TX. Hours: M 10-3 T 10-3 W 10-3.",
@@ -73356,7 +75364,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mission, TX. Hours: Th 9-3 F 9-3 Sat 9-1 Saturday by appointment only.",
@@ -73387,7 +75396,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Mount Pleasant, TX. Hours: T 9-5 W 9-5 Th 9-5 F 9-3.",
@@ -73419,7 +75429,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mount Vernon, TX. Hours: M 9-4 T 9-4  Th 9-4.",
@@ -73509,7 +75520,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in New Braunfels, TX. Hours: M 9:30-5 T 9:30-7 W 9:30-5 Th 9:30-5.",
@@ -73570,7 +75582,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Odessa, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 8-3  *Appointments scheduled after hours through PL.*.",
@@ -73630,7 +75643,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Palestine, TX. Hours: M 9-3 T 9-3 W 9-3 Th 9-3   *Appointments scheduled after hours through PL.*.",
@@ -73690,7 +75704,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pampa, TX. Hours: M 12-4 T 12-4 W 12-4 Th 2-6.",
@@ -73725,7 +75740,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Paris, TX. Hours: M 9:30-4:30 T 9:30-4:30 W 4:30-4:30 Th 9:30-4:30   We are available 24/7 for any client that needs u s..",
@@ -73758,7 +75774,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pasadena, TX. Hours: M 10-4 T 10-7 W 10-4 Th 10-5   Tuesdays 5-6 pm and 6-7 pm by appointment only..",
@@ -73824,7 +75841,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pflugerville, TX. Hours: M 9-4 T 9-1 W 9-4 Th 9-4 F 9-1 Sat 9-12 Additionally open Tue from 4:00 PM to 7:00 PM.",
@@ -73883,7 +75901,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pittsburg, TX. Hours: M 9-2:30  W 9-2:30.",
@@ -73917,7 +75936,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Plainview, TX. Hours: T 10-2 W 12:30-3 Th 10-2   Additionally open Thu from 4:30pm-6:30pm.",
@@ -73926,6 +75946,39 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "1209 Quincy Street, Plainview, TX 79072"
+  },
+  {
+    "id": "tx-bella-house-63676",
+    "name": "Bella House",
+    "type": "Pregnancy resource center",
+    "city": "Plano",
+    "state": "TX",
+    "zip": "75094",
+    "phone": "972-379-7450",
+    "website": "",
+    "email": "",
+    "services": [
+      "parenting classes",
+      "baby supplies",
+      "adoption information",
+      "housing support",
+      "community referrals"
+    ],
+    "needs": [
+      "adoption",
+      "expecting",
+      "housing",
+      "new-mom",
+      "supplies",
+      "parenting"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Plano, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  We are a Maternity Home for Homeless pregnant women. Please refer to BellaHouse.com.",
+    "lat": 33.027733,
+    "lng": -96.610378,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "Plano, Plano, TX 75094 United States"
   },
   {
     "id": "tx-human-coalition-99015",
@@ -74040,7 +76093,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Port Lavaca, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -74074,7 +76128,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Portland, TX. Hours: M 11-5 T 11-8 W 11-5 Th 11-5 F 11-5.",
@@ -74108,7 +76163,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Richardson, TX. Hours: M 8:30-7:30 T 8:30-7:30 W 8:30-4:30 Th 8:30-7:30 F 8:30-4:30 Sat 9-3 Offers STD testing referrals. *Appointments scheduled after hours through PL.*.",
@@ -74141,7 +76197,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rockport, TX. Hours: M 12-8  W 12-5  F 12-5.",
@@ -74197,7 +76254,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rosenberg, TX. Hours: M 9-5 T 9-7 W 9-5 Th 9-5 F 9-12.",
@@ -74231,7 +76289,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Round Rock, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  Sun 00-924-hour hotline with Infinite Worth..",
@@ -74290,7 +76349,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Angelo, TX. Hours: M 9-5 T 9-7 W 9-5 Th 9-7 F 9-12  Closed Mon, Tue, Thu, Fri from 12pm-1pm & Wed from 11:30am-1:30pm.",
@@ -74413,7 +76473,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Antonio, TX. Hours: W 10-5  F 10-5.",
@@ -74446,7 +76507,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Antonio, TX. Hours: M 10-5 T 1-7  Th 1-7 F 1-5.",
@@ -74479,7 +76541,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Antonio, TX. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -74513,7 +76576,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Antonio, TX. Hours: M 9-4 T 9-7 W 9-4 Th 9-4:30   Closed on most national holidays. 24 hour hotline.",
@@ -74575,7 +76639,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Marcos, TX. Hours: M 9-4 T 9-4 W 9-4 Th 9-5 F 10-3.",
@@ -74607,7 +76672,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in San Saba, TX. Hours: M 1-5 T 10-4 W 10-4 Th 10-5   closed for lunch Tuesday-Thursday 12-1; monthly Friday and Saturday hours (2nd Saturday 10-2 and 3rd Friday 2-6pm).",
@@ -74635,7 +76701,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in San Saba, TX. Hours: Tues/Thurs By Appointment Only..",
@@ -74669,7 +76736,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sealy, TX. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -74703,7 +76771,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Seguin, TX. Hours: M 9-4 T 1-7 W 9-4 Th 9-4   Closed for lunch 12-1*Appointments scheduled after hours through PL.*.",
@@ -74735,7 +76804,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sherman, TX. Hours: M 8-7 T 8-5 W 8-5 Th 8-7   *Appointments scheduled after hours through PL.*.",
@@ -74766,7 +76836,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Spring, TX. Hours: M 10-7:30  W 10-7:30 Th 10-3  Sat 8:30-12 *Appointments scheduled after hours through NXL.*.",
@@ -74832,7 +76903,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Spring Branch, TX. Hours: T 10-7 W 10-5 Th 10-5 F 10-5  *Appointments scheduled after hours through PL.*.",
@@ -74865,7 +76937,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Stephenville, TX. Hours: M 9-6 T 9-6 W 9-6 Th 9-6 F 9-1  24/7 nurse chat line.",
@@ -74898,7 +76971,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sulphur Springs, TX. Hours: M 1-7 T 9-5  Th 9-5   Phone is answered 24/7*Appointments scheduled after hours through PL.*.",
@@ -74960,7 +77034,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Temple, TX. Hours: M 9-4 T 9-4 W 9-4 Th 9-12   *Appointments scheduled after hours through PL.*.",
@@ -74994,7 +77069,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Texarkana, TX. Hours: T 10-4 W 10-4 Th 10-4 F 10-4.",
@@ -75054,7 +77130,9 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "car-seat",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Texas City, TX. Hours: T 10-3 W 10-3 Th 10-8 F 3-9  Thursday closed from 3:00 PM-5:00 PM.  We open every other Friday from 3:00 PM - 9:00 PM for Medical Clients; if we have Car Seat Safety we will open e",
@@ -75087,7 +77165,9 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting",
+      "childcare"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tomball, TX. Hours: M 10-8 T 10-3 W 10-3 Th 10-3   Group classes are available on Thursdays from 6:15 - 8:30.  Free Childcare..",
@@ -75120,7 +77200,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in TX, TX. Hours: M 10:30-4 T 10-4  Th 10-4.",
@@ -75153,7 +77234,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tyler, TX. Hours: T 9-3 W 9-3 Th 9-3   Walk-ins are accommodated. Request an appointment online!.",
@@ -75187,7 +77269,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Uvalde, TX. Hours: T 10-5 W 10-5 Th 10-5   Option Line is available after hours.&#10;.",
@@ -75220,7 +77303,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Vernon, TX. Hours: T 1:30-3:30  Th 5-7.",
@@ -75248,7 +77332,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Victoria, TX. Hours: M 7-10 T 7-10 W 7-10 Th 7-10 F 7-10 Sat 7-10 Sun 7-10Helpline available 24/7/365.",
@@ -75282,7 +77367,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waco, TX. Hours: M 8-8 T 8-5 W 8-5 Th 8-5 F 8-5  Offers rental & utility assistance programs.",
@@ -75316,7 +77402,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waco, TX. Hours: M 8-8 T 8-5 W 8-5 Th 8-5 F 8-5  Offers STD vouchers.",
@@ -75396,7 +77483,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waller, TX. Hours: M 9-8 T 9-5 W 9-5 Th 9-8   August 2024 open till 8pm on the 3rd and 4th Mondays for childbirth education..",
@@ -75430,7 +77518,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waxahachie, TX. Hours: M 10-5 T 10-8 W 10-5 Th 10-8   Our Store hours are different from the center.  The thrift store is open 10 am to 4 pm Monday through Saturday..",
@@ -75458,7 +77547,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Weatherford, TX. Hours: T 10-3 W 10-3 Th 10-3.",
@@ -75521,7 +77611,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Weatherford, TX. Hours: Available by Appointment only on Fridays.",
@@ -75552,7 +77643,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wichita Falls, TX. Hours: M 9:30-3 T 9:30-3 W 9:30-3 Th 9:30-12 F 9:30-12  Tuesday groups : 6-7:30pm&#10;Thursday groups 6-7:30pm.",
@@ -75586,7 +77678,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wylie, TX. Hours: M 9:30-2 T 9:30-5:30 W 9:30-5:30    We forward to Option Line outside of business hours.*Appointments scheduled after hours through NXL.*.",
@@ -75653,7 +77746,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brigham City, UT. Hours: T 10-5 W 10-5 Th 10-5 F 10-5.",
@@ -75687,7 +77781,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Logan, UT. Hours: M 1-5 T 1-5 W 1-5    We are available via appointment outside hours.  We also offer ultrasounds via appointment outside hours..",
@@ -75721,7 +77816,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Moab, UT. Hours: M 10-4 T 10-4 W 10-4    24/7 Nurse Chat Line. Open Thursday by appointment only..",
@@ -75780,7 +77876,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Price, UT. Hours: T 12-4  Th 12-4   Wednesday By Appt Only*Appointments scheduled after hours through NXL.*.",
@@ -75814,7 +77911,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Roy, UT. Hours: M 9-5:30 T 9-5:30 W 9-5:30 Th 9-5:30 F 9-1.",
@@ -75847,7 +77945,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Salt Lake City, UT. Hours: M 12-8 T 9-5 W 9-5 Th 12-8 F 9-5  *Appointments scheduled after hours through PL.*.",
@@ -75881,7 +77980,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in St George, UT. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   Friday hours are by appointment only. 24 hour Nurse Chat available..",
@@ -75976,7 +78076,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Annandale, VA. Hours: M 10-6 T 10-6 W 10-6 Th 10-6 F 9-1  Material aid available for clients only. We are open one Sat. per month from 9am-1pm.",
@@ -76073,7 +78174,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bedford, VA. Hours: M 10-4   Th 10-4.",
@@ -76107,7 +78209,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Blacksburg, VA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -76140,7 +78243,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Charlottesville, VA. Hours: M 10-7 T 10-5 W 10-5 Th 10-5.",
@@ -76174,7 +78278,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Charlottesville, VA. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-2.",
@@ -76231,7 +78336,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Chester, VA. Hours: T 11-7 W 3-7 Th 11-7 F 10-2  Medical staff is normally available on Tuesdays & Thursdays starting at 9am..",
@@ -76260,7 +78366,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Clarksville, VA. Hours: T 12-5 W 12-5    *Appointments scheduled after hours through NXL.*.",
@@ -76293,7 +78400,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Culpeper, VA. Hours: M 10-5 T 10-5 W 10-5 Th 10-7   Walk-ins welcome.",
@@ -76326,7 +78434,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Danville, VA. Hours: M 9-4:30   Th 9-4:30   *Appointments scheduled after hours through PL.*.",
@@ -76392,7 +78501,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Edinburg, VA. Hours: T 12-8 W 12-4 Th 10-6 F 12-4  Additionally open By Appointment Mon.",
@@ -76424,7 +78534,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fairfax, VA. Hours: M 9-5:30 T 9-5:30 W 9-5:30 Th 12-8.",
@@ -76488,7 +78599,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Falls Church, VA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-2 Sat 10-2 24-hour hotline*Appointments scheduled after hours through PL.*.",
@@ -76552,7 +78664,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Farmville, VA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -76640,7 +78753,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fredricksburg, VA. Hours: T 9:30-4:30 W 9:30-4:30 Th 9:30-4:30 F 9-12  Monday: by appointment only. Will extend office hours into the evening for emergencies ONLY.*Appointments scheduled after hours thro",
@@ -76762,7 +78876,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Herndon, VA. Hours: M 9:30-7 T 9:30-5:30 W 9:30-1 Th 9:30-5:30   *Appointments scheduled after hours through PL.*.",
@@ -76795,7 +78910,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Keysville, VA. Hours: W 12-5.",
@@ -76829,7 +78945,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lansdowne, VA. Hours: M 9-6 T 9-6 W 9-6 Th 9-6 F 9-4  Open late one day a week at each center*Appointments scheduled after hours through PL.*.",
@@ -76945,7 +79062,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Luray, VA. Hours: T 12-7  Th 12-7.",
@@ -76978,7 +79096,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lynchburg, VA. Hours: M 8-4 T 8-4 W 8-4 Th 8-4   *Appointments scheduled after hours through PL.*.",
@@ -77035,7 +79154,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Manassas, VA. Hours: M 10:30-6 T 10-9 W 10-6 Th 10-9 F 10-2.",
@@ -77068,7 +79188,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Martinsville, VA. Hours: T 9-5 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -77126,7 +79247,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Newport News, VA. Hours: M 8-8:30 T 8-8:30 W 8-5 Th 8-8:30 F 10-2  *Appointments scheduled after hours through PL.*.",
@@ -77249,7 +79371,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Onley, VA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4.",
@@ -77345,7 +79468,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Portsmouth, VA. Hours: M 9-4 T 9-4  Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -77379,7 +79503,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Radford, VA. Hours: M 9-5  W 9-5    *Appointments scheduled after hours through PL.*.",
@@ -77440,7 +79565,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Richmond, VA. Hours: M 10-3 T 1-7 W 10-3  F 10-1  Closed 2nd Friday of month; 2nd Sat of the month 2p-4p.",
@@ -77471,7 +79597,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Richmond, VA. Hours: M 9-4 T 9-4 W 9-4  F 9-4  Clients can request an appointment via our website. 24 Hour Hotline.",
@@ -77529,7 +79656,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Roanoke, VA. Hours: M 9:30-4 T 9:30-8 W 9:30-4 Th 9:30-8 F 9:30-4  Life Advancement Group, Option Line*Appointments scheduled after hours through NXL.*.",
@@ -77563,7 +79691,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in South Boston, VA. Hours: M 10-5      By appointment*Appointments scheduled after hours through NXL.*.",
@@ -77597,7 +79726,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in South Hill, VA. Hours: T 1-6     By appointment.",
@@ -77815,6 +79945,43 @@ window.HEARTH_CENTERS = [
     "address": "400 Holiday Court Ste 101, Warrenton, VA 20186"
   },
   {
+    "id": "va-the-mother-s-heart-112565",
+    "name": "The Mother's Heart",
+    "type": "Pregnancy resource center",
+    "city": "Warsaw",
+    "state": "VA",
+    "zip": "22572",
+    "phone": "804-250-2053",
+    "website": "https://themothersheart.org",
+    "email": "",
+    "services": [
+      "pregnancy tests",
+      "parenting classes",
+      "baby supplies",
+      "STI testing",
+      "adoption information",
+      "abortion recovery support",
+      "mentoring",
+      "pregnancy counseling"
+    ],
+    "needs": [
+      "adoption",
+      "counseling",
+      "expecting",
+      "new-mom",
+      "supplies",
+      "talk",
+      "parenting"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Warsaw, VA. Hours: T 11-2 W 11-2 Th 11-2 F 11-2  Option Line, willing to meet with clients and do intakes outside of these hours..",
+    "lat": 37.958983,
+    "lng": -76.762748,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "5565 Richmond Road, Warsaw, VA 22572 United States"
+  },
+  {
     "id": "va-abbacare-inc-21489",
     "name": "AbbaCare, Inc.",
     "type": "Pregnancy medical center",
@@ -77837,7 +80004,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Winchester, VA. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-2.",
@@ -77962,7 +80130,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wytheville, VA. Hours: T 9-5 W 9-5    *Appointments scheduled after hours through PL.*.",
@@ -77995,7 +80164,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Barre, VT. Hours: T 10-4 W 10-4 Th 10-4.",
@@ -78024,7 +80194,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Bennington, VT. Hours: Call for an appointment.",
@@ -78058,7 +80229,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Brattleboro, VT. Hours: T 9-4 W 9-4 Th 9-4 F 9-4.",
@@ -78067,6 +80239,38 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "26 Birge St., Brattleboro, VT 05301"
+  },
+  {
+    "id": "vt-futures-pregnancy-care-82899",
+    "name": "Futures Pregnancy Care",
+    "type": "Pregnancy medical center",
+    "city": "Lyndonville",
+    "state": "VT",
+    "zip": "05851",
+    "phone": "802-427-4199",
+    "website": "",
+    "email": "",
+    "services": [
+      "ultrasound",
+      "pregnancy tests",
+      "baby supplies",
+      "STI testing",
+      "pregnancy counseling"
+    ],
+    "needs": [
+      "counseling",
+      "expecting",
+      "new-mom",
+      "supplies",
+      "talk"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lyndonville, VT. Hours: M 11-5 T 11-5 W 11-5 Th 11-5 F 11-6  We have someone on call 24/7..",
+    "lat": 44.535658,
+    "lng": -72.002675,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "70 Church Street, Lyndonville, VT 05851 United States"
   },
   {
     "id": "vt-the-women-s-center-middlebury-18818",
@@ -78091,7 +80295,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Middlebury, VT. Hours: M 10-2 T 10-4  Th 12-5 F 10-4  24/7 Nurse Chat on website.",
@@ -78125,7 +80330,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Morrisville, VT. Hours: W 8-4 Th 8-5 F 8-6.",
@@ -78158,7 +80364,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rutland, VT. Hours: M 9-5 T 11-7  Th 11-3   24 Hour Nurse chat line.",
@@ -78218,7 +80425,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Williston, VT. Hours: M 8:30-3:30 T 8:30-5  Th 8:30-3:30   Our Mobile clinic is out in the community on some Wednesdays and Fridays..",
@@ -78244,7 +80452,8 @@ window.HEARTH_CENTERS = [
     ],
     "needs": [
       "expecting",
-      "new-mom"
+      "new-mom",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bellevue, WA. Hours: M 10-5 T 10-5   F 9-1  STD Screenings available Mondays & Tuesdays.",
@@ -78277,7 +80486,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bellingham, WA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -78310,7 +80520,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bremerton, WA. Hours: M 9-5 T 10-4 W 9-5 Th 9-5   *Appointments scheduled after hours through PL.*.",
@@ -78344,7 +80555,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Brewster, WA. Hours: T 5-9  Th 5-9 F 5-9.",
@@ -78377,7 +80589,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Centralia, WA. Hours: T 10-5 W 10-5 Th 10-4 F 10-3  After hours phones are switched over to Option Line.*Appointments scheduled after hours through PL.*.",
@@ -78408,7 +80621,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ellensburg, WA. Hours: M 11-5 T 11-5 W 11-5 Th 11-5 F 11-5.",
@@ -78437,7 +80651,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ephrata, WA. Hours: M 11-4  W 11-4.",
@@ -78470,7 +80685,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Everett, WA. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -78499,7 +80715,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Federal Way, WA. Hours: M 9-5 T 3-8 W 9-5 Th 9-8 F 9-3.",
@@ -78532,7 +80749,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Forks, WA. Hours: T 12-4  Th 12-4.",
@@ -78561,7 +80779,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Gig Harbor, WA. Hours: M 12-4:30 T 9-5 W 9-5 Th 11-6   Also offer pregnancy loss support.",
@@ -78594,7 +80813,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Goldendale, WA. Hours: T 11-3 W 11-3.",
@@ -78627,7 +80847,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grandview, WA. Hours: M 10:30-5 T 10-7 W 10-5 Th 10-7   24 hour helpline*Appointments scheduled after hours through PL.*.",
@@ -78658,7 +80879,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hoquiam, WA. Hours: T 12-4  Th 12-4.",
@@ -78688,7 +80910,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kenmore, WA. Hours: M 1-7 T 10-5 W 10-5  F 10-2.",
@@ -78722,7 +80945,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kennewick, WA. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-1.",
@@ -78754,7 +80978,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kennewick, WA. Hours: M 10-5 T 10-5 W 12-7 Th 10-5   24-hour hotline and 24-hour nurse chatline through website*Appointments scheduled after hours through PL.*.",
@@ -78784,7 +81009,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Lakewood, WA. Hours: M 9-5  W 9-5 Th 12-7 F 9-5  STD Clinic on 1st & 3rd Wednesday of the month. Also offer pregnancy loss support..",
@@ -78844,7 +81070,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Moses Lake, WA. Hours: M 11-4 T 11-4 W 11-4 Th 11-4   24 Hour Nurse Chat available on our website.",
@@ -78876,7 +81103,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mt. Vernon, WA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -78908,7 +81136,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Oak Harbor, WA. Hours: T 10-4 W 12-7 Th 10-4.",
@@ -78937,7 +81166,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Olympia, WA. Hours: M 9:30-5:30 T 9:30-5:30 W 9:30-5:30 Th 9:30-5:30   24 hour hotline.*Appointments scheduled after hours through PL.*.",
@@ -78971,7 +81201,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Omak, WA. Hours: M 12-4 T 12-4 W 12-4 Th 12-4 F 12-4.",
@@ -79026,7 +81257,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Port Angeles, WA. Hours: M 10-4  W 10-4 Th 10-4   We offer low-cost pregnancy testing..",
@@ -79059,7 +81291,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Port Townsend, WA. Hours: T 10-4 W 10-4    We offer low-cost pregnancy testing..",
@@ -79092,7 +81325,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Pullman, WA. Hours: T 9-4  Th 9-4.",
@@ -79121,7 +81355,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Puyallup, WA. Hours: M 12-5 T 9-5 W 9-5 Th 12-8.",
@@ -79154,7 +81389,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sequim, WA. Hours: M 10-4 T 12-6 W 10-4    We offer low-cost pregnancy testing..",
@@ -79244,7 +81480,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Spokane, WA. Hours: M 9-5 T 9-5 W 9-5 Th 10-5   24-hour hotline*Appointments scheduled after hours through PL.*.",
@@ -79301,7 +81538,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Spokane, WA. Hours: M 8-5 T 8-5 W 8-5 Th 8-8   24 hour hotline which includes appointments available outside of regular operating hours..",
@@ -79334,7 +81572,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sunnyside, WA. Hours: M 10-7 T 10-5 W 10-5 Th 10-5   *Appointments scheduled after hours through PL.*.",
@@ -79367,7 +81606,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Tacoma, WA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  24 hour helpline - Nurses Chat Line.",
@@ -79456,7 +81696,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Washougal, WA. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  We see patients by appointment on Saturdays and evenings when there is a need.  We have plans to add evening and weekend hours.*Appointments schedule",
@@ -79517,7 +81758,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Yakima, WA. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5  We have 24 access to APR providers*Appointments scheduled after hours through PL.*.",
@@ -79551,7 +81793,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Appleton, WI. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -79584,7 +81827,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ashland, WI. Hours: M 9-5  W 9-5 Th 9-5.",
@@ -79616,7 +81860,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Beaver Dam, WI. Hours: M 9-5  W 12-8 Th 12-8   *Appointments scheduled after hours through PL.*.",
@@ -79649,7 +81894,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Burlington, WI. Hours: M 12-8 T 8-4:30 W 8-4:30 Th 8-4:30   *Appointments scheduled after hours through PL.*.",
@@ -79683,7 +81929,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Delavan, WI. Hours: M 9-00 T 9-11  Th 9-00   We are part of the Option Line and are available for APR services on off hours.",
@@ -79716,7 +81963,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Eau Claire, WI. Hours: M 10-3 T 10-3 W 10-3 Th 10-3   Additionally available Tue & Thu evenings by appointment, & Fri by appointment from 10am12pm.",
@@ -79749,7 +81997,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Eau Claire, WI. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   On Call Friday, Saturday, & Sunday.",
@@ -79758,6 +82007,43 @@ window.HEARTH_CENTERS = [
     "source": "optionline.org",
     "source_date": "2026-09-23",
     "address": "318 Fulton Street, Eau Claire, WI 54703"
+  },
+  {
+    "id": "wi-charis-pregnancy-and-family-help-center-60500",
+    "name": "Charis Pregnancy and Family Help Center",
+    "type": "Pregnancy resource center",
+    "city": "Fond Du Lac",
+    "state": "WI",
+    "zip": "54935",
+    "phone": "920-933-5589",
+    "website": "https://charisfdl.com",
+    "email": "",
+    "services": [
+      "ultrasound",
+      "parenting classes",
+      "baby supplies",
+      "adoption information",
+      "abortion recovery support",
+      "mentoring",
+      "pregnancy counseling",
+      "community referrals"
+    ],
+    "needs": [
+      "adoption",
+      "counseling",
+      "expecting",
+      "new-mom",
+      "supplies",
+      "talk",
+      "parenting"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Fond du Lac, WI. Hours: T 10-4 W 10-4 Th 10-4.",
+    "lat": 43.784694,
+    "lng": -88.44672,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "207 N. Main St., Fond du Lac, WI 54935 United States"
   },
   {
     "id": "wi-vida-medical-clinic-132702",
@@ -79799,7 +82085,8 @@ window.HEARTH_CENTERS = [
     ],
     "needs": [
       "expecting",
-      "new-mom"
+      "new-mom",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Grafton, WI. Hours: M 10-4 T 10-4 W 10-4 Th 10-10 F 10-12.",
@@ -79899,6 +82186,35 @@ window.HEARTH_CENTERS = [
     "address": "Green Bay, Green Bay, WI 54305"
   },
   {
+    "id": "wi-new-beginnings-a-home-for-mothers-56195",
+    "name": "New Beginnings - A Home for Mothers",
+    "type": "Maternity home",
+    "city": "Greendale",
+    "state": "WI",
+    "zip": "53129",
+    "phone": "800-720-6667",
+    "website": "",
+    "email": "",
+    "services": [
+      "parenting classes",
+      "baby supplies",
+      "housing support"
+    ],
+    "needs": [
+      "housing",
+      "new-mom",
+      "supplies",
+      "parenting"
+    ],
+    "faith": "Life-affirming network (Option Line / Heartbeat)",
+    "blurb": "Public listing via Option Line (optionline.org). Maternity home in Greendale, WI. Hours: M 8-8 T 8-8 W 8-8 Th 8-8 F 8-8 Sat 11-8 Sun 11-8.",
+    "lat": 42.929634,
+    "lng": -87.974732,
+    "source": "optionline.org",
+    "source_date": "2026-09-23",
+    "address": "4815 W College Ave Apt 156, Greendale, WI 53129 United States"
+  },
+  {
     "id": "wi-echo-health-inc-22799",
     "name": "Echo Health Inc.",
     "type": "Pregnancy medical center",
@@ -79921,7 +82237,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Hayward, WI. Hours: T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through PL.*.",
@@ -79949,7 +82266,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Helpline in Janesville, WI. Hours: M 8-6 T 8-6 W 8-6 Th 8-6 F 8-6 Sat 8-6 We are available by appointment for the hours above.  We have walk-in hours (no appointment necessary) Tuesday's 10a-2p, and Saturday 10a-12p..",
@@ -79982,7 +82300,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Kenosha, WI. Hours: M 9-3 T 11-7  Th 9-3   *Appointments scheduled after hours through PL.*.",
@@ -80041,7 +82360,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in La Crosse, WI. Hours: M 11-7  W 8-3  F 8-12  *Appointments scheduled after hours through PL.*.",
@@ -80132,7 +82452,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Ladysmith, WI. Hours: M 10-4:30 T 10-4:30 W 10-4:30 Th 10-4:30.",
@@ -80164,7 +82485,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Madison, WI. Hours: M 9-5 T 9-5 W 9-7 Th 9-5 F 9-3  Online Appointment Scheduling www.carenetdane.org*Appointments scheduled after hours through PL.*.",
@@ -80248,7 +82570,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Manitowoc, WI. Hours: M 10-5 T 10-5 W 10-5 Th 10-6   Additional services include-Birth Planning, Certified Lactation Support, Perinatal Support, Nurse Consultation Visits, Miscarriage Support, Sex Traffi",
@@ -80281,7 +82604,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Marinette, WI. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   Closed on the 2nd Monday AM of each month for our board meeting..",
@@ -80346,7 +82670,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Marshfield, WI. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   OR by appointment for ANY time.",
@@ -80379,7 +82704,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Medford, WI. Hours: M 11-5 T 11-5  Th 11-5   24 hour nurse text line: 715-575-9566*Appointments scheduled after hours through PL.*.",
@@ -80441,7 +82767,8 @@ window.HEARTH_CENTERS = [
       "adoption",
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Menomonee Falls, WI. Hours: M 10-6 T 10-6  Th 10-6 F 9-5.",
@@ -80475,7 +82802,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Menomonie, WI. Hours: M 1-5 T 11-6  Th 1-5   *Appointments scheduled after hours through NXL.*.",
@@ -80601,7 +82929,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Milwaukee, WI. Hours: M 9-4 T 9-4 W 9-4 Th 9-4 F 9-4  Can text anytime to set up an appt..",
@@ -80633,7 +82962,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Milwaukee, WI. Hours: M 8:30-4:30 T 8:30-4:30 W 8:30-4:30 Th 8:30-4:30 F 8:30-4:30.",
@@ -80665,7 +82995,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Milwaukee, WI. Hours: M 9-5 T 11-7 W 9-5 Th 9-5 F 9-5 Sat 9-1 After hours hotline..",
@@ -80697,7 +83028,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Milwaukee, WI. Hours: M 10-4 T 10-4 W 10-4 Th 10-4 F 10-2  Spanish-speaking staff member available..",
@@ -80727,7 +83059,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Monroe, WI. Hours: T 12-3 W 12-3 Th 12-3 F 12-3.",
@@ -80761,7 +83094,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Monroe, WI. Hours: M 10-4 T 10-4  Th 10-4 F 10-4  Additional hours by appointment.",
@@ -80794,7 +83128,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mount Pleasant, WI. Hours: M 11-7  W 9-3  F 9-3  *Appointments scheduled after hours through PL.*.",
@@ -80828,7 +83163,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Mukwonago, WI. Hours: M 10-6 T 10-6 W 9-5 Th 10-6 F 9-5 Sat 10-2 *Appointments scheduled after hours through PL.*.",
@@ -80918,7 +83254,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Oshkosh, WI. Hours: M 9-5 T 9-5 W 9-5 Th 9-5.",
@@ -80951,7 +83288,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Platteville, WI. Hours: M 9-4 T 9-4   F 9-4.",
@@ -80985,7 +83323,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rhinelander, WI. Hours: M 11-4  W 11-4.",
@@ -81018,7 +83357,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rice Lake, WI. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   *Appointments scheduled after hours through NXL.*.",
@@ -81051,7 +83391,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in River Falls, WI. Hours: M 9:30-4 T 11-7 W 9:30-4 Th 11-7 F 9:30-4.",
@@ -81084,7 +83425,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Saint Croix Falls, WI. Hours: T 10-4 W 10-4 Th 10-4   Other times by Appointment..",
@@ -81117,7 +83459,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sheboygan, WI. Hours: M 8:30-5 T 9-3 W 8:30-6 Th 8:30-5 F 9-3  Other times by appointment.  Also offer well-woman exams and doula support*Appointments scheduled after hours through PL.*.",
@@ -81151,7 +83494,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Stevens Point, WI. Hours: M 10-5 T 10-5 W 10-5 Th 10-5 F 10-5 Sat 10-5 OR by appointment for ANY time.",
@@ -81185,7 +83529,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Viroqua, WI. Hours: T 10-2  Th 10-4.",
@@ -81218,7 +83563,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Waukesha, WI. Hours: M 10-6 T 10-6 W 9-5 Th 10-6 F 9-5 Sat 10-2 *Appointments scheduled after hours through PL.*.",
@@ -81251,7 +83597,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Wausau, WI. Hours: M 9-4 T 9-4 W 9-4 Th 9-4   On Call Friday, Saturday, & Sunday.",
@@ -81285,7 +83632,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wausau, WI. Hours: M 8-4 T 8-4 W 8-4 Th 8-4   Nurse chatline though Infinite Worth.",
@@ -81317,7 +83665,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Allis, WI. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   24-hour HopeSync hotline available.*Appointments scheduled after hours through PL.*.",
@@ -81350,7 +83699,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Allis, WI. Hours: M 11-7 T 9-3  Th 9-3   *Appointments scheduled after hours through PL.*.",
@@ -81383,7 +83733,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in West Bend, WI. Hours: M 9-4 T 9-4  Th 9-5   Available Thurdays by appointment from 5pm-7pm.",
@@ -81473,7 +83824,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Wisconsin Rapids, WI. Hours: M 10-5 T 10-5 W 10-5 Th 10-5   Anytime by Appointment.",
@@ -81507,7 +83859,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Woodruff, WI. Hours: T 11-4  Th 11-4.",
@@ -81542,7 +83895,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Woodville, WI. Hours: W 9:30-4:30    The Center is only open on Wednesday's for appointmets, but we answer the phone and Facebook messages daily.",
@@ -81604,7 +83958,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Bluefield, WV. Hours: M 10-6 T 10-4  Th 10-4  Sat 9-12 Services on Saturdays are are only available on the first Saturday of each month. We are not open for the rest of the Saturdays of each month.*Appoi",
@@ -81637,7 +83992,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Buckhannon, WV. Hours: M 10-2 T 10-2 W 10-2 Th 10-2   We provide after-hours services, via phone.",
@@ -81671,7 +84027,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Charleston, WV. Hours: M 10-5 T 12-7 W 10-5 Th 12-7   We have a text line that is operated 24/7 and is answered by our staff. Medical inquiries are handled by our sonographer/RDMS*Appointments scheduled ",
@@ -81737,7 +84094,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Clarksburg, WV. Hours: M 9-1 T 9-5 W 9-5 Th 9-5 F 9-5  *Appointments scheduled after hours through PL.*.",
@@ -81771,7 +84129,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Ellenboro, WV. Hours: T 12-2  Th 12-4   We have a 24 hour hotline. We are closed the week of Thanksgiving and Christmas.  During the school months - if the county schools are closed due to weather, we a",
@@ -81804,7 +84163,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Fairmont, WV. Hours: M 10-4 T 10-4 W 10-4 Th 10-4   Friday by appt only. *Appointments scheduled after hours through PL.*.",
@@ -81839,7 +84199,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Gassaway, WV. Hours: T 10-2.",
@@ -81891,7 +84252,8 @@ window.HEARTH_CENTERS = [
     ],
     "needs": [
       "expecting",
-      "new-mom"
+      "new-mom",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Huntington, WV. Hours: M 1-8  W 9-5  F 9-5.",
@@ -81923,7 +84285,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Keyser, WV. Hours: T 10-4  Th 10-4.",
@@ -81953,7 +84316,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Kingwood, WV. Hours: M 10-4 T 10-4  Th 10-4.",
@@ -81986,7 +84350,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "supplies",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Lewisburg, WV. Hours: M 8-3:30 T 8-3:30   F 8-3:30.",
@@ -82050,7 +84415,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "housing",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Martinsburg, WV. Hours: M 8-4 T 8-4 W 8-4 Th 8-4 F 8-4.",
@@ -82083,7 +84449,8 @@ window.HEARTH_CENTERS = [
       "housing",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Martinsburg, WV. Hours: M 8-4 T 8-4 W 8-4 Th 8-4 F 8-4.",
@@ -82145,7 +84512,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Morgantown, WV. Hours: M 10-4 T 10-4  Th 10-4   24 hour hotline. On Wednesday, by appointment only.",
@@ -82174,7 +84542,8 @@ window.HEARTH_CENTERS = [
     "needs": [
       "expecting",
       "new-mom",
-      "supplies"
+      "supplies",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Parkersburg, WV. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5  *Appointments scheduled after hours through PL.*.",
@@ -82208,7 +84577,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Parsons, WV. Hours: Th 10-2.",
@@ -82238,7 +84608,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy resource center in Petersburg, WV. Hours: T 10-3  Th 10-3.",
@@ -82295,7 +84666,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "counseling",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Williamson, WV. Hours: M 9-5 T 9-5 W 9-5 Th 9-5 F 9-5.",
@@ -82329,7 +84701,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Casper, WY. Hours: T 1-8 W 1-5:30 Th 9-8 F 9-3  The hours listed are patient appointment hours.  We have administrative office hours of:&#10;Tues - 9am-5pm&#10;Wed - 9am-5pm&#10;Thurs - 9am-5pm&#10;Fri -",
@@ -82362,7 +84735,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cheyenne, WY. Hours: M 10-4 T 10-4 W 12-6 Th 10-4   *Appointments scheduled after hours through PL.*.",
@@ -82428,7 +84802,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Cody, WY. Hours: M 12-5 T 1-7 W 10-2 Th 12-5   All services are free.*Appointments scheduled after hours through PL.*.",
@@ -82461,7 +84836,8 @@ window.HEARTH_CENTERS = [
       "new-mom",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Etna, WY. Hours: W 1-3:30    Addtionally open by appointment only Mon, Tue, Thu, Fri, Sat, Sun.",
@@ -82524,7 +84900,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Jackson, WY. Hours: M 10-2 T 10-5 W 10-5 Th 10-5   24/7 Nurses Line.",
@@ -82558,7 +84935,8 @@ window.HEARTH_CENTERS = [
       "supplies",
       "counseling",
       "talk",
-      "adoption"
+      "adoption",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Laramie, WY. Hours: M 8-4 T 8-4 W 8-4 Th 8-4   *Appointments scheduled after hours through PL.*.",
@@ -82591,7 +84969,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Powell, WY. Hours: M 1-7 T 12-5 W 10-2 Th 12-5   *Appointments scheduled after hours through PL.*.",
@@ -82648,7 +85027,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Rock Springs, WY. Hours: T 10-6 W 10-4 Th 10-4   Appointments outside regular business may be scheduled by appointment only&#10;24 hr Option Line&#10;24 hr Abortion Pill Reversal.",
@@ -82682,7 +85062,8 @@ window.HEARTH_CENTERS = [
       "expecting",
       "new-mom",
       "supplies",
-      "talk"
+      "talk",
+      "parenting"
     ],
     "faith": "Life-affirming network (Option Line / Heartbeat)",
     "blurb": "Public listing via Option Line (optionline.org). Pregnancy medical center in Sheridan, WY. Hours: T 10-4 W 10-4 Th 10-4   24-hour hotline, Wednesday 4-6 by appointment only..",
@@ -82692,4 +85073,4 @@ window.HEARTH_CENTERS = [
     "source_date": "2026-09-23",
     "address": "847 Coffeen  Ave, Sheridan, WY 82801"
   }
-]
+];
