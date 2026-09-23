@@ -1696,3 +1696,94 @@ body { font-size: 1.05rem; }
     flex: 1 1 auto;
   }
 }
+
+/* ===== Postpartum beacon & mom tools (v1.5) ===== */
+.soft-card { background: var(--white); }
+.beacon-disclaimer { margin: 1rem 0 1.25rem; border-left: 4px solid var(--gold); }
+.beacon-disclaimer p { margin: 0; }
+.beacon-actions { margin-bottom: 1rem; }
+.beacon-big { width: 100%; margin-top: 0.75rem; min-height: 3.25rem; font-size: 1.15rem; }
+.beacon-duration-row { margin: 0.75rem 0; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 0.5rem; }
+.btn-row .btn { flex: 1 1 auto; min-width: 8rem; text-align: center; }
+.mom-big-row .btn { min-height: 3.5rem; font-size: 1.25rem; }
+.beacon-count {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--blue-deep);
+  margin: 0.75rem 0 1rem;
+}
+.beacon-map {
+  width: 100%;
+  height: min(58vh, 420px);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(91, 143, 168, 0.2);
+  background: var(--blue-soft);
+  z-index: 0;
+}
+.beacon-glow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196, 165, 116, 0.95) 0%, rgba(196, 165, 116, 0.45) 40%, rgba(196, 165, 116, 0) 70%);
+  box-shadow: 0 0 18px rgba(196, 165, 116, 0.65);
+  animation: beacon-pulse 2.8s ease-in-out infinite;
+}
+.beacon-glow.mine {
+  background: radial-gradient(circle, rgba(91, 143, 168, 0.95) 0%, rgba(91, 143, 168, 0.45) 40%, rgba(91, 143, 168, 0) 70%);
+  box-shadow: 0 0 20px rgba(61, 109, 134, 0.7);
+}
+@keyframes beacon-pulse {
+  0%, 100% { transform: scale(0.92); opacity: 0.85; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+.beacon-encourage { margin-top: 1.25rem; }
+.beacon-note-card {
+  background: var(--cream-dark);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin: 0.5rem 0;
+}
+.beacon-note-card p { margin: 0; }
+.beacon-note-card .meta { margin-top: 0.35rem; font-size: 0.85rem; color: var(--muted); }
+.beacon-chip { cursor: pointer; }
+#beacon-status.is-error { color: var(--danger); }
+.mom-stat { font-size: 1.25rem; font-weight: 600; color: var(--blue-deep); margin: 0.35rem 0 0.75rem; }
+.mom-stat .is-low, #baby-diaper-stock.is-low { color: var(--danger); }
+.mom-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.mom-table th, .mom-table td { text-align: left; padding: 0.55rem 0.4rem; border-bottom: 1px solid rgba(44,58,71,0.08); }
+.mom-table th { color: var(--muted); font-weight: 600; }
+.field-row { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: flex-end; margin: 0.75rem 0; }
+.field-row .field { flex: 1 1 8rem; }
+.check-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.65rem 0; font-size: 1rem; }
+.warn-banner {
+  background: #f8e8e8;
+  color: #7a3030;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  margin: 0.5rem 0;
+}
+.contraction-live {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+  text-align: center;
+  margin: 0 0 0.75rem;
+}
+.mom-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 5.5rem;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  z-index: 2000;
+  box-shadow: var(--shadow-lg);
+  max-width: 90vw;
+  text-align: center;
+}
+.legend { margin-top: 0.5rem; }

@@ -12,6 +12,8 @@ The directory lists **verified real** pregnancy resource centers from public **O
 
 ## Support tools
 
+**Postpartum beacon** (anonymous area-glow map + kind notes), contraction timer, baby tracker, and gentle reminders/sounds — under **Support** / **Postpartum**.
+
 Crisis path, ultrasound companion, first-90-days checklist, mentor request, goods ask, family invite, work overview, hope stories (opt-in), and a simple resume + job email templates — all under **Support**. Dignity-first; no AI mentor; no fake government enrollment.
 
 ## Payday budget
@@ -33,7 +35,7 @@ Open `http://127.0.0.1:8080`.
 ## Live
 
 - GitHub Pages: https://bvsquiat27.github.io/hearth-and-hope/
-- Android APK: see GitHub Releases (v1.4.1+)
+- Android APK: see GitHub Releases (v1.5.0+)
 
 ## License / data notes
 
