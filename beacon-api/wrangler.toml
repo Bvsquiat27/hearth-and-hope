@@ -1,3 +1,11 @@
 name = "hearth-ember-api"
 main = "worker.js"
 compatibility_date = "2026-09-01"
+
+[[kv_namespaces]]
+binding = "BEACONS"
+id = "2601e4a71df740afa85abb7c8c308116"
+
+[[kv_namespaces]]
+binding = "HOPE"
+id = "05f6800a9e0e4d6abbabac726b9fd805"

@@ -1,26 +1,29 @@
 # Hearth Ember API
 
-Public HTTPS REST backend for the Postpartum **Ember** live map.
+Public HTTPS REST backend for the Postpartum **Ember** live map + Hope board.
+
+## Live URL
+
+`https://hearth-ember-api.piquant-filament-122.workers.dev`
+
+Host: **Cloudflare Workers + KV** (durable free). CORS `*`.
 
 ## Endpoints
 
-- `GET /beacons` → `{ id: { lat, lng, createdAt, expiresAt, coarseZip? } }`
-- `POST /beacons` → `{ id }`
-- `PUT /beacons/:id` → `{ id }`
-- `DELETE /beacons/:id`
-- `GET /beacons/:id/notes`
-- `POST /beacons/:id/notes`
+- `GET /health` → `{ ok, lights }`
+- `GET|POST /beacons`
+- `PUT|DELETE /beacons/:id`
+- `GET|POST /beacons/:id/notes`
+- `GET|POST /hope`
 
-CORS: `*` for GET/POST/PUT/DELETE. JSON only. Coarse locations; no PII; prune expired.
-
-## Run locally
+## Deploy
 
 ```bash
-npm install
-npm start
+# Node 22+
+npx wrangler kv namespace create BEACONS
+npx wrangler kv namespace create HOPE
+# put ids in wrangler.toml, then:
+npx wrangler deploy
 ```
 
-## Deploy options
-
-- **Express** (`server.js`): Render / Fly / any Node host — file persistence in `data/beacons.json`
-- **Cloudflare Worker** (`worker.js`): `npx wrangler deploy` — in-memory (lights expire anyway)
+Express `server.js` remains for local/dev file persistence.
