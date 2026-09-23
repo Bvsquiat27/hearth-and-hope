@@ -210,13 +210,251 @@
     });
   }
 
-  /* ---------- Directory ---------- */
+  /* ---------- Directory / proximity matching ---------- */
   const centerList = document.getElementById("center-list");
   const locFilter = document.getElementById("loc-filter");
   const typeFilter = document.getElementById("type-filter");
+  const dirMatchNote = document.getElementById("dir-match-note");
+  const LOCAL_MILES = 100;
+  let geoOverride = null; // { lat, lng, label } from "Use my location"
 
   function getCenters() {
     return window.HEARTH_CENTERS || [];
+  }
+
+  function toRad(d) { return (d * Math.PI) / 180; }
+
+  function haversineMiles(a, b) {
+    if (!a || !b || a.lat == null || b.lat == null) return Infinity;
+    const R = 3958.8;
+    const dLat = toRad(b.lat - a.lat);
+    const dLng = toRad(b.lng - a.lng);
+    const lat1 = toRad(a.lat);
+    const lat2 = toRad(b.lat);
+    const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+    return 2 * R * Math.asin(Math.min(1, Math.sqrt(h)));
+  }
+
+  function normalizeQuery(raw) {
+    let s = String(raw || "").trim().toLowerCase();
+    s = s.replace(/[,\s]+/g, " ").trim();
+    s = s.replace(/\bnew york city\b/g, "new york");
+    s = s.replace(/\bn\.?y\.?c\.?\b/g, "nyc");
+    return s;
+  }
+
+  function extractZip(q) {
+    const m = String(q).match(/\b(\d{5})(?:-\d{4})?\b/);
+    return m ? m[1] : null;
+  }
+
+  function aliasCity(token) {
+    const aliases = window.HEARTH_CITY_ALIASES || {};
+    return aliases[token] || token;
+  }
+
+  function resolveLocation(raw, geo) {
+    if (geo && geo.lat != null && geo.lng != null) {
+      return { lat: geo.lat, lng: geo.lng, zip: geo.zip || null, state: geo.state || null, city: geo.city || null, source: "geo", label: geo.label || "Your location" };
+    }
+    const q = normalizeQuery(raw);
+    if (!q) return null;
+
+    const zipObj = window.HEARTH_ZIPS || null;
+    const zipCoords = window.HEARTH_ZIP_COORDS || {};
+    const cityIndex = window.HEARTH_CITY_INDEX || {};
+    const cityMap = window.HEARTH_CITIES || {};
+    const aliases = {
+      "nyc": "new york", "new york city": "new york", "n.y.c.": "new york",
+      "manhattan": "new york", "la": "los angeles", "l.a.": "los angeles",
+      "philly": "philadelphia", "dc": "washington", "washington dc": "washington",
+      "washington d.c.": "washington", "st louis": "saint louis", "st. louis": "saint louis"
+    };
+
+    const zip = extractZip(q);
+
+    function fromZip(z) {
+      // Prefer a listed center at this ZIP (more accurate than some large ZCTA centroids)
+      const hit = getCenters().find((c) => c.zip === z && c.lat != null);
+      if (zipObj && zipObj[z]) {
+        const o = zipObj[z];
+        if (hit) return { lat: hit.lat, lng: hit.lng, zip: z, state: hit.state || o.state, city: hit.city || o.city, source: "zip-center", label: `${hit.city}, ${hit.state} ${z}` };
+        return { lat: o.lat, lng: o.lng, zip: z, state: o.state, city: o.city, source: "zip", label: `${o.city || "ZIP"}, ${o.state || ""} ${z}`.trim() };
+      }
+      if (hit) return { lat: hit.lat, lng: hit.lng, zip: z, state: hit.state, city: hit.city, source: "zip-center", label: `${hit.city}, ${hit.state} ${z}` };
+      if (zipCoords[z]) {
+        const [lat, lng] = zipCoords[z];
+        return { lat, lng, zip: z, state: null, city: null, source: "zip", label: `ZIP ${z}` };
+      }
+      return null;
+    }
+
+    if (zip) {
+      const exact = fromZip(zip);
+      if (exact) return exact;
+      const z3 = zip.slice(0, 3);
+      const z3Centers = getCenters().filter((c) => String(c.zip).startsWith(z3));
+      if (z3Centers.length) {
+        const lat = z3Centers.reduce((s, c) => s + c.lat, 0) / z3Centers.length;
+        const lng = z3Centers.reduce((s, c) => s + c.lng, 0) / z3Centers.length;
+        return { lat, lng, zip, state: z3Centers[0].state, city: null, source: "zip3", label: `Near ZIP ${zip}` };
+      }
+      const pool = zipObj || zipCoords;
+      for (const z of Object.keys(pool)) {
+        if (z.startsWith(z3)) {
+          const got = fromZip(z);
+          if (got) return { ...got, zip, source: "zip3-db", label: `Near ZIP ${zip}` };
+        }
+      }
+    }
+
+    let cityPart = q.replace(/\b\d{5}(?:-\d{4})?\b/g, "").trim();
+    const knownStates = "AL AK AZ AR CA CO CT DE DC FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY".split(" ");
+    let stateHint = null;
+    const stateMatch = cityPart.match(/\b([a-z]{2})$/i);
+    if (stateMatch) {
+      const maybe = stateMatch[1].toUpperCase();
+      if (knownStates.includes(maybe)) {
+        stateHint = maybe;
+        cityPart = cityPart.slice(0, -2).trim();
+      }
+    }
+    cityPart = aliases[cityPart] || cityPart;
+
+    // HEARTH_CITIES: "city|ST" -> zip
+    if (cityPart) {
+      const preferState = { "new york": "NY", "los angeles": "CA", "chicago": "IL", "houston": "TX", "phoenix": "AZ", "philadelphia": "PA", "san antonio": "TX", "san diego": "CA", "dallas": "TX", "san jose": "CA", "austin": "TX", "jacksonville": "FL", "miami": "FL", "seattle": "WA", "denver": "CO", "boston": "MA", "nashville": "TN", "detroit": "MI", "portland": "OR", "las vegas": "NV", "memphis": "TN", "louisville": "KY", "baltimore": "MD", "milwaukee": "WI", "albuquerque": "NM", "tucson": "AZ", "atlanta": "GA", "minneapolis": "MN", "omaha": "NE", "raleigh": "NC", "oakland": "CA", "tampa": "FL", "tulsa": "OK", "cleveland": "OH", "wichita": "KS", "arlington": "VA", "new orleans": "LA", "bakersfield": "CA", "honolulu": "HI", "anaheim": "CA", "santa ana": "CA", "riverside": "CA", "corpus christi": "TX", "lexington": "KY", "henderson": "NV", "stockton": "CA", "saint paul": "MN", "saint louis": "MO", "cincinnati": "OH", "pittsburgh": "PA", "greensboro": "NC", "lincoln": "NE", "orlando": "FL", "durham": "NC", "boise": "ID", "spokane": "WA", "birmingham": "AL", "des moines": "IA", "tacoma": "WA", "buffalo": "NY", "reno": "NV", "richmond": "VA", "baton rouge": "LA", "salt lake city": "UT", "little rock": "AR", "cheyenne": "WY", "fairbanks": "AK", "anchorage": "AK", "billings": "MT", "casper": "WY", "charleston": "SC", "springfield": "IL", "columbus": "OH", "washington": "DC", "newark": "NJ", "jersey city": "NJ", "hoboken": "NJ" };
+      const matches = Object.keys(cityMap).filter((k) => k === cityPart + "|" + (k.split("|")[1] || "") && k.startsWith(cityPart + "|"));
+      // exact city|ST keys only
+      const exactMatches = Object.keys(cityMap).filter((k) => {
+        const [c] = k.split("|");
+        return c === cityPart;
+      });
+      const centerStates = new Set(getCenters().filter((c) => c.city.toLowerCase() === cityPart).map((c) => c.state));
+      const ranked = exactMatches.slice().sort((a, b) => {
+        const sa = a.split("|")[1], sb = b.split("|")[1];
+        const score = (st) => {
+          if (stateHint && st === stateHint) return 0;
+          if (preferState[cityPart] && st === preferState[cityPart]) return 1;
+          if (centerStates.has(st)) return 2;
+          return 3;
+        };
+        return score(sa) - score(sb) || a.localeCompare(b);
+      });
+      for (const key of ranked) {
+        const z = cityMap[key];
+        if (z) {
+          const got = fromZip(z);
+          if (got) return { ...got, city: cityPart, source: "city-zip", label: got.city ? `${got.city}, ${got.state}` : cityPart };
+        }
+      }
+    }
+
+    if (cityIndex[cityPart]) {
+      const [lat, lng, st, z] = cityIndex[cityPart];
+      return { lat, lng, zip: z, state: stateHint || st, city: cityPart, source: "city-index", label: cityPart };
+    }
+
+    const centers = getCenters();
+    const cityHits = centers.filter((c) => c.city.toLowerCase() === cityPart);
+    if (cityHits.length) {
+      const pool = stateHint ? cityHits.filter((c) => c.state === stateHint) : cityHits;
+      const use = pool.length ? pool : cityHits;
+      const lat = use.reduce((s, c) => s + c.lat, 0) / use.length;
+      const lng = use.reduce((s, c) => s + c.lng, 0) / use.length;
+      return { lat, lng, zip: use[0].zip, state: use[0].state, city: use[0].city, source: "center-city", label: `${use[0].city}, ${use[0].state}` };
+    }
+
+    if (cityPart.length >= 3) {
+      const partial = centers.filter((c) =>
+        c.city.toLowerCase().includes(cityPart) || cityPart.includes(c.city.toLowerCase())
+      );
+      if (partial.length) {
+        const lat = partial.reduce((s, c) => s + c.lat, 0) / partial.length;
+        const lng = partial.reduce((s, c) => s + c.lng, 0) / partial.length;
+        return { lat, lng, zip: partial[0].zip, state: partial[0].state, city: partial[0].city, source: "partial-city", label: `${partial[0].city}, ${partial[0].state}` };
+      }
+    }
+
+    if (zip) return { lat: null, lng: null, zip, state: stateHint, city: cityPart || null, source: "unresolved", label: raw };
+    return { lat: null, lng: null, zip: null, state: stateHint, city: cityPart || null, source: "unresolved", label: raw };
+  }
+
+
+  function rankCenters(locRaw, needs, opts) {
+    opts = opts || {};
+    const limit = opts.limit || 50;
+    const geo = opts.geo || geoOverride;
+    const resolved = resolveLocation(locRaw, geo);
+    const type = opts.type || "";
+    let pool = getCenters().filter((c) => !type || c.type === type);
+
+    const scored = pool.map((c) => {
+      let tier = 50;
+      let dist = Infinity;
+      if (resolved && resolved.lat != null && c.lat != null) {
+        dist = haversineMiles(resolved, c);
+      }
+      if (resolved && resolved.zip && c.zip === resolved.zip) tier = 0;
+      else if (resolved && resolved.zip && c.zip.slice(0, 3) === resolved.zip.slice(0, 3)) tier = 1;
+      else if (resolved && resolved.city && c.city.toLowerCase() === String(resolved.city).toLowerCase()) tier = 2;
+      else if (resolved && resolved.state && c.state === resolved.state && dist <= LOCAL_MILES) tier = 3;
+      else if (dist <= LOCAL_MILES) tier = 4;
+      else if (resolved && resolved.state && c.state === resolved.state) tier = 5;
+      else tier = 6;
+
+      // Text boost when unresolved coords but query tokens match
+      const q = normalizeQuery(locRaw);
+      if (q && (resolved == null || resolved.lat == null)) {
+        const hay = `${c.city} ${c.state} ${c.zip} ${c.name}`.toLowerCase();
+        if (resolved && resolved.zip && c.zip === resolved.zip) tier = 0;
+        else if (q && hay.includes(q)) tier = Math.min(tier, 2);
+      }
+
+      const overlap = (needs || []).length
+        ? (needs || []).filter((n) => (c.needs || []).includes(n)).length
+        : 0;
+      return { c, tier, dist, overlap };
+    });
+
+    scored.sort((a, b) =>
+      a.tier - b.tier ||
+      a.dist - b.dist ||
+      b.overlap - a.overlap ||
+      a.c.name.localeCompare(b.c.name)
+    );
+
+    const local = scored.filter((s) => s.dist <= LOCAL_MILES || s.tier <= 4);
+    let mode = "all";
+    let list;
+    if (!locRaw && !geo) {
+      list = scored;
+      mode = "browse";
+    } else if (local.length) {
+      list = local;
+      mode = local.some((s) => s.tier <= 2) ? "exact" : "local";
+    } else {
+      const inState = scored.filter((s) => resolved && resolved.state && s.c.state === resolved.state);
+      if (inState.length) {
+        list = inState;
+        mode = "in-state";
+      } else {
+        list = scored;
+        mode = "national";
+      }
+    }
+
+    return {
+      resolved,
+      mode,
+      items: list.slice(0, limit).map((s) => ({ ...s.c, _dist: s.dist, _tier: s.tier }))
+    };
+  }
+
+  function formatDist(miles) {
+    if (miles == null || !isFinite(miles)) return "";
+    if (miles < 10) return ` · ${miles.toFixed(1)} mi`;
+    return ` · ${Math.round(miles)} mi`;
   }
 
   function populateTypeFilter() {
@@ -228,17 +466,33 @@
 
   function renderCenters() {
     if (!centerList) return;
-    const q = (locFilter && locFilter.value || "").trim().toLowerCase();
+    const q = (locFilter && locFilter.value || "").trim();
     const type = (typeFilter && typeFilter.value) || "";
-    const list = getCenters().filter((c) => {
-      const typeOk = !type || c.type === type;
-      const hay = `${c.city} ${c.state} ${c.zip} ${c.name}`.toLowerCase();
-      const locOk = !q || hay.includes(q);
-      return typeOk && locOk;
-    });
+    const qNorm = q.trim().toLowerCase();
+    const useGeo = geoOverride && (!q || qNorm === "near me");
+    const result = rankCenters(qNorm === "near me" ? "" : q, [], { type, limit: 40, geo: useGeo ? geoOverride : null });
+    const list = result.items;
+
+    if (dirMatchNote) {
+      if (!q && !geoOverride) {
+        dirMatchNote.hidden = true;
+        dirMatchNote.textContent = "";
+      } else if (result.mode === "exact" || result.mode === "local") {
+        dirMatchNote.hidden = false;
+        dirMatchNote.textContent = `Showing nearest centers${result.resolved && result.resolved.label ? " near " + result.resolved.label : ""}.`;
+      } else if (result.mode === "in-state") {
+        dirMatchNote.hidden = false;
+        dirMatchNote.textContent = "No centers within ~100 miles — nearest in-state options:";
+      } else if (result.mode === "national") {
+        dirMatchNote.hidden = false;
+        dirMatchNote.textContent = "No exact local match — nearest options nationwide:";
+      } else {
+        dirMatchNote.hidden = true;
+      }
+    }
 
     if (!list.length) {
-      centerList.innerHTML = `<div class="empty-state">No centers match that city or ZIP. Try “Austin”, “78701”, or clear the filter.</div>`;
+      centerList.innerHTML = `<div class="empty-state">No centers available yet. Try another city or ZIP, or clear the filter to browse the national starter network.</div>`;
       return;
     }
 
@@ -248,9 +502,9 @@
           <h3>${escapeHtml(c.name)}</h3>
           <span class="tag green">${escapeHtml(c.type)}</span>
         </header>
-        <p class="loc">${escapeHtml(c.city)}, ${escapeHtml(c.state)} ${escapeHtml(c.zip)} · ${escapeHtml(c.faith)}</p>
-        <p class="blurb">${escapeHtml(c.blurb)}</p>
-        <div class="services">${c.services.map((s) => `<span class="service-pill">${escapeHtml(s)}</span>`).join("")}</div>
+        <p class="loc">${escapeHtml(c.city)}, ${escapeHtml(c.state)} ${escapeHtml(c.zip)}${formatDist(c._dist)} · ${escapeHtml(c.faith)}</p>
+        <p class="blurb">${escapeHtml(c.blurb || c.blurb || "")}</p>
+        <div class="services">${(c.services || []).map((s) => `<span class="service-pill">${escapeHtml(s)}</span>`).join("")}</div>
         <div class="center-actions">
           <a href="tel:${escapeAttr(c.phone)}">Call ${escapeHtml(c.phone)}</a>
           <a href="mailto:${escapeAttr(c.email)}">Email</a>
@@ -260,8 +514,63 @@
     `).join("");
   }
 
-  if (locFilter) locFilter.addEventListener("input", renderCenters);
+  function useBrowserLocation(target) {
+    const helpNote = document.getElementById("help-geo-note");
+    const setNote = (el, msg, ok) => {
+      if (!el) return;
+      el.hidden = false;
+      el.textContent = msg;
+      el.style.color = ok ? "" : "#8a4b2e";
+    };
+    if (!navigator.geolocation) {
+      setNote(target === "help" ? helpNote : dirMatchNote, "Location is not supported in this browser.", false);
+      return;
+    }
+    setNote(target === "help" ? helpNote : dirMatchNote, "Getting your location…", true);
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        geoOverride = {
+          lat: pos.coords.latitude,
+          lng: pos.coords.longitude,
+          label: "Your location"
+        };
+        // Reverse-approximate: nearest ZIP from loaded zip coords is expensive; leave label as-is
+        if (target === "dir" || target === "both") {
+          if (locFilter && !locFilter.value) locFilter.value = "Near me";
+          renderCenters();
+        }
+        if (target === "help" || target === "both") {
+          const loc = document.getElementById("location");
+          if (loc) loc.value = loc.value && loc.value !== "Near me" ? loc.value : "Near me";
+          setNote(helpNote, "Using your current location for matching.", true);
+          updatePreview();
+        }
+        if (target === "dir") setNote(dirMatchNote, "Using your current location — showing nearest centers.", true);
+      },
+      () => {
+        setNote(target === "help" ? helpNote : dirMatchNote, "Location denied or unavailable. You can still type a city or ZIP.", false);
+      },
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 }
+    );
+  }
+
+  if (locFilter) {
+    locFilter.addEventListener("input", () => {
+      if (locFilter.value.trim() && locFilter.value.trim().toLowerCase() !== "near me") {
+        // keep geo as soft boost only when explicitly Near me
+        if (geoOverride && locFilter.value.trim().toLowerCase() !== "near me") {
+          /* typed query wins over stale geo for resolveLocation when raw is set — pass geo only for Near me */
+        }
+      }
+      renderCenters();
+    });
+  }
   if (typeFilter) typeFilter.addEventListener("change", renderCenters);
+
+  const btnDirGeo = document.getElementById("use-my-location-dir");
+  const btnHelpGeo = document.getElementById("use-my-location-help");
+  if (btnDirGeo) btnDirGeo.addEventListener("click", () => useBrowserLocation("dir"));
+  if (btnHelpGeo) btnHelpGeo.addEventListener("click", () => useBrowserLocation("help"));
 
   /* ---------- Get Help form ---------- */
   const helpForm = document.getElementById("help-form");
@@ -277,24 +586,25 @@
   }
 
   function matchCenters(loc, needs) {
-    const q = (loc || "").trim().toLowerCase();
-    let pool = getCenters();
-    if (q) {
-      const locMatched = pool.filter((c) =>
-        `${c.city} ${c.zip} ${c.state}`.toLowerCase().includes(q)
-      );
-      if (locMatched.length) pool = locMatched;
-    }
-    if (needs.length) {
+    const q = (loc || "").trim();
+    const geo = (q.toLowerCase() === "near me") ? geoOverride : (q ? null : geoOverride);
+    const result = rankCenters(q, needs || [], { limit: 12, geo });
+    let pool = result.items;
+
+    if ((needs || []).length) {
       const scored = pool.map((c) => {
         const overlap = needs.filter((n) => (c.needs || []).includes(n)).length;
-        return { c, overlap };
+        return { c, overlap, dist: c._dist };
       });
-      scored.sort((a, b) => b.overlap - a.overlap || a.c.name.localeCompare(b.c.name));
+      scored.sort((a, b) => b.overlap - a.overlap || a.dist - b.dist || a.c.name.localeCompare(b.c.name));
       const withOverlap = scored.filter((s) => s.overlap > 0).map((s) => s.c);
       pool = withOverlap.length ? withOverlap : scored.map((s) => s.c);
     }
-    return pool.slice(0, 3);
+
+    const top = pool.slice(0, 3);
+    top._matchMode = result.mode;
+    top._resolved = result.resolved;
+    return top;
   }
 
   function buildMessage(data, centers) {
@@ -353,9 +663,17 @@ Thank you for the work you do. Please contact me at your earliest convenience.
       centers.length ? centers : [{ name: "(centers will appear when you enter a city/ZIP)" }]
     );
 
+    const mode = centers._matchMode;
+    let heading = "Suggested centers (up to 3):";
+    if (mode === "in-state") heading = "No centers within ~100 miles — nearest in-state options:";
+    else if (mode === "national") heading = "No exact local match — nearest options:";
+    else if (mode === "local" || mode === "exact") heading = "Nearest centers for your location:";
     matchEl.innerHTML = centers.length
-      ? `<p><strong>Suggested centers (up to 3):</strong></p><ul class="match-list">${
-          centers.map((c) => `<li><strong>${escapeHtml(c.name)}</strong> — ${escapeHtml(c.city)} ${escapeHtml(c.zip)} · ${escapeHtml(c.type)}</li>`).join("")
+      ? `<p><strong>${heading}</strong></p><ul class="match-list">${
+          centers.map((c) => {
+            const d = (c._dist != null && isFinite(c._dist)) ? ` · ${c._dist < 10 ? c._dist.toFixed(1) : Math.round(c._dist)} mi` : "";
+            return `<li><strong>${escapeHtml(c.name)}</strong> — ${escapeHtml(c.city)}, ${escapeHtml(c.state)} ${escapeHtml(c.zip)}${d} · ${escapeHtml(c.type)}</li>`;
+          }).join("")
         }</ul>`
       : `<p class="hint">Enter a city or ZIP to see matching centers.</p>`;
 
@@ -388,7 +706,7 @@ ${msg.sms}`;
       if (!data.consent) errors.push("Please check the consent box so we know you allow outreach on your behalf.");
 
       const centers = matchCenters(data.location, data.needs);
-      if (!centers.length) errors.push("We couldn’t match a center. Try another nearby city or ZIP.");
+      if (!centers.length) errors.push("We couldn’t match a center. Try a ZIP code or another nearby city.");
 
       if (errors.length) {
         if (formError) {

@@ -1,30 +1,47 @@
 # Hearth & Hope
 
-Warm, practical support for new and expecting mothers. Resources, local help, and dignity-first care.
+A calm, mobile-first **Progressive Web App (PWA)** that helps new and expecting mothers find resources, local pro-life–aligned support, and draft outreach to nearby centers — with explicit consent before anything is sent.
 
-## Install (Android APK)
+> **Framing:** Supports life as Christ intended, with dignity for every woman. No Planned Parenthood. No abortion referrals.
 
-1. On your Android phone, open the [latest Release](https://github.com/Bvsquiat27/hearth-and-hope/releases/latest) and download **hearth-and-hope.apk**.
-2. If prompted, allow installing from that browser / Files (Settings → Apps → Special access → Install unknown apps).
-3. Open the downloaded APK and tap **Install**.
-4. Open **Hearth & Hope** from your app drawer.
+## Find help anywhere
 
-Direct download (after release is published):  
-`https://github.com/Bvsquiat27/hearth-and-hope/releases/latest/download/hearth-and-hope.apk`
+Enter **any US city, town, or ZIP**. Find help and Get Help sort by distance using ZIP centroids and center coordinates:
 
-## Web / PWA
+1. Exact ZIP / city matches first  
+2. Nearest centers within ~100 miles  
+3. Otherwise nearest **in-state**, then nearest **nationwide** (clearly labeled)
 
-Use the GitHub Pages site: [https://bvsquiat27.github.io/hearth-and-hope/](https://bvsquiat27.github.io/hearth-and-hope/)
+The directory is a **starter partner network** across all 50 states + DC (hundreds of sample listings at real city centroids). **Not every municipality has its own unique entry** — unknown towns still resolve via ZIP or city geocoding to the nearest listed centers. Optional **Use my location** uses browser geolocation when allowed.
 
-On Android Chrome: menu → **Install app** / **Add to Home screen**.  
-On iPhone Safari: Share → **Add to Home Screen**.
+## Quick start (local)
 
-## Privacy & safety
+```bash
+cd mothers-support-app   # or repo root on GitHub Pages
+python3 -m http.server 8080
+```
 
-This app is not emergency care. If you are in danger, call **911**. For emotional crisis in the U.S., call or text **988**.
+Open `http://127.0.0.1:8080`. Hash navigation works over `file://`, but PWA install needs http(s).
 
-## Nationwide directory
+## Project layout
 
-Find Help matches any US city/ZIP via distance to partner centers across all 50 states + DC.
-ZIP centroids: SimpleMaps US Zips (free). Sample partner listings at real city centroids — no abortion providers.
-See `INTEGRATION.md` and data file headers for details.
+```
+├── index.html
+├── manifest.webmanifest
+├── sw.js
+├── css/styles.css
+├── js/app.js              # proximity matching, Get Help, PWA
+├── data/
+│   ├── centers.js         # 50 states + DC starter network (+ national helplines)
+│   └── zips.js            # US ZIP centroids + city→ZIP (SimpleMaps-derived)
+└── icons/
+```
+
+## Live
+
+- GitHub Pages: https://bvsquiat27.github.io/hearth-and-hope/
+- Android APK: see GitHub Releases (v1.0.1+)
+
+## License / data notes
+
+Sample center names, phones (555), and emails (`example.org`) are fictional placeholders for product testing unless noted as public national helplines. ZIP centroids derived from public SimpleMaps US Zips basic data. Verify any referral before client use.

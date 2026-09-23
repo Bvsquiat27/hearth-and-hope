@@ -274,16 +274,18 @@
     const zip = extractZip(q);
 
     function fromZip(z) {
+      // Prefer a listed center at this ZIP (more accurate than some large ZCTA centroids)
+      const hit = getCenters().find((c) => c.zip === z && c.lat != null);
       if (zipObj && zipObj[z]) {
         const o = zipObj[z];
+        if (hit) return { lat: hit.lat, lng: hit.lng, zip: z, state: hit.state || o.state, city: hit.city || o.city, source: "zip-center", label: `${hit.city}, ${hit.state} ${z}` };
         return { lat: o.lat, lng: o.lng, zip: z, state: o.state, city: o.city, source: "zip", label: `${o.city || "ZIP"}, ${o.state || ""} ${z}`.trim() };
       }
+      if (hit) return { lat: hit.lat, lng: hit.lng, zip: z, state: hit.state, city: hit.city, source: "zip-center", label: `${hit.city}, ${hit.state} ${z}` };
       if (zipCoords[z]) {
         const [lat, lng] = zipCoords[z];
         return { lat, lng, zip: z, state: null, city: null, source: "zip", label: `ZIP ${z}` };
       }
-      const hit = getCenters().find((c) => c.zip === z);
-      if (hit) return { lat: hit.lat, lng: hit.lng, zip: z, state: hit.state, city: hit.city, source: "zip-center", label: `${hit.city}, ${hit.state} ${z}` };
       return null;
     }
 
@@ -501,7 +503,7 @@
           <span class="tag green">${escapeHtml(c.type)}</span>
         </header>
         <p class="loc">${escapeHtml(c.city)}, ${escapeHtml(c.state)} ${escapeHtml(c.zip)}${formatDist(c._dist)} · ${escapeHtml(c.faith)}</p>
-        <p class="blurb">${escapeHtml(c.blurb)}</p>
+        <p class="blurb">${escapeHtml(c.blurb || c.blurb || "")}</p>
         <div class="services">${(c.services || []).map((s) => `<span class="service-pill">${escapeHtml(s)}</span>`).join("")}</div>
         <div class="center-actions">
           <a href="tel:${escapeAttr(c.phone)}">Call ${escapeHtml(c.phone)}</a>
