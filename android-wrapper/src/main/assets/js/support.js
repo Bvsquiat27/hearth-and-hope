@@ -495,10 +495,11 @@ I’m doing my best. Thank you for standing with me.
   }
 
   function filterHopeText(text) {
+    /* Ember filterNote caps at 180 chars — only reuse its blocked patterns, not length. */
     if (window.HearthBeacon && typeof HearthBeacon.filterNote === "function") {
-      const r = HearthBeacon.filterNote(String(text || "").slice(0, HOPE_MAX));
-      if (!r.ok && r.reason === "long") return { ok: false, reason: "long" };
-      /* filterNote caps at 180 — re-check length ourselves for hope board */
+      const sample = String(text || "").trim().replace(/\s+/g, " ").slice(0, 180);
+      const r = HearthBeacon.filterNote(sample);
+      if (!r.ok && r.reason === "blocked") return { ok: false, reason: "blocked" };
     }
     let t = String(text || "").trim().replace(/\s+/g, " ");
     if (!t) return { ok: false, reason: "empty" };
